@@ -1,0 +1,745 @@
+\documentclass[12pt]{article}
+%\documentclass[11pt]{article}
+\usepackage{amsfonts,amssymb,epsfig,amsmath}
+\usepackage{caption,subcaption}
+\usepackage{color}
+
+%\usepackage[dvips]{graphicx}
+%\usepackage{amsmath}%,amscd}6
+
+%\usepackage[enableskew]{youngtab}
+%\usepackage{showkeys}
+
+
+% Added for arXiv submission only
+%\addtolength{\topmargin}{-0.6cm}
+
+\renewcommand{\baselinestretch}{1.2}
+
+% arXiv submission (NOT using pdflatex)
+%\setlength{\voffset}{-2.1cm}
+
+% normal case (NOT using pdflatex)
+\setlength{\voffset}{-2.0cm}
+
+% when using pdflatex0
+%\setlength{\voffset}{-2.5cm}
+
+
+% arXiv submission
+%\setlength{\oddsidemargin}{-0.3cm}
+
+% Other than arXiv
+\setlength{\oddsidemargin}{-0.5cm}
+
+
+\setlength{\evensidemargin}{0.5cm} \setlength{\textwidth}{17cm}
+\setlength{\textheight}{24cm}
+\parskip 0.3 cm
+
+
+%%%%%%%%%%%%%%%%%
+%  Hee-Cheol's  %
+%%%%%%%%%%%%%%%%%
+
+
+\def\Tr{{\rm Tr}}
+\def\tr{{\rm tr}}
+\def\det{{\rm det}}
+
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+
+
+%%%%%%%%%%%%%%%
+%  Joonho's  %
+%%%%%%%%%%%%%%%
+
+%% Mathematics
+
+\renewcommand{\d}[1]{\mathinner{d#1}} % Defines the differential operator `d'
+\newcommand{\ssin}[1]{\mathinner{s}_{#1}}
+\newcommand{\ccos}[1]{\mathinner{c}_{#1}}
+
+%% Miscellaneous
+
+\newcommand{\eq}[1]{Eq.~(\ref{#1})} % Defines the command "\eq{<equation label>}" to be "Eq.~(<equation number>)".
+\newcommand{\cmt}[1]{\textbf{(#1)}} % Defines the command "\cmt{ }" to be its argument written in bold font.
+\newcommand{\chifourteen}[1]{\chi_{\mathbf{#1}}^{\text{SO}(14)}}
+\newcommand{\chisixteen}[1]{\chi_{\mathbf{#1}}^{\text{SO}(16)}}
+
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sk}[1]{\textbf{sk: {#1}}}
+\newcommand{\hc}[1]{(\textbf{hc: {#1}})}
+
+\begin{document}
+
+\makeatletter \@addtoreset{equation}{section} \makeatother
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thefootnote}{\alph{footnote}}
+\section{Unity Blowup equations}
+The partition functions of generic 5d $\mathcal{N}=1$ gauge theories with hypermultiplets in $R$-representation in the Coulomb branch consist of classical action term, 1-loop term, and instanton partition functions.
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=Z_{\textrm{class}}(\epsilon_1,\epsilon_2,\vec{a},m_0)\,Z_{\textrm{1-loop}}(\epsilon_1,\epsilon_2,\vec{a},m_i)\,Z_{\textrm{inst}}(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)
+\label{eq:bueq_gen}
+\end{align}
+where
+\begin{align}
+Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij}\phi^i\phi^j+\frac{1}{6}d_{ijk}\phi^{i}\phi^j\phi^k\right)\Bigg]\nonumber\\
+Z_{\textrm{1-loop}}=\textrm{exp}\Bigg[&\,-\frac{1}{2\epsilon_1\epsilon_2}\Bigg(\sum_{\alpha\in\textrm{roots}}\Bigg(\frac{1}{6}(\vec{a}\cdot\vec{\alpha})^3-\frac{1}{4}(\epsilon_1+\epsilon_2)(\vec{a}\cdot\vec{\alpha})^2+\frac{1}{12}((\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2)(\vec{a}\cdot\vec{\alpha})\Bigg)\nonumber\\
+&\,+\sum_{\omega\in\rho(R)}\Bigg(\frac{1}{6}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^3-\frac{\epsilon_1+\epsilon_2}{4}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^2\nonumber\\
+&\,\qquad\qquad-\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{24}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)\Bigg)\Bigg]\nonumber\\
+\times\,\textrm{PE}\Bigg[&\,\frac{1}{(1-p_1)(1-p_2)}\Bigg(-\sum_{\alpha\in\textrm{roots}}e^{\vec{a}\cdot\vec{\alpha}}+p_1^{1/2}p_2^{1/2}y_i\sum_{\omega\in \rho(R)}e^{\vec{a}\cdot\vec{\omega}}\Bigg)\Bigg].
+\end{align}
+Here $\vec{a}$ are Coulomb VEVs and $p_{1,2}=e^{\epsilon_{1,2}}$, $y_i=e^{m_i}$. Note that the normal exponential term saturates the zero-point energy of pletheystic exponential terms.\footnote{Technically, instead of considering this 1-loop prepotential terms, I inserted overall factors to the $l_{\vec{k}}=Z_{\textrm{1-loop}}^{(1)}Z_{\textrm{1-loop}}^{(1)}/Z_{\textrm{1-loop}}$ so that it is written by Sinh terms.} 
+
+The partition function satisfies so-called ``Unity blowup equation" 
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i, m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
+&\times\, Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
+\end{align}
+for certain $\vec{r}_a,\, r_i,\,r_0$'s.
+Here $\vec{\alpha}^{\lor}$ is the coroot lattice where the long root is normalized to have norm 2. The $r_i$'s and $r_0$ are some numbers specifying the blowup equations.
+
+Technically $r_i$'s are constrained to be half integers since, for each single letter 1-loop partition functions
+\begin{align}
+Z_{i,\vec{\omega}}=\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}}{(1-p_1)(1-p_2)}y_i\,e^{\vec{a}\cdot\vec{\omega}}\Bigg],
+\end{align}
+the ratio between shifted ones and unshifted one is
+\begin{align}
+l^{\vec{k}}_{i,\vec{\omega}}=&\,Z^{(1)}_{i,\vec{\omega}}Z^{(2)}_{i,\vec{\omega}}/Z_{i,\vec{\omega}}\nonumber\\
+=&\,\textrm{PE}\Bigg[\frac{p_1^{r_i}p_2^{1/2}y_i}{(1-p_1)(1-p_2/p_1)}p_1^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}+\frac{p_1^{1/2}p_2^{r_i}y_i}{(1-p_1/p_2)(1-p_2)}p_2^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}-\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Bigg]\nonumber\\
+=&\,\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)(p_1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Big((1-p_2)p_1^{\vec{k}\cdot\vec{\omega}+r_i+1/2}-(1-p_1)p_2^{\vec{k}\cdot\vec{\omega}+r_i+1/2}\Big)-(p_1-p_2)\Bigg]
+\end{align}
+For the $l^{\vec{k}}_{i,\vec{\omega}}$ to be finite rational function, the plethystic exponent must be finite series. It can be satisfied only when $r_i$ is a half integer.
+
+\section{Instanton partition functions from blowup equations}
+From blowup equations one can compute the partition functions as follows. Rewriting the blowup equation as
+\begin{align}
+1=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}f_{\vec{k}}\,l_{\vec{k}}\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}
+\end{align}
+where $f_{\vec{k}}=Z^{(1)}_{\textrm{class}}Z^{(2)}_{\textrm{class}}/Z_{\textrm{class}}$ and $l_{\vec{k}}=Z^{(1)}_{\textrm{1-loop}}Z^{(2)}_{\textrm{1-loop}}/Z_{\textrm{1-loop}}$ with abbreviated notation 
+\begin{align}
+Z^{(1)}=Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
+Z^{(2)}=Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+\vec{k}\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
+\end{align} 
+Here note that $l_{\vec{k}}$ is independent of $Q=e^{-m_0}$, and $f_{\vec{k}}$ is some overall factor in the order of $Q^{\vec{k}\cdot\vec{k}/2}$. Expanding the equation by instanton fugacity $Q$, then at each $Q^{n}$ level the equation is written by 
+\begin{align}
+\delta_{n,0}=p_1^{r_0}Z^{(1)}_{n}+p_2^{r_0}Z^{(2)}_{n}-Z_{n}+\sum_{\vec{k}\neq 0}f_{\vec{k},r_0}l_{\vec{k}}\Bigg(\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}\Bigg)\Bigg|_{O(Q^{n-\vec{k}\cdot\vec{k}/2})}.
+\label{eq:be_n}
+\end{align}
+Since each $Z_{k}$ and $Z^{(1,2)}_{k}$ are independent of $r_0$, one can solve \eqref{eq:be_n} with three blowup equations with same $r_i$'s but different $r_0$'s. 
+
+The blowup equations for instanton partition functions of pure YM theory with generic gauge group were already studied in \cite{Keller:2012da}. They are actually \eqref{eq:bueq_gen} with 
+\begin{align}
+\vec{r}_a=0,\qquad r_0=d-h^{\lor}/2
+\end{align}
+where $d=0,\cdots, h^{\lor}$. We extend these blowup equations to the theories with matters based on pure YM blowup equations. If one restrict the cases to $\vec{r}_a=0$, as we explained in the previous section, the $r_i$'s are technically required to be half intergers. Thus we look for the $r_0$'s that provides the correct instanton partition functions by solving \eqref{eq:be_n} while fixing $\vec{r}_a=0$ and $r_i=1/2$. Here are the results.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$G$ & matter & $r_0$ & $d$\\
+\hline
+$SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
+\hline
+$SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
+\hline
+$SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
+\hline
+$SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
+\hline
+$SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
+\hline
+$SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
+\hline
+$G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
+\hline
+$G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
+\hline
+$F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
+\hline
+$F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
+\hline
+$F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
+\hline
+\end{tabular}
+
+
+They were tested by comparing the resulting instanton partition functions with the known results from \cite{Kim:2018gjo}($SO(7)$ and $G_2$) and \cite{DelZotto:2018tcj}($F_4$ with $N_{\boldsymbol{26}}=2$). They were compared numerically, putting random numbers on the fugacities.
+Note that matters shift the $r_0$, each by one quarter of their Dynkin indices. It seems to differ from blowup formula for $SU(N)_\kappa+N_f$ instantons, where $r_0$ was affected only by its CS-level $\kappa$. However, one can rewrite the $r_0$ as
+\begin{align}
+r_0=&\,d-N/2-\left(\kappa+\frac{1}{2}N_f\right)/2+N_f/4\nonumber\\
+=&\,d-N/2-\kappa_{\textrm{eff}}/2+N_f\times I_{\textrm{fund}}.
+\end{align}
+Since fundamental matters shifts the effective CS-level, they cancel their index contributions and consequently the $r_0$ apparently looks independent of matters. 
+
+By above observations, we write the unity blowup equation for generic gauge groups and matter representations.
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\epsilon_1,m_i+\epsilon_1/2,m_0+r_0\epsilon_1)\nonumber\\
+&\times\,Z(\epsilon_1-\epsilon_2,\vec{a}+\vec{k}\epsilon_2,m_i+\epsilon_2/2,m_0+r_0\epsilon_2)
+\end{align}
+with 
+\begin{align}
+r_0=d-h^{\lor}/2-\kappa_{\textrm{eff}}/2+N_{\boldsymbol{R}}\times I_{\boldsymbol{R}}.
+\end{align}
+Here $I_{\boldsymbol{R}}$ is the Dynkin index of $\boldsymbol{R}$ representation.
+
+\section{$SU(6)_3+1\times\boldsymbol{20}$}
+
+As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
+
+\textcolor{red}{(Written before computing the $SU(6)_3+20$ instanton partition function.)}\\
+Rather than comparing instanton partition functions directly, we consider an interesting Higgsing procedure. We consider the $SU(3)\times SU(3)\times U(1)\subset SU(6)$ where the $SU(6)$ multiplets are decomposed by
+\begin{align}
+A_{i\bar{j}}:\,\boldsymbol{35}\longrightarrow&\,(\boldsymbol{8},1)_0\oplus (1,\boldsymbol{8})_0\oplus (\boldsymbol{3},\bar{\boldsymbol{3}})_2\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_{-2}\oplus(1,1)_0,\nonumber\\
+\Phi_{ijk}:\,\boldsymbol{20}\longrightarrow&\,(\boldsymbol{3},\bar{\boldsymbol{3}})_{-1}\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_1\oplus(1,1)_3\oplus(1,1)_{-3}.
+\end{align} 
+Here to fit with the web-diagram, we set $\Phi_{156}$ and $\Phi_{234}$ are $(1,1)_3$ and $(1,1)_{-3}$. Once $\Phi_{156}$ and $\Phi_{234}$ get non-zero VEVs, 
+
+ When $a_5=-a_1-a_6$, the web-diagram factorizes to two $SU(3)_3$ whose Coulomb VEVs are $(a_1, a_5, a_6)$ and $(a_2, a_3, a_4)$. In the gauge theory, it can be seen partly from prepotential. The prepotential of $S(6)_3+1\times\boldsymbol{20}$ is
+\begin{align}
+\mathcal{F}=\frac{1}{2}m_0\sum_{i=1}^{6}a_i^2+\frac{1}{2}\sum_{i=1}^{6}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3-\frac{1}{6}\sum_{1<i<j}(a_1+a_j+a_k)^3
+\end{align}
+at the Weyl chamber $a_1>\cdots>a_6$. As one sets the Coulomb VEV $a_6=-a_1-a_5$ and $a_4=-a_2-a_3$, one can check
+\begin{align}
+\mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)=\mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4)
+\end{align}
+where
+\begin{align}
+\mathcal{F}_{SU(3)_3}(m_0,a_1,a_2,a_3)=\frac{1}{2}m_0\sum_{i=1}^{3}a_i^2+\frac{1}{2}\sum_{i=1}^{3}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3.
+\end{align}
+It is Higgsed by 
+
+\pagebreak
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+%\cite{Nakajima:2003pg}
+\bibitem{Nakajima:2003pg} 
+  H.~Nakajima and K.~Yoshioka,
+  %``Instanton counting on blowup. 1.,''
+  Invent.\ Math.\  {\bf 162}, 313 (2005)
+  doi:10.1007/s00222-005-0444-1
+  [math/0306198 [math.AG]].
+  %%CITATION = doi:10.1007/s00222-005-0444-1;%%
+  %189 citations counted in INSPIRE as of 26 Dec 2018
+
+%\cite{Huang:2017mis}
+\bibitem{Huang:2017mis} 
+  M.~x.~Huang, K.~Sun and X.~Wang,
+  %``Blowup Equations for Refined Topological Strings,''
+  JHEP {\bf 1810}, 196 (2018)
+  doi:10.1007/JHEP10(2018)196
+  [arXiv:1711.09884 [hep-th]].
+  %%CITATION = doi:10.1007/JHEP10(2018)196;%%
+  %5 citations counted in INSPIRE as of 27 Dec 2018
+
+%\cite{Keller:2012da}
+\bibitem{Keller:2012da} 
+  C.~A.~Keller and J.~Song,
+  %``Counting Exceptional Instantons,''
+  JHEP {\bf 1207}, 085 (2012)
+  doi:10.1007/JHEP07(2012)085
+  [arXiv:1205.4722 [hep-th]].
+  %%CITATION = doi:10.1007/JHEP07(2012)085;%%
+  %25 citations counted in INSPIRE as of 06 Apr 2019
+
+%\cite{Kim:2018gjo}
+\bibitem{Kim:2018gjo} 
+  H.~C.~Kim, J.~Kim, S.~Kim, K.~H.~Lee and J.~Park,
+  %``6d strings and exceptional instantons,''
+  arXiv:1801.03579 [hep-th].
+  %%CITATION = ARXIV:1801.03579;%%
+  %7 citations counted in INSPIRE as of 07 Apr 2019
+
+%\cite{DelZotto:2018tcj}
+\bibitem{DelZotto:2018tcj} 
+  M.~Del Zotto and G.~Lockhart,
+  %``Universal Features of BPS Strings in Six-dimensional SCFTs,''
+  JHEP {\bf 1808}, 173 (2018)
+  doi:10.1007/JHEP08(2018)173
+  [arXiv:1804.09694 [hep-th]].
+  %%CITATION = doi:10.1007/JHEP08(2018)173;%%
+  %14 citations counted in INSPIRE as of 07 Apr 2019
+
+%\cite{Hayashi:2019yxj}
+\bibitem{Hayashi:2019yxj} 
+  H.~Hayashi, S.~S.~Kim, K.~Lee and F.~Yagi,
+  %``Rank-3 antisymmetric matter on 5-brane webs,''
+  arXiv:1902.04754 [hep-th].
+  %%CITATION = ARXIV:1902.04754;%%
+  %2 citations counted in INSPIRE as of 19 Apr 2019
+
+\end{thebibliography}\endgroup
+
+%
+%\appendix
+%
+%\section{ADHM fields for rank $2$ bulk fields}
+%
+%\subsection{Review on ADHM fields for bulk hypermultiplets}
+%
+%With classical groups, there is a notion of fundamental
+%representation, which has $N$ complex dimension for $SU(N)$, $N$ real dimension
+%for $SO(N)$, and $2N$ real dimension for $Sp(N)$. One can further
+%form tensor product representations of the fundamental representations,
+%and then suitably symmetrize/antisymmetrize the indices to get various higher
+%rank representations. Matters in rank $2$ or lower representations of the
+%classical gauge group can often be
+%engineered from open fundamental strings ending on D-branes, simply because
+%open strings have two Chan-Paton factors and either $1$ or $2$ of them
+%can be associated with the gauge group. Supposing that the 5d or 6d
+%gauge theories are realized using D$(p+4)$ branes, Yang-Mills instantons
+%can be realized as D$p$ branes which share $p$ spatial dimensions with
+%the D$(p+4)$ branes. Therefore, The fields in the ADHM gauge theory for
+%instantons which realize the hypermultiplet zero modes in the
+%instanton background can be read off by studying massless open string spectrum.
+%Here, we first summarize the ADHM field contents accounting for the bulk
+%hypermultiplets, and investigate their dynamical structures in some detail. Then,
+%we shall review a similar argument for realizing vector multiplet zero modes
+%in the instanton background, in terms of the ADHM data. Finally, based on
+%these, we provide our extension ansatze the ADHM-like fields for vector
+%multiplets in exceptional gauge groups.
+%
+%The bulk gauge theory has $8$ supercharges, and the instantons are half-BPS.
+%The $4$ supercharges they preserve are $\mathcal{N}=(0,4)$ SUSY on the instantons'
+%worldvolume. For $d=6$ bulk, this is a chiral supersymmetric theory in $d=2$.
+%For $d=5$ bulk, we have a quantum mechanical gauge theory which can be formally
+%obtained from circle reduction of a classical 2d $\mathcal{N}=(0,4)$ theory.
+%Thus the ADHM fields that we present now, corresponding to
+%the bulk hypermultiplets, are all organized into 1d/2d hypermultiplets, twisted
+%hypermultiplets, for Fermi multiplets. See (\sk{ref}) for a brief review and
+%our conventions.
+%
+%For $SU(N)$ gauge theories in $d=5$ or $6$ bulk, the $d=1$ or $2$ dimensional
+%worldvolume gauge theory on $k$ instantons has $U(k)$ gauge symmetry.
+%If one has hypermultiplets in the fundamental or anti-fundamental
+%representation in the bulk, the worldvolume ADHM theory has the following
+%Fermi multiplet field
+%\begin{eqnarray}
+%  \textrm{bulk }\ {\bf N}&\rightarrow&\textrm{complex Fermi }\
+%  ({\bf k},{\bf 1})\ \textrm{in }U(k)\times SU(N)\nonumber\\
+%  \textrm{bulk }\ \overline{\bf N}&\rightarrow&\textrm{complex Fermi }\
+%  (\bar{\bf k},{\bf 1})\ \textrm{in }U(k)\times SU(N)\ .
+%\end{eqnarray}
+%for each bulk hypermultiplet. the $d$ dimensional bulk theory has
+%$SO(d-1,1)$ Lorentz symmetry and $SU(2)_R$ R-symmetry. In the background of
+%$d-4$ dimensional instanton worldvolume extended on $\mathbb{R}^{d-5,1}$,
+%one finds unbroken $SO(4)\sim SU(2)_l\times SU(2)_r$ spatial rotation transverse
+%to the instanton worldvolume, and $SU(2)_R$ inherited from the bulk R-symmetry.
+%The above Fermi fields are in trivial representation of
+%$(SU(2)_l,SU(2)_r,SU(2)_R)$. If the bulk theory has a hypermultiplet in
+%adjoint representation (which is equal to two half-hypermultipets),
+%it requires the following ADHM fields:
+%\begin{eqnarray}
+%  \textrm{bulk }\ {\bf N\times\overline{N}}&\rightarrow&\textrm{complex Fermi's }\
+%  ({\bf k},\overline{\bf N})_{({\bf 1},{\bf 1},{\bf 1};{\bf 2})}\nonumber\\
+%  &&\textrm{real Fermi's }\ ({\bf adj},{\bf 1})_{
+%  ({\bf 2},{\bf 1},{\bf 1};{\bf 2})}\nonumber\\
+%  &&\textrm{twisted half-hyper's }\ ({\bf adj},{\bf 1})_{
+%  ({\bf 1},{\bf 1},{\bf 2};{\bf 2})}\ .
+%\end{eqnarray}
+%Here we showed the representations of $U(k)\times SU(N)$ in the same
+%convention, and the subscripts are
+%$SU(2)_l\times SU(2)_r\times SU(2)_R\times SU(2)_F$ representations, where
+%$SU(2)_F$ is the flavor symmetry for the $2$ bulk half-hypermultiplets.
+%If the bulk theory has a hypermultiplet in the rank $2$ antisymmetric
+%representation, the ADHM fields are given by
+%\begin{eqnarray}
+%  \textrm{bulk }\ {\bf anti}({\bf N}\times {\bf N})&\rightarrow&
+%  \textrm{complex Fermi }\ ({\bf k},{\bf N})_{
+%  ({\bf 1},{\bf 1},{\bf 1};+1)}\nonumber\\
+%  &&\textrm{complex Fermi's }\
+%  ({\bf anti}({\bf k}\times{\bf k}),{\bf 1})_{({\bf 2},{\bf 1},{\bf 1};+1)}\nonumber\\
+%  &&\textrm{twisted hyper }\ ({\bf sym}({\bf k}\times{\bf k}),{\bf 1}
+%  )_{({\bf 1},{\bf 1},{\bf 2};+1)}\ ,
+%\end{eqnarray}
+%where conventions are almost the same as above, with last $+1$ in the subscript
+%being the charges of $U(1)_F$ flavor symmetry for the bulk hypermultiplet.
+%If the bulk has rank $2$ antisymmetric representation of $\overline{\bf N}$,
+%one has similar ADHM fields, with all $U(k)\times SU(N)$ representations
+%conjugated but with same $(SU(2)_r,SU(2)_R;U(1)_F)$ representations/charges.
+%Finally, if the bulk has rank $2$ symmetric representation of ${\bf N}$,
+%the ADHM fields are given by
+%\begin{eqnarray}
+%  \textrm{bulk }\ {\bf sym}({\bf N}\times {\bf N})&\rightarrow&
+%  \textrm{complex Fermi }\ ({\bf k},{\bf N})_{
+%  ({\bf 1},{\bf 1},{\bf 1};+1)}\nonumber\\
+%  &&\textrm{complex Fermi's }\
+%  ({\bf sym}({\bf k}\times{\bf k}),{\bf 1})_{({\bf 2},{\bf 1},{\bf 1};+1)}\nonumber\\
+%  &&\textrm{twisted hyper }\ ({\bf anti}({\bf k}\times{\bf k}),{\bf 1}
+%  )_{({\bf 1},{\bf 1},{\bf 2};+1)}\ .
+%\end{eqnarray}
+%Again, for rank $2$ symmetric representation of $\overline{\bf N}$,
+%the ADHM fields are obtained by conjugating $U(k)\times SU(N)$ representations.
+%For quiver gauge theories with many $U(N)$ factors, one can introduce similar
+%ADHM fields for the bi-fundamental representations, which we do not present here.
+%For instance, see (\sk{Shadchin}) for all the results presented in this paragraph.
+%
+%Let us explain certain $\mathcal{N}=(0,4)$ interactions to clarify the physics.
+%In the nonlinear sigma model description on the instanton
+%moduli space, the bosonic zero modes are
+%provided by the moduli of the bulk vector fields satisfying the self-dual equation.
+%All other zero modes in the instanton backgrounds come from bulk fermions.
+%A 5d Dirac fermion in representation ${\bf R}$ of $G$ has $2kD({\bf R})$
+%complex zero modes, where $D({\bf R})$ is given by
+%${\rm tr}_{\bf R}(T^aT^b)=D({\bf R})\delta^{ab}$, with
+%$D({\bf N})=1$, $D({\bf adj})$, (\sk{clear normalization})
+%In the non-linear sigma model in IR, the numbers of complex fermion zero modes are
+%$k$ for fundamental, $2kN$ for adjoint, $k(N-2)$ for antisymmetric, $k(N+2)$ for
+%symmetric representation. On the other hand, the numbers of complex Fermi fields
+%$\Psi_{Ii}$ in the bi-fundamental representation are $k$, $2kN$, $kN$, $kN$,
+%respectively. So, although the $\mathcal{O}(N^1)$ part of the UV bi-fundamental
+%zero modes agree with the IR fermion zero modes caused by the bulk fermions,
+%the correct number of massless zero modes in IR have to be considered with more
+%care. This has to be discussed after
+%writing down the interactions associated with the Fermi multiplet fields, which
+%we shall explain shortly. We also have to discuss the possible bosonic zero modes
+%coming from $k\times k$ matrix-valued bosons listed above, associated with bulk
+%matters. Since the IR nonlinear sigma model does not have bosonic zero modes
+%caused by bulk hypermultiplet fields, any extra bosonic zero modes would be
+%UV artifacts. This issue again can be addressed after writing down interactions.
+%
+%The interactions of the above fields preserving $\mathcal{N}=(0,4)$ SUSY can
+%be addressed in the off-shell $\mathcal{N}=(0,2)$ formalism as follows.
+%Our presentation reviews the general ideas observed in (\sk{tong}), for
+%the $(0,2)$ theories to have enhanced $(0,4)$ SUSY. (\sk{review $J$ and $E$})
+%First of all, all twisted hypermultiplets contribute to the $E$ potentials
+%for the fermion $\lambda$ in the $(0,4)$ vector multiplet. These potentials
+%can be written for the adjoint and symmetric/antisymmetric twisted hypermultiplets
+%as follows:
+%\begin{eqnarray}
+%  \textrm{adjoint}&:&(E_\lambda)_I^{\ J}=\Phi_{I}^{\ K}
+%  \tilde\Phi_{K}^{\ J}-\tilde\Phi_{I}^{\ K}\Phi_K^{\ J}\\
+%  \textrm{sym/antisym}&:&
+%  (E_\lambda)_I^{\ J}=2\Phi_{IK}\tilde\Phi^{KJ}\ .
+%\end{eqnarray}
+%These interactions, if unaccompanied with potentials for other Fermi multiplets,
+%are incompatible with even $\mathcal{N}=(0,2)$ SUSY. This is because $(0,2)$
+%SUSY requires $\sum_{\Psi\in\textrm{Fermi}}J_\Psi E_\Psi=0$ when summed over
+%all Fermi multiplet fields $\Psi$. Since the adjoint Fermi multiplet $\lambda$
+%contributes a nonzero term to $J_\Psi E_\Psi$,
+%taking the form of $\sim(q\tilde{q}+[a,\tilde{a}])E_\lambda$,
+%it has to be balanced with
+%other potential terms. To this end, one has to turn on $J$ and $E$ potentials
+%for the bi-fundametal Fermi fields $\Psi_{Ii}$ and $k\times k$ matrix valued
+%Fermi fields $\Omega_{IJ\alpha}$.
+%
+%Firstly, for the adjoint representation,
+%one finds pairs $\Psi_a=(\Psi,\tilde\Psi)$, $\Omega_a=(\Omega,\tilde\Omega)$
+%of Fermi fields, with $a=1,2$, transforming in the doublet of $SU(2)_F$ flavor
+%symmetry. The potentials are given by (\sk{check bosonic potential, ref})
+%\begin{eqnarray}
+%  &&J_\Psi=\tilde{q}\tilde\Phi\ ,\ \ E_\Psi=\Phi q\ ,\ \
+%  J_{\tilde\Psi}=-\tilde{q}\Phi\ , \ \ E_{\tilde\Psi}=\tilde\Phi q\ ,\ \ \\
+%  &&J_\Omega=\ ,\ \ E_\Omega=\ , \ \ J_{\tilde\Omega}=\ ,\ \
+%  E_{\tilde\Omega}= \nonumber
+%\end{eqnarray}
+%which guarantees $\sum_\Psi J_\Psi E_\Psi=0$ by canceling
+%$J_\lambda E_\lambda=(q\tilde{q}+[a,\tilde{a}])[\Phi,\tilde\Phi]$.
+%The bosonic potential energy, \sk{$D$, $J$, $E$}. After some rearrangements,
+%the potential and the Yukawa interaction are given by
+%\begin{equation}
+% V\sim \left(\right)^2+|\bar{q}^{\dot\alpha}\Phi_{aA}|^2
+% -\frac{1}{2}[a_m,\Phi_{aA}]^2-\frac{1}{2}[\Phi_{aA},\Phi^{bB}]^2
+% +\Psi_{Ja}^i\left[(\bar{\psi}^A)^I_i
+% (\Phi^a_A)_I^{\ J}+(\bar{q}^{\dot\alpha})_i^I(\chi^a_{\dot\alpha})_I^{\ J}\right]
+% +c.c.+\textrm{others}
+%\end{equation}
+%where $\psi^i_{IA}\sim Q_{\dot\alpha A}q^{i\dot\alpha}_I$,
+%$(\chi^a_{\dot\alpha})_I^{\ J}\sim Q_{\dot\alpha A}(\Phi^{aA})_I^{\ J}$.
+%For simplicity, let us consider the case with $k=1$.
+%Then, in the branch with nonzero ADHM data, $q_{\dot\alpha}\neq 0$,
+%$N$-dimensional vectors $q$ and $\tilde{q}$ are both nonzero and mutually
+%orthogonal. This firstly provides nonzero masses to all $\Phi_{aA}\sim(\Phi,\tilde\Phi^\dag)$. Thus, their superpartners $\chi,\tilde\chi$
+%given by two complex fermions should also acquire masses. This is provided by the
+%Yukawa interactions
+%of the form $\Psi q\chi$ shown above. Namely, in the 2d $(0,4)$ theories,
+%the right-moving $\chi$ and left moving $\Psi$'s should pair to be massive.
+%Even in 1d, the formal $(0,4)$ structure requires the same mechanism for acquiring
+%masses. Thus, $2$ of the $2N$ complex fields in $\Psi,\tilde\Psi$
+%pair with $\chi,\tilde\chi$ to be massive, with $2N-2$ remaining massless fermions.
+%Additionally, there are $2$ complex fermion fields coming from the $k\times k$
+%antisymmetric Fermi multiplet, which remain to be massless since
+%all their Yukawa couplings contain commutators of $k\times k$ matrices which
+%are zero at $k=1$. Collecting all, one finds the desired $(2N-2)+2=2N$ complex
+%fermion zero modes from the UV Fermi multiplet fields in the ADHM moduli space
+%with nonzero $q,\tilde{q}$.
+%
+%Considering the potential $\sim |q_{\dot\alpha}\Phi_{aA}|^2$, there is another
+%branch of moduli space in which $q=0$, $\tilde{q}=0$ and
+%$\Phi,\tilde\Phi\neq 0$. This is an extra branch of moduli space which
+%does not exist in 5d/6d quantum field theory solitons. It is an artifact
+%of UV completion. For instance, by realizing the 5d/6d QFTs in string theory,
+%one can find such extra branches of moduli spaces which decouple from the QFT
+%at low energy. For instance, 5d $SU(N)$ super-Yang-Mills theory with one
+%adjoint hypermultiplet is the maximal super-Yang-Mills theory, which can be
+%realized by $N$ stack of parallel D4-branes. Instanton solitons are D0-branes
+%which are marginally bound to the D4-branes. In the D0-D4 system, the branch
+%with nonzero $\Phi,\tilde\Phi$ represent D0-branes moving away from D4-branes,
+%thus do not belong to the QFT spectrum. In any kind of ADHM calculus, one should
+%make sure that observables do not acquire contribution from these extra states,
+%or otherwise should find ways to eliminate their contributions (often relying on
+%decoupling limits of string theory). See \sk{HKKP, etc.} for various examples.
+%
+%
+%One can do a similar analysis for $SU(N)$ ADHM fields for rank $2$
+%antisymmetric/symmetric bulk hypermultiplets. For simplicity, we sketch the
+%structures only at $k=1$.
+%
+%With a bulk antisymmetric hypermultiplet, one sets
+%$E_\lambda\sim \Phi\tilde\Phi$ with the symmetric twisted hypermultiplet, so that
+%$J_\lambda E_\lambda=q\tilde{q}\Phi\tilde\Phi\neq 0$. This can be canceled by
+%$J_\Psi\sim\tilde\Phi q$, $E_\Psi\sim -\tilde{q}\Phi$,
+%for a complex fermion $\Psi$ in $(k,N)$. This causes a
+%potential energy of the form (\sk{ref:KKL})
+%\begin{equation}
+%  \sim |\bar{q}_{\dot\alpha}\Phi_A|^2+|\Phi\tilde\Phi|^2
+%  +(|\Phi|^2-|\tilde\Phi|^2)^2\ .
+%\end{equation}
+%The first term makes both $\Phi$, $\tilde\Phi$ massive in the instanton moduli
+%space with nonzero $q,\tilde{q}$. Their superpartners given by two complex
+%fermions $\chi,\tilde\chi$ should also be massive, again combining with
+%two of the $N$ fermions $\Psi$. Thus, one finds $N-2$ massless fermions
+%from $\Psi$. Since the $k\times k$ antisymmetric Fermi multiplet
+%is void at $k=1$, $N-2$ fermion zero modes are all one finds in the ADHM
+%moduli space with nonzero $q,\tilde{q}$. This agrees with the expected
+%number of fermion zero modes, $kD({\bf anti})=k(N-2)$. In this case, due to
+%the second and third terms $\sim |\Phi\tilde\Phi|^2+(|\Phi|^2-|\tilde\Phi|^2)^2$
+%in the bosonic potential, one does not find any extra branch at $q=0$,
+%$\tilde{q}=0$. This is again well understood from models with D-brane
+%engineerings \sk{KKL? GK?}. (One has extra UV branch of moduli spaces if one
+%has two or more antisymmetric bulk hypermultiplets.)
+%
+%Finally, for rank $2$ symmetric bulk hyper, the antisymmetric twisted
+%hypermultipelt is void at $k=1$, so one does not have to introduce
+%nonzero $E_\lambda$. Also, one cannot introduce any $J$ and $E$ potentials
+%for $N$ complex fermions $\Psi$ in $(k,N)$, or two complex fermions
+%$\chi,\tilde\chi$ coming from $k\times k$ symmetric Fermi multiplet.
+%So one finds $N+2$ fermion zero modes, agreeing with the expected
+%$kD({\bf sym})=k(N+2)$. One does not find extra bosonic moduli space
+%at $q,\tilde{q}=0$.
+%
+%
+%One can also introduce the ADHM fields for various rank $1$, $2$ hypermultiplet
+%matters in $SO(N)$, $Sp(N)$ gauge theories in a similar manner. We shall not
+%present the details on these, as we shall
+%mostly consider $SU(N)$ type ADHM constructions and extensions in this paper.
+%
+%
+%\subsection{ADHM-like fields for bulk vector multiplets}
+%
+%Now we explain our proposal for the ADHM-like field contents associated
+%with bulk vector multiplets in adjoint representation of $G$.
+%
+%In the instanton
+%background, formed by the vector field $A_\mu$ on $\mathbb{R}^4$ satisfying
+%$F_{\mu\nu}=\star_4 F_{\mu\nu}$, $A_\mu$ has bosonic zero modes which form
+%the moduli space of solutions. The number of real zero modes is given by
+%$4kc_2(G)$, where $c_2(G)$ is the dual Coxeter number of $G$, given by
+%$c_2(SU(N))=N$, $c_2(SO(N))=$, $c_2(Sp(N))=$, $c_2(G_2)=4$, $c_2(F_4)=$,
+%$c_2(E_6)=12$, $c_2(E_7)=18$, $c_2(E_8)=30$. For $G=SU(N),SO(N),Sp(N)$,
+%there are UV ADHM description of the non-linear sigma models on this
+%moduli space. For exceptional groups, we do not know such UV gauge
+%theory descriptions. We first review the well-known ADHM descrition
+%for classical gauge groups, after which we shall set up our `ansatze' for
+%ADHM-like descriptions of certain exceptional instantons (to be used only
+%for specific instanton calculus, in Coulomb branch).
+%
+%For $SU(N)$, $k$ instanton moduli space dynamics can be described by the
+%following UV fields:
+%\begin{eqnarray}\label{SU(N)-ADHM}
+%  \textrm{vector }\ A_\mu\sim(A_-,A_+),\lambda_{A\dot\alpha}&:&
+%  ({\bf adj},{\bf 1})_{({\bf 1},{\bf 1},{\bf 1})}\\
+%  \textrm{complex hyper }\ q_{\dot\alpha},\psi_{A}&:&\
+%  ({\bf k},\overline{\bf N})_{({\bf 1},{\bf 2},{\bf 1})}\nonumber\\
+%  \textrm{real hyper }\ a_{\alpha\dot\beta}&:&\
+%  ({\bf adj},{\bf 1})_{({\bf 2},{\bf 2},{\bf 1})}\nonumber
+%\end{eqnarray}
+%where the subscripts are again representations of
+%$SU(2)_l\times SU(2)_r\times SU(2)_R$. On the right hand sides, we have
+%shown the representations of the bosonic fields in the multiplets.
+%For $SO(N)$, the worldvolume gauge symmetry on $k$ instantons
+%is $Sp(k)$. One finds the following UV fields:
+%\begin{eqnarray}\label{SO(N)-ADHM}
+%  \textrm{vector }\ A_\mu\sim(A_-,A_+),\lambda_{A\dot\alpha}&:&
+%  ({\bf sym}={\bf adj},{\bf 1})_{({\bf 1},{\bf 1},{\bf 1})}\\
+%  \textrm{real hyper }\ q_{\dot\alpha}&:&\
+%  ({\bf 2k},{\bf N})_{({\bf 1},{\bf 2},{\bf 1})}\nonumber\\
+%  \textrm{real hyper }\ a_{\alpha\dot\beta}&:&\
+%  ({\bf anti},{\bf 1})_{({\bf 2},{\bf 2},{\bf 1})}\ .\nonumber
+%\end{eqnarray}
+%For $Sp(N)$, the worldvolume gauge symmetry on $k$ instantons
+%is $O(k)$. One finds the following UV fields:
+%\begin{eqnarray}\label{Sp(N)-ADHM}
+%  \textrm{vector }\ A_\mu\sim(A_-,A_+),\lambda_{A\dot\alpha}&:&
+%  ({\bf anti}={\bf adj},{\bf 1})_{({\bf 1},{\bf 1},{\bf 1})}\\
+%  \textrm{real hyper }\ q_{\dot\alpha}&:&\
+%  ({\bf k},{\bf 2N})_{({\bf 1},{\bf 2},{\bf 1})}\nonumber\\
+%  \textrm{real hyper }\ a_{\alpha\dot\beta}&:&\
+%  ({\bf sym},{\bf 1})_{({\bf 2},{\bf 2},{\bf 1})}\ .\nonumber
+%\end{eqnarray}
+%The UV $\mathcal{N}=(0,4)$ gauge theory has the following bosonic action,
+%\begin{equation}
+%  \mathcal{L}=\frac{1}{2}(F_{01})^2+D^\mu\bar{q}^{\dot\alpha}D_\mu q_{\dot\alpha}
+%  +\frac{1}{2}D^\mu a_m D_\mu a_m-\frac{1}{2}D^ID^I
+%\end{equation}
+%with $m=1,2,3,4$ for $SO(4)\sim SU(2)_l\times SU(2)_r$, $I=1,2,3$ for $SU(2)_r$,
+%and
+%\begin{equation}
+%  D^I=\#\left(\right)
+%\end{equation}
+%Here, contractions and traces with $G=SU(N),SO(N),Sp(N)$ and $\hat{G}=U(k),Sp(k),O(k)$ are assumed everywhere (and for the cases with $SO(N)$ or $Sp(N)$ where
+%$q_{\dot\alpha}$ fields are real, normalizations for kinetic terms are not
+%conventional above).
+%Although we present the 2d Lagrangian density, its 1d
+%reduction is obvious, with $A_1$ being the adjoint scalar in
+%$\hat{G}$. For convenience, and for later discussions on reformulation,
+%it is often useful to describe this system using off-shell
+%$\mathcal{N}=(0,2)$ superfield language. (\sk{elaborate})
+%
+%(\sk{explain: gauging,
+%triplet of D-terms, F-term plus non-holomorphic D-term in $(0,2)$ viewpoint})
+%
+%
+%Before proceeding to our proposals on exceptional instantons, the following
+%exercise will provide some guidance. Note that, for $2k$ instantons in $Sp(N)$,
+%one has $Sp(N)\times O(2k)$ symmetry. Also, for $k$ instantons of $SO(2N)$,
+%one has $SO(2N)\times Sp(k)$ symmetry. Both contains $SU(N)\times U(k)$
+%as subgroup, so we first decompose the former ADHM fields into
+%representations of $U(N)\times U(k)$, trying to view them as
+%`decorations of $k$ $SU(N)$ instantons.'
+%
+%Firstly, various representations of $SO(2N)$, $Sp(k)$ decompose in
+%$U(N)$, $U(k)$ subgroups as
+%\begin{eqnarray}
+%  \textrm{adjoint }\ {\bf 2N^2-N}&\rightarrow&{\bf N^2}\oplus{\bf \frac{N^2-N}{2}}
+%  \oplus\overline{\left({\bf \frac{N^2-N}{2}}\right)}\nonumber\\
+%  {\bf 2N}&\rightarrow&{\bf N}\oplus\overline{\bf N}\nonumber\\
+%  \textrm{adjoint }\ {\bf 2k^2+k}&\rightarrow&{\bf k^2}\oplus
+%  {\bf \frac{k^2+k}{2}}\oplus\overline{\left({\bf \frac{k^2+k}{2}}\right)}\nonumber\\
+%  {\bf 2k}&\rightarrow&{\bf k}\oplus\overline{\bf k}\nonumber\\
+%  \textrm{antisymmetric }\ {\bf 2k^2-k}&\rightarrow&
+%  {\bf k^2}\oplus{\bf \frac{k^2-k}{2}}
+%  \oplus\overline{\left({\bf \frac{k^2-k}{2}}\right)}\ .
+%\end{eqnarray}
+%Here, ${\bf \frac{N^2-N}{2}}$ and ${\bf \frac{k^2+k}{2}}$ are rank $2$ anti-symmetric
+%and symmetric representations of $U(N)$ and $U(k)$, respectively.
+%Using these, we can decompose the ADHM fields into $SU(N)$ ADHM fields plus other
+%fields. Note that, during this procedure, the $Sp(k)$ adjoint vector multiplet will
+%be decomposed into $U(k)$ vector multiplet and a strange vector multiplet in
+%non-adjoint representation of $U(k)$. We formally regard this vector multiplet
+%as Fermi multiplet in non-adjoint representation, since in 1d/2d, the vector fields
+%will not carry dynamical degrees of freedom in IR.\footnote{Of course having them
+%as vector multiplets of $Sp(k)$ is crucial for writing down interactions of the
+%standard ADHM theory. So by treating some of them as Fermi multiplets in non-adjoint
+%representations of $U(k)$, we shall be attempting to write down alternative UV
+%completions of the instanton moduli space dynamics, which generalizes well to
+%certain exceptional instantons. See below.}
+%One finds the following field decompositions. One first finds the $SU(N)$
+%ADHM field contents, (\ref{SU(N)-ADHM}), and also (\sk{real OK?})
+%\begin{eqnarray}
+%  \textrm{real Fermi multiplets }\ \hat\lambda_{A\dot\alpha}&:&
+%  \left[\left({\bf \frac{k^2+k}{2}},{\bf 1}\right)\oplus
+%  \left(\overline{\left({\bf \frac{k^2+k}{2}}\right)},{\bf 1}\right)
+%  \right]_{({\bf 1},{\bf 2},{\bf 2})}\nonumber\\
+%  \textrm{complex hypers }\ \phi\ ,\tilde\phi&:&
+%  ({\bf k},{\bf N})+(\overline{\bf k},\overline{\bf N})\nonumber\\
+%  \textrm{real hypers}\ b_{\alpha\dot\beta}&:&
+%  \left[\left({\bf \frac{k^2-k}{2}},{\bf 1}\right)\oplus
+%  \left(\overline{\left({\bf \frac{k^2-k}{2}}\right)},{\bf 1}\right)
+%  \right]_{({\bf 2},{\bf 2},{\bf 1})}\ .
+%\end{eqnarray}
+%The $SU(2)_l\times SU(2)_r\times SU(2)_R$ symmetries with representations in
+%the subscript are symmetries acting on these real fields.
+%
+%In the ADHM construction, one has $Sp(k)$ gauge symmetry, and
+%this symmetry is crucial to write down the interactions interactions given by
+%triplet of D-terms which yields
+%the correct non-linear sigma model in IR. However, we changed the setting
+%by regarding some $Sp(k)$ vector multiplets as Fermi multiplets, as shown
+%on the first line above. This means that we have to think about writing
+%down new interactions which still yields the right moduli space in IR.
+%To write down the desired interactions, one has to sacrifice some of the
+%$SU(2)_r\times SU(2)_R$ symmetries, down to $U(1)\subset SU(2)_r\times SU(2)_R$.
+%The $U(1)$ is chosen to be the diagonal rotation of the two Cartans of $SU(2)$'s.
+%This has to do with the fact that our alternative UV theory would have
+%less than $\mathcal{N}=(0,4)$ SUSY, because $SU(2)_r\times SU(2)_R$ is the R-symmetry
+%of $(0,4)$ supersymmetry. (\sk{double of below...?})
+%\begin{eqnarray}
+%  \textrm{complex Fermi }\ \hat\lambda,\ \check\lambda&:&
+%  \left({\bf \frac{k^2+k}{2}}+c.c.,{\bf 1}\right)_{({\bf 1};J=0)}\oplus
+%  \left({\bf \frac{k^2+k}{2}}+c.c.,{\bf 1}\right)_{({\bf 1};J=-1)}\nonumber\\
+%  \textrm{complex chiral}\ \phi,\tilde\phi&:&
+%  ({\bf k},{\bf N})_{({\bf 1};J=\frac{1}{2})}\oplus
+%  (\overline{\bf k},\overline{\bf N})_{({\bf 1};J=\frac{1}{2})}\nonumber\\
+%  \textrm{complex chirals}\ b_{\alpha}&:&
+%  \left(\overline{\left({\bf \frac{k^2-k}{2}}\right)},{\bf 1}
+%  \right)_{({\bf 2};J=\frac{1}{2})}\ .
+%\end{eqnarray}
+%These take the form of $\mathcal{N}=(0,2)$ supermultiplets. We shall write
+%down alternative interactions for them shortly. At this stage, we can provide
+%an interpretation for these ADHM-like fields. Namely, the $U(N)$ ADHM fields
+%(\ref{SU(N)-ADHM}) can be regarded as providing the bosonic zero modes for
+%the bulk $U(N)$ vector multiplet, in ${\bf N^2}$. But in $SO(2N)$ bulk vector
+%multiplet, there are more complex vector multiplet fields in the antisymmetric
+%representation ${\bf \frac{N^2-N}{2}}$, from the $U(N)$ viewpoint. These vector
+%fields also provide zero modes in the $U(N)$ instanton background. The last
+%zero modes are to be provided by the above ADHM-like UV fields.
+%Thus, supposing that we can write down reasonable interactions to realize
+%the desired extra moduli in IR, we have constructed a proposal for the
+%ADHM-like fields
+%associated with a bulk vector multiplet in the rank $2$ antisymmetric
+%representation ${\bf \frac{N^2-N}{2}}$.
+%
+%The ADHM constraints coming from the $Sp(k)$ formulation are given by
+%\begin{eqnarray}
+%  &&qq^\dag-\tilde{q}^\dag\tilde{q}+[a,a^\dag]+[\tilde{a},\tilde{a}^\dag]+
+%  \phi\phi^\dag-\tilde\phi^\dag\tilde\phi+=0
+%  \ ,\ \ q\tilde{q}+[a,\tilde{a}]+\phi\tilde\phi+=0\nonumber\\
+%  &&(q\tilde\phi^\dag+\tilde{q}^\dag\phi)_S+ =0\ ,\ \
+%  (-?)_S+\cdots=0\ ,\ \
+%  (\tilde{q}\tilde\phi)_S+\cdots=0\ ,\ \ (q\phi)_S+=0
+%\end{eqnarray}
+%Had one been using the full $Sp(k)$ vector multiplets, all the non-holomorphic
+%constraints could have been imposed as the $Sp(k)$ D-term conditions. However,
+%since we now use the $U(k)$ theory formalism in which rank $2$ symmetric fields
+%are viewed as Fermi multiplets, non-holomorphic interactions cannot be hosted
+%using holomorphic superpotentials associated with Fermi multiplets. Therefore,
+%to realize the constraints on the second line (with subscripts $S$ denoting
+%rank $2$ symmetric representation), we introduce non-holomorphic superpotentials
+%which only preserve $\mathcal{N}=(0,1)$ SUSY. (\sk{details})
+%
+%
+%One can do a similar analysis for the $Sp(N)\times O(2k)$ ADHM fields, and
+%find a proposal for ADHM-like fields associated with the bulk vector multiplet
+%in rank $2$ symmetric representation ${\bf \frac{N^2+N}{2}}$. As we shall
+%not use this in the studies of exceptional instantons in this paper, we shall
+%not elaborate on the details.
+%
+%(\sk{comment on Shadchin})
+%
+%Now the ideas to describe the zero modes of exceptional instanton are as follows.
+%For certain gauge groups $G_r$ or rank $r$, one can find a maximal $SU(r+1)$
+%subgroup. Then one decomposes the adjoint representation of $G_r$ into representations of $SU(r+1)$. If all the resulting representations are rank $2$ or lower,
+%one uses the `ADHM-like ansatze' outlined above to describe all the zero modes
+%of $G_r$ instantons in the vicinity of the moduli space of $SU(r+1)$ instantons.
+%The examples which satisfies all the conditions stated in this paragraph are
+%$G_2\supset SU(3)$ for which
+%${\bf 14}\rightarrow{\bf 8}\oplus{\bf 3}\oplus\overline{\bf 3}$, and
+%$SO(7)\supset SU(4)$ for which ${\bf 21}\rightarrow{\bf 15}\oplus{\bf 6}$.
+%Although $SO(7)$ is a classical gauge group with its own $Sp(k)$ ADHM formalism,
+%we shall be finding an alternative ADHM-like formalism with manifest
+%$SU(4)\times U(k)$ symmetry. In this alternative formalism, one will be able
+%to introduce the ADHM-like matters for the exceptional bulk hypermultiplet
+%in spinor representation ${\bf 8}$.
+
+
+
+
+\end{document} 
