@@ -1,0 +1,206 @@
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{jheppub}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amsmath, amssymb}
+
+\usepackage{amsfonts,amssymb,epsfig,amsmath,mathtools,tabu}
+\usepackage{verbatim}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage{textcomp,setspace}
+\usepackage[inline]{enumitem}
+
+\usepackage{hyperref,caption,subcaption}
+\usepackage{xcolor,tikz,graphicx,afterpage}
+\usetikzlibrary{shapes.geometric,positioning}
+%\usetikzlibrary{cd}
+
+
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+
+%%%%%%%%%%%%%%%%%%% Figures %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\fig}[3]{
+\begin{figure}
+\centerline{\epsfxsize=#1\epsfbox{#2.eps}}
+\newcaption{#3. \label{#2}}
+\end{figure}
+}
+
+%%%%%%%%%%%%% Double line letters using amssymb %%%%%%%%%%%%%%%%
+
+\def\identity{{\rlap{1} \hskip 1.6pt \hbox{1}}}
+\def\iden{\identity}
+
+\def\IB{\mathbb{B}}
+\def\IC{\mathbb{C}}
+\def\ID{\mathbb{D}}
+\def\IH{\mathbb{H}}
+\def\IM{\mathbb{M}}
+\def\IN{\mathbb{N}}
+\def\IP{\mathbb{P}}
+\def\IR{\mathbb{R}}
+\def\IZ{\mathbb{Z}}
+
+%%%%%%%%%%%%%%%% Caligraphic letters %%%%%%%%%%%%%%%%%%
+
+\def\CA{{\cal A}}
+\def\CB{{\cal B}}
+\def\CC{{\cal C}}
+\def\CD{{\cal D}}
+\def\CE{{\cal E}}
+\def\CF{{\cal F}}
+\def\CG{{\cal G}}
+\def\CH{{\cal H}}
+\def\CI{{\cal I}}
+\def\CJ{{\cal J}}
+\def\CK{{\cal K}}
+\def\CL{{\cal L}}
+\def\CM{{\cal M}}
+\def\CN{{\cal N}}
+\def\CO{{\cal O}}
+\def\CP{{\cal P}}
+\def\CQ{{\cal Q}}
+\def\CR{{\cal R}}
+\def\CS{{\cal S}}
+\def\CT{{\cal T}}
+\def\CU{{\cal U}}
+\def\CV{{\cal V}}
+\def\CW{{\cal W}}
+\def\CX{{\cal X}}
+\def\CY{{\cal Y}}
+\def\CZ{{\cal Z}}
+
+%%%%%%%%%%%%%%%%%% Greek letters %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\a{\alpha}
+\def\b{\beta}
+\def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\ve{\varepsilon}
+\def\z{\zeta}
+% eta
+\def\th{\theta}
+\def\vth{\vartheta}
+\def\i{\iota}
+\def\k{\kappa}
+\def\l{\lambda}
+\def\m{\mu}
+\def\n{\nu}
+% xi
+% o
+% pi
+\def\vp{\varpi}
+\def\r{\rho}
+\def\vr{\varrho}
+\def\s{\sigma}
+\def\vs{\varsigma}
+\def\t{\tau}
+\def\u{\upsilon}
+% phi
+\def\vph{\varphi}
+% chi
+\def\ch{\chi}
+% psi
+\def\w{\omega}
+%
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\Th{\Theta}
+\def\L{\Lambda}
+% Xi
+% Pi
+\def\S{\Sigma}
+\def\Y{\Upsilon}
+% Phi
+% Psi
+\def\O{\Omega}
+
+
+%%%%%%%%%%%%%%%%% Mathematical Symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\half{\frac{1}{2}}
+\def\thalf{{\textstyle \frac{1}{2}}}
+\def\imp{\Longrightarrow}
+\def\goto{\rightarrow}
+\def\para{\parallel}
+\def\vev#1{\langle #1 \rangle}
+\def\del{\nabla}
+\def\grad{\nabla}
+\def\curl{\nabla\times}
+\def\div{\nabla\cdot}
+\def\p{\partial}
+\newcommand{\bra}[1]{\langle{#1}|}
+\newcommand{\ket}[1]{|{#1}\rangle}
+\def\fslash{\displaystyle{\not}}
+
+%%%%%%%%%%%%%%%%%%%% Normal font in math %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Tr{{\rm Tr}}
+\def\tr{{\rm tr}}
+\def\det{{\rm det}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Exceptional Instantons from Blow-up}
+
+\author[a]{Joonho Kim}
+\author[b]{Sung-Soo Kim}
+\author[c]{Ki-Hong Lee}
+\author[a]{Kimyeong Lee}
+\author[a]{and Jaewon Song}
+\affiliation[a]{School of Physics, Korea Institute for Advanced Study, Seoul 02455, Korea}
+\affiliation[b]{School of Physics, University of Electronic Science and Technology of China, No.4, Section 2, North Jianshe Road, Chengdu, Sichuan 610054, China}
+\affiliation[c]{Department of Physics and Astronomy \& Center for Theoretical Physics\\ Seoul National University, Seoul 08826, Korea}
+\emailAdd{joonhokim@kias.re.kr}
+\emailAdd{sungsoo.kim@uestc.edu.cn}
+\emailAdd{khlee11812@gmail.com}
+\emailAdd{klee@kias.re.kr}
+\emailAdd{jsong@kias.re.kr}
+
+\abstract{
+    
+}
+
+
+\preprint{KIAS-P19???, SNUTP19-???}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\section{Introduction} \label{sec:intro}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Blowup Equation} \label{sec:blowup}
+    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Examples} \label{sec:example}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusion} \label{sec:conclusion}
+
+
+\acknowledgments
+This work is supported in part by the UESTC Research Grant A03017023801317 (SSK), the National Research Foundation of Korea (NRF) Grants 2017R1D1A1B06034369 (KL, JS), and 2018R1A2B6004914 (KHL)
+
+
+\bibliographystyle{JHEP}
+\bibliography{ref}
+
+\end{document}
+
