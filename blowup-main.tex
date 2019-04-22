@@ -153,13 +153,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Exceptional Instantons from Blow-up}
 
-\author[a]{Joonho Kim}
-\author[b]{Sung-Soo Kim}
-\author[c]{Ki-Hong Lee}
-\author[a]{Kimyeong Lee}
+\author[a]{Joonho Kim,}
+\author[b]{Sung-Soo Kim,}
+\author[c]{Ki-Hong Lee,}
+\author[a]{Kimyeong Lee,}
 \author[a]{and Jaewon Song}
 \affiliation[a]{School of Physics, Korea Institute for Advanced Study, Seoul 02455, Korea}
-\affiliation[b]{School of Physics, University of Electronic Science and Technology of China, No.4, Section 2, North Jianshe Road, Chengdu, Sichuan 610054, China}
+\affiliation[b]{School of Physics, University of Electronic Science and Technology of China,\\ No.4, Section 2, North Jianshe Road, Chengdu, Sichuan 610054, China}
 \affiliation[c]{Department of Physics and Astronomy \& Center for Theoretical Physics\\ Seoul National University, Seoul 08826, Korea}
 \emailAdd{joonhokim@kias.re.kr}
 \emailAdd{sungsoo.kim@uestc.edu.cn}
@@ -183,12 +183,173 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Blowup Equation} \label{sec:blowup}
-    
+
+We consider a 5d $\mathcal{N}=1$ gauge theory with a gauge group $G$. It has the Coulomb branch moduli space, parametrized by the vacuum expectation value $\alpha_i\equiv \langle\Phi_{ii}\rangle $ of the vector multiplet scalar $\Phi$. The gauge symmetry $G$ is spontaeously broken to its Abelian subgroup $U(1)^{|G|}$ on the Coulomb branch. The low energy Abelian theory is described by the effective prepotential, which can be written as \cite{Intriligator:1997pq}
+\begin{align}
+	\mathcal{F}_\text{classical} = \frac{1}{2g^2}h_{ij}\alpha_i \alpha_j + \frac{\kappa}{6}d_{ijk}\alpha_i\alpha_j\alpha_k 
+\end{align}
+at the classical level. It was found in \cite{Nekrasov:2002qd,Nekrasov:2003rj} that the fully quantum corrected prepotential can be obtained from the BPS instanton partition function $\mathcal{Z}$ on $\Omega$-deformed $\mathbf{R}^4 \times S^1$, i.e.,
+\begin{align}
+	\mathcal{F} = \lim_{\epsilon_{1,2}\rightarrow 0} \epsilon_1 \epsilon_2 \log{\mathcal{Z}} = \mathcal{F}_\text{classical} + \mathcal{F}_\text{quantum}.
+\end{align}
+
+The BPS partition function $\mathcal{Z}$ is defined with equivariant parameters $\epsilon_{1}, \epsilon_2$, $\alpha_1, \cdots, \alpha_{|G|}$ associated to the $U(1)^2 \times U(1)^{|G|}$ action on the $k$-instanton moduli space $\mathcal{M}_{k,G}$  \cite{Nekrasov:2002qd,Nekrasov:2003rj}. Additional equivariant parameters $m_1, \cdots, m_{|F|}$ can be introduced if a given theory has the flavor symmetry $F$. It takes the form of 
+\begin{align}
+    \mathcal{Z} = \exp{(F_0)} \cdot \mathcal{I}
+\end{align}
+where $\mathcal{I}$ is the Witten index counting the BPS bound states of fundamental particles and/or non-perturbative instanton solitons. More precisely, 
+\begin{align}
+	\mathcal{I} \equiv \text{Tr}_{\mathcal{H}} \bigg[(-1)^F e^{-\frac{8\pi^2}{g^2} k} e^{-\epsilon_1 (J_1+\frac{R}{2})} e^{-\epsilon_2 (J_2+\frac{R}{2})} \prod_{i=1}^{|G|} e^{-\alpha_i Q_i} \prod_{l=1}^{|F|} e^{-m_l F_l}\bigg]
+\end{align}
+where $(J_1, J_2)$ are the angular momenta associated to the two $\mathbf{R}^2$ planes, $R$ is the Cartan generator of $SU(2)_R$ symmetry, $(Q_1, \cdots, Q_{|G|})$ are the electric charges of $U(1)^{|G|} \subset G$, and $(F_1, \cdots, F_{|F|})$ are the Cartan generators of the flavor symmetry group $F$. 
+We also frequently use the notation $\epsilon_+ \equiv \frac{\epsilon_1 + \epsilon_2}{2}$, $\epsilon_- \equiv \frac{\epsilon_1 - \epsilon_2}{2}$ and $J_l = \frac{J_1 - J_2}{2}$, $J_r = \frac{J_1 + J_2}{2}$, generating self-dual and anti-self-dual rotation inside the $\mathbf{R}^4$.
+The fugacity variables used throughout this paper are 
+\begin{align}
+    p_1 = e^{-\epsilon_1},\ p_2 = e^{-\epsilon_2},\ \omega_i = e^{-\alpha_i},\ y_l = e^{-m_l},\ Q = e^{-8\pi^2  /g^2},\ t = \sqrt{p_1p_2},\  u = \sqrt{p_1/p_2}.
+\end{align}
+
+Each multiplet
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Examples} \label{sec:example}
 
+\subsection{Ki-Hong's note}
+\paragraph{Unity Blowup equations}
+The partition functions of generic 5d $\mathcal{N}=1$ gauge theories with hypermultiplets in $R$-representation in the Coulomb branch consist of classical action term, 1-loop term, and instanton partition functions.
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=Z_{\textrm{class}}(\epsilon_1,\epsilon_2,\vec{a},m_0)\,Z_{\textrm{1-loop}}(\epsilon_1,\epsilon_2,\vec{a},m_i)\,Z_{\textrm{inst}}(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)
+\label{eq:bueq_gen}
+\end{align}
+where
+\begin{align}
+Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij}\phi^i\phi^j+\frac{1}{6}d_{ijk}\phi^{i}\phi^j\phi^k\right)\Bigg]\nonumber\\
+Z_{\textrm{1-loop}}=\textrm{exp}\Bigg[&\,-\frac{1}{2\epsilon_1\epsilon_2}\Bigg(\sum_{\alpha\in\textrm{roots}}\Bigg(\frac{1}{6}(\vec{a}\cdot\vec{\alpha})^3-\frac{1}{4}(\epsilon_1+\epsilon_2)(\vec{a}\cdot\vec{\alpha})^2+\frac{1}{12}((\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2)(\vec{a}\cdot\vec{\alpha})\Bigg)\nonumber\\
+&\,+\sum_{\omega\in\rho(R)}\Bigg(\frac{1}{6}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^3-\frac{\epsilon_1+\epsilon_2}{4}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^2\nonumber\\
+&\,\qquad\qquad-\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{24}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)\Bigg)\Bigg]\nonumber\\
+\times\,\textrm{PE}\Bigg[&\,\frac{1}{(1-p_1)(1-p_2)}\Bigg(-\sum_{\alpha\in\textrm{roots}}e^{\vec{a}\cdot\vec{\alpha}}+p_1^{1/2}p_2^{1/2}y_i\sum_{\omega\in \rho(R)}e^{\vec{a}\cdot\vec{\omega}}\Bigg)\Bigg].
+\end{align}
+Here $\vec{a}$ are Coulomb VEVs and $p_{1,2}=e^{\epsilon_{1,2}}$, $y_i=e^{m_i}$. Note that the normal exponential term saturates the zero-point energy of pletheystic exponential terms.\footnote{Technically, instead of considering this 1-loop prepotential terms, I inserted overall factors to the $l_{\vec{k}}=Z_{\textrm{1-loop}}^{(1)}Z_{\textrm{1-loop}}^{(1)}/Z_{\textrm{1-loop}}$ so that it is written by Sinh terms.} 
+
+The partition function satisfies so-called ``Unity blowup equation" 
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i, m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
+&\times\, Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
+\end{align}
+for certain $\vec{r}_a,\, r_i,\,r_0$'s.
+Here $\vec{\alpha}^{\lor}$ is the coroot lattice where the long root is normalized to have norm 2. The $r_i$'s and $r_0$ are some numbers specifying the blowup equations.
+
+Technically $r_i$'s are constrained to be half integers since, for each single letter 1-loop partition functions
+\begin{align}
+Z_{i,\vec{\omega}}=\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}}{(1-p_1)(1-p_2)}y_i\,e^{\vec{a}\cdot\vec{\omega}}\Bigg],
+\end{align}
+the ratio between shifted ones and unshifted one is
+\begin{align}
+l^{\vec{k}}_{i,\vec{\omega}}=&\,Z^{(1)}_{i,\vec{\omega}}Z^{(2)}_{i,\vec{\omega}}/Z_{i,\vec{\omega}}\nonumber\\
+=&\,\textrm{PE}\Bigg[\frac{p_1^{r_i}p_2^{1/2}y_i}{(1-p_1)(1-p_2/p_1)}p_1^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}+\frac{p_1^{1/2}p_2^{r_i}y_i}{(1-p_1/p_2)(1-p_2)}p_2^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}-\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Bigg]\nonumber\\
+=&\,\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)(p_1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Big((1-p_2)p_1^{\vec{k}\cdot\vec{\omega}+r_i+1/2}-(1-p_1)p_2^{\vec{k}\cdot\vec{\omega}+r_i+1/2}\Big)-(p_1-p_2)\Bigg]
+\end{align}
+For the $l^{\vec{k}}_{i,\vec{\omega}}$ to be finite rational function, the plethystic exponent must be finite series. It can be satisfied only when $r_i$ is a half integer.
+
+\paragraph{Instanton partition functions from blowup equations}
+From blowup equations one can compute the partition functions as follows. Rewriting the blowup equation as
+\begin{align}
+1=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}f_{\vec{k}}\,l_{\vec{k}}\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}
+\end{align}
+where $f_{\vec{k}}=Z^{(1)}_{\textrm{class}}Z^{(2)}_{\textrm{class}}/Z_{\textrm{class}}$ and $l_{\vec{k}}=Z^{(1)}_{\textrm{1-loop}}Z^{(2)}_{\textrm{1-loop}}/Z_{\textrm{1-loop}}$ with abbreviated notation 
+\begin{align}
+Z^{(1)}=Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
+Z^{(2)}=Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+\vec{k}\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
+\end{align} 
+Here note that $l_{\vec{k}}$ is independent of $Q=e^{-m_0}$, and $f_{\vec{k}}$ is some overall factor in the order of $Q^{\vec{k}\cdot\vec{k}/2}$. Expanding the equation by instanton fugacity $Q$, then at each $Q^{n}$ level the equation is written by 
+\begin{align}
+\delta_{n,0}=p_1^{r_0}Z^{(1)}_{n}+p_2^{r_0}Z^{(2)}_{n}-Z_{n}+\sum_{\vec{k}\neq 0}f_{\vec{k},r_0}l_{\vec{k}}\Bigg(\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}\Bigg)\Bigg|_{O(Q^{n-\vec{k}\cdot\vec{k}/2})}.
+\label{eq:be_n}
+\end{align}
+Since each $Z_{k}$ and $Z^{(1,2)}_{k}$ are independent of $r_0$, one can solve \eqref{eq:be_n} with three blowup equations with same $r_i$'s but different $r_0$'s. 
+
+The blowup equations for instanton partition functions of pure YM theory with generic gauge group were already studied in \cite{Keller:2012da}. They are actually \eqref{eq:bueq_gen} with 
+\begin{align}
+\vec{r}_a=0,\qquad r_0=d-h^{\lor}/2
+\end{align}
+where $d=0,\cdots, h^{\lor}$. We extend these blowup equations to the theories with matters based on pure YM blowup equations. If one restrict the cases to $\vec{r}_a=0$, as we explained in the previous section, the $r_i$'s are technically required to be half intergers. Thus we look for the $r_0$'s that provides the correct instanton partition functions by solving \eqref{eq:be_n} while fixing $\vec{r}_a=0$ and $r_i=1/2$. Here are the results.
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$G$ & matter & $r_0$ & $d$\\
+\hline
+$SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
+\hline
+$SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
+\hline
+$SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
+\hline
+$SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
+\hline
+$SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
+\hline
+$SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
+\hline
+$G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
+\hline
+$G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
+\hline
+$F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
+\hline
+$F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
+\hline
+$F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
+\hline
+\end{tabular}
+
+
+They were tested by comparing the resulting instanton partition functions with the known results from \cite{Kim:2018gjo}($SO(7)$ and $G_2$) and \cite{DelZotto:2018tcj}($F_4$ with $N_{\boldsymbol{26}}=2$). They were compared numerically, putting random numbers on the fugacities.
+Note that matters shift the $r_0$, each by one quarter of their Dynkin indices. It seems to differ from blowup formula for $SU(N)_\kappa+N_f$ instantons, where $r_0$ was affected only by its CS-level $\kappa$. However, one can rewrite the $r_0$ as
+\begin{align}
+r_0=&\,d-N/2-\left(\kappa+\frac{1}{2}N_f\right)/2+N_f/4\nonumber\\
+=&\,d-N/2-\kappa_{\textrm{eff}}/2+N_f\times I_{\textrm{fund}}.
+\end{align}
+Since fundamental matters shifts the effective CS-level, they cancel their index contributions and consequently the $r_0$ apparently looks independent of matters. 
+
+By above observations, we write the unity blowup equation for generic gauge groups and matter representations.
+\begin{align}
+Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\epsilon_1,m_i+\epsilon_1/2,m_0+r_0\epsilon_1)\nonumber\\
+&\times\,Z(\epsilon_1-\epsilon_2,\vec{a}+\vec{k}\epsilon_2,m_i+\epsilon_2/2,m_0+r_0\epsilon_2)
+\end{align}
+with 
+\begin{align}
+r_0=d-h^{\lor}/2-\kappa_{\textrm{eff}}/2+N_{\boldsymbol{R}}\times I_{\boldsymbol{R}}.
+\end{align}
+Here $I_{\boldsymbol{R}}$ is the Dynkin index of $\boldsymbol{R}$ representation.
+
+\paragraph{$SU(6)_3+1\times\boldsymbol{20}$}
+
+As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
+
+\textcolor{red}{(Written before computing the $SU(6)_3+20$ instanton partition function.)}\\
+Rather than comparing instanton partition functions directly, we consider an interesting Higgsing procedure. We consider the $SU(3)\times SU(3)\times U(1)\subset SU(6)$ where the $SU(6)$ multiplets are decomposed by
+\begin{align}
+A_{i\bar{j}}:\,\boldsymbol{35}\longrightarrow&\,(\boldsymbol{8},1)_0\oplus (1,\boldsymbol{8})_0\oplus (\boldsymbol{3},\bar{\boldsymbol{3}})_2\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_{-2}\oplus(1,1)_0,\nonumber\\
+\Phi_{ijk}:\,\boldsymbol{20}\longrightarrow&\,(\boldsymbol{3},\bar{\boldsymbol{3}})_{-1}\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_1\oplus(1,1)_3\oplus(1,1)_{-3}.
+\end{align} 
+Here to fit with the web-diagram, we set $\Phi_{156}$ and $\Phi_{234}$ are $(1,1)_3$ and $(1,1)_{-3}$. Once $\Phi_{156}$ and $\Phi_{234}$ get non-zero VEVs, 
+
+ When $a_5=-a_1-a_6$, the web-diagram factorizes to two $SU(3)_3$ whose Coulomb VEVs are $(a_1, a_5, a_6)$ and $(a_2, a_3, a_4)$. In the gauge theory, it can be seen partly from prepotential. The prepotential of $S(6)_3+1\times\boldsymbol{20}$ is
+\begin{align}
+\mathcal{F}=\frac{1}{2}m_0\sum_{i=1}^{6}a_i^2+\frac{1}{2}\sum_{i=1}^{6}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3-\frac{1}{6}\sum_{1<i<j}(a_1+a_j+a_k)^3
+\end{align}
+at the Weyl chamber $a_1>\cdots>a_6$. As one sets the Coulomb VEV $a_6=-a_1-a_5$ and $a_4=-a_2-a_3$, one can check
+\begin{align}
+\mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)=\mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4)
+\end{align}
+where
+\begin{align}
+\mathcal{F}_{SU(3)_3}(m_0,a_1,a_2,a_3)=\frac{1}{2}m_0\sum_{i=1}^{3}a_i^2+\frac{1}{2}\sum_{i=1}^{3}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3.
+\end{align}
+It is Higgsed by 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
