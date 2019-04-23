@@ -168,7 +168,9 @@
 \emailAdd{jsong@kias.re.kr}
 
 \abstract{
-    
+The Nekrasov partition function for 4d $\CN=2$ or 5d $\CN=1$ gauge theory on the blow up of a point $\hat{\IC}^2$ can be written in terms of the partition function on the flat space $\IC^2$. At the same time, the partition function on the blow up is identical to the partition function on a flat space for sufficiently large class of examples. 
+This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations. 
+Especially, we obtain the partition function for the exceptional gauge groups $EFG$ with fundamental hypermultiplets/spinors and more. We also compute the case with $SU(6)$ with rank-3 antisymmetric tensor and compare with the topological vertex computation using the recently found 5-brane web configuration. 
 }
 
 
@@ -184,13 +186,47 @@
 
 \section{Instanton Counting from Blow-up} \label{sec:blowup}
 
-The essential idea for us is that the gauge theory partition function for a 4d $\CN=2$ theory (or 5d $\CN=1$) on a blow up of a point $\hat{\IC}^2$ (or $S^1 \times \hat{\IC}^2$) is identical to that on the flat space $\IC^2$ (or $S^1 \times \IC^2$) \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}. This can be argued as follows: The blow up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by $\IP^1$. There can be massive states coming from $\IP^1$. As we shrink the size of $\IP^1$, this may become massless which might in principle contribute to a new state. This happens when we have a singularity as we blow-down. For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. In our case, we do not obtain any singularity as we blow down the sphere. Therefore, as long as we keep the size of blow up small (and do not turn on extra flux through the sphere), the physical degree of freedom should be identical to that of the flat $\IC^2$. (In some sense, the partition function is a birational invariant. But there can be wall-crossing.)
+The essential idea of using the blow-up for the instanton counting is that the gauge theory partition function for a 4d $\CN=2$ theory or 5d $\CN=1$ on a blow up of a point $\hat{\IC}^2$ (or $S^1 \times \hat{\IC}^2$) can be written in two different ways. This allows us to write a recursion relation for the instanton partiton function that can be solved easily \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg, Keller:2012da}. 
 
-The partition function on a blow up can be written as a sum over a product of the partition function on $\IC^2$ as follows (if we turn off any external flux that can be supported on the blow up):
-\begin{align} \label{eq:blowup}
- \hat{Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) 
+One of the expression is obtained via localization on the Coulomb branch obtained by patching together flat-space partition functions. The blow up of a point of $\IC^2$ can be described as a subspace of $\IC^2 \times \IP^1$ defined as
+\begin{align}
+ \{ (x, y), [z: w] \in \IC^2 \times \IP^1 | xw = yz \} \ , 
 \end{align}
+where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space is identical to $\IC^2$ when $(x, y) \neq (0, 0)$, and the origin is replaced by complex projective plane. We will be considering $U(1)^2$-equivariant partition function, with each $U(1)$'s acting as the rotation of two complex planes. This $U(1)^2$ action acts on $\hat{\IC}^2$ as
+\begin{align}
+ ((x, y), [z: w]) \mapsto (e^{i \e_1} x, e^{i \e_2} y), [e^{i \e_1} z, e^{i \e_2} w]) \ . 
+\end{align}
+The zero sized instantons will be located at the two fixed points of the $U(1)^2$ action, namely the north pole and the south pole of the sphere. At these points, the weights of the $U(1)^2$ action become
+\begin{align}
+ ((0, 0), [1, 0]) : (\e_1, \e_2 - \e_1) , \qquad ((0, 0), [0, 1]): (\e_1 - \e_2, \e_2) \ . 
+\end{align}
+
+Now, the (full) partition function on a blow up (includes both the perturbative and the instanton parts) $\hat{Z}$ can be written as a sum over a product of the partition functions at two fixed points as (here we turn off any external flux that can be supported on the blow up) [References]
+\begin{align} \label{eq:blowup}
+ \hat{Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
+\end{align}
+where $Z(\vec{a}, \e_1, \e_2)$ is the (full) partition function on $\IC^2$ where $\vec{a}$ is the Coulomb parameter. 
 Here $\Lambda$ is the weight lattice of the gauge group and the vector $\vec{k}$ labels different flux configurations on the divisor of the blow-up classified by the first Chern numbers. 
+We obtain this expression by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is broken to $U(1)^r$ where $r$ is the rank of the gauge group. We need to patch together all possible field configurations with zero sized instantons located at north and south poles, and all the inequivalent configurations are labeled by the first Chern numbers which we have to sum over. The shift of the Coulomb parameter comes from the gauge transformation along the equator that connects the north and the south pole so that $\vec{a}_N - \vec{a}_S = \vec{k} (\e_1 - \e_2)$. 
+
+
+The second expression for the partition function on the blow-up is that $\hat{Z}$ is actually identical to the partition function $Z$ on the flat space $\IC^2$ (or $S^1 \times \IC^2$) \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}. This can be argued as follows: The blow up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by $\IP^1$, called as the exceptional divisor. The blow-up can be also identified as the total space of the bundle $\CO(-1) \to \IP^1$. 
+The Nekrasov partition function gets contributions only from the zero-size instantons and the finite size of the divisor should not affect the partition function as we smoothly shrink the size. Therefore, we expect that the partition function on the blow-up to be identical to that of the flat $\IC^2$. (In some sense, the partition function is a birational invariant. But there can be wall-crossing.)
+
+This is a special feature of the blow-up of a point. In principle, there can be extra states coming from the $\IP^1$. As we shrink the size of the $\IP^1$, they may become massless which might in principle contribute to the partition function when there is a singularity as we blow-down. 
+For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. In our case, we do not obtain any singularity as we blow down the sphere.  As we will discuss later, this simple picture does not necessarily hold when there are too many hypermultiplets. But this is actually shown to be the case for the pure YM theory, and we will also demonstrate that it is true for many interesting cases.\footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing.}
+
+Therefore, we have a powerful identity:
+\begin{align}
+ Z(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ . 
+\end{align}
+But this is not enough to determine the partition function since there are three unknown functions and one relation. To achieve this we need to consider a `correlation function' $\langle \mu(C) \mu(C) \ldots \rangle$ of operators $\mu$ associated to the two-cycle in the blow-up so that we get 
+\begin{align}
+ \hat{Z}^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \mu(\vec{k})^d Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ . 
+\end{align} 
+We can insert arbitrary number of $\mu$'s and they in turn can be written in a very simple form. Now, as we shrink the two cycles to recover the flat $\IC^2$, the effect of the insertion of $\mu$ turns out to give either a trivial or vanishing contribution due to the conservation laws. This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function. 
+
+In the remainder of this section we will give detailed formulae for 4d and 5d gauge theories. 
 
 \subsection{4d gauge theory}
 Building blocks for the 4d
@@ -265,7 +301,7 @@ We have checked this expression explicitly for the $SU(2)$ gauge theory with $N_
 
 Notice that in the Gottsche-Nakajima-Yoshioka \cite{Nakajima:2009qjc, Gottsche:2010ig}, the mass parameters and the instanton parameters (for the 5d) are also shifted when the contribution from North and South poles are computed. This is simply a reflection of the fact that they twist the instanton bundles by the half-Canonical bundle of the $\IC^2$, which shift the mass parameters by $m \to m - \frac{\e_1 + \e_2}{2}$. If we do not twist by this amount, we get a cleaner expression as above. 
 
-\subsubsection{Correlation functions}
+\paragraph{Correlation functions}
 On the blow-up, we have a non-trivial 2-cycle. This allows us to insert the equivariant version of the Donaldson operator, which can be written in terms of the twisted fields as
 \begin{align} \label{eq:muC}
  \left\langle \exp \left[ t \int d^4 x \left( \omega \wedge \phi F + \half \psi \wedge \psi + H F \wedge F \right) \right] \right\rangle \ . 
