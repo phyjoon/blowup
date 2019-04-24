@@ -487,7 +487,151 @@ where
 \end{align}
 It is Higgsed by 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{$SU(6)_3$ with a rank-3 antisymmetric hyper}
+
+\textcolor{red}{(describe blow-up computation)}
+
+
+It was recently found in \cite{Hayashi:2019yxj} that the 5d $SU(6)_3$ gauge theory with a rank-3 antisymmetric hypermultiplet can be engineered from the 5-brane web configuration, depicted in Figure~\ref{fig:SU6-monopole}. Given a web diagram, we utilize  the topological vertex method \cite{Aganagic:2003db,Iqbal:2007ii} to compute all genus topological string amplitudes, which is the logarithm of the 5d Nekrasov partition function on $\Omega$-deformed $\mathbf{R}^4\times S^1$ \cite{Gopakumar:1998jq}. We will check its agreement with the blowup partition function (eqn), providing a supporting evidence to the suggested blow-up equation (eqn).
+% We use the notation of \cite{Bao:2013pwa} for the following topological vertex computation. 
+
+By applying the topological vertex method to Figure~\ref{fig:SU6-monopole}, we find that the instanton partition function can be  written as the following sum over all possible 6 Young diagrams:
+\begin{align}
+  \label{eq:znek-su6}
+  Z_{\text{Nek}} 
+  =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
+  &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
+  \end{align}
+  where the K\"ahler parameters can be identified as 
+\begin{align}
+A_i = e^{-a_i}, \qquad q = e^{-\frac{8\pi^2}{g^2}}, \qquad g=e^{-\epsilon_-}.
+\end{align}
+We briefly explain our notation: For a given Young diagram $\mu$, $|\mu|$ denotes the total number of boxes. $\mu_i$ is the number of boxes in the $i$-th row of $\mu$. $\mu^t$ is the transpose of $\mu$. We also use
+\begin{align}
+f_\mu(g) = (-1)^{|\mu|}g^{\frac{1}{2}({\Vert \mu^t\Vert ^2 - \Vert \mu\Vert ^2})}, \qquad \tilde{Z}_{\lambda}(g) 
+= \prod_{(i,j) \in \lambda} {(1 - g^{\lambda_i + \lambda^t_j - i - j +1} )^{-1}}
+\end{align}
+with $\Vert \mu \Vert^2   = \sum_{i} \mu_i^2$. The factor $Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$ involves a single summation over all possible Young diagrams, i.e.,
+\begin{align}
+Z_{\text{left}}(\vec{Y})= \,
+\sum_{Y_0} &( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
+g^{\frac{\Vert Y_0^t\Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}(g)^2
+\ \textstyle\prod_{i=1}^6 g^{\frac{\Vert Y_i\Vert ^2}{2}} \tilde{Z}_{Y_i} (g)
+\cr 
+& 
+\times 
+R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_0^t }^{-1} (A_1^2A_6) \cr 
+& 
+\times  
+ \textstyle\prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})\ 
+ \prod_{i=2}^5 R_{Y_0^t Y_i} (A_1 A_i  A_6) ,
+\end{align}
+in which we introduce
+\begin{align}
+R_{\lambda \mu} (Q)=R_{ \mu\lambda} (Q)
+&= \text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
+\times N_{\lambda^t \mu} (Q)
+\end{align}
+with PE representing the Plethystic exponential
+ and 
+\begin{align}
+N_{\lambda \mu} (Q) 
+= \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
+\prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right).
+\end{align}
+We also recall that the Nekrasov partition function is divided into the perturbative partition function $Z_{\text{pert}}$ and the weighted sum of $k$-instanton partition function $Z_k$.
+\begin{align}
+Z_{\text{Nek}} = Z_{\text{pert}}\Big(1 + \sum_{k=1}^{\infty}q^kZ_k\Big).
+\end{align}
+
+The perturbative part of the partition function $Z_{\text{pert}}$ comes from the summand of \eqref{eq:znek-su6} at empty Young diagrams, i.e., $(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)$. It is given by
+\begin{align}
+  \label{eq:zpert-top}
+Z_{\rm pert} 
+=& \,
+Z_{\text{half}}(\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)^2
+\cr
+=&\, 
+\text{PE} \Biggl[ 
+\frac{2g}{(1-g)^2} 
+\Bigl( \frac{A_1}{A_6} + \frac{1}{A_1A_6^2} + A_1^2  A_6 
++ \sum_{2 \le i <  j \le 5} \frac{A_i}{A_j}
+- \sum_{i=2}^5 A_1 A_i  A_6
+\Bigr)
+\Biggr]
+\cr 
+& 
+\times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
+g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
+\cr 
+& \qquad \qquad
+\textstyle N_{Y_0^t \varnothing }^{-1} (A_1{}^{-1} A_6{}^{-2})
+ N^{-1}_{Y_0 \varnothing } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \varnothing } (A_1 A_i  A_6)\bigg)^2 ,
+\end{align}
+where the last two lines can be  combined into the following closed-form expression:
+\begin{align}
+  \text{PE} \Biggl[ 
+    \frac{2g}{(1-g)^2} 
+    \Bigl(\sum_{i=2}^5  \frac{A_1}{A_i} +\sum_{i=2}^5  \frac{A_i}{A_6} - \frac{1}{A_1A_6^2} - A_1^2  A_6 
+    - \sum_{2\leq i<j \leq 5} A_1 A_i  A_j + \mathcal{O}(A_1^6)
+    \Bigr)
+    \Biggr].
+\end{align}
+So \eqref{eq:zpert-top} is manifestly consistent with the equivariant index  \cite{Shadchin:2005mx} for 5d $SU(6)$ gauge theory with a hypermultiplet in the rank-3 antisymmetric representation $\mathbf{20}$, i.e., 
+\begin{align}
+  Z_{\rm pert}  = \text{PE} \Biggl[ 
+    \frac{2g}{(1-g)^2} 
+    \Bigl(\sum_{1\leq i<j \leq 6}  \frac{A_i}{A_j} 
+    - \sum_{2\leq i<j \leq 6} A_1 A_i  A_j + \mathcal{O}(A_1^6)
+    \Bigr)
+    \Biggr].
+\end{align}
+
+The 1-instanton partition function $Z_1$ can be obtained from the summands of \eqref{eq:znek-su6} at Young diagrams satisfying $\sum_{i=1}^6 |Y_i|=1$. There are 6 different profiles of Young diagrams. The configuration $|Y_i| = 1$ and $Y_{j\neq i} = \varnothing$ contributes to $Z_{1}$ by
+\begin{align}
+  + \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
+  \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
+ \Bigr)^2. 
+\end{align}
+Summing over all six contributions, we find
+\begin{align}
+  Z_1 = \sum_{i=1}^6 \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
+  \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
+ \Bigr)^2. 
+\end{align}
+which is in agreement with the blowup partition function (eqn). \textcolor{red}{(overall sign: looking at the GV invariant for single W-boson + single instanton (which should be -2), the topological vertex computation seems to be correct. blowup should have an overall sign issue)}
+\pagebreak
+
+%---------  Figure  ---------------%
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{SU6-monopole.jpeg}
+\caption{A 5-brane web for $SU(6)_3+1{\bf TAS}$ with massless ${\bf TAS}$.}
+\label{fig:SU6-monopole}
+\end{figure}
+%----------------------------------%
+
+  %---------  Figure  ---------------%
+\begin{figure}[t]
+\centering
+\includegraphics[width=12cm]{SU6-Higgsing.jpeg}
+\caption{(a) A Higgsing from from $SU(6)_3+1{\bf TAS}$ to two $SU(3)_3$ theories. (a) Two $SU(3)_3$ theories are painted in blue and in pink respectively. A new decoupled mode emerges.}
+\label{fig:SU6-Higgsing}
+\end{figure}
+%----------------------------------%
+
+%---------  Figure  ---------------%
+\begin{figure}[t]
+\centering
+\includegraphics[width=10cm]{SU6young.jpeg}
+\caption{A labeling of Young diagrams assigned to the horizontal lines in Figure \ref{fig:SU6-monopole}.}
+\label{fig:SU6young}
+\end{figure}
+%----------------------------------%
+
+
 
 \section{Conclusion} \label{sec:conclusion}
 
