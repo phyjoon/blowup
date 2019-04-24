@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 %\pdfoutput=1
 \usepackage{jheppub}
-%\usepackage[notref,color,draft]{showkeys}
+\usepackage[notref,color,draft]{showkeys}
 %\usepackage[pageref]{backref}
 \usepackage{amsthm,amsbsy,amsfonts,mathrsfs,enumerate,float,wrapfig,amsmath}
 \usepackage{subfigure}
@@ -35,7 +35,7 @@ TO DO LIST:\\
 %KIAS-P*****\\
 \end{flushright}
 }
-\today
+\today 
 %\maketitle
 \section{Prepotential}
 The effective prepotential on a Coulomb branch of a 5d gauge theory with a gauge group $G$ and matter $f$ in a representation $R_f$ is given by [Seiberg] %\cite{Seiberg:1996bd, Morrison:1996xf, Intriligator:1997pq}\footnote{In \cite{Closset:2018bjz}, the authors approach the prepotential differently.}
@@ -167,7 +167,7 @@ Z_{\text{Nek}}
 &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y}), \label{Znek1}
 \end{align}
 where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$.
-$Z_{\text{left}}(\vec{Y})$ and $Z_{\text{right}}(\vec{Y})$ 
+$Z_{\text{left}}(\vec{Y})$ and $Z_{\text{right}}(\vec{Y})$ are given by
 \begin{align}
 Z_{\text{left}}(\vec{Y})=& \,
 \sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
@@ -184,27 +184,21 @@ R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\
 \end{align}
 and
 \begin{align}
-Z_{\text{right}}(\vec{Y})=&
-\sum_{Y_7} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_7|} 
-g^{\frac{||Y_7^t||^2+||Y_7||^2}{2}} \tilde{Z}_{Y_7}^2 f_{Y_7}^2(g)
-\prod_{i=1}^6 g^{\frac{||Y_i||^2}{2}} \tilde{Z}_{Y_i} 
-\cr 
-& 
-%\times 
-%R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1}) \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
+Z_{\text{right}}(\vec{Y})=&\, Z_{\text{left}}(\vec{Y})\,/.\,\{Y_0 \to Y_7 \}~.
+%{}\Big|_{Y_0\to Y_7}.
+%\sum_{Y_7} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_7|} 
+%g^{\frac{||Y_7^t||^2+||Y_7||^2}{2}} \tilde{Z}_{Y_7}^2 f_{Y_7}^2(g)
+%\prod_{i=1}^6 g^{\frac{||Y_i||^2}{2}} \tilde{Z}_{Y_i} 
 %\cr 
 %& 
+%\times 
+%R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_7 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_7^t }^{-1} (A_1^2A_6) \cr 
+%& 
 %\times  
-%R_{Y_7 Y_6^t} (A_1{}^{-1} A_6{}^{-2})\prod_{i=1}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6).
-\times 
-R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_7 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_7^t }^{-1} (A_1^2A_6) \cr 
-& 
-\times  
- \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
- \prod_{i=2}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6) .
+% \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
+% \prod_{i=2}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6) .
 \end{align}
 Here, 
-with 
 \begin{align}
 A_6 
 = \prod_{i=1}^5 A_i{}^{-1}, 
@@ -228,8 +222,8 @@ The partition function can be written as a sum of the instanton partition functi
 \begin{align}
 Z_{\text{Nek}} = Z_{\text{pert}}\left(1 + \sum_{k=1}^{\infty}q^kZ_k\right) ,
 \end{align}
-where $Z_{\text{pert}}$ represents the perturbative part of the partition function given by the order $q^0$ in \eqref{Znek1}, while $Z_k$ stands for the $k$-instanton partition function. \\
-------- (liable up to here) ----\\
+where $Z_{\text{pert}}$ represents the perturbative part of the partition function given by the order $q^0$ in \eqref{Znek1}, while $Z_k$ stands for the $k$-instanton partition function.
+
 \paragraph{The perturbative part.}
 By setting $Y_1=Y_2=\cdots = Y_6 = \emptyset$ in  \eqref{Znek1}, the partition part is obtained 
 \begin{align}
@@ -240,23 +234,30 @@ Z_{\text{right}}( (\emptyset,\emptyset,\emptyset,\emptyset,\emptyset,\emptyset )
 \cr
 =&\, 
 \text{PE} \Biggl[ 
-\frac{{\color{red}2}g}{(1-g)^2} 
+\frac{2g}{(1-g)^2} 
 \Bigl( A_1 A_6{}^{-1} 
++ A_1{}^{-1} A_6{}^{-2} + A_1^2  A_6 
 + \sum_{2 \le i <  j \le 5} A_i A_j{}^{-1}
 %+ \sum_{1 \le i <  j \le 6} A_i A_j{}^{-1}
 %\\ 
 %& \qquad \qquad \qquad \qquad 
-- A_1{}^{-1} A_6{}^{-2} 
-- \sum_{i=1}^5 A_1 A_i  A_6
+- \sum_{i=2}^5 A_1 A_i  A_6
 \Bigr)
 \Biggr]
 \cr 
 & 
-\times \bigg[\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
-g^{\frac{||Y_0^t||^2+||Y_0||^2}{2}} \tilde{Z}_{Y_0}^2 f_{Y_0}^2(g)
-%\cr 
-%& \qquad 
-N_{Y_0^t \emptyset } (A_1{}^{-1} A_6{}^{-2})\prod_{i=1}^5 N_{Y_0 \emptyset } (A_1 A_i  A_6)\bigg]^{\color{red}2} .\nn
+%\times \prod_{Y_k=\{Y_0, Y_7\}}\bigg[\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
+%g^{\frac{||Y_0^t||^2+||Y_0||^2}{2}} \tilde{Z}_{Y_0}^2 f_{Y_0}^2(g)
+%%\cr 
+%%& \qquad 
+%N_{Y_0^t \emptyset }^{-1} (A_1{}^{-1} A_6{}^{-2})\cr
+%&\qquad N^{-1}_{Y_0 \emptyset } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \emptyset } (A_1 A_i  A_6)\bigg]^{\color{red}2} ,\nn
+\times \prod_{Y_k=\{Y_0, Y_7\}}\bigg(\sum_{Y_k} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_k|} 
+g^{\frac{||Y_k^t||^2+||Y_0||^2}{2}} \tilde{Z}_{Y_k}^2 f_{Y_k}^2(g)
+\cr 
+& \qquad \qquad
+N_{Y_k^t \emptyset }^{-1} (A_1{}^{-1} A_6{}^{-2})
+ N^{-1}_{Y_k \emptyset } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_k \emptyset } (A_1 A_i  A_6)\bigg) ,
 \end{align}
 where we used the identity
 \begin{align}
@@ -271,15 +272,45 @@ N_{\lambda \mu} (Q)
 = \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
 \prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right).
 \end{align}
+ \\
+{\color{red}------- (liable up to here) ----}\\
+
 Note that in order to obtain the exact expression for the perturbative part we still need to sum over the Young diagram $Y_0$. We can still evaluate the summation in terms of an expansion by $A_1$. Namely when we sum over the Young diagram until $|Y_0| \leq k$, the expression is exact until the order $A_1^k$. The summation of the Young diagram $Y_0$ until $|Y_0| = 7$ yields the expression  
 \begin{align}
 Z_{\rm pert} 
-&= \text{PE}\left[\frac{g}{(1-g)^2} 
-\left( 2\sum_{1 \le i < j \le 6} A_i A_j{}^{-1} 
+&= \text{PE}\left[\frac{2\,g}{(1-g)^2} 
+\left( \sum_{1 \le i < j \le 6} A_i A_j{}^{-1} 
 - \sum_{1 = i < j < k \le 6} A_i A_j A_k
 + \mathcal{O} (A_1{}^8)\right)\right].\label{Zpert1}
 \end{align} 
 We observed that the the series expansion by $A_1$ gives an expression which stops at the order $A_1$ inside the Plethystic exponential as far as we checked. Hence, we claim that $\mathcal{O} (A_1{}^8)$ term is actually exactly zero. Indeed, the partition function \eqref{Zpert1} is exactly equal to the perturbative part of the partition function of the $SU(6)$ gauge theory with a half-hypermultiplet in the rank-3 antisymmetric representation. We can also see that the charge of the BPS states counted by the perturbative partition function agrees with the charge of the positive weights used in the prepotential computation for \eqref{pre.SU6whTSA}.
+
+Next, we compute the $1$-instanton part. The $1$-instanton part can be read off from the coefficient of the $q^1$ order part in \eqref{Znek1} divided by the perturbative part given in \eqref{Zpert1}.
+%of $\sum_{Y_1, \cdots Y_6}q^{\sum_{i=1}^6|Y_i|}Z_{\text{inst}}(Y_1, Y_2, Y_3, Y_4. Y_5, Y_6)$. 
+Hence the order $q^1$ contribution is given by combinations where $|Y_i| = 1$ for one of the $Y_i, (i=1, \cdots, 6)$ and the others are trivial. Furthermore, we still need to sum over $Y_0$ and evaluate the summation in terms of a series expansion by $A_1$\footnote{The expression \eqref{Znek1} contains factors with $A_1$ in the denominator. We perform a series expansion by $A_1$ only for the numerator of \eqref{Znek1}. }. $A_1$ is a good expansion parameter since the explicit summation of Young diagrams in \eqref{Znek1} involves only positive powers of $A_1$. For example, the contribution from $|Y_1| = 1 , |Y_j| = 0 \,\, (j=2,3,4,5,6)$ to the 1-instanton part is given by, up to order $\mathcal{O} (A_1{}^8)$,
+\begin{align}
+ - \frac{g}{(1-g)^2} \frac{A_1^6}{\prod_{i= 2}^6 (A_i - A_1)^2} 
+ \Bigl(
+1 - \sum_{i = 2}^6  A_i{}^{-1} A_1 + \sum_{i = 2}^6  A_i A_1^2 - A_1^3
+\Bigr)^2. \label{Z1inst1}
+\end{align} 
+We again observed that the stop of the series expansion by $A_1$ in the numerator of \eqref{Z1inst1} and we claim that the $\mathcal{O} (A_1{}^8)$ term is actually exactly zero. 
+Similarly we can also compute the other combinations of the Young diagrams which contribute to the $1$-instanton part. Summing up all the contributions from the other combinations of the Young diagrams which contribute to the $1$-instanton part, we obtain
+\begin{align}
+Z_{1} 
+&= - \sum_{\ell=1}^6
+\frac{g}{(1-g)^2} \frac{A_\ell^6}{\prod_{i \neq \ell} (A_i - A_\ell)^2} 
+\Bigl[
+1 - \sum_{i \neq \ell}  A_i{}^{-1} A_\ell + \sum_{i \neq \ell}  A_i A_\ell^2 - A_\ell^3
+\Bigr]^2
+\nn\\
+&= - \sum_{\ell=1}^6
+\frac{e^{-3a_\ell}}{(2 \sinh \frac{\epsilon}{2} )^2\prod_{i \neq \ell} (2 \sinh \frac{a_i-a_\ell}{2})^2} 
+\Bigl[ (2\sinh \frac{3 a_\ell}{2}) -
+ \sum_{i \neq \ell}  (2\sinh \frac{2a_i +a_\ell}{2}) \Bigr].
+\label{Zinst1}
+\end{align}
+This is the explicit expression for the $1$-instanton part of the partition function for the $SU(6)$ gauge theory with $N_{\bf TAS} = 1$ and $\kappa = 3$. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,7 +324,6 @@ We observed that the the series expansion by $A_1$ gives an expression which sto
 
 %\appendix 
 
-%====================================================================
 
 %\input{}
 
