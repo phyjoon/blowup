@@ -169,7 +169,7 @@
 
 \abstract{
 The Nekrasov partition function for 4d $\CN=2$ or 5d $\CN=1$ gauge theory on the blow up of a point $\hat{\IC}^2$ can be written in terms of the partition function on the flat space $\IC^2$. At the same time, the partition function on the blow up is identical to the partition function on a flat space for sufficiently large class of examples. 
-This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations. 
+This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations without knowing explicit construction of the instanton moduli space. 
 Especially, we obtain the partition function for the exceptional gauge groups $EFG$ with fundamental hypermultiplets/spinors and more. We also compute the case with $SU(6)$ with rank-3 antisymmetric tensor and compare with the topological vertex computation using the recently found 5-brane web configuration. 
 }
 
@@ -201,7 +201,7 @@ The zero sized instantons will be located at the two fixed points of the $U(1)^2
  ((0, 0), [1, 0]) : (\e_1, \e_2 - \e_1) , \qquad ((0, 0), [0, 1]): (\e_1 - \e_2, \e_2) \ . 
 \end{align}
 
-Now, the (full) partition function on a blow up (includes both the perturbative and the instanton parts) $\hat{Z}$ can be written as a sum over a product of the partition functions at two fixed points as (here we turn off any external flux that can be supported on the blow up) [References]
+Now, the (full) partition function on a blow up (includes both the perturbative and the instanton parts) $\hat{Z}$ can be written as a sum over a product of the partition functions at two fixed points as (here we turn off any external flux that can be supported on the blow up) \cite{Nekrasov:2003vi, Gottsche:2006bm, Gottsche:2006tn, Gasparim:2008ri, Bonelli:2012ny}
 \begin{align} \label{eq:blowup}
  \hat{Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
 \end{align}
@@ -211,20 +211,53 @@ We obtain this expression by performing the localization on the Coulomb branch. 
 
 
 The second expression for the partition function on the blow-up is that $\hat{Z}$ is actually identical to the partition function $Z$ on the flat space $\IC^2$ (or $S^1 \times \IC^2$) \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}. This can be argued as follows: The blow up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by $\IP^1$, called as the exceptional divisor. The blow-up can be also identified as the total space of the bundle $\CO(-1) \to \IP^1$. 
-The Nekrasov partition function gets contributions only from the zero-size instantons and the finite size of the divisor should not affect the partition function as we smoothly shrink the size. Therefore, we expect that the partition function on the blow-up to be identical to that of the flat $\IC^2$. (In some sense, the partition function is a birational invariant. But there can be wall-crossing.)
+The Nekrasov partition function gets contributions only from the zero-size instantons localized at the fixed points of the $U(1)^2$ action so that the size of the divisor should not affect the partition function as we smoothly shrink it. Therefore, we expect that the partition function on the blow-up to be identical to that of the flat $\IC^2$.
 
 This is a special feature of the blow-up of a point. In principle, there can be extra states coming from the $\IP^1$. As we shrink the size of the $\IP^1$, they may become massless which might in principle contribute to the partition function when there is a singularity as we blow-down. 
-For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. In our case, we do not obtain any singularity as we blow down the sphere.  As we will discuss later, this simple picture does not necessarily hold when there are too many hypermultiplets. But this is actually shown to be the case for the pure YM theory, and we will also demonstrate that it is true for many interesting cases.\footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing.}
+For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. In our case, we do not obtain any singularity as we blow down the sphere.  As we will discuss later, this simple picture does not necessarily hold when there are too many hypermultiplets. But this is  shown to be the case for the pure YM theory, and we will demonstrate that it is also true for many interesting cases with matter hypermultiplets.\footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing. \cite{Ito:2013kpa}}
 
 Therefore, we have a powerful identity:
 \begin{align}
- Z(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ . 
+ Z(\vec{a}, \e_1, \e_2, q) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1, q) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q) \ . 
 \end{align}
-But this is not enough to determine the partition function since there are three unknown functions and one relation. To achieve this we need to consider a `correlation function' $\langle \mu(C) \mu(C) \ldots \rangle$ of operators $\mu$ associated to the two-cycle in the blow-up so that we get 
+But this is not enough to determine the partition function since there are three unknown functions and one relation. To achieve this we need to consider a `correlation function' $\langle \mu(C) \mu(C) \ldots \rangle$ of operators $\mu$ associated to the two-cycle $C$ in the blow-up. In terms of the component fields of the Doanldson-twisted theory, it can be written as
+\begin{align} \label{eq:muC}
+\mu(C) = \int d^4 x \left( \omega \wedge \phi F + \half \psi \wedge \psi + H F \wedge F \right)  \ , 
+\end{align}
+where $\omega$ is the two-form dual to $C$ and $H = \e_1 |z_1|^2 + \e_2 |z_2|^2$ is the moment map for the $U(1)^2$ action. 
+
+Let us consider the generating function of the correlators by inserting $e^{t \cdot \mu(C)}$. Then the partiton function $\hat{Z}^{(d)}$ can be written in a very simple form as 
 \begin{align}
- \hat{Z}^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \mu(\vec{k})^d Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ . 
+ \hat{Z}^{(t)}(\vec{a}, m, \e_1, \e_2, q) = \sum_{\vec{k} \in \Lambda} \exp\left(t \cdot \mu(\vec{k}) \right)  Z^{(N), t} (\vec{k}) Z^{(S), t} (\vec{k})\ , 
 \end{align} 
-We can insert arbitrary number of $\mu$'s and they in turn can be written in a very simple form. Now, as we shrink the two cycles to recover the flat $\IC^2$, the effect of the insertion of $\mu$ turns out to give either a trivial or vanishing contribution due to the conservation laws. This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function. 
+where
+\begin{align}
+\begin{split}
+ Z^{(N), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q e^{t\e_1}) \ , \\
+ Z^{(S), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q e^{t\e_2}) \ , 
+\end{split}
+\end{align}
+and $\mu(\vec{k})$ is the contribution coming from the operator $\mu(C)$ which is a function of $\vec{k}$ that also depends on $\vec{a}, \e_1,\e_2$ that we often abbreviate. Explicitly, it is given as
+\begin{align}
+ \exp \left( \mu(\vec{k}) \right) = \exp \left( \vec{k} \cdot \vec{a} +  \half \vec{k}\cdot\vec{k} (\e_1 + \e_2) \right) \ . 
+\end{align}
+Notice that we shift the instanton parameter by equivariant parameters at both poles $q \to q e^{t \e_{1, 2}}$. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
+
+Now, as we shrink the two cycles to recover the flat $\IC^2$, the effect of the insertion of $\mu$ turns out to give a vanishing contribution due to the conservation laws. 
+To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqref{eq:muC} has $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry. The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to a discrete subgroup $\IZ_{2h^\vee - I(R)}$ where $h^\vee$ is the dual Coxeter number of the gauge group and $I(R)$ is the Dynkin index of the half-hypermultiplet representation $R$.\footnote{Here we normalize the Dynkin index so that the fundamental for the $SU(N)$ has $I=1/2$. Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
+\begin{align}
+\hat{Z}_{4d}^{(t)} = Z_{4d} + \CO(t^{2h^\vee - I(R)})  \ . 
+\end{align}
+%Therefore, for the x$SU(N_c)$ SQCD with $N_f < 2N_c - 2$, we have enough number of relations to fix the instanton partition function. 
+This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function as long as the hypermultiplet representation is not too large, namely, when $2h^\vee - I(R) > 2$. In this case, we can expand $\hat{Z}^{(t)}$ up to order $t^2$ to obtain 3 relations that is enough to fix the instanton part of the partition function from the \emph{perturbative} part as we will see soon. 
+
+For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the operator $\mu(C)^d$ is given via exponentiation $\exp\left( d \beta \cdot \mu (C) \right)$ where $\beta$ is the size of $S^1$. We can always choose our scale so that $\beta = 1$ and we will omit this parameter. The exponentiation accounts for the Kaluza-Klein tower. Since we know that in the 4d limit the insertion of $\mu(C)$ does not alter the partition function (as long as $2h^\vee - I(R)>2$), we expect this to be true as well in the 5d uplift. 
+[MORE EXPLANATION] 
+Therefore, we obtain
+\begin{align}
+ Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, 2) \ , 
+\end{align} 
+for the 5d theories as long as $2h^\vee - I(R) > 2$.
 
 In the remainder of this section we will give detailed formulae for 4d and 5d gauge theories. 
 
@@ -301,22 +334,22 @@ We have checked this expression explicitly for the $SU(2)$ gauge theory with $N_
 
 Notice that in the Gottsche-Nakajima-Yoshioka \cite{Nakajima:2009qjc, Gottsche:2010ig}, the mass parameters and the instanton parameters (for the 5d) are also shifted when the contribution from North and South poles are computed. This is simply a reflection of the fact that they twist the instanton bundles by the half-Canonical bundle of the $\IC^2$, which shift the mass parameters by $m \to m - \frac{\e_1 + \e_2}{2}$. If we do not twist by this amount, we get a cleaner expression as above. 
 
-\paragraph{Correlation functions}
-On the blow-up, we have a non-trivial 2-cycle. This allows us to insert the equivariant version of the Donaldson operator, which can be written in terms of the twisted fields as
-\begin{align} \label{eq:muC}
- \left\langle \exp \left[ t \int d^4 x \left( \omega \wedge \phi F + \half \psi \wedge \psi + H F \wedge F \right) \right] \right\rangle \ . 
-\end{align}
-Here $H$ is the moment map for the $U(1)^2_{\e_1, \e_2}$ action so that $dH = \i_{V} \omega$. Upon localization, it is easy to see that it can be written as
-\begin{align}
- \hat{Z}^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, t) = \sum_{\vec{k} \in \Lambda} e^{ t \left( \vec{k} \cdot \vec{a} + \half \vec{k}\cdot \vec{k} (\e_1 + \e_2) \right) } f(\vec{k}) Z^{\textrm{inst}}(\vec{k}; q e^{t \e_1} ) Z^{(S), \textrm{inst}}(\vec{k} ; q e^{t \e_2}) \ . 
-\end{align} 
-Notice that we shift the instanton parameter by equivariant parameters. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which shifts the instanton parameter by $e^{t(\e_1+\e_2)}$. We need to compensate this part by shifting $q$. 
-The insertion \eqref{eq:muC} inside the exponent has the conserved charge $U=+2$, and the instanton generates $4h^\vee$ which means it counts the number of fermion zero modes. Therefore, when expanding in powers of $t$, 
-\begin{align}
-\hat{Z} = Z + \CO(t^{2h^\vee - 2\sum_R C_2(R)})  \ . 
-\end{align}
-Therefore, when $N_f < 2N_c - 2$ for the $SU(N_c)$ SQCD, we have enough number of relations to fix the instanton partition function. 
-
+%\paragraph{Correlation functions}
+%On the blow-up, we have a non-trivial 2-cycle. This allows us to insert the equivariant version of the Donaldson operator, which can be written in terms of the twisted fields as
+%\begin{align} \label{eq:muC}
+% \left\langle \exp \left[ t \int d^4 x \left( \omega \wedge \phi F + \half \psi \wedge \psi + H F \wedge F \right) \right] \right\rangle \ . 
+%\end{align}
+%Here $H$ is the moment map for the $U(1)^2_{\e_1, \e_2}$ action so that $dH = \i_{V} \omega$. Upon localization, it is easy to see that it can be written as
+%\begin{align}
+% \hat{Z}^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, t) = \sum_{\vec{k} \in \Lambda} e^{ t \left( \vec{k} \cdot \vec{a} + \half \vec{k}\cdot \vec{k} (\e_1 + \e_2) \right) } f(\vec{k}) Z^{(N), \textrm{inst}}(\vec{k}; q e^{t \e_1} ) Z^{(S), \textrm{inst}}(\vec{k} ; q e^{t \e_2}) \ . 
+%\end{align} 
+%Notice that we shift the instanton parameter by equivariant parameters. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which shifts the instanton parameter by $e^{t(\e_1+\e_2)}$. We need to compensate this part by shifting $q$. 
+%The insertion \eqref{eq:muC} inside the exponent has the conserved charge $U=+2$, and the instanton generates $4h^\vee$ which means it counts the number of fermion zero modes. Therefore, when expanding in powers of $t$, 
+%\begin{align}
+%\hat{Z} = Z + \CO(t^{2h^\vee - 2\sum_R C_2(R)})  \ . 
+%\end{align}
+%Therefore, when $N_f < 2N_c - 2$ for the $SU(N_c)$ SQCD, we have enough number of relations to fix the instanton partition function. 
+%
 
 \subsection{Blowup Equation for 5d gauge theory} 
 
