@@ -151,7 +151,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Exceptional Instantons from Blow-up}
+\title{Instantons from Blow-up}
 
 \author[a]{Joonho Kim,}
 \author[b]{Sung-Soo Kim,}
@@ -169,8 +169,8 @@
 
 \abstract{
 The Nekrasov partition function for 4d $\CN=2$ or 5d $\CN=1$ gauge theory on the blow up of a point $\hat{\IC}^2$ can be written in terms of the partition function on the flat space $\IC^2$. At the same time, the partition function on the blow up is identical to the partition function on a flat space for sufficiently large class of examples. 
-This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations without knowing explicit construction of the instanton moduli space. 
-Especially, we obtain the partition function for the exceptional gauge groups $EFG$ with fundamental hypermultiplets/spinors and more. We also compute the case with $SU(6)$ with rank-3 antisymmetric tensor and compare with the topological vertex computation using the recently found 5-brane web configuration. 
+This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
+We obtain the partition function for the previously unknown theories: exceptional gauge groups $EFG$ with fundamental/spinor hypermultiplets and more. We also compute the case with $SU(6)$ with rank-3 antisymmetric tensor and compare with the topological vertex computation using the recently found 5-brane web configuration. 
 }
 
 
@@ -188,6 +188,7 @@ Especially, we obtain the partition function for the exceptional gauge groups $E
 
 The essential idea of using the blow-up for the instanton counting is that the gauge theory partition function for a 4d $\CN=2$ theory or 5d $\CN=1$ on a blow up of a point $\hat{\IC}^2$ (or $S^1 \times \hat{\IC}^2$) can be written in two different ways. This allows us to write a recursion relation for the instanton partiton function that can be solved easily \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg, Keller:2012da}. 
 
+\paragraph{Partition function on the Blow-up $\hat{\IC}^2$}
 One of the expression is obtained via localization on the Coulomb branch obtained by patching together flat-space partition functions. The blow up of a point of $\IC^2$ can be described as a subspace of $\IC^2 \times \IP^1$ defined as
 \begin{align}
  \{ (x, y), [z: w] \in \IC^2 \times \IP^1 | xw = yz \} \ , 
@@ -209,7 +210,7 @@ where $Z(\vec{a}, \e_1, \e_2)$ is the (full) partition function on $\IC^2$ where
 Here $\Lambda$ is the weight lattice of the gauge group and the vector $\vec{k}$ labels different flux configurations on the divisor of the blow-up classified by the first Chern numbers. 
 We obtain this expression by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is broken to $U(1)^r$ where $r$ is the rank of the gauge group. We need to patch together all possible field configurations with zero sized instantons located at north and south poles, and all the inequivalent configurations are labeled by the first Chern numbers which we have to sum over. The shift of the Coulomb parameter comes from the gauge transformation along the equator that connects the north and the south pole so that $\vec{a}_N - \vec{a}_S = \vec{k} (\e_1 - \e_2)$. 
 
-
+\paragraph{Partition function on $\hat{\IC^2}$ vs $\IC^2$}
 The second expression for the partition function on the blow-up is that $\hat{Z}$ is actually identical to the partition function $Z$ on the flat space $\IC^2$ (or $S^1 \times \IC^2$) \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}. This can be argued as follows: The blow up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by $\IP^1$, called as the exceptional divisor. The blow-up can be also identified as the total space of the bundle $\CO(-1) \to \IP^1$. 
 The Nekrasov partition function gets contributions only from the zero-size instantons localized at the fixed points of the $U(1)^2$ action so that the size of the divisor should not affect the partition function as we smoothly shrink it. Therefore, we expect that the partition function on the blow-up to be identical to that of the flat $\IC^2$.
 
@@ -254,18 +255,68 @@ This allows us to write 3 relations among for the 3 unknowns to solve for the in
 For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the operator $\mu(C)^d$ is given via exponentiation $\exp\left( d \beta \cdot \mu (C) \right)$ where $\beta$ is the size of $S^1$. We can always choose our scale so that $\beta = 1$ and we will omit this parameter. The exponentiation accounts for the Kaluza-Klein tower. Since we know that in the 4d limit the insertion of $\mu(C)$ does not alter the partition function (as long as $2h^\vee - I(R)>2$), we expect this to be true as well in the 5d uplift. 
 [MORE EXPLANATION] 
 Therefore, we obtain
-\begin{align}
- Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, 2) \ , 
+\begin{align} \label{eq:blowup5d}
+ Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee) \ , 
 \end{align} 
-for the 5d theories as long as $2h^\vee - I(R) > 2$.
+for the 5d theories. We call the relation above as the blow-up equation. 
 
-In the remainder of this section we will give detailed formulae for 4d and 5d gauge theories. 
-
-\subsection{4d gauge theory}
-Building blocks for the 4d
+\paragraph{Instanton partition function from the blow-up equation}
+From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
 \begin{align}
- Z_{\textrm{vec}}^{\textrm{pert}}(\vec{a}, q) &= \exp \left( - \sum_{\vec \a \in \Delta} \gamma_{\e_1, \e_2}  (\vec{a} \cdot {\vec{\a}}; q )\right) \\
- Z_{\textrm{hyp}}^{\textrm{pert}} (\vec{a}, m, q)&= \exp \left( \sum_{\vec{w} \in R} \gamma_{\e_1, \e_2} ( \vec{a} \cdot {\vec{w}} - m; q)\right)
+ Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
+\end{align}
+Then the blow-up equation can be rewritten as
+\begin{align}
+ Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( d \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
+\end{align}
+where $Z_{\textrm{pert}} \equiv Z_{\textrm{class}} Z_{\textrm{1-loop}}$ and the superscript $(N/S)$ denotes appropriate shift of parameters in the north/south pole 
+\begin{align}
+\begin{split}
+ Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{d\e_1}) \ , \\
+ Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{d\e_2}) \ . 
+\end{split}
+\end{align}
+ Notice that there is no $q$-dependence in the 1-loop part, hence no $d$-dependence as well. 
+The instanton piece can be expanded in terms of the instanton number as
+\begin{align}
+ Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, q) = \sum_{n \ge 0} q^n Z_n (\vec{a}, \e_1, \e_2) \ . 
+\end{align}
+Pluggin in, we obtain
+\begin{align}
+ q^n Z_n = \sum_{\vec{k}} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{d(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
+\end{align}
+where $q^{\half \vec{k} \cdot \vec{k}}$ comes from the classical piece as we will see later. Collecting the terms with the same order, we obtain
+\begin{align}
+ Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
+\end{align}
+where $g(\vec{k}) \equiv \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}}$. Notice that the right-hand side of the above equation only involves the instanton parts with $\ell , m < n$. Therefore, one can determine the $n$-instanton partition function recursively from $Z_0 = 1$. 
+To do this, let us separate $n$-instanton contribution from the above expression. We get 
+\begin{align}
+ Z_n = e^{\e_1 d n} Z^{(N)}_n + e^{\e_2 d n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
+\end{align}
+where
+\begin{align}
+I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
+\end{align}
+Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
+\begin{align}
+ Z_n (\vec{a}, m, \e_1, \e_2) = \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ . 
+\end{align}
+Since $I_n^{(d)}$ only depends on $Z_m$ with $m<n$ we can determine the instanton partition function recursively. 
+
+We now need to determine the $g(\vec{k})$, but this is also completely determined by the \emph{1-loop part} of the partition function. Therefore we land on a remarkable conclusion: The non-perturbative partition function is completely fixed by the perturbative partition function! Notice that we have arrived at this conclusion not by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis. Instead, we simply demand consistent answer upon deforming the spacetime geometry smoothly. This consistency condition is entirely non-perturbative, that the QFT has to be well-defined regardless of its spacetime. 
+
+In the remainder of this section we will give explicit formulae for 4d and 5d gauge theories. Especially, we will obtain a closed-form expression for the one-instanton partition function for a large class of gauge theories. 
+
+\subsection{One instanton partition function for the 5d theory}
+
+
+\subsection{Partition function for 4d gauge theory}
+Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
+The perturbative partition functions for the vector and hypermultiplet are
+\begin{align}
+ Z_{\textrm{vec}}^{\textrm{pert}}(\vec{a}, q) &= \exp \left( - \sum_{\vec \a \in \Delta} \gamma_{\e_1, \e_2}  (\vec{a} \cdot {\vec{\a}}; q )\right) \ , \\
+ Z_{\textrm{hyp}}^{\textrm{pert}} (\vec{a}, m, q)&= \exp \left( \sum_{\vec{w} \in R} \gamma_{\e_1, \e_2} ( \vec{a} \cdot {\vec{w}} - m; q)\right) \ . 
 \end{align}
 Here the gamma function is defined as
 \begin{align}
@@ -275,29 +326,21 @@ which is formally equivalent to
 \begin{align}
  \textrm{log} \left[\prod_{n, m\ge 0} \left( \frac{x - m\e_1 - n \e_2}{\Lambda} \right) \right] \ . 
 \end{align}
-
 If we write the equation \eqref{eq:blowup} in terms of $Z = Z^{\textrm{pert}} Z^{\textrm{inst}}$, we get
 \begin{align}
  Z^{\textrm{inst}}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \frac{Z^{(N), \textrm{pert}}(\vec{k}) Z^{(S), \textrm{pert}}(\vec{k})}{Z^{\textrm{pert}}(\vec{a}, \e_1, \e_2)} Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k})
 \end{align}
-where
-\begin{align}
- Z^{(N)} (\vec{k}) &= Z(\vec{a}+ \e_1 \vec{k}, \e_1, \e_2 - \e_1) \\
- Z^{(S)} (\vec{k}) &= Z(\vec{a} + \e_2 \vec{k}, \e_1 - \e_2, \e_2)
-\end{align}
 and here we omit the dependence on the Coulomb vev and the Omega deformation parameters. 
 Now the factor in the middle can be explicitly worked out. Let us denote the ratio of the perturbative factor as $f(\vec{k}) \equiv Z^{(N), \textrm{pert}} Z^{(S), \textrm{pert}}/Z^{\textrm{pert}}$. 
-%The tree level part can be worked out to get
-%\begin{align}
-% f(\vec{k})^{\textrm{tree}} = q^{ - \frac{(a+k\e_1)^2}{\e_1 (\e_2 - \e_1)} - \frac{(a+k\e_2)^2}{\e_1 (\e_2 - \e_1)}+ \frac{a^2}{\e_1 \e_2} } = q^{k^2}
-%\end{align}
 Then the ratio of the perturbative factor for the vector multiplet is given as
 \begin{align} \label{eq:1loopvec}
-f(\vec{k})_{\textrm{vec}} &= \prod_{\a \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
+\begin{split}
+f(\vec{k})_{\textrm{vec}} &= \prod_{\vec{\a} \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
  &= \prod_{\vec{\a} \in \Delta}  \frac{\Lambda^{(\vec{k} \cdot \vec{\a})^2 /2} }{s(-\vec{k}\cdot \vec{\a}, \vec{\a}\cdot \vec{a}, \e_1, \e_2) }
- = \frac{(\Lambda^{2 h^\vee})^{\vec{k} \cdot \vec{k}/2} }{\prod_{\vec{\a} \in \Delta} \ell^{\vec{k}}_{\vec{\a}} (\vec{a}, \e_1, \e_2) }
+ = \frac{(\Lambda^{2 h^\vee})^{\vec{k} \cdot \vec{k}/2} }{\prod_{\vec{\a} \in \Delta} \ell^{\vec{k}}_{\vec{\a}} (\vec{a}, \e_1, \e_2) } \ , 
+\end{split}
 \end{align}
-where $h^\vee)$ refers to the dual Coxeter number of the gauge group. Notice that ithe beta function coefficient for the pure YM theory is given by $b_0 = 2h^\vee$ and the instanton number is given as $q \equiv \Lambda^{2 h^\vee}$. The other symbols are given as 
+where $h^\vee$ refers to the dual Coxeter number of the gauge group. Notice that the beta function coefficient for the pure YM theory is given by $b_0 = 2h^\vee$ and the instanton parameter is given by $q \equiv \Lambda^{2 h^\vee}$. The other symbols are given as 
 \begin{align}
 \ell^{\vec{k}}_{\vec{\alpha}} (\vec{a}, \e_1, \e_2) &= s(-\vec{k}\cdot\vec{\a}, \vec{a}\cdot\vec{\a}, \e_1, \e_2) \\
 s(k, x, \e_1, \e_2) &= 
@@ -309,17 +352,19 @@ s(k, x, \e_1, \e_2) &=
 \end{align}
 The final identity of \eqref{eq:1loopvec} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
 \begin{align}
- \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) + \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda)
-  = \g_{\e_1, \e_2}(x; \Lambda) + \log s(-k, x, \e_1, \e_2) - \frac{k(k-1)}{2} \log \Lambda \ . 
+\begin{split}
+ \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) &+ \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda) \\
+  & \qquad = \g_{\e_1, \e_2}(x; \Lambda) + \log s(-k, x, \e_1, \e_2) - \frac{k(k-1)}{2} \log \Lambda \ . 
+\end{split}
 \end{align}
 For the hypermultiplets we get, 
 \begin{align}
-f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} (a_w - m) + \g_{\e_1, \e_2 - \e_1}(a_w + k_w \e_1 - m) +  \g_{\e_1 - \e_2, \e_2 }(a_w + k_w \e_2 - m)   \Big) \nn \\
-&= \prod_{\vec{w} \in R} \Lambda^{-\half k_w^2} s(-{k}_w, {a}_w - m, \e_1, \e_2) 
-= (\Lambda^{- 2 C_2(R)})^{\vec{k} \cdot \vec{k}/2 }\prod_{\vec{w} \in R}  s(-{k}_w, {a}_w - m, \e_1, \e_2) 
+f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} (a_{w, m}) + \g_{\e_1, \e_2 - \e_1}(a_{w, m} + k_w \e_1) +  \g_{\e_1 - \e_2, \e_2 }(a_{w, m} + k_w \e_2)   \Big) \nn \\
+&= \prod_{\vec{w} \in R} \Lambda^{-\half k_w^2} s(-{k}_w, a_{w, m}, \e_1, \e_2) 
+= (\Lambda^{- 2 I(R)})^{\half \vec{k} \cdot \vec{k} }\prod_{\vec{w} \in R}  s(-{k}_w, a_{w, m}, \e_1, \e_2) 
 \ , 
 \end{align}
-where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_w = \vec{a} \cdot \vec{w}$ and $C_2(R)$ corresponds to the second Casimir invariant for the representation $R$. This invariant appears in the beta function coefficients as $b_0 = 2h^\vee - 2 \sum_R C_2(R)$ for the hypermultiplets in irrep $R$.  This gives the instanton parameter to be $q\equiv \Lambda^{b_0} = \Lambda^{2h^\vee - 2 \sum_R C_2(R)}$. 
+where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - 2 I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - 2 I(R)}$. 
 
 Now, for the SQCD, we obtain the following equation:
 \begin{align}
