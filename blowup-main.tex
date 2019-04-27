@@ -308,10 +308,61 @@ We now need to determine the $g(\vec{k})$, but this is also completely determine
 
 In the remainder of this section we will give explicit formulae for 4d and 5d gauge theories. Especially, we will obtain a closed-form expression for the one-instanton partition function for a large class of gauge theories. 
 
-\subsection{One instanton partition function for the 5d theory}
+\subsection{Instanton partition function for the 5d theory}
+Let us write the perturbative part of the partition function. The classical part is given as
+\begin{align}
+Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij} a^i a^j+\frac{1}{6}d_{ijk} a^{i}a^j a^k\right)\Bigg]
+\end{align}
+where $a_i$ denotes the Coulomb branch parameter and $h_{ij}, d_{ijk}$ denotes the effective gauge couplings and Chern-Simons couplings in the Coulomb branch. 
+The 1-loop part of the vector multiplet is given as
+\begin{align} \label{eq:1loopvec}
+\begin{split}
+Z^{V}_{\textrm{1-loop}}&=\textrm{exp}\left[ -\frac{1}{2\epsilon_1\epsilon_2} \sum_{\alpha\in\Delta}\Bigg(\frac{1}{6}(\vec{a}\cdot\vec{\alpha})^3-\frac{\epsilon_1+\epsilon_2}{4}(\vec{a}\cdot\vec{\alpha})^2+\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{12}(\vec{a}\cdot\vec{\alpha})\Bigg) \right] \\
+&\qquad \qquad \times\,\textrm{PE}\left[- \frac{1}{(1-e^{\e_1})(1-e^{\e_2})}\sum_{\alpha\in \Delta}e^{\vec{a}\cdot\vec{\alpha}}\right] \ , 
+\end{split}
+\end{align}
+where $\Delta$ denotes the set of all roots. The 1-loop partition function of the hypermultiplet is given as
+\begin{align} \label{eq:1loophyp}
+\begin{split}
+Z^{H}_{\textrm{1-loop}} &= \exp \Bigg[-\frac{1}{2\epsilon_1\epsilon_2} \sum_{\omega\in R }\Bigg(\frac{1}{6}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)^3-\frac{\e_1+\e_2}{4}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)^2 \\
+ &\quad +\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{12}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)\Bigg)\Bigg] \times 
+\textrm{PE} \left[ \frac{e^{m^{\textrm{phy}}_i}}{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\omega\in R}e^{\vec{a}\cdot\vec{\omega}} \right]
+\end{split}
+\end{align}
+where $R$ is the set of all weight vectors in the representation of the hypermultiplet. We define the physical mass parameter as $m^{\textrm{phy}}_i = m_i + \e_+$ and $\e_+ = \frac{\e_1+\e_2}{2}$, since there is an effect of topological twisting that shifts the `mass parameter' $m_i$ by a unit of $SU(2)_R$ rotation \cite{Okuda:2010ke}. 
 
+Now, let us compute the $g(\vec{k})$ which is given by the ratio of the 1-loop part of the partition function. 
+It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out (due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry. Therefore, we simply evaluate the ratio inside the PE. This yields
+\begin{align}
+ g(\vec{k})^{V} &= \prod_{\vec{\a} \in \Delta} \textrm{PE} \left[  \frac{e^{\vec{a} \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2})} - \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})}- \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{\a}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] , \\
+ g(\vec{k})^{H} &= \prod_{\vec{w} \in R} \textrm{PE} \left[ \frac{- e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] , 
+\end{align}
+for the vector and hypermultiplets respectively. Both of them can be written as 
+\begin{align}
+ g(\vec{k}) =  \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{a}, e^{\e_1} e^{\e_2})\right] } \ , 
+\end{align} 
+where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p_2 = e^{\e_2}$. Here the function $A$ is given as
+\begin{align}
+\begin{split}
+ A(k, p_1, p_2) &= \frac{1}{(1-p_1)(1-p_2)} -  \frac{p_1^k}{(1-p_1)(1-p_2/p_1)} -  \frac{p_2^k}{(1-p_1/p_2)(1-p_2)}  \ . 
+\end{split}
+\end{align}
+We can easily see that $A(k, p_1, p_2)$ vanishes at $k=0, -1$. 
+After some work, it is not hard to convince that $A(k, p_1, p_2)$ can be written in terms of a finite sum. Upon taking the PE, we obtain
+\begin{align}
+\textrm{PE}\left[ e^{x} A(k, e^{\e_1}, e^{\e_2}) \right] = 
+\begin{cases}
+ {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le k-1}} \left( 1-e^{x+ m \e_1 +n  \e_2}\right)} & (k > 0) \\
+ {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le -k-2}} \left(1-e^{x -(m+1)\e_1 - (n+1)\e_2} \right)} & (k < -1)  \\
+ 1 & (k=0, -1)
+\end{cases}
+\end{align}   
+Let us state our final answer:
+\begin{align}
+ Z_n = 
+\end{align}
 
-\subsection{Partition function for 4d gauge theory}
+\subsection{Instanton partition function for 4d gauge theory}
 Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
 The perturbative partition functions for the vector and hypermultiplet are
 \begin{align}
