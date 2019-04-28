@@ -339,7 +339,7 @@ It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not 
 \end{align}
 for the vector and hypermultiplets respectively. Both of them can be written as 
 \begin{align}
- g(\vec{k}) =  \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{a}, e^{\e_1} e^{\e_2})\right] } \ , 
+ g(\vec{k}) =  \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{\a}, e^{\e_1} e^{\e_2})\right] } \ , 
 \end{align} 
 where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p_2 = e^{\e_2}$. Here the function $A$ is given as
 \begin{align}
@@ -348,9 +348,20 @@ where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p
 \end{split}
 \end{align}
 We can easily see that $A(k, p_1, p_2)$ vanishes at $k=0, -1$. 
-After some work, it is not hard to convince that $A(k, p_1, p_2)$ can be written in terms of a finite sum. Upon taking the PE, we obtain
+After some work, it is not hard to find that $A(k, p_1, p_2)$ can be written in terms of a finite sum as
 \begin{align}
-\textrm{PE}\left[ e^{x} A(k, e^{\e_1}, e^{\e_2}) \right] = 
+ A(k, p_1, p_2) =
+ \begin{cases}
+ \displaystyle
+ \sum_{m+n \le k-1} p_1^m p_2^n & (k>0) \\
+ \displaystyle
+ \sum_{m+n \le -k-2} p_1^{-m-1} p_2^{-n-1} & (k<-1) \\
+ 0 & (k=0, -1)
+ \end{cases} . 
+\end{align}
+Upon taking PE, we obtain
+\begin{align}
+\mathcal{L}_{k} (x, \e_1, \e_2) \equiv \textrm{PE}\left[ e^{x} A(k, e^{\e_1}, e^{\e_2}) \right] = 
 \begin{cases}
  {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le k-1}} \left( 1-e^{x+ m \e_1 +n  \e_2}\right)} & (k > 0) \\
  {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le -k-2}} \left(1-e^{x -(m+1)\e_1 - (n+1)\e_2} \right)} & (k < -1)  \\
@@ -359,8 +370,60 @@ After some work, it is not hard to convince that $A(k, p_1, p_2)$ can be written
 \end{align}   
 Let us state our final answer:
 \begin{align}
- Z_n = 
+ Z_n (\vec{a}, \vec{m}^{\textrm{phy}}, \e_1, \e_2) &= \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ , 
 \end{align}
+with 
+\begin{align}
+\begin{split}
+I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} & \Bigg( \exp \left[ d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)\right] \\
+& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
+&\quad \times Z_{\ell}(\vec{a}+\vec{k}\e_1, \vec{m}^{\textrm{phy}}, \e_1, \e_2-\e_1) Z_m (\vec{a}+\vec{k} \e_2, \vec{m}^{\textrm{phy}}, \e_1-\e_2, \e_2) \Bigg) \ , 
+\end{split}
+\end{align}
+where $i$ runs over all the hypermultiplets. 
+
+\paragraph{One-instanton partition function}
+Let us compute the 1-instanton partition function using our formula. In this case, we only take the sum over the long roots having $\vec{k}\cdot \vec{k} = 2$ and $\ell = m = 0$. Therefore, 
+\begin{align}
+ I_1^{(d)} = e^{d(\e_1+\e_2)} \sum_{\vec{\g} \in \Delta_l} \frac{e^{d \vec{\g} \cdot \vec{a} } M(\g) }{L(\g)} \ , 
+\end{align} 
+where $\Delta_l$ is the set of all long roots and
+\begin{align}
+\begin{split}
+ L(\g) &\equiv \prod_{\a \in \Delta} \CL_{\g \cdot \a} (a \cdot \a, \e_1, \e_2) 
+  = \prod_{\g \cdot \a = \pm 2} \prod_{\g \cdot \a = 1} \CL_{\g \cdot \a} (a \cdot \a, \e_1, \e_2) \\
+ & = (1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2})(1-e^{a_\g}) (1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a }) \ , 
+\end{split}
+\end{align}
+where $a_\g \equiv \vec{a}\cdot \vec{\g}$ and $a_\a \equiv \vec{a}\cdot \vec{\a}$. The one-instanton partition function can be written explicitly as 
+\begin{align}
+\begin{split}
+Z_1 &= \frac{e^{\e_1 + \e_2} I_n^{(0)} - (e^{\e_1} + e^{ \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{\e_1})(1-e^{\e_2})} \\
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{(1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2}) M(\g) }{L(\g)} \ , 
+\end{split}
+\end{align}
+where 
+\begin{align}
+ M(\g) \equiv \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
+\end{align}
+with $a_w \equiv \vec{a} \cdot \vec{w}$. 
+For the case of pure SYM theory with no matters, $M(\g)=1$ so that 
+\begin{align}
+Z_1^{\textrm{SYM}} &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{1}{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2}}{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
+\end{align}
+which is the one derived in \cite{Keller:2011ek, Keller:2012da}. 
+
+For the case with fundamental matters, we find that for the long root $\g$, there are only weights with $\g \cdot w = 0, \pm 1$. Therefore, the $M(\g)$ can be simplified to give
+\begin{align}
+ M(\g) = \prod_{\g \cdot w = 0, \pm 1} \CL_{\g \cdot w} (a_w, \e_1, \e_2) = \prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) \ . 
+\end{align}
+The one-instanton partition function is now given as
+\begin{align}
+Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{\prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2} \prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
+\end{align}
+which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$. 
 
 \subsection{Instanton partition function for 4d gauge theory}
 Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
