@@ -548,42 +548,81 @@ Each multiplet
 
 \section{Examples} \label{sec:example}
 
+As the remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to employ the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj}, and/or to apply the topological vertex formalism based on the geometric engineering of 5d $\mathcal{N}=1$ gauge theory \cite{Gopakumar:1998jq,Aganagic:2003db}. An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
+
+There are multiple and distinct blow-up equations \eqref{eq:blowup5d} at different values of $d$, ranged over $0 \leq d \leq d_{\rm max}$ where $d_{\rm max} \equiv h^\vee -  |\kappa_{\rm eff}| - \frac{1}{2}\sum_{i} I(\mathbf{R}_i)$. Since at least 3 distinct equations are necessary to solve for the instanton partition function, the bootstrap method is applicable for theories which satisfy $d_{\rm max} \geq 2$. Let us constrain our discussion to simple gauge groups. The complete list of $\mathcal{N}=1$ gauge theories, satisfying $d_{\rm max} \geq 2$, is given as follows:
+\begin{itemize}
+  \item $G=E_8$: pure YM
+  \item $G=E_7$: $I_{\bf 56} = 12$. $n_{\bf 56} \leq 2$. 
+  \item $G=E_6$: $I_{\bf 27} = I_{\bf \overline{27}} = 6$. $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$. 
+  \item $G=F_4$: $I_{\bf 26} = 6$. $n_{\bf 26}\leq 2$. 
+  \item $G=G_2$: $I_{\bf 7} = 2$. $n_{\bf 7}\leq 2$. 
+  \item $G=D_N$: $I(spinor) = 2^{N-3}$. $I(vector) = 2$.\\
+   $G= D_7$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
+   $G=D_6$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
+   $G=D_5$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
+   $G=D_4$: $n_{\bf s}  + n_{\bf v} \leq 4$
+   \item $G=B_N$: $I(spinor) = 2^{N-2}$. $I(vector) = 2$.\\
+   $G= B_6$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
+   $G=B_5$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
+   $G=B_4$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
+   $G=B_3$: $n_{\bf s}  + n_{\bf v} \leq 4$
+   \item $G=C_N$:  $I(vector) = 1$. $I(anti) = 2N-2$. $I(\text{rank-3 anti}) = (N-2)(2N -1)$.\\
+   $G= C_{N}$:  $n_{\bf v} + (2N-2) n_{\Lambda^2} \leq 2N$ . \\
+   $G= C_3$: $n_{ \Lambda^3} = 1$, $n_{ \Lambda^2} = 0$, $n_{\bf v}  \leq 1$ in addition to the above.\\
+   ------------------------------------------------------
+   \item $G=A_N$:  $I(fnd) = 1$. $I(anti) = N-2$. $I(sym) = N+2$. $I(\text{rank-3 anti}) = (N - 3) (N - 2)/2$. $I(\text{rank-4 anti}) = (N-4)(N - 3) (N - 2)/3!$. 
+   \begin{align}
+    \kappa_{\rm eff} = \kappa_\text{cl} -\text{sgn}(m) \frac{\mathcal{A}_\mathbf{R_i} }{2}\cdot n_\mathbf{R_i}
+   \end{align}
+\end{itemize}
+
+\pagebreak
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  $G$ & matter & $r_0$ & $d_{\rm max}$\\
+  \hline
+  $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
+  \hline
+  $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
+  \hline
+  $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
+  \hline
+  $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
+  \hline
+  $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
+  \hline
+  $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
+  \hline
+  $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
+  \hline
+  $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
+  \hline
+  $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
+  \hline
+  $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
+  \hline
+  $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
+  \hline
+  \end{tabular}
+  \caption{list of theories}
+  \label{tbl:list}
+\end{table}
+\textcolor{red}{list down all possible theories for ABCDEFG.}
+
+
+
+\subsection{Known examples}
+
+
+
 \subsection{Ki-Hong's note}
 \paragraph{Unity Blowup equations}
-The partition functions of generic 5d $\mathcal{N}=1$ gauge theories with hypermultiplets in $R$-representation in the Coulomb branch consist of classical action term, 1-loop term, and instanton partition functions.
-\begin{align}
-Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=Z_{\textrm{class}}(\epsilon_1,\epsilon_2,\vec{a},m_0)\,Z_{\textrm{1-loop}}(\epsilon_1,\epsilon_2,\vec{a},m_i)\,Z_{\textrm{inst}}(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)
-\label{eq:bueq_gen}
-\end{align}
-where
-\begin{align}
-Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij}\phi^i\phi^j+\frac{1}{6}d_{ijk}\phi^{i}\phi^j\phi^k\right)\Bigg]\nonumber\\
-Z_{\textrm{1-loop}}=\textrm{exp}\Bigg[&\,-\frac{1}{2\epsilon_1\epsilon_2}\Bigg(\sum_{\alpha\in\textrm{roots}}\Bigg(\frac{1}{6}(\vec{a}\cdot\vec{\alpha})^3-\frac{1}{4}(\epsilon_1+\epsilon_2)(\vec{a}\cdot\vec{\alpha})^2+\frac{1}{12}((\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2)(\vec{a}\cdot\vec{\alpha})\Bigg)\nonumber\\
-&\,+\sum_{\omega\in\rho(R)}\Bigg(\frac{1}{6}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^3-\frac{\epsilon_1+\epsilon_2}{4}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)^2\nonumber\\
-&\,\qquad\qquad-\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{24}\Big(\vec{a}\cdot\vec{\omega}+m_i+\frac{\epsilon_1+\epsilon_2}{2}\Big)\Bigg)\Bigg]\nonumber\\
-\times\,\textrm{PE}\Bigg[&\,\frac{1}{(1-p_1)(1-p_2)}\Bigg(-\sum_{\alpha\in\textrm{roots}}e^{\vec{a}\cdot\vec{\alpha}}+p_1^{1/2}p_2^{1/2}y_i\sum_{\omega\in \rho(R)}e^{\vec{a}\cdot\vec{\omega}}\Bigg)\Bigg].
-\end{align}
-Here $\vec{a}$ are Coulomb VEVs and $p_{1,2}=e^{\epsilon_{1,2}}$, $y_i=e^{m_i}$. Note that the normal exponential term saturates the zero-point energy of pletheystic exponential terms.\footnote{Technically, instead of considering this 1-loop prepotential terms, I inserted overall factors to the $l_{\vec{k}}=Z_{\textrm{1-loop}}^{(1)}Z_{\textrm{1-loop}}^{(1)}/Z_{\textrm{1-loop}}$ so that it is written by Sinh terms.} 
-
-The partition function satisfies so-called ``Unity blowup equation" 
-\begin{align}
-Z(\epsilon_1,\epsilon_2,\vec{a},m_i, m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
-&\times\, Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+(\vec{k}+\vec{r}_a)\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
-\end{align}
-for certain $\vec{r}_a,\, r_i,\,r_0$'s.
-Here $\vec{\alpha}^{\lor}$ is the coroot lattice where the long root is normalized to have norm 2. The $r_i$'s and $r_0$ are some numbers specifying the blowup equations.
-
-Technically $r_i$'s are constrained to be half integers since, for each single letter 1-loop partition functions
-\begin{align}
-Z_{i,\vec{\omega}}=\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}}{(1-p_1)(1-p_2)}y_i\,e^{\vec{a}\cdot\vec{\omega}}\Bigg],
-\end{align}
-the ratio between shifted ones and unshifted one is
-\begin{align}
-l^{\vec{k}}_{i,\vec{\omega}}=&\,Z^{(1)}_{i,\vec{\omega}}Z^{(2)}_{i,\vec{\omega}}/Z_{i,\vec{\omega}}\nonumber\\
-=&\,\textrm{PE}\Bigg[\frac{p_1^{r_i}p_2^{1/2}y_i}{(1-p_1)(1-p_2/p_1)}p_1^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}+\frac{p_1^{1/2}p_2^{r_i}y_i}{(1-p_1/p_2)(1-p_2)}p_2^{\vec{k}\cdot\vec{\omega}}e^{\vec{a}\cdot\vec{\omega}}-\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Bigg]\nonumber\\
-=&\,\textrm{PE}\Bigg[\frac{p_1^{1/2}p_2^{1/2}y_i}{(1-p_1)(1-p_2)(p_1-p_2)}e^{\vec{a}\cdot\vec{\omega}}\Big((1-p_2)p_1^{\vec{k}\cdot\vec{\omega}+r_i+1/2}-(1-p_1)p_2^{\vec{k}\cdot\vec{\omega}+r_i+1/2}\Big)-(p_1-p_2)\Bigg]
-\end{align}
-For the $l^{\vec{k}}_{i,\vec{\omega}}$ to be finite rational function, the plethystic exponent must be finite series. It can be satisfied only when $r_i$ is a half integer.
 
 \paragraph{Instanton partition functions from blowup equations}
 From blowup equations one can compute the partition functions as follows. Rewriting the blowup equation as
@@ -608,33 +647,6 @@ The blowup equations for instanton partition functions of pure YM theory with ge
 \end{align}
 where $d=0,\cdots, h^{\lor}$. We extend these blowup equations to the theories with matters based on pure YM blowup equations. If one restrict the cases to $\vec{r}_a=0$, as we explained in the previous section, the $r_i$'s are technically required to be half intergers. Thus we look for the $r_0$'s that provides the correct instanton partition functions by solving \eqref{eq:be_n} while fixing $\vec{r}_a=0$ and $r_i=1/2$. Here are the results.
 
-\begin{tabular}{|c|c|c|c|}
-\hline
-$G$ & matter & $r_0$ & $d$\\
-\hline
-$SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
-\hline
-$SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
-\hline
-$SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
-\hline
-$SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
-\hline
-$SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
-\hline
-$SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
-\hline
-$G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
-\hline
-$G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
-\hline
-$F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
-\hline
-$F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
-\hline
-$F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
-\hline
-\end{tabular}
 
 
 They were tested by comparing the resulting instanton partition functions with the known results from \cite{Kim:2018gjo}($SO(7)$ and $G_2$) and \cite{DelZotto:2018tcj}($F_4$ with $N_{\boldsymbol{26}}=2$). They were compared numerically, putting random numbers on the fugacities.
