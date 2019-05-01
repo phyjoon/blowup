@@ -245,18 +245,21 @@ and $\mu(\vec{k})$ is the contribution coming from the operator $\mu(C)$ which i
 Notice that we shift the instanton parameter by equivariant parameters at both poles $q \to q e^{t \e_{1, 2}}$. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
 
 Now, as we shrink the two cycles to recover the flat $\IC^2$, the effect of the insertion of $\mu$ turns out to give a vanishing contribution due to the conservation laws. 
-To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqref{eq:muC} has $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry. The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to a discrete subgroup $\IZ_{2h^\vee - I(R)}$ where $h^\vee$ is the dual Coxeter number of the gauge group and $I(R)$ is the Dynkin index of the half-hypermultiplet representation $R$.\footnote{Here we normalize the Dynkin index so that the fundamental for the $SU(N)$ has $I=1/2$. Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
+To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqref{eq:muC} has $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry. The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to a discrete subgroup $\IZ_{2h^\vee - I(R)}$ where $h^\vee$ is the dual Coxeter number of the gauge group and $I(R)$ is the Dynkin index of the hypermultiplet representation $R$.\footnote{Here we normalize the Dynkin index so that the fundamental for the $SU(N)$ has $I=1$. Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
 \begin{align}
 \hat{Z}_{4d}^{(t)} = Z_{4d} + \CO(t^{2h^\vee - I(R)})  \ . 
 \end{align}
 %Therefore, for the x$SU(N_c)$ SQCD with $N_f < 2N_c - 2$, we have enough number of relations to fix the instanton partition function. 
 This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function as long as the hypermultiplet representation is not too large, namely, when $2h^\vee - I(R) > 2$. In this case, we can expand $\hat{Z}^{(t)}$ up to order $t^2$ to obtain 3 relations that is enough to fix the instanton part of the partition function from the \emph{perturbative} part as we will see soon. 
 
-For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the operator $\mu(C)^d$ is given via exponentiation $\exp\left( d \beta \cdot \mu (C) \right)$ where $\beta$ is the size of $S^1$. We can always choose our scale so that $\beta = 1$ and we will omit this parameter. The exponentiation accounts for the Kaluza-Klein tower. Since we know that in the 4d limit the insertion of $\mu(C)$ does not alter the partition function (as long as $2h^\vee - I(R)>2$), we expect this to be true as well in the 5d uplift. 
-[MORE EXPLANATION] 
+For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the operator $\mu(C)^d$ is given via exponentiation $\exp\left( d \beta \cdot \mu (C) \right)$ where $\beta$ is the size of $S^1$. We can always choose our scale so that $\beta = 1$ and we will omit this parameter. 
+This stems from the fact that $\tr \phi^2$ is not a well-defined operator in 5d theory on $S^1 \times M_4$. In order to take into account the periodic boson, we need to exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. 
+
+[TODO: Explain why $e^{\mu(C)}$ is good topological operator in 5d. Explain why inserting this does not alter the partition function.]
+
 Therefore, we obtain
 \begin{align} \label{eq:blowup5d}
- Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee) \ , 
+ Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 - |\kappa|) \ , 
 \end{align} 
 for the 5d theories. We call the relation above as the blow-up equation. 
 
@@ -332,14 +335,14 @@ Z^{H}_{\textrm{1-loop}} &= \exp \Bigg[-\frac{1}{2\epsilon_1\epsilon_2} \sum_{\om
 where $R$ is the set of all weight vectors in the representation of the hypermultiplet. We define the physical mass parameter as $m^{\textrm{phy}}_i = m_i + \e_+$ and $\e_+ = \frac{\e_1+\e_2}{2}$, since there is an effect of topological twisting that shifts the `mass parameter' $m_i$ by a unit of $SU(2)_R$ rotation \cite{Okuda:2010ke}. 
 
 Now, let us compute the $g(\vec{k})$ which is given by the ratio of the 1-loop part of the partition function. 
-It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out (due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry. Therefore, we simply evaluate the ratio inside the PE. This yields
+It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry except for one single term for the hyper. Therefore, we obtain
 \begin{align}
  g(\vec{k})^{V} &= \prod_{\vec{\a} \in \Delta} \textrm{PE} \left[  \frac{e^{\vec{a} \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2})} - \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})}- \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{\a}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] , \\
- g(\vec{k})^{H} &= \prod_{\vec{w} \in R} \textrm{PE} \left[ \frac{- e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] , 
+ g(\vec{k})^{H} &= \prod_{\vec{w} \in R} e^{\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} }\textrm{PE} \left[ \frac{- e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] , \nn  
 \end{align}
 for the vector and hypermultiplets respectively. Both of them can be written as 
 \begin{align}
- g(\vec{k}) =  \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{\a}, e^{\e_1} e^{\e_2})\right] } \ , 
+ g(\vec{k}) =  \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i} e^{\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} } \textrm{PE} \left[ e^{\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{\a}, e^{\e_1} e^{\e_2})\right] } \ , 
 \end{align} 
 where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p_2 = e^{\e_2}$. Here the function $A$ is given as
 \begin{align}
@@ -376,7 +379,7 @@ with
 \begin{align}
 \begin{split}
 I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} & \Bigg( \exp \left[ d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)\right] \\
-& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i}  \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
+& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i} e^{\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} } \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
 &\quad \times Z_{\ell}(\vec{a}+\vec{k}\e_1, \vec{m}^{\textrm{phy}}, \e_1, \e_2-\e_1) Z_m (\vec{a}+\vec{k} \e_2, \vec{m}^{\textrm{phy}}, \e_1-\e_2, \e_2) \Bigg) \ , 
 \end{split}
 \end{align}
@@ -395,22 +398,22 @@ where $\Delta_l$ is the set of all long roots and
  & = (1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2})(1-e^{a_\g}) (1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a }) \ , 
 \end{split}
 \end{align}
-where $a_\g \equiv \vec{a}\cdot \vec{\g}$ and $a_\a \equiv \vec{a}\cdot \vec{\a}$. The one-instanton partition function can be written explicitly as 
+where $a_\g \equiv \vec{a}\cdot \vec{\g}$ with $a_\a \equiv \vec{a}\cdot \vec{\a}$ and 
+\begin{align}
+ M(\g) \equiv \prod_{\vec{w} \in R} e^{\frac{(\vec{\g} \cdot \vec{w})^2}{4}m^{\textrm{phy}} }\CL_{\g \cdot w} (a_w, \e_1, \e_2)  = e^{I(R)m^{\textrm{phy}}/2} \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
+\end{align}
+with $a_w \equiv \vec{a} \cdot \vec{w}$ and $I(R)$ is the Dynkin index of the representation $R$. 
+Therefore, the one-instanton partition function can be written explicitly as 
 \begin{align}
 \begin{split}
 Z_1 &= \frac{e^{\e_1 + \e_2} I_n^{(0)} - (e^{\e_1} + e^{ \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{\e_1})(1-e^{\e_2})} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{(1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2}) M(\g) }{L(\g)} \ , 
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{(1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2}) M(\g) }{L(\g)} \ . 
 \end{split}
 \end{align}
-where 
-\begin{align}
- M(\g) \equiv \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
-\end{align}
-with $a_w \equiv \vec{a} \cdot \vec{w}$. 
 For the case of pure SYM theory with no matters, $M(\g)=1$ so that 
 \begin{align}
 Z_1^{\textrm{SYM}} &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{1}{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2}}{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2}}{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-\e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
 \end{align}
 which is the one derived in \cite{Keller:2011ek, Keller:2012da}. 
 
@@ -423,7 +426,7 @@ The one-instanton partition function is now given as
 Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{\prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2} \prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
 \end{align}
-which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$. 
+which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$ for all $w \in R$. 
 
 \subsection{Instanton partition function for 4d gauge theory}
 Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
@@ -447,7 +450,7 @@ If we write the equation \eqref{eq:blowup} in terms of $Z = Z^{\textrm{pert}} Z^
 and here we omit the dependence on the Coulomb vev and the Omega deformation parameters. 
 Now the factor in the middle can be explicitly worked out. Let us denote the ratio of the perturbative factor as $f(\vec{k}) \equiv Z^{(N), \textrm{pert}} Z^{(S), \textrm{pert}}/Z^{\textrm{pert}}$. 
 Then the ratio of the perturbative factor for the vector multiplet is given as
-\begin{align} \label{eq:1loopvec}
+\begin{align} \label{eq:1loopvec4d}
 \begin{split}
 f(\vec{k})_{\textrm{vec}} &= \prod_{\vec{\a} \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
  &= \prod_{\vec{\a} \in \Delta}  \frac{\Lambda^{(\vec{k} \cdot \vec{\a})^2 /2} }{s(-\vec{k}\cdot \vec{\a}, \vec{\a}\cdot \vec{a}, \e_1, \e_2) }
@@ -464,7 +467,7 @@ s(k, x, \e_1, \e_2) &=
  1 & (k=0, -1)
 \end{cases}
 \end{align}
-The final identity of \eqref{eq:1loopvec} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
+The final identity of \eqref{eq:1loopvec4d} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
 \begin{align}
 \begin{split}
  \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) &+ \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda) \\
@@ -478,7 +481,7 @@ f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} 
 = (\Lambda^{- 2 I(R)})^{\half \vec{k} \cdot \vec{k} }\prod_{\vec{w} \in R}  s(-{k}_w, a_{w, m}, \e_1, \e_2) 
 \ , 
 \end{align}
-where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - 2 I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - 2 I(R)}$. 
+where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - I(R)}$. 
 
 Now, for the SQCD, we obtain the following equation:
 \begin{align}
