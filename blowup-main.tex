@@ -239,6 +239,7 @@ The full partition function $\hat{Z}$ on $\hat{\IC}^2$, which includes both the 
 where the sum is taken over the coweight lattice $\Lambda$  of the gauge group.
 This expression is obtained by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is broken to $U(1)^r$ where $r$ is the rank of the gauge group. We need to patch together all possible field configurations with zero sized instantons located at the north and south poles.  All the inequivalent configurations are labeled by the vector $\vec{k}$ of the first Chern numbers, corresponding to different flux configurations on the divisor $\mathbb{P}^1$. The shift of the Coulomb parameter is due to the following reason \cite{Bershtein:2015xfa}: At a fixed point $p$, the $U(1)^r$ vector multiplet scalar $\vec{\Phi}$ takes the value of $\vec{a} + \vec{k}H|_p$, where $H$ is the moment map for the $U(1)^2$ action $V$ on the K\"ahler 2-form $\omega$, i.e., $\iota_V \omega = dH$. One can find $H|_{N} = \epsilon_1$ and $H|_{S} = \epsilon_2$ as 
 \begin{align}
+  \label{eq:moment-map}
   H = 
   \begin{dcases}
      \frac{\epsilon_1|z|^2+ (\epsilon_2 - \epsilon_1)|w|^2}{|z|^2+|w|^2} & \text{(around the north pole)},\\
@@ -258,11 +259,12 @@ For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink th
   \label{eq:blowup-generic}
   Z(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
 \end{align}
-However, \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. To achieve this we need to consider a `correlation function' $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators $\mu$ associated to the two-cycle $C$ in the blow-up $\hat{\mathbb{C}}^2$. In terms of the component fields of the Donaldson-twisted theory, it can be written as 
+However, \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. To achieve this, we need to consider a `correlation function' $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators $\mu$ associated to the two-cycle $C$ in the blow-up $\hat{\mathbb{C}}^2$. In terms of the component fields of the Donaldson-twisted theory, it can be written as 
 \begin{align} \label{eq:muC}
-\mu(C) = \int d^4 x \left( \omega \wedge\, \phi F + \half \omega \wedge\psi \wedge \psi + H F \wedge F \right)  \ , 
+\mu(C) = \int \left( \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right)  \ , 
 \end{align}
-where $\omega$ is the two-form dual to $C$ and $H = \e_1 |z_1|^2 + \e_2 |z_2|^2$ is the moment map for the $U(1)^2$ action. \textcolor{red}{(Q. Is $H$ correct?)}
+where $\omega = i\partial\bar{\partial}\log(|z|^2+|w|^2)$ is the Fubini-Study two-form on the exceptional divisor $C$. The zero-form $H$ denotes the corresponding $U(1)^2$ moment map, written explicitly in \eqref{eq:moment-map}.
+%  for the  action. \textcolor{red}{(Q. Is $H$ correct?)}
 
 Let us consider the generating function $\langle e^{t \cdot \mu(C)}\rangle $ of the correlators $\langle \mu(C) \ldots \mu(C)  \rangle$. Then the partiton function $\hat{Z}^{(d)}$ can be written in a very simple form as 
 \begin{align}
@@ -272,18 +274,19 @@ where
 \begin{align}
 \begin{split}
  Z^{(N), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q e^{t\e_1}, m) \ , \\
- Z^{(S), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q e^{t\e_2}, m) \ , 
+ Z^{(S), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q e^{t\e_2}, m) \ . 
 \end{split}
 \end{align}
-and $\mu(\vec{k})$ is the contribution coming from the operator insertion $\mu(C)$. It is a function of $\vec{k}$ and also depends on $\vec{a}, \e_1,\e_2$ that we often abbreviate. Explicitly, it is written as
+Notice that the insertion of  $\int \frac{H}{2}\, \text{Tr}( F \wedge F )$ shifts the effective instanton fugacity at both poles by $q \to q \cdot e^{t\, \e_{1, 2}}$, since $H|_{N} = \epsilon_1$ and $H|_{S} = \epsilon_2$. Similarly, the insertion of $\int \omega \wedge \text{Tr}(\Phi F + \half \psi \wedge \psi)$ results in $\mu(\vec{k})$, which is  a function of $\vec{k}$ and also depends on $\vec{a}, \e_1,\e_2$ that we often abbreviate. More explicitly, it can be expressed as \textcolor{red}{(factor of $\half$?)}
 \begin{align}
- \exp \left( \mu(\vec{k}) \right) = \exp \left( \vec{k} \cdot \vec{a} +  \half \vec{k}\cdot\vec{k}\, (\e_1 + \e_2) \right) \ . 
+ \exp \left( \mu(\vec{k}) \right) \equiv \prod_{p\in\{N, S\}} \exp \left( \half (\vec{a} + H_p \vec{k}) \cdot \vec{k}  \right) =  \exp \left( \vec{k} \cdot \vec{a} +  \half \vec{k}\cdot\vec{k}\, (\e_1 + \e_2) \right). 
 \end{align}
-\textcolor{red}{(add more explanation)}
-\\
-Notice that the effective instanton fugacity $q$ has to be shifted by equivariant parameters at both poles as $q \to q\, e^{t \e_{1, 2}}$. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
+The 5d version of the equivariant Donaldson operator \eqref{eq:muC} was constructed in \cite{Baulieu:1997nj},  \textcolor{red}{complete}
 
-Now, as we shrink the two cycles to recover the flat $\IC^2$, the effect of the insertion of $\mu$ turns out to give a vanishing contribution due to the conservation laws. 
+
+% This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
+
+Now, as we shrink the blown-up two-cycle to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation laws. 
 To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqref{eq:muC} has $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry. The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to a discrete subgroup $\IZ_{2h^\vee - I(R)}$ where $h^\vee$ is the dual Coxeter number of the gauge group and $I(R)$ is the Dynkin index of the hypermultiplet representation $R$.\footnote{Here we normalize the Dynkin index so that the fundamental for the $SU(N)$ has $I=1$. Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
 \begin{align}
 \hat{Z}_{4d}^{(t)} = Z_{4d} + \CO(t^{2h^\vee - I(R)})  \ . 
