@@ -259,11 +259,12 @@ For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink th
   \label{eq:blowup-generic}
   Z(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
 \end{align}
-However, \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. To achieve this, we need to consider a `correlation function' $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators $\mu$ associated to the two-cycle $C$ in the blow-up $\hat{\mathbb{C}}^2$. In terms of the component fields of the Donaldson-twisted theory, it can be written as 
+However, \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. To achieve this, we need to consider a `correlation function' $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators $\mu$ associated to the two-cycle $\mathbb{P}^1$ in the blow-up $\hat{\mathbb{C}}^2$, named as $C$.  In terms of the component fields of the 4d Donaldson-twisted theory, it is written as  \cite{Witten:1988ze}
 \begin{align} \label{eq:muC}
-\mu(C) = \int \left( \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right)  \ , 
+\mu(C) = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ , 
 \end{align}
-where $\omega = i\partial\bar{\partial}\log(|z|^2+|w|^2)$ is the Fubini-Study two-form on the exceptional divisor $C$. The zero-form $H$ denotes the corresponding $U(1)^2$ moment map, written explicitly in \eqref{eq:moment-map}.
+where $\omega = i\partial\bar{\partial}\,\log(|z|^2+|w|^2)$ is the Fubini-Study two-form on the exceptional divisor $C$. The zero-form $H$ is the corresponding $U(1)^2$ moment map, written explicitly in \eqref{eq:moment-map}.
+
 %  for the  action. \textcolor{red}{(Q. Is $H$ correct?)}
 
 Let us consider the generating function $\langle e^{t \cdot \mu(C)}\rangle $ of the correlators $\langle \mu(C) \ldots \mu(C)  \rangle$. Then the partiton function $\hat{Z}^{(d)}$ can be written in a very simple form as 
@@ -281,8 +282,6 @@ Notice that the insertion of  $\int \frac{H}{2}\, \text{Tr}( F \wedge F )$ shift
 \begin{align}
  \exp \left( \mu(\vec{k}) \right) \equiv \prod_{p\in\{N, S\}} \exp \left( \half (\vec{a} + H_p \vec{k}) \cdot \vec{k}  \right) =  \exp \left( \vec{k} \cdot \vec{a} +  \half \vec{k}\cdot\vec{k}\, (\e_1 + \e_2) \right). 
 \end{align}
-The 5d version of the equivariant Donaldson operator \eqref{eq:muC} was constructed in \cite{Baulieu:1997nj},  \textcolor{red}{complete}
-
 
 % This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
 
@@ -294,16 +293,26 @@ To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqr
 %Therefore, for the x$SU(N_c)$ SQCD with $N_f < 2N_c - 2$, we have enough number of relations to fix the instanton partition function. 
 This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function as long as the hypermultiplet representation is not too large, namely, when $2h^\vee - I(R) > 2$. In this case, we can expand $\hat{Z}^{(t)}$ up to order $t^2$ to obtain 3 relations that is enough to fix the instanton part of the partition function from the \emph{perturbative} part as we will see soon. 
 
-For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the operator $\mu(C)^d$ is given via exponentiation $\exp\left( d \beta \cdot \mu (C) \right)$ where $\beta$ is the size of $S^1$. We can always choose our scale so that $\beta = 1$ and we will omit this parameter. 
-This stems from the fact that $\tr \phi^2$ is not a well-defined operator in 5d theory on $S^1 \times M_4$. In order to take into account the periodic boson, we need to exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. 
+For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the 4d operator 
+is given via exponentiation  \cite{Baulieu:1997nj}
+\begin{align}
+  \exp{ \left\{(d+d_0)\cdot  \mu (C)\right\} }
+\end{align}
+where the 4d complex scalar $\Phi_4$ is decomposed into
+\begin{align}
+  \int\omega \wedge \text{Tr}(\Phi_4 F) \ \longrightarrow \
+  \int\omega \wedge \left(\text{CS}_3(A) + \text{Tr}(\Phi_5 F) \right) \in \mu(C).
+\end{align}
+% We can always choose our scale so that $\beta = 1$ and we will omit this parameter. 
+This stems from the fact that $\tr \phi^2$ is not a well-defined operator in 5d theory on $S^1 \times M_4$. In order to take into account the periodic boson, we need to exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. More precisely, the offset $d_0$ is set to be $d_0 \equiv \frac{h^\vee}{2} - \sum_{i} \frac{I_2(\mathbf{R_i})}{4}$ where the sum is taken over all matter multiplets, since \textcolor{red}{(explain the reason)}. Then $d$ is integer-valued.  
 
-[TODO: Explain why $e^{\mu(C)}$ is good topological operator in 5d. Explain why inserting this does not alter the partition function.]
+\textcolor{red}{[TODO: Explain why $e^{\mu(C)}$ is good topological operator in 5d. Explain why inserting this does not alter the partition function.]}
 
 Therefore, we obtain
 \begin{align} \label{eq:blowup5d}
- Z = \sum_{\vec{k} \in \Lambda} \exp\left( d \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 - |\kappa|) \ , 
+ Z = \sum_{\vec{k} \in \Lambda} \exp\left( (d+d_0)\, \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 ) \ , 
 \end{align} 
-for the 5d theories. We call the relation above as the blow-up equation. 
+for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
 
 \paragraph{Instanton partition function from the blow-up equation}
 From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
@@ -312,13 +321,13 @@ From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton pa
 \end{align}
 Then the blow-up equation can be rewritten as
 \begin{align}
- Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( d \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
+ Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( (d+d_0) \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
 \end{align}
 where $Z_{\textrm{pert}} \equiv Z_{\textrm{class}} Z_{\textrm{1-loop}}$ and the superscript $(N/S)$ denotes appropriate shift of parameters in the north/south pole 
 \begin{align}
 \begin{split}
- Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{d\e_1}) \ , \\
- Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{d\e_2}) \ . 
+ Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{(d+d_0)\e_1}) \ , \\
+ Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{(d+d_0)\e_2}) \ . 
 \end{split}
 \end{align}
  Notice that there is no $q$-dependence in the 1-loop part, hence no $d$-dependence as well. 
@@ -326,22 +335,22 @@ The instanton piece can be expanded in terms of the instanton number as
 \begin{align}
  Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, q) = \sum_{n \ge 0} q^n Z_n (\vec{a}, \e_1, \e_2) \ . 
 \end{align}
-Pluggin in, we obtain
+Plugging in, we obtain
 \begin{align}
- q^n Z_n = \sum_{\vec{k}} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{d(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
+ q^n Z_n = \sum_{\vec{k}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{(d+d_0)(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
 \end{align}
 where $q^{\half \vec{k} \cdot \vec{k}}$ comes from the classical piece as we will see later. Collecting the terms with the same order, we obtain
 \begin{align}
- Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
+ Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
 \end{align}
 where $g(\vec{k}) \equiv \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}}$. Notice that the right-hand side of the above equation only involves the instanton parts with $\ell , m < n$. Therefore, one can determine the $n$-instanton partition function recursively from $Z_0 = 1$. 
 To do this, let us separate $n$-instanton contribution from the above expression. We get 
 \begin{align}
- Z_n = e^{\e_1 d n} Z^{(N)}_n + e^{\e_2 d n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
+ Z_n = e^{\e_1 (d+d_0) n} Z^{(N)}_n + e^{\e_2 (d+d_0) n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
 \end{align}
 where
 \begin{align}
-I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
+I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
 \end{align}
 Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
 \begin{align}
@@ -377,14 +386,17 @@ Z^{H}_{\textrm{1-loop}} &= \exp \Bigg[+\frac{1}{2\epsilon_1\epsilon_2} \sum_{\om
 where $R$ is the set of all weight vectors in the representation of the hypermultiplet. We define the physical mass parameter as $m^{\textrm{phy}}_i = m_i + \e_+$ and $\e_+ = \frac{\e_1+\e_2}{2}$, since there is an effect of topological twisting that shifts the `mass parameter' $m_i$ by a unit of $SU(2)_R$ rotation \cite{Okuda:2010ke}. 
 
 Now, let us compute the $g(\vec{k})$ which is given by the ratio of the 1-loop part of the partition function. 
-It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry except for one single term for the hyper \textcolor{red}{(change)}. Introducing the symbols $n_1(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} \ell$ and  $n_2(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} (\ell^2-\ell)$ for brevity, we find
+It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry except for one single term for the hyper \textcolor{red}{(change)}.  We find
+% Introducing the symbols $n_1(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} \ell$ and  $n_2(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} (\ell^2-\ell)$ for brevity, we find
 \begin{align}
  g(\vec{k})^{V} &= e^{\frac{h^\vee}{2}(\vec{k}\cdot \vec{a})}\prod_{\vec{\a} \in \Delta}  \textrm{PE} \left[  \frac{e^{\vec{a} \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2})} - \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})}- \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{\a}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] ,\nn \\
- g(\vec{k})^{H} &= \prod_{\vec{w} \in R} \exp{\left((\vec{a}\cdot \vec{w}+{m^{\rm phy}) n_1(\vec{k},\vec{w})} + \frac{\e_1+\e_2}{2} n_2(\vec{k},\vec{w})\right)}\nn\\&
+ g(\vec{k})^{H} &= e^{-\frac{I_2(\mathbf{R})}{4}(\vec{k}\cdot \vec{a})-\frac{I_2(\mathbf{R})}{4}(\vec{k}\cdot \vec{k})m_{\rm phy}} 
+ e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k ) - \frac{ I_3(\mathbf{R})}{6} \epsilon_+(d_{ijk} k_i k_j k_k )}
+ \nn\\&
  \quad\quad\times 
- \textrm{PE} \left[ \frac{- e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right]
+ \prod_{\vec{w} \in R}\textrm{PE} \left[ -\frac{ e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right]
 \end{align}
-for the vector and hypermultiplets respectively. 
+for the vector and hypermultiplets respectively. Our notation is that $\Tr(T^i T^j) = I_2(\mathbf{R})\delta^{ij}$ and $\Tr(T^i \{T^j,T^k\}) = I_3(\mathbf{R})d_{ijk}$, where $d_{ijk} \neq 0$ only for $G = SU(N)$. The $SU(N)$ generators are normalized such that $I_3(\text{fund}) =1$.
 Besides the zero-point energy contribution, the PE of $g(\vec{k})$ can be written as 
 % Both of them can be written as 
 \begin{align}
@@ -428,15 +440,16 @@ Let us state our final answer:
 with 
 \begin{align}
 \begin{split}
-I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} & \Bigg( \exp \left[ d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)\right] \\
-& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i} e^{\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} } \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} - m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
+I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} & \Bigg( \exp \left[ d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)\right]  \\& \quad
+\times e^{d_0\left( \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)}  \times e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k ) - \frac{ I_3(\mathbf{R})}{6} \epsilon_+(d_{ijk} k_i k_j k_k )}\\
+& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i} e^{-\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} } \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} + m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
 &\quad \times Z_{\ell}(\vec{a}+\vec{k}\e_1, \vec{m}^{\textrm{phy}}, \e_1, \e_2-\e_1) Z_m (\vec{a}+\vec{k} \e_2, \vec{m}^{\textrm{phy}}, \e_1-\e_2, \e_2) \Bigg) \ , 
 \end{split}
 \end{align}
 where $i$ runs over all the hypermultiplets. 
 
 \paragraph{One-instanton partition function}
-Let us compute the 1-instanton partition function using our formula. In this case, we only take the sum over the long roots having $\vec{k}\cdot \vec{k} = 2$ and $\ell = m = 0$. Therefore, 
+Let us compute the 1-instanton partition function using our formula. In this case, we only take the sum over the long roots having $\vec{k}\cdot \vec{k} = 2$ and $\ell = m = 0$. Therefore, \textcolor{red}{(add the effect of $e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k )}$)}
 \begin{align}
  I_1^{(d)} = e^{d(\e_1+\e_2)} \sum_{\vec{\g} \in \Delta_l} \frac{e^{d \vec{\g} \cdot \vec{a} } M(\g) }{L(\g)} \ , 
 \end{align} 
@@ -450,7 +463,7 @@ where $\Delta_l$ is the set of all long roots and
 \end{align}
 where $a_\g \equiv \vec{a}\cdot \vec{\g}$ with $a_\a \equiv \vec{a}\cdot \vec{\a}$ and 
 \begin{align}
- M(\g) \equiv \prod_{\vec{w} \in R} e^{\frac{(\vec{\g} \cdot \vec{w})^2}{4}m^{\textrm{phy}} }\CL_{\g \cdot w} (a_w, \e_1, \e_2)  = e^{I(R)m^{\textrm{phy}}/2} \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
+ M(\g) \equiv \prod_{\vec{w} \in R} e^{-\frac{(\vec{\g} \cdot \vec{w})^2}{4}m^{\textrm{phy}} }\CL_{\g \cdot w} (a_w, \e_1, \e_2)  = e^{-I(R)m^{\textrm{phy}}/2} \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
 \end{align}
 with $a_w \equiv \vec{a} \cdot \vec{w}$ and $I(R)$ is the Dynkin index of the representation $R$. 
 Therefore, the one-instanton partition function can be written explicitly as 
@@ -469,12 +482,12 @@ which is the one derived in \cite{Keller:2011ek, Keller:2012da}.
 
 For the case with fundamental matters, we find that for the long root $\g$, there are only weights with $\g \cdot w = 0, \pm 1$. Therefore, the $M(\g)$ can be simplified to give
 \begin{align}
- M(\g) = \prod_{\g \cdot w = 0, \pm 1} \CL_{\g \cdot w} (a_w, \e_1, \e_2) = \prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) \ . 
+ M(\g) = \prod_{\g \cdot w = 0, \pm 1} \CL_{\g \cdot w} (a_w, \e_1, \e_2) = \prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) \ . 
 \end{align}
 The one-instanton partition function is now given as
 \begin{align}
-Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{\prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2} \prod_{\g \cdot w = 1} (1-e^{a_w - m^{\textrm{phy} }}) }{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
+Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{\prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) }{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
+&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2} \prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) }{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
 \end{align}
 which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$ for all $w \in R$. 
 
