@@ -223,32 +223,32 @@ The essential idea of using the blow-up of ${\IC}^2$ for instanton counting is t
 
 
 
-\paragraph{Partition function on the Blow-up $\hat{\IC}^2$}
+\paragraph{Localization on the blow-up $\hat{\IC}^2$}
 
-One of the expressions for the partition function $\hat{\mathcal{Z}}$ on the blow-up $\hat{\IC}^2$ comes from the Coulomb branch localization, which results that $\hat{\mathcal{Z}}$ can be obtained by patching together the flat-space partition functions \cite{Nekrasov:2003vi}.
+One of the expressions for the partition function $\hat{\mathcal{Z}}$ on the blow-up $\hat{\IC}^2$ comes from the Coulomb branch localization, which results that $\hat{\mathcal{Z}}$ can be obtained by patching together the flat-space partition function $\mathcal Z$ \cite{Nekrasov:2003vi}.
 
 
  The blow-up of a point in $\IC^2$ can be described as a subspace of $\IC^2 \times \IP^1$, defined as
 \begin{align}
- \{ (x, y), [z: w] \in \IC^2 \times \IP^1 | xw = yz \} \ , 
+ \left\{ \big((x, y), [z: w]\big) \in \IC^2 \times \IP^1 \,\big|\, xw = yz \,\right\} \ , 
 \end{align}
-where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space is identical to $\IC^2$ when $(x, y) \neq (0, 0)$, and the origin is replaced by complex projective plane. We will be considering the $U(1)^2$-equivariant partition function, with each $U(1)$'s acting as the rotation of a complex plane. This $U(1)^2$ action acts on $\hat{\IC}^2$ as
+where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space is identical to $\IC^2$ when $(x, y) \neq (0, 0)$, and the origin is replaced by complex projective plane. We will be considering the $U(1)^2$ equivariant partition function, with each $U(1)$'s acting as the rotation of a complex plane. This $U(1)^2$ action $V$ acts on $\hat{\IC}^2$ as
 \begin{align}
- ((x, y), [z: w]) \mapsto (e^{i \e_1} x, e^{i \e_2} y), [e^{i \e_1} z, e^{i \e_2} w]) \ . 
+ \big((x, y), [z: w]\big) \mapsto \big((e^{ \e_1} x, e^{ \e_2} y), [e^{ \e_1} z: e^{ \e_2} w]\big) \ . 
 \end{align}
-The zero sized instantons will be located at two fixed points of the $U(1)^2$ action, namely the north and south pole of the $\mathbb{P}^1$. At these points, the weights of the $U(1)^2$ action become
+Instantons are located at two fixed points of the $U(1)^2$ action, namely the north/south poles of the $\mathbb{P}^1$, whose coordinates are $((x, y), [z: w]) = ((0, 0), [1, 0])$ and $((0, 0), [0, 1])$ respectively. Around these fixed points, the weights of the $U(1)^2$ action $V$ become:
 \begin{align}
- ((0, 0), [1, 0]) : (\e_1, \e_2 - \e_1) , \qquad ((0, 0), [0, 1]): (\e_1 - \e_2, \e_2) \ . 
+  (x,\,w/z) &\mapsto  (e^{\e_1}x, \,e^{\e_2 - \e_1}w/z) &  \text{(near the north pole)}\\
+  (z/w,\,y) &\mapsto  (e^{\e_1 - \e_2}z/w, \,e^{\e_2}y) &  \text{(near the south pole)}
 \end{align}
 
-The full partition function $\hat{Z}$ on $\hat{\IC}^2$, which includes both the perturbative and instanton contributions, can be written as a sum over the product of the partition functions at two fixed points \cite{Nekrasov:2003vi, Gottsche:2006bm, Gottsche:2006tn, Gasparim:2008ri, Bonelli:2012ny}. Here we turn off any external flux that can be supported on the $\IP^1$. Then 
+The full partition function $\hat{\mathcal Z}$ on $\hat{\IC}^2$, which includes both the perturbative and instanton contributions, can be obtained by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is generically broken to $U(1)^r$ where $r$ is the rank of the gauge group. The $U(1)^r$ equivariant parameters $\vec{a}$ naturally appear in the partition function. One needs to sum over all distinct field configurations with zero-sized instantons located at the north and south poles. All the inequivalent configurations are labeled by the vector $\vec{k}$ of the first Chern numbers, corresponding to different flux configurations on the divisor $\mathbb{P}^1$. Here we turn off any possible external flux that can be supported on the $\IP^1$. 
+Summing up, $\hat{\mathcal Z}$ can be expressed as the following formula \cite{Nekrasov:2003vi, Gottsche:2006bm, Gottsche:2006tn, Gasparim:2008ri, Bonelli:2012ny}:
 \begin{align} \label{eq:blowup}
- \hat{Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
-\end{align}
-% where $Z(\vec{a}, \e_1, \e_2)$ is the full partition function on $\IC^2$ where $\vec{a}$ is the Coulomb VEV parameter. 
-where the sum is taken over the coweight lattice $\Lambda$  of the gauge group.
-This expression is obtained by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is broken to $U(1)^r$ where $r$ is the rank of the gauge group. We need to patch together all possible field configurations with zero sized instantons located at the north and south poles.  All the inequivalent configurations are labeled by the vector $\vec{k}$ of the first Chern numbers, corresponding to different flux configurations on the divisor $\mathbb{P}^1$. The shift of the Coulomb parameter is due to the following reason \cite{Bershtein:2015xfa}: At a fixed point $p$, the $U(1)^r$ vector multiplet scalar $\vec{\Phi}$ takes the value of $\vec{a} + \vec{k}H|_p$, where $H$ is the moment map for the $U(1)^2$ action $V$ on the K\"ahler 2-form $\omega$, i.e., $\iota_V \omega = dH$. One can find $H|_{N} = \epsilon_1$ and $H|_{S} = \epsilon_2$ as 
-\begin{align}
+  \hat{\mathcal Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} {\mathcal Z}(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) {\mathcal Z}(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) 
+ \end{align}
+ where the flux sum is taken over the coweight lattice $\Lambda$  of the gauge algebra. Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$. This is because the $U(1)^r$ vector multiplet scalar $\langle \vec{\Phi}\rangle $ has the vacuum expectation value $\vec{a} + \vec{k}H|_p$ \cite{Bershtein:2015xfa}, where 
+ \begin{align}
   \label{eq:moment-map}
   H = 
   \begin{dcases}
@@ -256,47 +256,98 @@ This expression is obtained by performing the localization on the Coulomb branch
    \frac{(\epsilon_1-\epsilon_2)|z|^2+ \epsilon_2|w|^2}{|z|^2+|w|^2} & \text{(around the south pole)}.
   \end{dcases}
 \end{align}
+is the moment map $\iota_V \omega = dH$ for the  $U(1)^2$ action $V$ on the K\"ahler 2-form $\omega$. It follows that  $H|_\text{NP} = \epsilon_1$ and $H|_\text{SP} = \epsilon_2$.
 
-\paragraph{Partition function on $\hat{\IC^2}$ vs $\IC^2$}
-Alternatively, it is  known that the partition function $\hat{\CZ}$ on the blow-up $\hat{\IC}^2$ ($S^1 \times \hat{\IC^2}$) is actually identical to the flat space partition function $\CZ$  \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}.
+\paragraph{Partition function on $\hat{\IC}^2$ vs $\IC^2$}
+An alternative fact for the partition function $\hat{\CZ}$ on the blow-up $\hat{\IC}^2$ is that $\hat{\CZ}$ is actually identical to the flat-space partition function $\CZ$  \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}.
  
-This can be argued as follows: The blow-up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by the exceptional divisor $\IP^1$. It can also be  identified as the total space of the bundle $\CO(-1) \to \IP^1$. 
-The Nekrasov partition function gets contributions only from the zero-size instantons localized at the fixed points of the $U(1)^2$ action, thus the size of the divisor should not affect the partition function as we smoothly shrink it. Therefore, we expect that the partition function on the blow-up to be identical to that of the flat $\IC^2$ (or $\IC^2 \times S^1$).
 
-This is a special feature of the blow-up of a point. In principle, there can be extra states coming from the $\IP^1$. As we shrink the size of the $\IP^1$, there may appear extra massless states which can contribute to the partition function. This happens when there is a singularity as we blow down the $\IP^1$. 
-For example, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. However, in our case, we do not obtain any singularity as we blow down the sphere. \textcolor{red}{We will discuss later that this simple picture does not necessarily hold when there are too many hypermultiplets. But at least this was the case for the pure YM theory \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg,Keller:2012da,Gu:2018gmy,Gu:2019dan}. We will demonstrate that this is also true for many interesting cases with matter hypermultiplets \cite{Gottsche:2010ig}.}\footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing. \cite{Ito:2013kpa}} Therefore, we have a powerful identity:
+
+% This can be understood as follows: 
+The blow-up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by the exceptional divisor $\IP^1$. It can be identified with the total space of the bundle $\CO(-1) \to \IP^1$. 
+Since the Nekrasov partition function gets contributions only from the small instantons localized at the fixed points of the $U(1)^2$ equivariant action $V$, the size of the divisor should not affect the partition function as we smoothly shrink it. So we expect that $\hat{\CZ} = \CZ$. More generally, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. There are extra states coming from the $\IP^1$, which become massless as we shrink the size of the $\IP^1$. However, they contribute to the orbifold partition function merely as the required twisted sector. We expect the Nekrasov partition function to remain the same by blowing up and down. This implies the following  identity: \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg,Keller:2012da,Gu:2018gmy,Gu:2019dan}
 \begin{align} 
   \label{eq:blowup-generic}
-  Z(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} Z(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
+  \CZ(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \CZ(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
 \end{align}
-However, \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. To achieve this, we need to consider a `correlation function' $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators $\mu$ associated to the two-cycle $\mathbb{P}^1$ in the blow-up $\hat{\mathbb{C}}^2$, named as $C$.  In terms of the component fields of the 4d Donaldson-twisted theory, it is written as  \cite{Witten:1988ze}
-\begin{align} \label{eq:muC}
-\mu(C) = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ , 
-\end{align}
-where $\omega = i\partial\bar{\partial}\,\log(|z|^2+|w|^2)$ is the Fubini-Study two-form on the exceptional divisor $C$. The zero-form $H$ is the corresponding $U(1)^2$ moment map, written explicitly in \eqref{eq:moment-map}.
+% \footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing. \cite{Ito:2013kpa}} 
 
-%  for the  action. \textcolor{red}{(Q. Is $H$ correct?)}
+%
+% This simple picture does not necessarily hold when there are too many hypermultiplets. However, for many interesting cases with matter hypermultiplets \cite{Gottsche:2010ig}, the above relation turns out to be true.
 
-Let us consider the generating function $\langle e^{t \cdot \mu(C)}\rangle $ of the correlators $\langle \mu(C) \ldots \mu(C)  \rangle$. Then the partiton function $\hat{Z}^{(d)}$ can be written in a very simple form as 
+
+\paragraph{Background parameters}
+
+The expected relation \eqref{eq:blowup-generic} is only a schematic expression.
+The partition function also depends on some background parameters, such as the gauge coupling $\Lambda$ or the flavor chemical potentials $\vec{m}$. Those need to be modified appropriately at each fixed point $p$ of the blow-up $\hat{\IC}^2$. 
+For example, the $\IC^2 \times S^1$ partition function of a free hypermultiplet with mass $m$ can be written as
 \begin{align}
- \hat{Z}^{(t)}(\vec{a}, m, \e_1, \e_2, q) = \sum_{\vec{k} \in \Lambda} \exp\left(t \cdot \mu(\vec{k}) \right)  Z^{(N), t} (\vec{k}) Z^{(S), t} (\vec{k})\ , 
+  % \CZ_\text{hyper}(\epsilon_1, \epsilon_2, m) = 
+  \color{red}  \exp\left[\frac{-2m^3 +(\e_+^2 + \e_-^2+12) \cdot m-24 }{12\e_1\e_2} \right] \cdot \text{PE}\left[\frac{e^{-m}\cdot e^{-\e_+}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
+\end{align}
+which can satisfy \eqref{eq:blowup-generic} only when accompanied by $m \rightarrow m + \frac{H}{2}|_p$. 
+This shift keeps it unchanged the combination $(m + \e_+)$ of background gauge fields, corresponding to the effective twisted mass of the hypermultiplet. We will denote it as $m_\text{phy} \equiv (m+ \e_+)$ from here on. 
+
+Similarly, we investigate the $\IC^2 \times S^1$ partition function of the 5d $\mathcal{N}=1$ Maxwell theory. This is a product between the perturbative index of a free vector multiplet,
+\begin{align}
+  % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
+  \color{red}  \exp\left[ \frac{\e_+(\e_+^2 - \e_-^2 - 12) + 24}{12\e_1\e_2}\right] \cdot  \text{PE}\left[-\frac{1}{(1-e^{\e_1})(1-e^{\e_2})}\right]
+\end{align}
+satisfying \eqref{eq:blowup-generic} by itself, and the non-perturbative contribution from $U(1)$ multi-instantons
+\begin{align}
+  % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
+  \color{red}   \text{PE}\left[\frac{e^\Lambda \cdot e^{\e_+}}{(1-e^{\e_1})(1-e^{\e_2})}\right]
+\end{align}
+which comply with \eqref{eq:blowup-generic} upon the appropriate shift of the gauge coupling $\Lambda \rightarrow \Lambda + \frac{H}{2}|_p$. 
+Again, the effective twisted mass $(\Lambda + \epsilon_+)$ of an instanton stays invariant under this change. 
+
+We remark that the twisted mass of an instanton, in a general non-Abelian gauge theory with effective Chern-Simons level $\kappa_\text{eff}$, is $(\Lambda + b \cdot  \epsilon_+)$ where $b \equiv h^\vee  - \frac{1}{2}\sum_{i}I(\mathbf{R}_i) + \kappa_\text{eff}$. This is the supersymmetric Casimir energy of the ADHM quantum mechanics at one instanton. Here $h^\vee$ is the dual Coxeter number of the gauge group, $I_2(\mathbf{R})$ is the Dynkin index\footnote{The Dynkin index $I_2(\mathbf{R})$ is normalized such that $I_2(\mathbf{F}) = 1$ for the $SU(N)$ fundamental representation $\bf F$.} of a given representation $\bf R$, and the sum is taken over all matter multiplets in the theory. The effective Chern-Simons level is  $\kappa_\text{eff} \equiv \kappa_\text{cl} + \frac{1}{2}\sum_i \text{sgn}(m_i)\,I_3(\mathbf{R}_i)$  where $I_3(\mathbf{R})$ is the anomaly coefficient of an $SU(N)$ representation $\mathbf{R}$. Having identified the effective instanton mass,  the proper shift of the gauge coupling at each fixed point $p$ must be $\Lambda \rightarrow \Lambda + \frac{b}{2}H|_p$. In summary,
+\begin{align}
+  m|_p = m + \frac{H}{2}\bigg|_p\, \qquad \Lambda|_p = \Lambda + \frac{b}{2}H|_p.
+\end{align}
+
+
+
+
+
+
+
+
+\paragraph{Donaldson operator}
+
+The equation \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. More independent relations can be found from insertion of topological operators.
+We want to consider the correlation functions of the topological operator $\mu(C)$ associated to the two-cycle $C$ of the blow-up $\hat{\mathbb{C}}^2$. 
+
+Let us focus on the 4d Donaldson-twisted theory. The $\CQ$-exact operator $\mu(C)$ is obtained by applying the descent procedure twice to the Casimir invariant $\text{Tr}(\Phi^2)$, which can be written in terms of the component fields as  \cite{Witten:1988ze}
+% $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators 
+\begin{align} \label{eq:muC}
+  \mu(C) = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
+\end{align}
+Here $\omega$ and $H$ are the K\"ahler two-form on $C$ and the moment map \eqref{eq:moment-map} associated to $V$.
+We find it convenient to study the generating function $\langle e^{t \, \mu(C)}\rangle $ of the correlators $\langle \mu(C) \ldots \mu(C)  \rangle$. The expectation value can be written as
+\begin{align}
+  \langle e^{t \, \mu(C)}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})}{\CZ^{(0)}}\ , 
 \end{align} 
 where
 \begin{align}
 \begin{split}
- Z^{(N), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q e^{t\e_1}, m) \ , \\
- Z^{(S), t}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q e^{t\e_2}, m) \ . 
+  \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, \Lambda +  (\tfrac{b}{2}+t)\e_1, \vec{m} +\tfrac{1}{2}\e_1) \ , \\
+  \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, \Lambda +  (\tfrac{b}{2}+t)\e_2, \vec{m} +\tfrac{1}{2}\e_2)\ , \\
+ \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, \Lambda, m).
 \end{split}
 \end{align}
-Notice that the insertion of  $\int \frac{H}{2}\, \text{Tr}( F \wedge F )$ shifts the effective instanton fugacity at both poles by $q \to q \cdot e^{t\, \e_{1, 2}}$, since $H|_{N} = \epsilon_1$ and $H|_{S} = \epsilon_2$. Similarly, the insertion of $\int \omega \wedge \text{Tr}(\Phi F + \half \psi \wedge \psi)$ results in $\mu(\vec{k})$, which is  a function of $\vec{k}$ and also depends on $\vec{a}, \e_1,\e_2$ that we often abbreviate. More explicitly, it can be expressed as \textcolor{red}{(factor of $\half$?)}
-\begin{align}
- \exp \left( \mu(\vec{k}) \right) \equiv \prod_{p\in\{N, S\}} \exp \left( \half (\vec{a} + H_p \vec{k}) \cdot \vec{k}  \right) =  \exp \left( \vec{k} \cdot \vec{a} +  \half \vec{k}\cdot\vec{k}\, (\e_1 + \e_2) \right). 
-\end{align}
+We notice that the insertion of the operator $\mu(C)$ has caused an extra shift of the effective instanton mass by $tH|_p$, at each fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. 
 
-% This is due to the term $H F\wedge F$ in \eqref{eq:muC} which makes the effective instanton parameter as $q e^{t(\e_1+\e_2)}$ At the north pole, $\e_1 + \e_2 \to \e_1 + (\e_2 - \e_1) = \e_2$. We need to compensate this part by shifting $q$ by $e^{t\e_1}$. Similarly, we need to shift the parameters at the south pole. 
+As we shrink the two-cycle $C$ to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation law. To see this, we recall that the instanton breaks the $U(1)_R$ symmetry to the a discrete subgroup $\IZ_{2h^\vee - I(R)}$.
 
-Now, as we shrink the blown-up two-cycle to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation laws. 
-To see this, let us consider 4d $\CN=2$ theory for the moment. The operator \eqref{eq:muC} has $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry. The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to a discrete subgroup $\IZ_{2h^\vee - I(R)}$ where $h^\vee$ is the dual Coxeter number of the gauge group and $I(R)$ is the Dynkin index of the hypermultiplet representation $R$.\footnote{Here we normalize the Dynkin index so that the fundamental for the $SU(N)$ has $I=1$. Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
+The operator \eqref{eq:muC} carries $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry.
+%  let us consider 4d $\CN=2$ theory for the moment. 
+
+
+\footnote{
+
+
+ The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to where Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
 \begin{align}
 \hat{Z}_{4d}^{(t)} = Z_{4d} + \CO(t^{2h^\vee - I(R)})  \ . 
 \end{align}
@@ -324,7 +375,7 @@ Therefore, we obtain
 \end{align} 
 for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
 
-\paragraph{Instanton partition function from the blow-up equation}
+\subsection{Instanton partition function from the blow-up equation}
 From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
 \begin{align}
  Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
