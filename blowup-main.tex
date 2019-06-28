@@ -328,34 +328,34 @@ where
 \end{align}
 We notice that the insertion of the operator $\mu(C)$ has caused an extra shift of the effective instanton mass by $tH|_p$, at each fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. 
 
-As we shrink the two-cycle $C$ to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation law. To see this, we recall that the instanton breaks the $U(1)_R$ symmetry to the a discrete subgroup $\IZ_{2h^\vee - I(R)}$.
-
-The operator \eqref{eq:muC} carries $U(1)_R$ charge $+2$ of the 4d $\CN=2$ supersymmetry.
-%  let us consider 4d $\CN=2$ theory for the moment. 
-
-
-\footnote{
-
-
- The instanton carries $4h^\vee$ which is responsible for breaking $U(1)_R$ to where Therefore the $SU(N_c)$ SQCD with $N_f$ fundamental hypers have $I(R) = N_f$.} Unless the charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
+As we shrink the two-cycle $C$ to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation law. To see this, we recall that the instanton breaks the $U(1)_R$ symmetry to the a discrete subgroup $\IZ_{2h^\vee - \sum_i I_2(\mathbf{R}_i)}$, under which the operator \eqref{eq:muC} carries a charge of $+2$. Unless the discrete charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
 \begin{align}
-\hat{Z}_{4d}^{(t)} = Z_{4d} + \CO(t^{2h^\vee - I(R)})  \ . 
+  \label{eq:donaldson-4d}
+  \langle e^{t \, \mu(C)}\rangle = 1 + \CO(t^{2h^\vee - \sum_i I_2(\mathbf{R}_i)})  \ . 
 \end{align}
-%Therefore, for the x$SU(N_c)$ SQCD with $N_f < 2N_c - 2$, we have enough number of relations to fix the instanton partition function. 
-This allows us to write 3 relations among for the 3 unknowns to solve for the instanton partition function as long as the hypermultiplet representation is not too large, namely, when $2h^\vee - I(R) > 2$. In this case, we can expand $\hat{Z}^{(t)}$ up to order $t^2$ to obtain 3 relations that is enough to fix the instanton part of the partition function from the \emph{perturbative} part as we will see soon. 
+As long as the hypermultiplet representation is not too large, i.e., when $2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown varables, at every instanton number. Thus we can expand $\langle e^{t \, \mu(C)}\rangle$ up to order $\CO(t^2)$ and recursively solve for the instanton partition function $\CZ^{(0)}$ on $\IC^2$. The instanton part of the partition function will be completely determined from the perturbative partition function, as we will illustrate in Section~\ref{subsec:recursion}. 
 
-For the case of 5d $\CN=1$ theory in $S^1$, we do not have $U(1)_R$ symmetry to impose the selection rule. The natural uplift of the 4d operator 
-is given via exponentiation  \cite{Baulieu:1997nj}
-\begin{align}
-  \exp{ \left\{(d+d_0)\cdot  \mu (C)\right\} }
+Turning to the 5d $\CN=1$ gauge theory on $S^1$, the operator $\mu(C)$ is naturally uplifted via exponentiation as follows: \cite{Baulieu:1997nj}
+\begin{align} \label{eq:muC}
+  \mu(C)^d = \exp\left[
+    d\int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \tfrac{1}{2} \psi \wedge \psi\Big) + \tfrac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}
+     \right] \ .
 \end{align}
+This stems from the fact that $\Tr (\Phi^2)$ is not a well-defined operator in a 5d theory on $ \CM_4 \times S^1$.
+To take into account the periodicty boson, we need to exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. More precisely, the offset $d_0$ is set to be $d_0 \equiv \frac{h^\vee}{2} - \sum_{i} \frac{I_2(\mathbf{R_i})}{4}$ where the sum is taken over all matter multiplets, since \textcolor{red}{(explain the reason)}. Then $d$ is integer-valued.  
+
+
+we no longer have a discrete R-symmetry to impose the selection rule. 
+
+
+The natural uplift of the 4d operator 
+is given via  
 where the 4d complex scalar $\Phi_4$ is decomposed into
 \begin{align}
   \int\omega \wedge \text{Tr}(\Phi_4 F) \ \longrightarrow \
   \int\omega \wedge \left(\text{CS}_3(A) + \text{Tr}(\Phi_5 F) \right) \in \mu(C).
 \end{align}
 % We can always choose our scale so that $\beta = 1$ and we will omit this parameter. 
-This stems from the fact that $\tr \phi^2$ is not a well-defined operator in 5d theory on $S^1 \times M_4$. In order to take into account the periodic boson, we need to exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. More precisely, the offset $d_0$ is set to be $d_0 \equiv \frac{h^\vee}{2} - \sum_{i} \frac{I_2(\mathbf{R_i})}{4}$ where the sum is taken over all matter multiplets, since \textcolor{red}{(explain the reason)}. Then $d$ is integer-valued.  
 
 \textcolor{red}{[TODO: Explain why $e^{\mu(C)}$ is good topological operator in 5d. Explain why inserting this does not alter the partition function.]}
 
@@ -366,6 +366,7 @@ Therefore, we obtain
 for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
 
 \subsection{Instanton partition function from the blow-up equation}
+\label{subsec:recursion}
 From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
 \begin{align}
  Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
