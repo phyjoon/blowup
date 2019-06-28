@@ -194,11 +194,21 @@ where the instanton piece is the fugacity sum over all multi-instanton contribut
 \begin{align}
   \mathcal{Z}_{\textrm{inst}}(\vec{a}, \vec{\mathfrak{m}}, \e_1, \e_2, \mathfrak{q}) = 1 + \sum_{k=1}^\infty \mathfrak{q}^k \mathcal{Z}_k(\vec{a}, \vec{\mathfrak{m}}, \e_1, \e_2).
 \end{align}
+The instanton part of the partition function in the $\Omega$-background can be computed once we know appropriate instanton moduli space. For the classical gauge group, the ADHM construction of the moduli space provides a direct way compute the instanton partition function. The ADHM construction can be understood as the quantum mechanics described by the Dp-D(p+4) system. The Higgs branch moduli space of the Dp system gives the desired moduli space. Matter fields can be also introduced by considering the world-volume theory on the D0-branes of the D0-D4-D8 system. 
+
+But there is no ADHM type construction for the exceptional gauge groups or generic type of matter fields. String-theoretic picture implies that they require strong-coupling dynamics or non-Lagrangian field theories to realize instanton moduli space of exceptional group as a vacuum moduli space. There has been a few results regarding the exceptional instantons. 
+
+In this paper, we generalize the approach of \cite{Keller:2012da} where the instanton partition function was obtained via blow-up formula of Nakajima-Yoshioka \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg} for the pure YM theory. We propose a general blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not too large. This enables us to compute the instanton partition function for a numerous gauge theories that has not been known before, without relying on to the explicit construction of the moduli space. 
+
+The basic idea is as follows: Let us consider a one-point blow up $\hat{\IC^2}$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC^2}$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC^2}$ to $\IC^2$.\footnote{As long as the matter representation is not `too large'.} This provides us a functional relation for the partition function, which turns out to be enough to determine the instanton partition function itself. Remarkably, this relation is completely determined by the perturbative part of the partition function. Therefore we arrive at a surprising conclusion: The \emph{perturbative} physics determine the \emph{non-perturbative} physics! 
+
+
+
 
 \paragraph{Notation}
 The equivariant parameters $\epsilon_{1}, \epsilon_2, \vec{a}$ are associated to the $U(1)^2 \times U(1)^{|G|}$ action on the $k$-instanton moduli space $\mathcal{M}_{k,G}$. Additional parameters $\vec{\mathfrak{m}}$ are introduced if the gauge theory has an extra  flavor symmetry. The instanton fugacity $\mathfrak{q}$ can be written as $\mathfrak{q}\equiv\Lambda^{b_0}$ (4d) or $\mathfrak{q}\equiv \exp(2\pi i \Lambda)$ (5d) where $\Lambda$ denotes the bare coupling of the 4d/5d gauge theory.
 
-Throughout Section~\ref{sec:blowup}, we will characterize the partition function in terms of $m_i \equiv \mathfrak{m}_i + \epsilon_+$ (where $\epsilon_+ \equiv \frac{\epsilon_1 + \epsilon_2}{2}$) as a reflection of the Donaldson-Witten twist by $SU(2)_R$ symmetry. Here $m_i$ corresponds to the `physical' mass parameter of a matter hypermultiplet. We will also stick to the `effective' instanton fugacity $q \equiv \mathfrak{q} e^{{b_0}\epsilon_+/2}$, which absorbs the $SU(2)_R$ generated mass of fermionic instanton zero modes, in describing the 5d Nekrasov partition function.
+Throughout Section~\ref{sec:blowup}, we will characterize the partition function in terms of $m_i \equiv \mathfrak{m}_i + \epsilon_+$ (where $\epsilon_+ \equiv \frac{\epsilon_1 + \epsilon_2}{2}$) as a reflection of the Donaldson-Witten twist by $SU(2)_R$ symmetry. Here $m_i$ corresponds to the `physical' mass parameter of a matter hypermultiplet. We will also stick to the `effective' instanton fugacity $q \equiv \mathfrak{q} e^{{b_0}\epsilon_+}$, which absorbs the $SU(2)_R$ generated mass of fermionic instanton zero modes, in describing the 5d Nekrasov partition function.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
