@@ -1,3 +1,5 @@
+
+
 \documentclass[letterpaper, 11pt]{article}
 
 \usepackage{jheppub}
@@ -225,7 +227,7 @@ Throughout Section~\ref{sec:blowup}, we will characterize the partition function
 
 
 
-The essential idea of using the blow-up of ${\IC}^2$ for instanton counting is that the gauge theory partition function for a 4d $\CN=2$ (or 5d $\CN=1$) theory on a blow up of a point $\hat{\IC}^2$ (or $S^1 \times \hat{\IC}^2$) can be written in two different ways. This allows us to write a recursion relation for the instanton partiton function that can be solved easily \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg, Keller:2012da}. 
+The essential idea of using the blow-up of ${\IC}^2$ for instanton counting is that the gauge theory partition function for a 4d $\CN=2$ (or 5d $\CN=1$) theory on the blow-up of a point $\hat{\IC}^2$ (or $S^1 \times \hat{\IC}^2$) can be written in two different ways. This will allow us to write a recursion relation for the instanton partiton function that can be solved rather easily \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg, Keller:2012da}. 
 
 
 
@@ -236,36 +238,35 @@ The essential idea of using the blow-up of ${\IC}^2$ for instanton counting is t
 
 One of the expressions for the partition function $\hat{\mathcal{Z}}$ on the blow-up $\hat{\IC}^2$ comes from the Coulomb branch localization, which results that $\hat{\mathcal{Z}}$ can be obtained by patching together the flat-space partition function $\mathcal Z$ \cite{Nekrasov:2003vi}.
 
+The blow-up $\hat{\IC}^2$ is constructed from $\IC^2$ by replacing the origin with the compact 2-cycle. In particular, the geometry near the $\IP^1$ is identical to a line bundle of degree $(-1)$ on the $\IP^1$. One can parametrize $\mathcal{O}(-1)\rightarrow \IP^1$ using three homogeneous coordinates $(z_0, z_1, z_2)$, satisfying the projective condition $(z_0, z_1, z_2) \sim (\lambda^{-1}z_0, \lambda^1 z_1, \lambda^1 z_2)$ for any $\lambda \in \IC^*$, where the two-cycle  $\IP^1 \subset \hat{\IC}^2$ corresponds to the locus $z_0 = 0$. 
+%  can be described as a subspace of $\IC^2 \times \IP^1$, defined as
+% \begin{align}
+%  \left\{ \big((x, y), [z: w]\big) \in \IC^2 \times \IP^1 \,\big|\, xw = yz \,\right\} \ , 
+% \end{align}
+% where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space 
+We are interested in the $U(1)^2$ equivariant partition function, with the $U(1)^2$ action $V$ rotating the complex coordinates $(z_0, z_1, z_2)$ as follows:
+\begin{align}
+  (z_0, z_1, z_2) \mapsto (z_0, e^{\e_1}z_1, e^{\e_2}z_2).
+%  \big((x, y), [z: w]\big) \mapsto \big((e^{ \e_1} x, e^{ \e_2} y), [e^{ \e_1} z: e^{ \e_2} w]\big) \ . 
+\end{align}
+Instantons are located at two fixed points of the $U(1)^2$ action, i.e., the north/south poles of the $\mathbb{P}^1$, whose coordinates are 
+% $((x, y), [z: w]) = ((0, 0), [1, 0])$ and $((0, 0), [0, 1])$ 
+$(z_0, z_1, z_2)  = (0,1,0)$ and $(0,0,1)$. Around these fixed points, the local weights under the $U(1)^2$ action $V$ are:
+\begin{align}
+  (z_0 z_1,\,z_2/z_1) &\mapsto  (e^{\e_1}z_0 z_1, \,e^{\e_2 - \e_1}z_2/z_1) &  \text{(near the north pole)}\\
+  (z_0 z_2,\,z_1/z_2) &\mapsto (e^{\e_2}z_0 z_2, \,e^{\e_1 - \e_2}z_1/z_2) &  \text{(near the south pole)}
+\end{align}
 
- The blow-up of a point in $\IC^2$ can be described as a subspace of $\IC^2 \times \IP^1$, defined as
-\begin{align}
- \left\{ \big((x, y), [z: w]\big) \in \IC^2 \times \IP^1 \,\big|\, xw = yz \,\right\} \ , 
-\end{align}
-where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space is identical to $\IC^2$ when $(x, y) \neq (0, 0)$, and the origin is replaced by complex projective plane. We will be considering the $U(1)^2$ equivariant partition function, with each $U(1)$'s acting as the rotation of a complex plane. This $U(1)^2$ action $V$ acts on $\hat{\IC}^2$ as
-\begin{align}
- \big((x, y), [z: w]\big) \mapsto \big((e^{ \e_1} x, e^{ \e_2} y), [e^{ \e_1} z: e^{ \e_2} w]\big) \ . 
-\end{align}
-Instantons are located at two fixed points of the $U(1)^2$ action, namely the north/south poles of the $\mathbb{P}^1$, whose coordinates are $((x, y), [z: w]) = ((0, 0), [1, 0])$ and $((0, 0), [0, 1])$ respectively. Around these fixed points, the weights of the $U(1)^2$ action $V$ become:
-\begin{align}
-  (x,\,w/z) &\mapsto  (e^{\e_1}x, \,e^{\e_2 - \e_1}w/z) &  \text{(near the north pole)}\\
-  (z/w,\,y) &\mapsto  (e^{\e_1 - \e_2}z/w, \,e^{\e_2}y) &  \text{(near the south pole)}
-\end{align}
-
-The full partition function $\hat{\mathcal Z}$ on $\hat{\IC}^2$, which includes both the perturbative and instanton contributions, can be obtained by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is generically broken to $U(1)^r$ where $r$ is the rank of the gauge group. The $U(1)^r$ equivariant parameters $\vec{a}$ naturally appear in the partition function. One needs to sum over all distinct field configurations with zero-sized instantons located at the north and south poles. All the inequivalent configurations are labeled by the vector $\vec{k}$ of the first Chern numbers, corresponding to different flux configurations on the divisor $\mathbb{P}^1$. Here we turn off any possible external flux that can be supported on the $\IP^1$. 
+The full partition function $\hat{\mathcal Z}$ on $\hat{\IC}^2$, which includes both the perturbative and instanton contributions, can be obtained by performing the localization on the Coulomb branch. On the Coulomb branch, the gauge group is generically broken to $U(1)^r$ where $r$ is the rank of the gauge group. The $U(1)^r$ equivariant parameters $\vec{a}$ naturally appear in the partition function. One needs to sum over all distinct field configurations with zero-sized instantons located at the north and south poles. All the inequivalent configurations are labeled by the vector $\vec{k}$ of the first Chern numbers, corresponding to different flux configurations on the two-cycle $\mathbb{P}^1$. Here we  turn off any possible external flux that can be supported on the $\IP^1$. 
 Summing up, $\hat{\mathcal Z}$ can be expressed as the following formula \cite{Nekrasov:2003vi, Gottsche:2006bm, Gottsche:2006tn, Gasparim:2008ri, Bonelli:2012ny}:
 \begin{align} \label{eq:blowup}
   \hat{\mathcal Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} {\mathcal Z}(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) {\mathcal Z}(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) 
  \end{align}
- where the flux sum is taken over the coweight lattice $\Lambda$  of the gauge algebra. Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$. This is because the $U(1)^r$ vector multiplet scalar $\langle \vec{\Phi}\rangle $ has the vacuum expectation value $\vec{a} + \vec{k}H|_p$ \cite{Bershtein:2015xfa}, where 
- \begin{align}
-  \label{eq:moment-map}
-  H = 
-  \begin{dcases}
-     \frac{\epsilon_1|z|^2+ (\epsilon_2 - \epsilon_1)|w|^2}{|z|^2+|w|^2} & \text{(around the north pole)},\\
-   \frac{(\epsilon_1-\epsilon_2)|z|^2+ \epsilon_2|w|^2}{|z|^2+|w|^2} & \text{(around the south pole)}.
-  \end{dcases}
+ where the flux sum is taken over the coweight lattice $\Lambda$  of the gauge algebra. Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$, induced by the non-trivial magnetic flux $\vec{k}$ on the blown-up $\IP^1$, with the proportionality constant $H|_p$. Values of the moment map $H$ for the $U(1)^2$ action $V$, i.e., $dH = \iota_V \omega$, at the north and south poles are 
+\begin{align}
+  H|_\text{NP} = \epsilon_1 \text{ and } H|_\text{SP} = \epsilon_2.
 \end{align}
-is the moment map $\iota_V \omega = dH$ for the  $U(1)^2$ action $V$ on the K\"ahler 2-form $\omega$. It follows that  $H|_\text{NP} = \epsilon_1$ and $H|_\text{SP} = \epsilon_2$.
+
 
 \paragraph{Partition function on $\hat{\IC}^2$ vs $\IC^2$}
 An alternative fact for the partition function $\hat{\CZ}$ on the blow-up $\hat{\IC}^2$ is that $\hat{\CZ}$ is actually identical to the flat-space partition function $\CZ$  \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg}.
@@ -273,68 +274,95 @@ An alternative fact for the partition function $\hat{\CZ}$ on the blow-up $\hat{
 
 
 % This can be understood as follows: 
-The blow-up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by the exceptional divisor $\IP^1$. It can be identified with the total space of the bundle $\CO(-1) \to \IP^1$. 
-Since the Nekrasov partition function gets contributions only from the small instantons localized at the fixed points of the $U(1)^2$ equivariant action $V$, the size of the divisor should not affect the partition function as we smoothly shrink it. So we expect that $\hat{\CZ} = \CZ$. More generally, if we consider the total space of $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ which is singular at the origin. There are extra states coming from the $\IP^1$, which become massless as we shrink the size of the $\IP^1$. However, they contribute to the orbifold partition function merely as the required twisted sector. We expect the Nekrasov partition function to remain the same by blowing up and down. This implies the following  identity: \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg,Keller:2012da,Gu:2018gmy,Gu:2019dan}
+The blow-up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by the blown-up sphere $\IP^1$. 
+Since the Nekrasov partition function gets contributions only from the small instantons localized at the fixed points of the $U(1)^2$ equivariant action $V$, the size of the divisor should not affect the partition function as we smoothly shrink it. So we expect that $\hat{\CZ} = \CZ$. This implies the following  relation: \cite{Nakajima:2003pg, Nakajima:2003uh,Nakajima:2005fg,Keller:2012da,Gu:2018gmy,Gu:2019dan}
 \begin{align} 
   \label{eq:blowup-generic}
   \CZ(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \CZ(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) \ , 
 \end{align}
-% \footnote{The orbifold partition function can be also obtained in two different ways modulo some subtle scheme dependence related to wall-crossing. \cite{Ito:2013kpa}} 
 
-%
-% This simple picture does not necessarily hold when there are too many hypermultiplets. However, for many interesting cases with matter hypermultiplets \cite{Gottsche:2010ig}, the above relation turns out to be true.
+The blow-up identity can also be generalized to orbifold partition functions \cite{Sasaki:2006vq,Bonelli:2012ny,Ito:2013kpa}. For example, if we consider the total space of the bundle $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ with singularity at the origin. There are certain states originated from wrapped D-branes on the $\IP^1$ which become massless by shrinking the $\IP^1$. They constitute to the required twisted sector of the orbifold partition function. In any case, we expect that the Nekrasov partition function still remains the same by blowing up and down.\footnote{This simple picture does not necessarily hold when there are too many hypermultiplets, due to some subtle scheme dependence related to wall-crossing \cite{Gottsche:2006bm,Gottsche:2006tn, Ito:2013kpa}. We will discuss about this issue in Section~\ref{}.}
+
 
 
 \paragraph{Background parameters}
 
 The expected relation \eqref{eq:blowup-generic} is only a schematic expression.
-The partition function also depends on some background parameters, such as the gauge coupling $\Lambda$ or the flavor chemical potentials $\vec{m}$. Those need to be modified appropriately at each fixed point $p$ of the blow-up $\hat{\IC}^2$. 
-For example, the $\IC^2 \times S^1$ partition function of a free hypermultiplet with mass $m$ can be written as
-\begin{align}
-  % \CZ_\text{hyper}(\epsilon_1, \epsilon_2, m) = 
-  \color{red}  \exp\left[\frac{-2m^3 +(\e_+^2 + \e_-^2+12) \cdot m-24 }{12\e_1\e_2} \right] \cdot \text{PE}\left[\frac{e^{-m}\cdot e^{-\e_+}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
-\end{align}
-which can satisfy \eqref{eq:blowup-generic} only when accompanied by $m \rightarrow m + \frac{H}{2}|_p$. 
-This shift keeps it unchanged the combination $(m + \e_+)$ of background gauge fields, corresponding to the effective twisted mass of the hypermultiplet. We will denote it as $m_\text{phy} \equiv (m+ \e_+)$ from here on. 
+The partition function also depends on some background parameters, such as the gauge coupling  $\Lambda$ and flavor chemical potentials $m$. They need to be appropriately shifted at each fixed point $p$ of the blow-up $\hat{\IC}^2$, keeping invariant the effective mass parameters twisted by $SU(2)_R$.
 
-Similarly, we investigate the $\IC^2 \times S^1$ partition function of the 5d $\mathcal{N}=1$ Maxwell theory. This is a product between the perturbative index of a free vector multiplet,
+One can identify the shifted parameters $\Lambda|_p$ and $m|_p$ at a fixed point $p$, by examining the 1-loop effective free energy of the 5d Nekrasov partition function $\CZ$. For a general 5d $\mathcal{N}=1$ gauge theory with the Chern-Simons level $\kappa$ and/or some hypermultiplets,
+\footnote{We assume a particular Weyl chamber in the Coulomb branch, i.e., $ 0< a_i < \e_+ < m$ for all $i\in \{1,\cdots, r\}$.}
+\begin{align}
+  \label{eq:free-energy}
+  & \log{\CZ} = \frac{1}{\epsilon_1\epsilon_2}\Bigg[\frac{1}{2}\Lambda \, h_{ij}a_i a_j +\frac{\kappa}{6}d_{ijk} a^{i}a^j a^k +  \sum_{\vec{\alpha}\in\Delta}\left(\frac{(\vec{a}\cdot\vec{\alpha}+\e_+)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\alpha}+\e_+)+1\right)\nn \\
+  &-\sum_i\sum_{\vec{\omega}\in\boldsymbol{R}_i}\left(\frac{(\vec{a}\cdot\vec{\omega}+m_i)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\omega}+m_i)+1\right)\Bigg] + \sum_{n=1}^\infty\frac{ f(n\vec{a},n\epsilon_{1,2},nm_i)}{n}
+\end{align}
+in which the first 2 terms inside the square brackets constitute the classical prepotential $\CF_\text{cl}$, whereas all the other terms come in at one-loop level.  The set of all roots is denoted by $\Delta$. The $\vec{\omega}$ runs over all weight vectors in the representation $\mathbf{R}_i$ of the $i$-th hypermultiplet. First, let us consider a 5d free hypermultiplet with mass $m$, whose corresponding free energy is 
+\begin{align}
+  \label{eq:free-hyper}
+  & \log{\CZ} = -\frac{1}{\epsilon_1\epsilon_2} \left(\frac{m^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,m +1\right) + \sum_{n=1}^\infty\frac{ 1}{n} \frac{e^{-nm}\cdot e^{-n\e_+}}{(1-e^{-n\e_1})(1-e^{-n\e_2})}.
+\end{align}
+This satisfies the relation \eqref{eq:blowup-generic} only when it is accompanied by $m \rightarrow m \pm \frac{H}{2}|_p$. 
+Each $\pm$ shift preserves the combination $(m \pm \e_+)$ respectively,  corresponding to the $SU(2)_R$ twisted mass of the hypermultiplet \cite{Okuda:2010ke}. Throughout this paper, we take $m_\text{phy} \equiv (m- \e_+)$ as the invariant $SU(2)_R$ twisted mass, identifying that
+\begin{align}
+  \label{eq:mass-shift}
+  m|_p = m - \frac{H}{2}|_p
+\end{align}
+at a fixed point $p$. Second, the twisted instanton mass can be easily read off after simplifying \eqref{eq:free-energy} based on the following identities:
+\begin{align}
+  \textstyle \sum_{\vec{\omega}\in\boldsymbol{R}}(\vec{a}\cdot\vec{\omega})(\vec{b}\cdot\vec{\omega})(\vec{c}\cdot\vec{\omega})=&\,I_3(\boldsymbol{R})\,d_{ijk}\,a^ib^jc^k,\nonumber \\
+  \textstyle \sum_{\vec{\omega}\in\boldsymbol{R}}(\vec{a}\cdot\vec{\omega})(\vec{b}\cdot\vec{\omega})=&\,I_2(\boldsymbol{R})\,h_{ij}\,a^ib^j,\\
+  \textstyle \sum_{\vec{\omega}\in\boldsymbol{R}}(\vec{a}\cdot\vec{\omega})=&\,0.\nonumber
+\end{align}
+Here $I_2(\mathbf{R})$ and $I_3(\mathbf{R})$ are the quadratic and cubic Dynkin indices\footnote{The Dynkin indices are normalized such that $I_2(\mathbf{F}) = 1$ for the $SU(N)$ fundamental representation $\bf F$.} of a given representation $\bf R$. In particular, $I_2(\mathbf{adj}) = h^\vee$ is the dual Coxeter number of the gauge algebra.
+Speaking explicitly, the rational part of the one-loop free energy  \eqref{eq:free-energy} can be written as 
+\begin{align}
+  \log{\CZ}=\frac{1}{\e_1\e_2}\Bigg[&\,\frac{1}{2}\Lambda_\text{eff}\,h_{ij}\,a^ia^j+\frac{\k_\text{eff}}{6}d_{ijk}\,a^ia^ja^k+ \text{(independent of $\vec{a}$)}\Bigg],
+  %  + \sum_{n=1}^\infty\frac{ f(n\vec{a},n\epsilon_{1,2},nm_i)}{n}
+  % + \text{(exponential part)}
+  \end{align}
+where the one-loop corrected parameters are 
+\begin{align}
+  \Lambda_{\textrm{eff}}=\,\Lambda+\Bigg(h^{\vee}-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2}\Bigg)\e_+-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2}m_i^{\textrm{phy}},\quad 
+  \k_{\textrm{eff}}=\,\k-\sum_i\frac{I_3(\boldsymbol{R}_i)}{2}
+\end{align}
+in which the sum is taken over all the matter multiplets. We notice that the instanton soliton carries the $SU(2)_R$ twisted effective mass, given by $m_\text{inst} \equiv \Lambda_{\textrm{eff}} + \kappa_\text{eff}\,\e_+$.
+In addition, the  effective Chern-Simons coupling $\k_{\textrm{eff}}$ induces an electric charge to the instanton, contributing to its ground state energy as $E_0 = m_\text{inst} + \vec{a} \cdot \vec{\Pi}$, where $\vec{\Pi}$ is the $U(1)^r \subset G$ electric charge.\footnote{This agrees with the supersymmetric Casimir energy of the ADHM quantum mechanics.} To keep it invariant the effective instanton mass $m_\text{inst}$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$, we require the shifted gauge coupling $\Lambda|_p$  to be 
+\begin{align}
+  \label{eq:coupling-shift}
+  \Lambda|_p = \Lambda + \frac{b}{2}H|_p \quad \text{ with }\quad
+  b \equiv h^{\vee}-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2} + \kappa_\text{eff}.
+\end{align}
+For example, the $\IC^2 \times S^1$ partition function of $\mathcal{N}=1$ free Maxwell theory, given as a product between the perturbative index of a free vector multiplet,
 \begin{align}
   % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
-  \color{red}  \exp\left[ \frac{\e_+(\e_+^2 - \e_-^2 - 12) + 24}{12\e_1\e_2}\right] \cdot  \text{PE}\left[-\frac{1}{(1-e^{\e_1})(1-e^{\e_2})}\right]
+    \exp\left[+\frac{1}{\e_1 \e_2} \left(\frac{\epsilon _1
+  \epsilon _2 (\epsilon _1+\epsilon _2)}{48} -\frac{\epsilon _1+\epsilon _2}{4} +1 \right)  \right] \cdot  \text{PE}\left[-\frac{e^{-\e_1-\e_2}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
 \end{align}
-satisfying \eqref{eq:blowup-generic} by itself, and the non-perturbative contribution from $U(1)$ multi-instantons
+and the non-perturbative correction from $U(1)$ multi-instantons,
 \begin{align}
   % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
-  \color{red}   \text{PE}\left[\frac{e^\Lambda \cdot e^{\e_+}}{(1-e^{\e_1})(1-e^{\e_2})}\right]
+  \text{PE}\left[\frac{e^{-\Lambda} \cdot e^{-\e_+}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
 \end{align}
-which comply with \eqref{eq:blowup-generic} upon the appropriate shift of the gauge coupling $\Lambda \rightarrow \Lambda + \frac{H}{2}|_p$. 
-Again, the effective twisted mass $(\Lambda + \epsilon_+)$ of an instanton stays invariant under this change. 
+will comply with the relation \eqref{eq:blowup-generic} by shifting the gauge coupling as $\Lambda \rightarrow \Lambda|_p = \Lambda + \frac{H}{2}|_p$. 
 
-We remark that the twisted mass of an instanton, in a general non-Abelian gauge theory with effective Chern-Simons level $\kappa_\text{eff}$, is $(\Lambda + b \cdot  \epsilon_+)$ where $b \equiv h^\vee  - \frac{1}{2}\sum_{i}I(\mathbf{R}_i) + \kappa_\text{eff}$. This is the supersymmetric Casimir energy of the ADHM quantum mechanics at one instanton. Here $h^\vee$ is the dual Coxeter number of the gauge group, $I_2(\mathbf{R})$ is the Dynkin index\footnote{The Dynkin index $I_2(\mathbf{R})$ is normalized such that $I_2(\mathbf{F}) = 1$ for the $SU(N)$ fundamental representation $\bf F$.} of a given representation $\bf R$, and the sum is taken over all matter multiplets in the theory. The effective Chern-Simons level is  $\kappa_\text{eff} \equiv \kappa_\text{cl} + \frac{1}{2}\sum_i \text{sgn}(m_i)\,I_3(\mathbf{R}_i)$  where $I_3(\mathbf{R})$ is the anomaly coefficient of an $SU(N)$ representation $\mathbf{R}$. Having identified the effective instanton mass,  the proper shift of the gauge coupling at each fixed point $p$ must be $\Lambda \rightarrow \Lambda + \frac{b}{2}H|_p$. In summary,
-\begin{align}
-  m|_p = m + \frac{H}{2}\bigg|_p\, \qquad \Lambda|_p = \Lambda + \frac{b}{2}H|_p.
-\end{align}
+In summary, the blow-up  relation \eqref{eq:blowup-generic} should always be understood with \eqref{eq:mass-shift} and \eqref{eq:coupling-shift}.
 
 
 
+\paragraph{Correlation functions}
 
+In fact, \eqref{eq:blowup-generic} is not enough to fix the partition function completely,  since there are 3 unknown functions and only one relation. More independent relations would be found from insertion of non-trivial $\mathcal{Q}$-closed operators \cite{Nakajima:2003pg,Nakajima:2005fg}. So we consider the correlation functions of that operator $\mathcal{O}_{\IP^1}$ associated to the two-cycle $\IP^1$ of the blow-up $\hat{\mathbb{C}}^2$. 
 
-
-
-
-\paragraph{Donaldson operator}
-
-The equation \eqref{eq:blowup-generic} is not enough to determine the partition function since there are three unknown functions and only one relation. More independent relations can be found from insertion of topological operators.
-We want to consider the correlation functions of the topological operator $\mu(C)$ associated to the two-cycle $C$ of the blow-up $\hat{\mathbb{C}}^2$. 
-
-Let us focus on the 4d Donaldson-twisted theory. The $\CQ$-exact operator $\mu(C)$ is obtained by applying the descent procedure twice to the Casimir invariant $\text{Tr}(\Phi^2)$, which can be written in terms of the component fields as  \cite{Witten:1988ze}
-% $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators 
+In the 4d Donaldson-twisted theory, the $\mathcal{Q}$-invariant observable $\mathcal{O}_{\IP^1}$ can be constructed by applying the descent procedure twice to the Casimir invariant $\text{Tr}(\Phi^2)$. It can be written in terms of the component fields as follows: \cite{Witten:1988ze}
 \begin{align} \label{eq:muC}
-  \mu(C) = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + H\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
+  {\CO}_{\IP^1} = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) - H\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
 \end{align} 
-Here $\omega$ and $H$ are the K\"ahler two-form on $C$ and the moment map \eqref{eq:moment-map} associated to $V$.
-We find it convenient to study the generating function $\langle e^{t \, \mu(C)}\rangle $ of the correlators $\langle \mu(C) \ldots \mu(C)  \rangle$. The expectation value can be written as
+We find it convenient to study the generating function $\langle e^{t \, {\CO}_{\IP^1}}\rangle $ of the correlators $\langle {\CO}_{\IP^1} \ldots {\CO}_{\IP^1} \rangle$. 
+In particular, the insertion of $\exp{(t  {\CO}_{\IP^1})}$ causes an extra shift of the instanton mass by $2tH|_p$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. This modifies \eqref{eq:coupling-shift} to $\Lambda|_p = \Lambda + (\frac{b}{2}+t)H|_p$.
+Therefore the expectation value of the generating function is given by
 \begin{align}
+  \label{eq:corgen}
   \langle e^{t \, \mu(C)}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})}{\CZ^{(0)}}\ , 
 \end{align} 
 where
@@ -342,33 +370,22 @@ where
 \begin{split}
   \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, \Lambda +  (\tfrac{b}{2}+t)\e_1, \vec{m} +\tfrac{1}{2}\e_1) \ , \\
   \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, \Lambda +  (\tfrac{b}{2}+t)\e_2, \vec{m} +\tfrac{1}{2}\e_2)\ , \\
- \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, \Lambda, m).
+ \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, \Lambda, \vec{m}).
 \end{split}
 \end{align}
-We notice that the insertion of the operator $\mu(C)$ has caused an extra shift of the effective instanton mass by $tH|_p$, at each fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. 
-
-As we shrink the two-cycle $C$ to recover the flat $\IC^2$, the effect of  inserting $\mu(C)^d$ turns out to give a vanishing contribution due to the conservation law. To see this, we recall that the classical $U(1)_R$ symmetry is violated by $4h^\vee -2 \sum_i I_2(\mathbf{R}_i)$ 
-
-instanton breaks the $U(1)_R$ symmetry 
-
-
-
-to the a discrete subgroup $\IZ_{2h^\vee - \sum_i I_2(\mathbf{R}_i)}$, under which the operator \eqref{eq:muC} carries a charge of $+2$. Unless the discrete charges add up to zero, the correlation function vanishes. Therefore, expanding in powers of $t$, 
+As we shrink the two-cycle $\IP^1$ to recover the flat $\IC^2$, the effect of  inserting ${\CO}_{\IP^1}^d$ turns out to give a vanishing contribution due to the selection rule. We recall that the instanton breaks the $U(1)_R$ symmetry 
+to the a discrete subgroup \textcolor{red}{$\IZ_{2h^\vee - \sum_i I_2(\mathbf{R}_i)}$} under which the operator ${\CO}_{\IP^1}^d$ carries a charge of $+2$. So the correlation functions vanish unless the discrete charges add up to zero, modulo $4h^\vee - 2\sum_i I_2(\mathbf{R}_i)$. Therefore, expanding \eqref{eq:corgen} in powers of $t$, we find
 \begin{align}
   \label{eq:donaldson-4d}
   \langle e^{t \, \mu(C)}\rangle = 1 + \CO(t^{2h^\vee - \sum_i I_2(\mathbf{R}_i)})  \ . 
 \end{align}
-As long as the hypermultiplet representation is not too large, i.e., when $2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown varables, at every instanton number. Thus we can expand $\langle e^{t \, \mu(C)}\rangle$ up to order $\CO(t^2)$ and recursively solve for the instanton partition function $\CZ^{(0)}$ on $\IC^2$. The instanton part of the partition function will be completely determined from the perturbative partition function, as we will illustrate in Section~\ref{subsec:recursion}. 
+As long as the hypermultiplet representation is not too large, i.e., when $2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown varables. One can expand $\langle e^{t \, \mu(C)}\rangle$ until $\mathcal{O}(t^2)$ order and recursively solve for $\CZ^{(0)}$ at every instanton number. So the instanton part of the partition function will be completely determined from the perturbative partition function. An explicit form of the recursion relation will be displayed in Section~\ref{subsec:recursion}.
 
-Turning to the 5d $\CN=1$ gauge theory on $S^1$, $\mathcal{Q}^2$ now involves translation along the $S^1$. The Casimir operator $\Tr (\Phi^2)$ and its descendants are no longer well-defined operators, but instead we need to 
-
-
-in 5d SYM on $S^1$
-
+Turning to the 5d $\CN=1$ gauge theory on $S^1$, the $\mathcal{Q}^2$ now involves translation along the circle. The Casimir operator $\Tr (\Phi^2)$ and its descendants are no longer well-defined operators, but instead we need to 
 
 
 the operator $\mu(C)$ is naturally uplifted via exponentiation as follows: \cite{Baulieu:1997nj}
-\begin{align} \label{eq:muC}
+\begin{align} 
   \mu(C)^d = \exp\left[
     d\int \left\{ \omega \wedge \text{Tr}\Big(A \wedge dA + \frac{2}{3}A^3 \Big)  + \omega \wedge \Big( \phi \, F + \frac{1}{2}\psi \wedge \psi \Big)\wedge dt + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}
      \right] \ .
@@ -377,6 +394,33 @@ This stems from the fact that $\Tr (\Phi^2)$ is . Instead, to take into account 
 
 
 exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. More precisely, the offset $d_0$ is set to be $d_0 \equiv \frac{h^\vee}{2} - \sum_{i} \frac{I_2(\mathbf{R_i})}{4}$ where the sum is taken over all matter multiplets, since \textcolor{red}{(explain the reason)}. Then $d$ is integer-valued.  
+
+
+% $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators 
+Here $\omega$ and $H$ are the K\"ahler two-form on $C$ and the moment map \eqref{eq:moment-map} associated to $V$.
+
+
+
+5d operator
+
+coefficient quantization 
+
+unity condition (?)
+
+violation? wall crossing etc.
+
+
+
+\pagebreak
+
+
+
+
+
+in 5d SYM on $S^1$
+
+
+
 
 
 we no longer have a discrete R-symmetry to impose the selection rule. 
@@ -578,72 +622,72 @@ Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \f
 which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$ for all $w \in R$. 
 
 \subsection{Instanton partition function for 4d gauge theory}
-Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
-The perturbative partition functions for the vector and hypermultiplet are
-\begin{align}
- Z_{\textrm{vec}}^{\textrm{pert}}(\vec{a}, q) &= \exp \left( - \sum_{\vec \a \in \Delta} \gamma_{\e_1, \e_2}  (\vec{a} \cdot {\vec{\a}}; q )\right) \ , \\
- Z_{\textrm{hyp}}^{\textrm{pert}} (\vec{a}, m, q)&= \exp \left( \sum_{\vec{w} \in R} \gamma_{\e_1, \e_2} ( \vec{a} \cdot {\vec{w}} - m; q)\right) \ . 
-\end{align}
-Here the gamma function is defined as
-\begin{align}
- \gamma_{\e_1, \e_2} (x; \Lambda) = \left. \frac{d}{ds} \right|_{s=0} \frac{\Lambda^s}{\Gamma(s)} \int_0^{\infty} \frac{dt}{t} t^s \frac{e^{-ts}}{(e^{\e_1 t} - 1)(e^{\e_2 t} - 1)} \ , 
-\end{align}
-which is formally equivalent to 
-\begin{align}
- \textrm{log} \left[\prod_{n, m\ge 0} \left( \frac{x - m\e_1 - n \e_2}{\Lambda} \right) \right] \ . 
-\end{align}
-If we write the equation \eqref{eq:blowup} in terms of $Z = Z^{\textrm{pert}} Z^{\textrm{inst}}$, we get
-\begin{align}
- Z^{\textrm{inst}}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \frac{Z^{(N), \textrm{pert}}(\vec{k}) Z^{(S), \textrm{pert}}(\vec{k})}{Z^{\textrm{pert}}(\vec{a}, \e_1, \e_2)} Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k})
-\end{align}
-and here we omit the dependence on the Coulomb vev and the Omega deformation parameters. 
-Now the factor in the middle can be explicitly worked out. Let us denote the ratio of the perturbative factor as $f(\vec{k}) \equiv Z^{(N), \textrm{pert}} Z^{(S), \textrm{pert}}/Z^{\textrm{pert}}$. 
-Then the ratio of the perturbative factor for the vector multiplet is given as
-\begin{align} \label{eq:1loopvec4d}
-\begin{split}
-f(\vec{k})_{\textrm{vec}} &= \prod_{\vec{\a} \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
- &= \prod_{\vec{\a} \in \Delta}  \frac{\Lambda^{(\vec{k} \cdot \vec{\a})^2 /2} }{s(-\vec{k}\cdot \vec{\a}, \vec{\a}\cdot \vec{a}, \e_1, \e_2) }
- = \frac{(\Lambda^{2 h^\vee})^{\vec{k} \cdot \vec{k}/2} }{\prod_{\vec{\a} \in \Delta} \ell^{\vec{k}}_{\vec{\a}} (\vec{a}, \e_1, \e_2) } \ , 
-\end{split}
-\end{align}
-where $h^\vee$ refers to the dual Coxeter number of the gauge group. Notice that the beta function coefficient for the pure YM theory is given by $b_0 = 2h^\vee$ and the instanton parameter is given by $q \equiv \Lambda^{2 h^\vee}$. The other symbols are given as 
-\begin{align}
-\ell^{\vec{k}}_{\vec{\alpha}} (\vec{a}, \e_1, \e_2) &= s(-\vec{k}\cdot\vec{\a}, \vec{a}\cdot\vec{\a}, \e_1, \e_2) \\
-s(k, x, \e_1, \e_2) &= 
-\begin{cases}
- {\displaystyle \prod_{i, j \ge 0, i+j \le k-1} (x - i \e_1 - j e_2) } & (k > 0) \\
- {\displaystyle \prod_{i, j \ge 0, i+j \le -k-2} (x + (i+1)\e_1 + (j+1)\e_2)} & (k < -1)  \\
- 1 & (k=0, -1)
-\end{cases}
-\end{align}
-The final identity of \eqref{eq:1loopvec4d} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
-\begin{align}
-\begin{split}
- \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) &+ \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda) \\
-  & \qquad = \g_{\e_1, \e_2}(x; \Lambda) + \log s(-k, x, \e_1, \e_2) - \frac{k(k-1)}{2} \log \Lambda \ . 
-\end{split}
-\end{align}
-For the hypermultiplets we get, 
-\begin{align}
-f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} (a_{w, m}) + \g_{\e_1, \e_2 - \e_1}(a_{w, m} + k_w \e_1) +  \g_{\e_1 - \e_2, \e_2 }(a_{w, m} + k_w \e_2)   \Big) \nn \\
-&= \prod_{\vec{w} \in R} \Lambda^{-\half k_w^2} s(-{k}_w, a_{w, m}, \e_1, \e_2) 
-= (\Lambda^{- 2 I(R)})^{\half \vec{k} \cdot \vec{k} }\prod_{\vec{w} \in R}  s(-{k}_w, a_{w, m}, \e_1, \e_2) 
-\ , 
-\end{align}
-where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - I(R)}$. 
+% Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
+% The perturbative partition functions for the vector and hypermultiplet are
+% \begin{align}
+%  Z_{\textrm{vec}}^{\textrm{pert}}(\vec{a}, q) &= \exp \left( - \sum_{\vec \a \in \Delta} \gamma_{\e_1, \e_2}  (\vec{a} \cdot {\vec{\a}}; q )\right) \ , \\
+%  Z_{\textrm{hyp}}^{\textrm{pert}} (\vec{a}, m, q)&= \exp \left( \sum_{\vec{w} \in R} \gamma_{\e_1, \e_2} ( \vec{a} \cdot {\vec{w}} - m; q)\right) \ . 
+% \end{align}
+% Here the gamma function is defined as
+% \begin{align}
+%  \gamma_{\e_1, \e_2} (x; \Lambda) = \left. \frac{d}{ds} \right|_{s=0} \frac{\Lambda^s}{\Gamma(s)} \int_0^{\infty} \frac{dt}{t} t^s \frac{e^{-ts}}{(e^{\e_1 t} - 1)(e^{\e_2 t} - 1)} \ , 
+% \end{align}
+% which is formally equivalent to 
+% \begin{align}
+%  \textrm{log} \left[\prod_{n, m\ge 0} \left( \frac{x - m\e_1 - n \e_2}{\Lambda} \right) \right] \ . 
+% \end{align}
+% If we write the equation \eqref{eq:blowup} in terms of $Z = Z^{\textrm{pert}} Z^{\textrm{inst}}$, we get
+% \begin{align}
+%  Z^{\textrm{inst}}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \frac{Z^{(N), \textrm{pert}}(\vec{k}) Z^{(S), \textrm{pert}}(\vec{k})}{Z^{\textrm{pert}}(\vec{a}, \e_1, \e_2)} Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k})
+% \end{align}
+% and here we omit the dependence on the Coulomb vev and the Omega deformation parameters. 
+% Now the factor in the middle can be explicitly worked out. Let us denote the ratio of the perturbative factor as $f(\vec{k}) \equiv Z^{(N), \textrm{pert}} Z^{(S), \textrm{pert}}/Z^{\textrm{pert}}$. 
+% Then the ratio of the perturbative factor for the vector multiplet is given as
+% \begin{align} \label{eq:1loopvec4d}
+% \begin{split}
+% f(\vec{k})_{\textrm{vec}} &= \prod_{\vec{\a} \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
+%  &= \prod_{\vec{\a} \in \Delta}  \frac{\Lambda^{(\vec{k} \cdot \vec{\a})^2 /2} }{s(-\vec{k}\cdot \vec{\a}, \vec{\a}\cdot \vec{a}, \e_1, \e_2) }
+%  = \frac{(\Lambda^{2 h^\vee})^{\vec{k} \cdot \vec{k}/2} }{\prod_{\vec{\a} \in \Delta} \ell^{\vec{k}}_{\vec{\a}} (\vec{a}, \e_1, \e_2) } \ , 
+% \end{split}
+% \end{align}
+% where $h^\vee$ refers to the dual Coxeter number of the gauge group. Notice that the beta function coefficient for the pure YM theory is given by $b_0 = 2h^\vee$ and the instanton parameter is given by $q \equiv \Lambda^{2 h^\vee}$. The other symbols are given as 
+% \begin{align}
+% \ell^{\vec{k}}_{\vec{\alpha}} (\vec{a}, \e_1, \e_2) &= s(-\vec{k}\cdot\vec{\a}, \vec{a}\cdot\vec{\a}, \e_1, \e_2) \\
+% s(k, x, \e_1, \e_2) &= 
+% \begin{cases}
+%  {\displaystyle \prod_{i, j \ge 0, i+j \le k-1} (x - i \e_1 - j e_2) } & (k > 0) \\
+%  {\displaystyle \prod_{i, j \ge 0, i+j \le -k-2} (x + (i+1)\e_1 + (j+1)\e_2)} & (k < -1)  \\
+%  1 & (k=0, -1)
+% \end{cases}
+% \end{align}
+% The final identity of \eqref{eq:1loopvec4d} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
+% \begin{align}
+% \begin{split}
+%  \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) &+ \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda) \\
+%   & \qquad = \g_{\e_1, \e_2}(x; \Lambda) + \log s(-k, x, \e_1, \e_2) - \frac{k(k-1)}{2} \log \Lambda \ . 
+% \end{split}
+% \end{align}
+% For the hypermultiplets we get, 
+% \begin{align}
+% f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} (a_{w, m}) + \g_{\e_1, \e_2 - \e_1}(a_{w, m} + k_w \e_1) +  \g_{\e_1 - \e_2, \e_2 }(a_{w, m} + k_w \e_2)   \Big) \nn \\
+% &= \prod_{\vec{w} \in R} \Lambda^{-\half k_w^2} s(-{k}_w, a_{w, m}, \e_1, \e_2) 
+% = (\Lambda^{- 2 I(R)})^{\half \vec{k} \cdot \vec{k} }\prod_{\vec{w} \in R}  s(-{k}_w, a_{w, m}, \e_1, \e_2) 
+% \ , 
+% \end{align}
+% where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - I(R)}$. 
 
-Now, for the SQCD, we obtain the following equation:
-\begin{align}
-  Z^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} f(\vec{k}) Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k}) \ , 
-\end{align}
-with
-\begin{align}
- f(\vec{k}) =  \frac{\displaystyle q^{\half \vec{k} \cdot \vec{k}} \prod_{i} \prod_{\vec{w} \in R_i}  s(-k_w, a_w - m_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda} s(-k_\a, a_\a, \e_1, \e_2)} \ , 
-\end{align} 
-where $i$ runs over the charged hypermultiplets. Here $q = \Lambda^{2N_c - N_f}$ for the $SU(N_c)$ SQCD with $N_f$ fundamental hypermultiplets. 
-We have checked this expression explicitly for the $SU(2)$ gauge theory with $N_f=0, 1$ hypermultiplets up to the first few order in instanton numbers. 
+% Now, for the SQCD, we obtain the following equation:
+% \begin{align}
+%   Z^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} f(\vec{k}) Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k}) \ , 
+% \end{align}
+% with
+% \begin{align}
+%  f(\vec{k}) =  \frac{\displaystyle q^{\half \vec{k} \cdot \vec{k}} \prod_{i} \prod_{\vec{w} \in R_i}  s(-k_w, a_w - m_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda} s(-k_\a, a_\a, \e_1, \e_2)} \ , 
+% \end{align} 
+% where $i$ runs over the charged hypermultiplets. Here $q = \Lambda^{2N_c - N_f}$ for the $SU(N_c)$ SQCD with $N_f$ fundamental hypermultiplets. 
+% We have checked this expression explicitly for the $SU(2)$ gauge theory with $N_f=0, 1$ hypermultiplets up to the first few order in instanton numbers. 
 
-Notice that in the Gottsche-Nakajima-Yoshioka \cite{Nakajima:2009qjc, Gottsche:2010ig}, the mass parameters and the instanton parameters (for the 5d) are also shifted when the contribution from North and South poles are computed. This is simply a reflection of the fact that they twist the instanton bundles by the half-Canonical bundle of the $\IC^2$, which shift the mass parameters by $m \to m - \frac{\e_1 + \e_2}{2}$. If we do not twist by this amount, we get a cleaner expression as above. 
+% Notice that in the Gottsche-Nakajima-Yoshioka \cite{Nakajima:2009qjc, Gottsche:2010ig}, the mass parameters and the instanton parameters (for the 5d) are also shifted when the contribution from North and South poles are computed. This is simply a reflection of the fact that they twist the instanton bundles by the half-Canonical bundle of the $\IC^2$, which shift the mass parameters by $m \to m - \frac{\e_1 + \e_2}{2}$. If we do not twist by this amount, we get a cleaner expression as above. 
 
 %\paragraph{Correlation functions}
 %On the blow-up, we have a non-trivial 2-cycle. This allows us to insert the equivariant version of the Donaldson operator, which can be written in terms of the twisted fields as
