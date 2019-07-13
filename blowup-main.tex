@@ -358,15 +358,17 @@ In the 4d Donaldson-twisted theory, the $\mathcal{Q}$-invariant observable $\mat
 \begin{align} \label{eq:muC}
   {\CO}_{\IP^1} = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) - H\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
 \end{align} 
+Here $\omega$ and $H$ are the K\"ahler two-form on the $\IP^1$ and the moment map $\iota_V \omega = dH$, respectively.
 We find it convenient to study the generating function $\langle e^{t \, {\CO}_{\IP^1}}\rangle $ of the correlators $\langle {\CO}_{\IP^1} \ldots {\CO}_{\IP^1} \rangle$. 
 In particular, the insertion of $\exp{(t  {\CO}_{\IP^1})}$ causes an extra shift of the instanton mass by $2tH|_p$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. This modifies \eqref{eq:coupling-shift} to $\Lambda|_p = \Lambda + (\frac{b}{2}+t)H|_p$.
 Therefore the expectation value of the generating function is given by
 \begin{align}
   \label{eq:corgen}
-  \langle e^{t \, \mu(C)}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})}{\CZ^{(0)}}\ , 
+  \langle e^{t  {\CO}_{\IP^1}}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})}{\CZ^{(0)}}\ , 
 \end{align} 
 where
 \begin{align}
+  \label{eq:param-np-sp}
 \begin{split}
   \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, \Lambda +  (\tfrac{b}{2}+t)\e_1, \vec{m} +\tfrac{1}{2}\e_1) \ , \\
   \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, \Lambda +  (\tfrac{b}{2}+t)\e_2, \vec{m} +\tfrac{1}{2}\e_2)\ , \\
@@ -374,125 +376,48 @@ where
 \end{split}
 \end{align}
 As we shrink the two-cycle $\IP^1$ to recover the flat $\IC^2$, the effect of  inserting ${\CO}_{\IP^1}^d$ turns out to give a vanishing contribution due to the selection rule. We recall that the instanton breaks the $U(1)_R$ symmetry 
-to the a discrete subgroup \textcolor{red}{$\IZ_{2h^\vee - \sum_i I_2(\mathbf{R}_i)}$} under which the operator ${\CO}_{\IP^1}^d$ carries a charge of $+2$. So the correlation functions vanish unless the discrete charges add up to zero, modulo $4h^\vee - 2\sum_i I_2(\mathbf{R}_i)$. Therefore, expanding \eqref{eq:corgen} in powers of $t$, we find
+to the discrete subgroup $\IZ_{4h^\vee - 2\sum_i I_2(\mathbf{R}_i)}$ under which the operator ${\CO}_{\IP^1}^d$ carries a charge of $+2$. The correlation functions vanish unless the discrete charges add up to zero, modulo $4h^\vee - 2\sum_i I_2(\mathbf{R}_i)$. Therefore, expanding \eqref{eq:corgen} in powers of $t$, we find
 \begin{align}
   \label{eq:donaldson-4d}
-  \langle e^{t \, \mu(C)}\rangle = 1 + \CO(t^{2h^\vee - \sum_i I_2(\mathbf{R}_i)})  \ . 
+  \langle e^{t {\CO}_{\IP^1}}\rangle = 1 + \CO(t^{2h^\vee - \sum_i I_2(\mathbf{R}_i)})  \ . 
 \end{align}
 As long as the hypermultiplet representation is not too large, i.e., when $2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown varables. One can expand $\langle e^{t \, \mu(C)}\rangle$ until $\mathcal{O}(t^2)$ order and recursively solve for $\CZ^{(0)}$ at every instanton number. So the instanton part of the partition function will be completely determined from the perturbative partition function. An explicit form of the recursion relation will be displayed in Section~\ref{subsec:recursion}.
 
-Turning to the 5d $\CN=1$ gauge theory on $S^1$, the $\mathcal{Q}^2$ now involves translation along the circle. The Casimir operator $\Tr (\Phi^2)$ and its descendants are no longer well-defined operators, but instead we need to 
-
-
-the operator $\mu(C)$ is naturally uplifted via exponentiation as follows: \cite{Baulieu:1997nj}
+We now turn to 5d $\CN=1$ gauge theory wrapped on $S^1$. The Casimir invariant $\Tr (\Phi^2)$ and its descendants are no longer considered as well-defined observables. Instead, there are two types of $\CQ$-invariant observables \cite{Baulieu:1997nj}. The first type of observables are constructed from the 5d Wilson loop on the $S^1$ by applying the descent procedure. The second type of observables introduce the 3d (K\"ahler) Chern-Simons term, which can be written as \cite{Losev:1995cr,Baulieu:1997nj}
 \begin{align} 
-  \mu(C)^d = \exp\left[
-    d\int \left\{ \omega \wedge \text{Tr}\Big(A \wedge dA + \frac{2}{3}A^3 \Big)  + \omega \wedge \Big( \phi \, F + \frac{1}{2}\psi \wedge \psi \Big)\wedge dt + \frac{H}{2}\, \text{Tr}\Big( F \wedge F \Big) \right\}
-     \right] \ .
+  \mathcal{O}_{\IP^1}^{d} = \exp\bigg[
+    d\int \bigg( & \omega \wedge \text{Tr}\Big(A \wedge dA + \frac{2}{3}A\wedge A \wedge A \Big) \\ \nonumber
+     + &\omega \wedge \Big( \phi \, F + \frac{1}{2}\psi \wedge \psi \Big)\wedge dt -H\, \text{Tr}\Big( F \wedge F \Big) \bigg)
+     \bigg] \ .
 \end{align}
-This stems from the fact that $\Tr (\Phi^2)$ is . Instead, to take into account the periodicity, we need to 
-
-
-exponentiate to obtain the `Coulomb parameter'. The $\mu(C)$ operator has to be exponentiated accordingly to take into account the periodicity and the coefficient in front of the exponent has to be properly quantized. More precisely, the offset $d_0$ is set to be $d_0 \equiv \frac{h^\vee}{2} - \sum_{i} \frac{I_2(\mathbf{R_i})}{4}$ where the sum is taken over all matter multiplets, since \textcolor{red}{(explain the reason)}. Then $d$ is integer-valued.  
-
-
-% $\langle \mu(C) \ldots \mu(C)  \rangle$ of operators 
-Here $\omega$ and $H$ are the K\"ahler two-form on $C$ and the moment map \eqref{eq:moment-map} associated to $V$.
-
-
-
-5d operator
-
-coefficient quantization 
-
-unity condition (?)
-
-violation? wall crossing etc.
-
-
-
-\pagebreak
-
-
-
-
-
-in 5d SYM on $S^1$
-
-
-
-
-
-we no longer have a discrete R-symmetry to impose the selection rule. 
-
-
-The natural uplift of the 4d operator 
-is given via  
-where the 4d complex scalar $\Phi_4$ is decomposed into
+It can be viewed as the natural $S^1$ uplift of \eqref{eq:muC} via exponentiation, where the coefficient $d$ is integer-valued as required by gauge invariance. The correlation function is given by
 \begin{align}
-  \int\omega \wedge \text{Tr}(\Phi_4 F) \ \longrightarrow \
-  \int\omega \wedge \left(\text{CS}_3(A) + \text{Tr}(\Phi_5 F) \right) \in \mu(C).
-\end{align}
-% We can always choose our scale so that $\beta = 1$ and we will omit this parameter. 
-
-\textcolor{red}{[TODO: Explain why $e^{\mu(C)}$ is good topological operator in 5d. Explain why inserting this does not alter the partition function.]}
-
-Therefore, we obtain
-\begin{align} \label{eq:blowup5d}
- Z = \sum_{\vec{k} \in \Lambda} \exp\left( (d+d_0)\, \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 ) \ , 
+  \label{eq:cor5d}
+  \langle \mathcal{O}_{\IP^1}^{d}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),d}(\vec{k}) \cdot \CZ^{(S),d}(\vec{k})}{\CZ^{(0)}}
 \end{align} 
-for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
+with the definitions \eqref{eq:param-np-sp} understood. For the case of 5d pure $\mathcal{N}=1$ SYM, with a possible non-zero Chern-Simons level $\kappa$, the correlation function turns out to be \cite{Nakajima:2005fg,Gottsche:2006tn} 
+\begin{align}
+  \label{eq:cor5d-unity}
+  \langle \mathcal{O}_{\IP^1}^{d}\rangle = 1 \quad \text{ for }\quad 0\leq d \leq d_\text{max}
+\end{align}
+where $d_\text{max} = h^\vee$. For $d_\text{max} = h^\vee \geq 2$, there are sufficient number of algebraic relations to determine the instanton partition function $\CZ$ iteratively, in increasing the order of instantons. This fact was utilized in \cite{Keller:2012da} to compute $\CZ$ in exceptional gauge theories, for which the ADHM construction of instanton moduli space is not known. In this paper, we aim at developing the relation \eqref{eq:cor5d-unity} for various 5d 
+$\mathcal{N}=1$ gauge theories with hypermultiplets, then writing down the corresponding $\CZ$ based on that. We will shortly see the following  
+\emph{necessary} condition for \eqref{eq:cor5d-unity} to hold true:
+\begin{align}
+  \label{eq:cor5d-dmax}
+d_\text{max} = \begin{dcases}
+  \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G \neq SU(N)\\ \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G = SU(N)
+\end{dcases}
+\end{align}
+Furthermore, we conjecture that \eqref{eq:cor5d-dmax} is also sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will bring a wide variety of 5d $\mathcal{N}=1$ SCFTs later in Section~\ref{sec:example}, whose $\CZ$ is known from an alternative method, and confirm that \eqref{eq:cor5d-unity} with \eqref{eq:cor5d-dmax} is indeed true for the considered set of examples. We call the relation \eqref{eq:cor5d-unity} the blow-up equation. 
 
-\subsection{Instanton partition function from the blow-up equation}
+
+\subsection{Recursion formula}
 \label{subsec:recursion}
-From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
-\begin{align}
- Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
-\end{align}
-Then the blow-up equation can be rewritten as
-\begin{align}
- Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( (d+d_0) \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
-\end{align}
-where $Z_{\textrm{pert}} \equiv Z_{\textrm{class}} Z_{\textrm{1-loop}}$ and the superscript $(N/S)$ denotes appropriate shift of parameters in the north/south pole 
-\begin{align}
-\begin{split}
- Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{(d+d_0)\e_1}) \ , \\
- Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{(d+d_0)\e_2}) \ . 
-\end{split}
-\end{align}
- Notice that there is no $q$-dependence in the 1-loop part, hence no $d$-dependence as well. 
-The instanton piece can be expanded in terms of the instanton number as
-\begin{align}
- Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, q) = \sum_{n \ge 0} q^n Z_n (\vec{a}, \e_1, \e_2) \ . 
-\end{align}
-Plugging in, we obtain
-\begin{align}
- q^n Z_n = \sum_{\vec{k}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{(d+d_0)(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
-\end{align}
-where $q^{\half \vec{k} \cdot \vec{k}}$ comes from the classical piece as we will see later. Collecting the terms with the same order, we obtain
-\begin{align}
- Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
-\end{align}
-where $g(\vec{k}) \equiv \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}}$. Notice that the right-hand side of the above equation only involves the instanton parts with $\ell , m < n$. Therefore, one can determine the $n$-instanton partition function recursively from $Z_0 = 1$. 
-To do this, let us separate $n$-instanton contribution from the above expression. We get 
-\begin{align}
- Z_n = e^{\e_1 (d+d_0) n} Z^{(N)}_n + e^{\e_2 (d+d_0) n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
-\end{align}
-where
-\begin{align}
-I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
-\end{align}
-Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
-\begin{align}
- Z_n (\vec{a}, m, \e_1, \e_2) = \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ . 
-\end{align}
-Since $I_n^{(d)}$ only depends on $Z_m$ with $m<n$ we can determine the instanton partition function recursively. 
 
-We now need to determine the $g(\vec{k})$, but this is also completely determined by the \emph{1-loop part} of the partition function. Therefore we land on a remarkable conclusion: The non-perturbative partition function is completely fixed by the perturbative partition function! Notice that we have arrived at this conclusion not by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis. Instead, we simply demand consistent answer upon deforming the spacetime geometry smoothly. This consistency condition is entirely non-perturbative, that the QFT has to be well-defined regardless of its spacetime. 
+The blow-up equation 
 
-In the remainder of this section we will give explicit formulae for 4d and 5d gauge theories. Especially, we will obtain a closed-form expression for the one-instanton partition function for a large class of gauge theories. 
 
-\subsection{Instanton partition function for the 5d theory}
 Let us write the perturbative part of the partition function. The classical part is given as
 \begin{align}
 Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij} a^i a^j+\frac{1}{6}d_{ijk} a^{i}a^j a^k\right)\Bigg]
@@ -577,6 +502,84 @@ I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m 
 \end{split}
 \end{align}
 where $i$ runs over all the hypermultiplets. 
+
+
+% such as the ADHM quantum mechanics, topological vertex, or the modular bootstrap of partition function applied to their 6d origin, 
+
+
+
+
+check 
+can be computed in an alternative way,
+
+
+in Section~\ref{}, whose partition functions can be 
+
+
+sufficiency
+
+
+
+
+Therefore, we obtain
+\begin{align} \label{eq:blowup5d}
+ Z = \sum_{\vec{k} \in \Lambda} \exp\left( (d+d_0)\, \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 ) \ , 
+\end{align} 
+for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
+
+
+
+
+
+From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
+\begin{align}
+ Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
+\end{align}
+Then the blow-up equation can be rewritten as
+\begin{align}
+ Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( (d+d_0) \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
+\end{align}
+where $Z_{\textrm{pert}} \equiv Z_{\textrm{class}} Z_{\textrm{1-loop}}$ and the superscript $(N/S)$ denotes appropriate shift of parameters in the north/south pole 
+\begin{align}
+\begin{split}
+ Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{(d+d_0)\e_1}) \ , \\
+ Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{(d+d_0)\e_2}) \ . 
+\end{split}
+\end{align}
+ Notice that there is no $q$-dependence in the 1-loop part, hence no $d$-dependence as well. 
+The instanton piece can be expanded in terms of the instanton number as
+\begin{align}
+ Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, q) = \sum_{n \ge 0} q^n Z_n (\vec{a}, \e_1, \e_2) \ . 
+\end{align}
+Plugging in, we obtain
+\begin{align}
+ q^n Z_n = \sum_{\vec{k}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{(d+d_0)(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
+\end{align}
+where $q^{\half \vec{k} \cdot \vec{k}}$ comes from the classical piece as we will see later. Collecting the terms with the same order, we obtain
+\begin{align}
+ Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
+\end{align}
+where $g(\vec{k}) \equiv \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}}$. Notice that the right-hand side of the above equation only involves the instanton parts with $\ell , m < n$. Therefore, one can determine the $n$-instanton partition function recursively from $Z_0 = 1$. 
+To do this, let us separate $n$-instanton contribution from the above expression. We get 
+\begin{align}
+ Z_n = e^{\e_1 (d+d_0) n} Z^{(N)}_n + e^{\e_2 (d+d_0) n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
+\end{align}
+where
+\begin{align}
+I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
+\end{align}
+Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
+\begin{align}
+ Z_n (\vec{a}, m, \e_1, \e_2) = \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ . 
+\end{align}
+Since $I_n^{(d)}$ only depends on $Z_m$ with $m<n$ we can determine the instanton partition function recursively. 
+
+We now need to determine the $g(\vec{k})$, but this is also completely determined by the \emph{1-loop part} of the partition function. Therefore we land on a remarkable conclusion: The non-perturbative partition function is completely fixed by the perturbative partition function! Notice that we have arrived at this conclusion not by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis. Instead, we simply demand consistent answer upon deforming the spacetime geometry smoothly. This consistency condition is entirely non-perturbative, that the QFT has to be well-defined regardless of its spacetime. 
+
+In the remainder of this section we will give explicit formulae for 4d and 5d gauge theories. Especially, we will obtain a closed-form expression for the one-instanton partition function for a large class of gauge theories. 
+
+\subsection{Instanton partition function for the 5d theory}
+
 
 \paragraph{One-instanton partition function}
 Let us compute the 1-instanton partition function using our formula. In this case, we only take the sum over the long roots having $\vec{k}\cdot \vec{k} = 2$ and $\ell = m = 0$. Therefore, \textcolor{red}{(add the effect of $e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k )}$)}
