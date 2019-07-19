@@ -262,7 +262,7 @@ Summing up, $\hat{\mathcal Z}$ can be expressed as the following formula \cite{N
 \begin{align} \label{eq:blowup}
   \hat{\mathcal Z}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} {\mathcal Z}(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1) {\mathcal Z}(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2) 
  \end{align}
- where the flux sum is taken over the coweight lattice $\Lambda$  of the gauge algebra. Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$, induced by the non-trivial magnetic flux $\vec{k}$ on the blown-up $\IP^1$, with the proportionality constant $H|_p$. Values of the moment map $H$ for the $U(1)^2$ action $V$, i.e., $dH = \iota_V \omega$, at the north and south poles are 
+ where the flux sum is taken over the co-root lattice $\Lambda$  of the gauge algebra. Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$, induced by the non-trivial magnetic flux $\vec{k}$ on the blown-up $\IP^1$, with the proportionality constant $H|_p$. Values of the moment map $H$ for the $U(1)^2$ action $V$, i.e., $dH = \iota_V \omega$, at the north and south poles are 
 \begin{align}
   H|_\text{NP} = \epsilon_1 \text{ and } H|_\text{SP} = \epsilon_2.
 \end{align}
@@ -303,7 +303,7 @@ in which the first 2 terms inside the square brackets constitute the classical p
   & \log{\CZ} = -\frac{1}{\epsilon_1\epsilon_2} \left(\frac{m^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,m +1\right) + \sum_{n=1}^\infty\frac{ 1}{n} \frac{e^{-nm}\cdot e^{-n\e_+}}{(1-e^{-n\e_1})(1-e^{-n\e_2})}.
 \end{align}
 This satisfies the relation \eqref{eq:blowup-generic} only when it is accompanied by $m \rightarrow m \pm \frac{H}{2}|_p$. 
-Each $\pm$ shift preserves the combination $(m \pm \e_+)$ respectively,  corresponding to the $SU(2)_R$ twisted mass of the hypermultiplet \cite{Okuda:2010ke}. Throughout this paper, we take $m_\text{phy} \equiv (m- \e_+)$ as the invariant $SU(2)_R$ twisted mass, identifying that
+Each $\pm$ shift preserves the combination $(m \pm \e_+)$ respectively,  corresponding to the $SU(2)_R$ twisted mass of the hypermultiplet \cite{Okuda:2010ke}. Throughout this paper, we take $m_\text{phy} \equiv (m- \e_+)$ as the invariant $SU(2)_R$ twisted mass, identifying that 
 \begin{align}
   \label{eq:mass-shift}
   m|_p = m - \frac{H}{2}|_p
@@ -326,12 +326,12 @@ where the one-loop corrected parameters are
   \Lambda_{\textrm{eff}}=\,\Lambda+\Bigg(h^{\vee}-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2}\Bigg)\e_+-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2}m_i^{\textrm{phy}},\quad 
   \k_{\textrm{eff}}=\,\k-\sum_i\frac{I_3(\boldsymbol{R}_i)}{2}
 \end{align}
-in which the sum is taken over all the matter multiplets. We notice that the instanton soliton carries the $SU(2)_R$ twisted effective mass, given by $m_\text{inst} \equiv \Lambda_{\textrm{eff}} + \kappa_\text{eff}\,\e_+$.
-In addition, the  effective Chern-Simons coupling $\k_{\textrm{eff}}$ induces an electric charge to the instanton, contributing to its ground state energy as $E_0 = m_\text{inst} + \vec{a} \cdot \vec{\Pi}$, where $\vec{\Pi}$ is the $U(1)^r \subset G$ electric charge.\footnote{This agrees with the supersymmetric Casimir energy of the ADHM quantum mechanics.} To keep it invariant the effective instanton mass $m_\text{inst}$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$, we require the shifted gauge coupling $\Lambda|_p$  to be 
+in which the sum is taken over all the matter multiplets. We notice that the instanton soliton carries the $SU(2)_R$ twisted effective mass, given by $m_\text{inst} \equiv \Lambda_{\textrm{eff}} - \kappa_\text{eff}\,\e_+$.
+In addition, the  effective Chern-Simons coupling $\k_{\textrm{eff}}$ induces an electric charge to the instanton, contributing to its ground state energy as $E_0 = m_\text{inst} - \vec{a} \cdot \vec{\Pi}$, where $\vec{\Pi}$ is the $U(1)^r \subset G$ electric charge.\footnote{This agrees with the supersymmetric Casimir energy of the ADHM quantum mechanics.} To keep it invariant the effective instanton mass $m_\text{inst}$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$, we require the shifted gauge coupling $\Lambda|_p$  to be 
 \begin{align}
   \label{eq:coupling-shift}
   \Lambda|_p = \Lambda + \frac{b}{2}H|_p \quad \text{ with }\quad
-  b \equiv h^{\vee}-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2} + \kappa_\text{eff}.
+  b \equiv h^{\vee}-\sum_i\frac{I_2(\boldsymbol{R}_i)}{2} - \kappa_\text{eff}.
 \end{align}
 For example, the $\IC^2 \times S^1$ partition function of $\mathcal{N}=1$ free Maxwell theory, given as a product between the perturbative index of a free vector multiplet,
 \begin{align}
@@ -405,55 +405,204 @@ $\mathcal{N}=1$ gauge theories with hypermultiplets, then writing down the corre
 \emph{necessary} condition for \eqref{eq:cor5d-unity} to hold true:
 \begin{align}
   \label{eq:cor5d-dmax}
-d_\text{max} = \begin{dcases}
-  \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G \neq SU(N)\\ \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G = SU(N)
+  d_\text{max} = \begin{dcases}
+  \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G \neq SU(N)\\ \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G = SU(N) \textcolor{red}{change}
 \end{dcases}
 \end{align}
-Furthermore, we conjecture that \eqref{eq:cor5d-dmax} is also sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will bring a wide variety of 5d $\mathcal{N}=1$ SCFTs later in Section~\ref{sec:example}, whose $\CZ$ is known from an alternative method, and confirm that \eqref{eq:cor5d-unity} with \eqref{eq:cor5d-dmax} is indeed true for the considered set of examples. We call the relation \eqref{eq:cor5d-unity} the blow-up equation. 
+Furthermore, we conjecture that \eqref{eq:cor5d-dmax} is also sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will bring a wide variety of 5d $\mathcal{N}=1$ SCFTs later in Section~\ref{sec:example}, whose $\CZ$ is known from an alternative method, and confirm that \eqref{eq:cor5d-unity} with \eqref{eq:cor5d-dmax} is indeed true for the considered set of examples. We call the relation \eqref{eq:cor5d-unity} the blowup equation. 
 
 
 \subsection{Recursion formula}
 \label{subsec:recursion}
 
-The blow-up equation 
-
-
-Let us write the perturbative part of the partition function. The classical part is given as
+The blowup equation  \eqref{eq:cor5d-unity} can be translated to useful recursion formulae on the $k$-instanton contribution $Z_k$ to the entire partition function $\CZ$.
+To derive this, we decompose the partition function $\CZ$ in terms of the classical, one-loop, and instanton pieces: 
 \begin{align}
-Z_{\textrm{class}}=\textrm{exp}\Bigg[&\,-\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}h_{ij} a^i a^j+\frac{1}{6}d_{ijk} a^{i}a^j a^k\right)\Bigg]
-\end{align}
-where $a_i$ denotes the Coulomb branch parameter and $h_{ij}, d_{ijk}$ denotes the effective gauge couplings and Chern-Simons couplings in the Coulomb branch. 
-The 1-loop part of the vector multiplet is given as
-\begin{align} \label{eq:1loopvec}
-\begin{split}
-Z^{V}_{\textrm{1-loop}}&=\textrm{exp}\left[ -\frac{1}{2\epsilon_1\epsilon_2} \sum_{\alpha\in\Delta}\Bigg(\frac{1}{6}(\vec{a}\cdot\vec{\alpha})^3-\frac{\epsilon_1+\epsilon_2}{4}(\vec{a}\cdot\vec{\alpha})^2+\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{12}(\vec{a}\cdot\vec{\alpha})\Bigg) \right] \\
-&\qquad \qquad \times\,\textrm{PE}\left[- \frac{1}{(1-e^{\e_1})(1-e^{\e_2})}\sum_{\alpha\in \Delta}e^{\vec{a}\cdot\vec{\alpha}}\right] \ , 
-\end{split}
-\end{align}
-where $\Delta$ denotes the set of all roots. The 1-loop partition function of the hypermultiplet is given as
-\begin{align} \label{eq:1loophyp}
-\begin{split}
-Z^{H}_{\textrm{1-loop}} &= \exp \Bigg[+\frac{1}{2\epsilon_1\epsilon_2} \sum_{\omega\in R }\Bigg(\frac{1}{6}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)^3-\frac{\e_1+\e_2}{4}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)^2 \\
- &\quad -\frac{(\epsilon_1+\epsilon_2)^2+\epsilon_1\epsilon_2}{24}\left(\vec{a}\cdot\vec{\omega}+m^{\textrm{phy}}_i \right)\Bigg)\Bigg] \times 
-\textrm{PE} \left[ \frac{e^{m^{\textrm{phy}}_i}}{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\omega\in R}e^{\vec{a}\cdot\vec{\omega}} \right]
-\end{split}
-\end{align}
-where $R$ is the set of all weight vectors in the representation of the hypermultiplet. We define the physical mass parameter as $m^{\textrm{phy}}_i = m_i + \e_+$ and $\e_+ = \frac{\e_1+\e_2}{2}$, since there is an effect of topological twisting that shifts the `mass parameter' $m_i$ by a unit of $SU(2)_R$ rotation \cite{Okuda:2010ke}. 
-
-Now, let us compute the $g(\vec{k})$ which is given by the ratio of the 1-loop part of the partition function. 
-It turns out piece of the \eqref{eq:1loopvec}, \eqref{eq:1loophyp} that are not inside the PE eventually cancel out due to $\vec{k} \to -\vec{k}$ and $\vec{a} \to -\vec{a}$ symmetry except for one single term for the hyper \textcolor{red}{(change)}.  We find
-% Introducing the symbols $n_1(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} \ell$ and  $n_2(\vec{k},\vec{w}) \equiv \sum_{\ell=1}^{\vec{k}\cdot \vec{w}} (\ell^2-\ell)$ for brevity, we find
+  \CZ(\vec{a}, \e_1, \e_2, \Lambda, \vec{m}) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, \Lambda, \vec{m}) \cdot  Z_{\textrm{1-loop}} (\vec{a}, \e_1, \e_2, \vec{m}) \cdot Z_{\textrm{inst}}(\vec{a}, \e_1, \e_2, \Lambda, \vec{m})
+ \end{align}
+%  $\CZ = Z_{\textrm{class}}\,   Z_{\textrm{pert}}\,  Z_{\textrm{inst}}$, 
+ where $Z_\text{inst}$ can be further expanded in terms of the instanton fugacity $q \equiv e^{-\Lambda}$ as
 \begin{align}
- g(\vec{k})^{V} &= e^{\frac{h^\vee}{2}(\vec{k}\cdot \vec{a})}\prod_{\vec{\a} \in \Delta}  \textrm{PE} \left[  \frac{e^{\vec{a} \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2})} - \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{\a}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})}- \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{\a}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right] ,\nn \\
- g(\vec{k})^{H} &= e^{-\frac{I_2(\mathbf{R})}{4}(\vec{k}\cdot \vec{a})-\frac{I_2(\mathbf{R})}{4}(\vec{k}\cdot \vec{k})m_{\rm phy}} 
- e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k ) - \frac{ I_3(\mathbf{R})}{6} \epsilon_+(d_{ijk} k_i k_j k_k )}
- \nn\\&
- \quad\quad\times 
- \prod_{\vec{w} \in R}\textrm{PE} \left[ -\frac{ e^{\vec{a} \cdot \vec{w}+ m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2})} + \frac{e^{(\vec{a}+\vec{k}\e_1) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1})(1-e^{\e_2-\e_1})} + \frac{e^{(\vec{a}+\vec{k}\e_2) \cdot \vec{w} + m^{\textrm{phy}}}}{(1-e^{\e_1- \e_2})(1-e^{\e_2})} \right]
+ Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, \Lambda, \vec{m}) = 1 + \sum_{k \ge 1} q^n Z_k (\vec{a}, \e_1, \e_2, m) \ . 
 \end{align}
-for the vector and hypermultiplets respectively. Our notation is that $\Tr(T^i T^j) = I_2(\mathbf{R})\delta^{ij}$ and $\Tr(T^i \{T^j,T^k\}) = I_3(\mathbf{R})d_{ijk}$, where $d_{ijk} \neq 0$ only for $G = SU(N)$. The $SU(N)$ generators are normalized such that $I_3(\text{fund}) =1$.
-Besides the zero-point energy contribution, the PE of $g(\vec{k})$ can be written as 
-% Both of them can be written as 
+Then the blowup equation \eqref{eq:cor5d-unity} can be written as
+\begin{align}
+  \label{eq:recur-inst}
+ Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \frac{Z^{(N), d}_{\textrm{class}}(\vec{k}) \, Z^{(S), d}_{\textrm{class}}(\vec{k})}{Z_{\textrm{class}}}  \frac{Z^{(N), d}_{\textrm{1-loop}}(\vec{k})\, Z^{(S), d}_{\textrm{1-loop}}(\vec{k})}{Z_{\textrm{1-loop}}} \right] Z^{(N), d}_{\textrm{inst}}(\vec{k})\, Z^{(S), d}_{\textrm{inst}}(\vec{k})  \ , 
+\end{align}
+where the superscript $(N/S),d$ implies the appropriate shift of parameters, specified in \eqref{eq:param-np-sp}. 
+
+We recall the known expressions for the classical and 1-loop partition function \cite{Intriligator:1997pq,Nekrasov:2002qd,Shadchin:2005mx}:
+\begin{align}
+   { Z_{\textrm{class}}} &= \exp \Bigg[\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}\Lambda \, h_{ij}a_i a_j +\frac{\kappa}{6}d_{ijk} a^{i}a^j a^k\right) \Bigg],\\
+   \label{eq:1-loop-vec}
+   { Z_{\textrm{1-loop}}^\text{vec}} &= \exp \Bigg[\frac{1}{\epsilon_1\epsilon_2} \,  \sum_{\vec{\alpha}\in\Delta}\Big(\frac{(\vec{a}\cdot\vec{\alpha}+\e_+)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\alpha}+\e_+)+1\Big)\Bigg]\nn\\ & \times \text{PE}\ \Bigg[- \frac{p_1 p_2}{(1-p_1)(1-p_2) }\sum_{\vec{\a} \in \D} e^{- \vec{a} \cdot \vec{\a}}  \Bigg]  \qquad \text{ for the vector multiplet}\\
+   \label{eq:1-loop-hyp}
+   { Z_{\textrm{1-loop}}^\text{hyp,$i$}} &= \exp \Bigg[-\frac{1}{\epsilon_1\epsilon_2} \sum_{\vec{\omega}\in\boldsymbol{R}_\ell}\Big(\frac{(\vec{a}\cdot\vec{\omega}+m_\ell)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\omega}+m_\ell)+1\Big)\Bigg]\nn\\ &
+   \times \text{PE}\ \Bigg[+ \frac{(p_1 p_2)^{\frac{1}{2}} \cdot  y_\ell } {(1-p_1)(1-p_2) }\sum_{\vec{\omega}\in\boldsymbol{R}_\ell}e^{-\vec{a} \cdot \vec{\w}}\Bigg] \qquad \text{ for the $\ell$'th hypermultiplet}
+\end{align}
+where $p_1 \equiv e^{-\e_1},\, p_2 \equiv e^{-\e_2},\, y_i \equiv e^{-m_{i}}$ and the PE represents the Plethystic exponential
+\begin{align}
+  \textstyle\text{PE}\left[f(\vec{a},\e_1,\e_2,\Lambda,\vec{m})\right] \equiv \exp\Big(\sum_{n=1}^\infty\frac{1}{n} f(n\vec{a},n\e_1,n\e_2,n\Lambda,n\vec{m})\Big).
+\end{align}
+Substituting them to \eqref{eq:recur-inst}, the combinations of three different $Z$'s are given by
+\begin{align}
+  \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z}  &=  q^{\frac{\vec{k}\cdot\vec{k}}{2} } \, 
+  (p_1p_2)^{(d+\frac{b}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k}{6}d_{ijk}\,k^ik^jk^k} \nn\\&\times  e^{-(d+\frac{b}{2})(\vec{a}\cdot\vec{k})}\,
+  e^{-\frac{\kappa}{2}d_{ijk}\,a^ik^jk^k} \hspace{3.62cm} \text{for }Z=Z_\text{class},\\
+  \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z} &= e^{\frac{h^\vee}{2}(\vec{a}\cdot\vec{k})}  \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)^{-1}  \hspace{2.5cm} \text{for }Z=Z_\text{1-loop}^\text{vec}, \\
+  \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z} &= e^{-\frac{I_2(\boldsymbol{R}_\ell)}{4}(\vec{a}\cdot\vec{k})+\frac{I_3(\boldsymbol{R}_\ell)}{4}d_{ijk}\,a^ik^jk^k} (p_1p_2)^{\frac{I_2(\boldsymbol{R}_\ell)}{8}(\vec{k}\cdot\vec{k})-\frac{I_3(\boldsymbol{R}_\ell)}{12}d_{ijk}\,k^ik^jk^k}\nn \\
+   &\times   y_\ell^{-\frac{I_2(\boldsymbol{R}_\ell)}{4}(\vec{k}\cdot\vec{k})} \prod_{\w \in \boldsymbol{R}_\ell} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},\ell}, \e_1,\e_2) \hspace{0.5cm} \text{for }Z=Z_\text{1-loop}^\text{hyp,$\ell$}.
+\end{align}
+% with $\vec{v}_1\cdot\vec{v}_2 \equiv h_{ij} v_1^i v_2^j$. 
+Here we used $I_2(\textbf{adj}) = 2h^\vee$, $I_3(\textbf{adj})=0$, and also 
+the fact $h_{ij}$ and $d_{ijk}$ are totally symmetric. The function $\CL_k (x,\e_1,\e_2)$ is introduced to denote concisely the combination of the PE parts:
+\begin{align}
+  \CL_k (x,\e_1,\e_2) \equiv \text{PE}\left[\left(\frac{p_1^k \, p_2}{(1-p_1)(1-p_2/p_1)}+\frac{p_1\, p_2^k}{(1-p_1/p_2)(1-p_2)}-\frac{p_1p_2}{(1-p_1)(1-p_2)}\right)\times e^{-x}\right]
+\end{align}
+One can easily check that the expression inside the PE vanishes at $k=0, 1$. After some work, it is not difficult to find that 
+\begin{align}
+  \CL_k (x,\e_1,\e_2) =
+   \begin{dcases}
+   \prod_{m+n \le k-2}(1-p_1^{m+1} p_2^{n+1}e^{-x}) & \text{ for } k\geq +2 \\
+   \prod_{m+n \le -k-1}(1-p_1^{-m} p_2^{-n}e^{-x}) & \text{ for } k\leq-1 \\
+   1 & \text{ for } k=0, 1.
+   \end{dcases} . 
+\end{align}
+Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can be written as
+\begin{align}
+  \label{eq:recursion}
+  Z_n = &\sum_{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}  
+  \Bigg( (p_1p_2)^{(d+\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+ e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k} \\& 
+ \times    \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
+ \cdot p_1^{(d+\frac{b}{2})\ell}p_2^{(d+\frac{b}{2})m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
+ \end{align}
+ which is generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. 
+
+
+ \subsection{One instanton partition function}
+The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$. Being so, one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
+At one instanton level, the formula \eqref{eq:recursion} can be written as follows:
+\begin{align}
+  \label{eq:1inst}
+  Z_1 = p_1^{(d+\frac{b}{2})}Z^{(N)}_{1}  + p_2^{(d+\frac{b}{2})}  Z^{(S)}_1  + I_1^{(d)} \ , 
+ \end{align}
+ where  (with the fugacity variable $y_{\text{phy},l} \equiv e^{-m_{\text{phy},l}} = y_l / \sqrt{p_1p_2}$ understood)
+ \begin{align}
+  I_1^{(d)} = &\sum_{\vec{k} \in \Delta_l}  \Bigg( 
+     (p_1p_2)^{(d+\frac{b}{2} )  +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+    e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
+  \times \frac{\prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ (1-p_1p_2 e^{-\vec{a} \cdot \vec{k} })(1-p_1^{-1} e^{\vec{a} \cdot \vec{k} })(1-p_2^{-1} e^{\vec{a} \cdot \vec{k} })(1-e^{\vec{a} \cdot \vec{k} })\prod_{\vec{\a} \cdot \vec{k} = -1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}
+    \Bigg). \nn
+\end{align}
+We are interested in 5d $\mathcal{N}=1$ gauge theories which are UV-complete as 5d $\mathcal{N}=1$ SCFTs. Then the set of possible matter representation should be restricted to \cite{Jefferson:2017ahm}
+\begin{itemize}\setlength\itemsep{-0.3em}
+  \item fundamental representation for $SU(N)$, $SO(N)$, $Sp(N)$, $G_2$, $F_4$, $E_6$, $E_7$
+  \item antisymmetric representation for $SU(N)$, $Sp(N)$
+  % \item symmetric representation for $SU(N)$
+  \item spinor representation for $SO(N)$ with $7 \leq N \leq 14$
+  \item rank-3 antisymmetric representation for $Sp(3)$, $Sp(4)$, $SU(6)$, $SU(7)$
+  \item symmetric representation for $SU(N)$.
+\end{itemize}
+For the $SU(N)$ symmetric representation, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, or $\pm 2$.
+\begin{align}
+  \textstyle\prod_{\w \in \boldsymbol{\textbf{sym}}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle\prod_{\vec{k}\cdot \vec{\w} = 2} (1-y_\text{phy}\,  p_1p_2 e^{-\vec{a}\cdot \vec{\w}}) \times \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) \nn\\&\textstyle\times \prod_{\vec{k}\cdot \vec{\w} = -2} (1-y_\text{phy}\,  p_1^{-1} e^{-\vec{a}\cdot \vec{\w}})(1-y_\text{phy}\,  p_2^{-1} e^{-\vec{a}\cdot \vec{\w}}).
+ \end{align}
+For the other cases, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, such that 
+\begin{align}
+  \textstyle\prod_{\w \in \boldsymbol{R}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) .
+\end{align}
+
+\paragraph{Range of $d$} 
+Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$. We want to narrow down the validity range of $d$ by doing a simple sanity check on \eqref{eq:1inst}. Specifically, we examine the double expansion of \eqref{eq:1inst} with respect to $y_{\text{phy},l} \ll \sqrt{p_1p_2} \ll 1$, identifying an exponent in $\sqrt{p_1p_2}$ of the leading term. 
+The expansion of the single terms in \eqref{eq:1inst} can be written as
+{\allowdisplaybreaks
+\begin{align}
+  I_1^{(d)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{d+\frac{b}{2} + 1} g_0(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  Z_1 &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n}{2}} g_1(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  p_1^{(d+\frac{b}{2})}Z_1^{(N)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{d}{2}+\frac{b}{4}+\frac{n}{4}} g_2(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  p_2^{(d+\frac{b}{2})}  Z^{(S)}_1&\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{d}{2}+\frac{b}{4}+\frac{n}{4}} g_3(\vec{a}) + \cdots \right) + \cdots.
+\end{align}
+where  
+\begin{align}
+  \label{eq:upperbound}
+  n  = \begin{dcases}
+    \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
+    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} & \text{ for } G = SU(N).
+  \end{dcases}
+\end{align}
+except for the special case of $SU(N)_{|\kappa|<N}$ gauge theory without a hypermultiplet, whose $n$ enhances to $n = h^\vee + |\k|$ \cite{Gottsche:2006bm}. We note that for the equation \eqref{eq:1inst} to hold, some terms on the right-hand side should have the leading exponent with respect to $\sqrt{p_1 p_2}$ less than or equal to that of $Z_1$. Thus the following condition is  naturally imposed: 
+\begin{align}
+  \frac{n}{2} \geq  d + \frac{b}{2}.
+\end{align}
+which sets an upper bound on $d$. Similarly, a lower bound on $d$ can be found from another expansion of \eqref{eq:1inst}, with respect to $y_{\text{phy},l} \ll 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the double expansion of the single terms in \eqref{eq:1inst} with respect to $y_{\text{phy},l} \ll 1/\sqrt{p_1p_2} \ll 1$.} 
+Each term in \eqref{eq:1inst} becomes
+{\allowdisplaybreaks
+\begin{align}
+  I_1^{(d)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (1/p_1p_2)^{-d-\frac{b}{2} + 1} h_0(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-d-\frac{b}{2} + 1}  h_1(\vec{a}) + \cdots \right) \nn \\
+  Z_1 &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n'}{2} + \frac{1}{2}\sum_l I_2(\mathbf{R}_l)} h_2(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n'}{2}} h_3(\vec{a}) + \cdots \right) \nn \\
+  p_1^{(d+\frac{b}{2})}Z_1^{(N)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}+ \frac{1}{4}\sum_l I_2(\mathbf{R}_l)} h_4(\vec{a}) + \cdots \right) + \cdots  \nn \\
+  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}} h_5(\vec{a}) + \cdots \right) \nn \\
+  p_2^{(d+\frac{b}{2})}  Z^{(S)}_1&\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}+ \frac{1}{4}\sum_l I_2(\mathbf{R}_l)} h_6(\vec{a}) + \cdots \right) + \cdots \nn\\
+  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}} h_5(\vec{a}) + \cdots \right) 
+\end{align}
+where  
+\begin{align}
+  \label{eq:lowerbound}
+  n'  = \begin{dcases}
+    \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
+    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} & \text{ for } G = SU(N).
+  \end{dcases}
+\end{align}
+So actually the stronger bound on $d$ 
+
+
+\pagebreak
+
+
+% Let us narrow down the validity regime of $d$ by doing a sanity check on the expected formula \eqref{eq:recursion} at one instanton:
+% To do this, let us separate $n$-instanton partition function $Z_n$ from the above expression. 
+\begin{align}
+ Z_n = p_1^{(d+\frac{b}{2})n}Z^{(N)}_{n}  + p_2^{(d+\frac{b}{2})n}  Z^{(S)}_n    + I_n^{(d)} \ , 
+\end{align}
+with 
+\begin{align}
+  I_n^{(d)} = &\sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}}  \Bigg( 
+     (p_1p_2)^{(d+\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+    e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
+  \times \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
+  \cdot p_1^{(d+\frac{b}{2})\ell}p_2^{(d+\frac{b}{2})m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg). \nn
+\end{align}
+  
+Let us state our final answer:
+\begin{align}
+ Z_n (\vec{a}, \vec{m}^{\textrm{phy}}, \e_1, \e_2) &= \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ , 
+\end{align}
+with 
+
+
+
+
+\begin{align}
+  I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
+  \end{align}
+
+  
+
+where
+\begin{align}
+  Z_{\text{inst}}=\sum_{\vec{k}\in\Delta^{\vee}}&\,(p_1p_2)^{(d+b_0/2)(\vec{k}\cdot\vec{k})/2+\frac{\kappa}{6}d_{ijk}\,k^ik^jk^k}e^{-(d+b_0/2)(\vec{a}\cdot\vec{k})-\frac{\kappa}{2}d_{ijk}\,a^ik^jk^k}\nn\\
+  % &\,\times e^{(\frac{h^\vee}{2}-\sum_{l=1}^{N_f}\frac{I_2(\boldsymbol{R}_l)}{4})(\vec{a}\cdot\vec{k})+\sum_{l=1}^{N_f}\frac{I_3(\boldsymbol{R}_l)}{4}d_{ijk}\,a^ik^jk^k}\prod_{l=1}^{N_f}\left(M_l^{-\frac{I_2(\boldsymbol{R}_l)}{4}(\vec{k}\cdot\vec{k})}\right)(p_1p_2)^{\sum_{l=1}^{N_f}\frac{I_2(\boldsymbol{R}_l)}{8}(\vec{k}\cdot\vec{k})-\frac{I_3(\boldsymbol{R}_l)}{12}d_{ijk}\,k^ik^jk^k}\nn\\
+  % &\times\frac{\prod_{l=1}^{N_f}\prod_{\vec{\omega}\in\boldsymbol{R}_l}\mathcal{L}(e^{-m_l^\text{phy}-\vec{a}\cdot\vec{\omega}},\vec{k}\cdot\vec{\omega})}{\prod_{\vec{\alpha}\in\Delta}\mathcal{L}(e^{-\vec{a}\cdot\vec{\alpha}},\vec{k}\cdot\vec{\alpha})}\nn\\
+  % &\times Z_{\text{inst}}(\e_1,\e_2-\e_1,\vec{a}+\vec{k}\e_1,m-\frac{\e_1}{2},\Lambda+(d+\frac{b_0}{2})\e_1)\nn\\
+  % &\times Z_{\text{inst}}(\e_1-\e_2,\e_2,\vec{a}+\vec{k}\e_2,m-\frac{\e_2}{2},\Lambda+(d+\frac{b_0}{2})\e_2)
+\end{align}
+
+
+
 \begin{align}
 %  g(\vec{k}) =  e^{\frac{h^\vee}{2}(\vec{k}\cdot \vec{a})}\prod_{\vec{\a} \in \Lambda}  
 \textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{\a}, e^{\e_1} e^{\e_2})\right]\cdot 
@@ -467,18 +616,7 @@ where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p
  A(k, p_1, p_2) &= \frac{1}{(1-p_1)(1-p_2)} -  \frac{p_1^k}{(1-p_1)(1-p_2/p_1)} -  \frac{p_2^k}{(1-p_1/p_2)(1-p_2)}  \ . 
 \end{split}
 \end{align}
-We can easily see that $A(k, p_1, p_2)$ vanishes at $k=0, -1$. 
-After some work, it is not hard to find that $A(k, p_1, p_2)$ can be written in terms of a finite sum as
-\begin{align}
- A(k, p_1, p_2) =
- \begin{cases}
- \displaystyle
- \sum_{m+n \le k-1} p_1^m p_2^n & (k>0) \\
- \displaystyle
- \sum_{m+n \le -k-2} p_1^{-m-1} p_2^{-n-1} & (k<-1) \\
- 0 & (k=0, -1)
- \end{cases} . 
-\end{align}
+
 Upon taking PE, we obtain
 \begin{align}
 \mathcal{L}_{k} (x, \e_1, \e_2) \equiv \textrm{PE}\left[ e^{x} A(k, e^{\e_1}, e^{\e_2}) \right] = 
@@ -488,35 +626,12 @@ Upon taking PE, we obtain
  1 & (k=0, -1)
 \end{cases}
 \end{align}   
-Let us state our final answer:
-\begin{align}
- Z_n (\vec{a}, \vec{m}^{\textrm{phy}}, \e_1, \e_2) &= \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ , 
-\end{align}
-with 
-\begin{align}
-\begin{split}
-I_n^{(d)} = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} & \Bigg( \exp \left[ d\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)\right]  \\& \quad
-\times e^{d_0\left( \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)}  \times e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k ) - \frac{ I_3(\mathbf{R})}{6} \epsilon_+(d_{ijk} k_i k_j k_k )}\\
-& \quad \times \frac{\displaystyle \prod_{i} \prod_{\vec{w} \in R_i} e^{-\frac{(\vec{k}\cdot \vec{w})^2}{4}m^{\textrm{phy}} } \CL_{\vec{k} \cdot \vec{w}} (\vec{a} \cdot \vec{w} + m^{\textrm{phy}}_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda}  \CL_{\vec{k} \cdot \vec{\a}}(\vec{a} \cdot \vec{\a}, \e_1, \e_2)  }  \\
-&\quad \times Z_{\ell}(\vec{a}+\vec{k}\e_1, \vec{m}^{\textrm{phy}}, \e_1, \e_2-\e_1) Z_m (\vec{a}+\vec{k} \e_2, \vec{m}^{\textrm{phy}}, \e_1-\e_2, \e_2) \Bigg) \ , 
-\end{split}
-\end{align}
+
 where $i$ runs over all the hypermultiplets. 
 
 
 % such as the ADHM quantum mechanics, topological vertex, or the modular bootstrap of partition function applied to their 6d origin, 
 
-
-
-
-check 
-can be computed in an alternative way,
-
-
-in Section~\ref{}, whose partition functions can be 
-
-
-sufficiency
 
 
 
@@ -530,44 +645,6 @@ for the 5d theories. We call the relation above as the blow-up equation.  \textc
 
 
 
-
-From the blow up equation \eqref{eq:blowup5d}, we can determine the instanton partition function for the 5d $\CN=1$ theory on $S^1 \times \IC^2$. To see this, let us decompose the partition function in terms of classical, 1-loop and the instanton piece:
-\begin{align}
- Z(\vec{a}, m, \e_1, \e_2, q) = Z_{\textrm{class}}(\vec{a}, \e_1, \e_2, q) Z_{\textrm{1-loop}} (\vec{a}, m, \e_1, \e_2) Z_{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, q)
-\end{align}
-Then the blow-up equation can be rewritten as
-\begin{align}
- Z_{\textrm{inst}} = \sum_{\vec{k}} \left[ \exp\left( (d+d_0) \mu(\vec{k}) \right)  \frac{Z^{(N), d}_{\textrm{pert}} Z^{(S), d}_{\textrm{pert}}}{Z_{\textrm{pert}}} \right] Z^{(N), d}_{\textrm{inst}} Z^{(S), d}_{\textrm{inst}}  \ , 
-\end{align}
-where $Z_{\textrm{pert}} \equiv Z_{\textrm{class}} Z_{\textrm{1-loop}}$ and the superscript $(N/S)$ denotes appropriate shift of parameters in the north/south pole 
-\begin{align}
-\begin{split}
- Z^{(N), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_1, m, \e_1, \e_2-\e_1, q e^{(d+d_0)\e_1}) \ , \\
- Z^{(S), d}(\vec{k}) &\equiv Z(\vec{a}+\vec{k} \e_2, m, \e_1 - \e_2, \e_2, q e^{(d+d_0)\e_2}) \ . 
-\end{split}
-\end{align}
- Notice that there is no $q$-dependence in the 1-loop part, hence no $d$-dependence as well. 
-The instanton piece can be expanded in terms of the instanton number as
-\begin{align}
- Z_{\textrm{inst}} (\vec{a}, \e_1, \e_2, q) = \sum_{n \ge 0} q^n Z_n (\vec{a}, \e_1, \e_2) \ . 
-\end{align}
-Plugging in, we obtain
-\begin{align}
- q^n Z_n = \sum_{\vec{k}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2)\right)} q^{\half \vec{k}\cdot \vec{k}} \left( \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}} \right) q^{\ell + m} e^{(d+d_0)(\ell \e_1 + m \e_2)} Z^{(N)}_{\ell} Z^{(S)}_m  \ , 
-\end{align}
-where $q^{\half \vec{k} \cdot \vec{k}}$ comes from the classical piece as we will see later. Collecting the terms with the same order, we obtain
-\begin{align}
- Z_n = \sum_{\half \vec{k}\cdot\vec{k} + \ell + m = n} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ , 
-\end{align}
-where $g(\vec{k}) \equiv \frac{Z^{(N)}_{\textrm{1-loop}} Z^{(S)}_{\textrm{1-loop}}}{Z_{\textrm{1-loop}}}$. Notice that the right-hand side of the above equation only involves the instanton parts with $\ell , m < n$. Therefore, one can determine the $n$-instanton partition function recursively from $Z_0 = 1$. 
-To do this, let us separate $n$-instanton contribution from the above expression. We get 
-\begin{align}
- Z_n = e^{\e_1 (d+d_0) n} Z^{(N)}_n + e^{\e_2 (d+d_0) n} Z^{(S)}_n + I_n^{(d)}(\vec{a}, m, \e_1, \e_2) \ , 
-\end{align}
-where
-\begin{align}
-I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
-\end{align}
 Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
 \begin{align}
  Z_n (\vec{a}, m, \e_1, \e_2) = \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ . 
