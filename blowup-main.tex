@@ -356,11 +356,11 @@ In fact, \eqref{eq:blowup-generic} is not enough to fix the partition function c
 
 In the 4d Donaldson-twisted theory, the $\mathcal{Q}$-invariant observable $\mathcal{O}_{\IP^1}$ can be constructed by applying the descent procedure twice to the Casimir invariant $\text{Tr}(\Phi^2)$. It can be written in terms of the component fields as follows: \cite{Witten:1988ze}
 \begin{align} \label{eq:muC}
-  {\CO}_{\IP^1} = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) - H\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
+  {\CO}_{\IP^1} = \int \left\{ \omega \wedge \text{Tr}\Big(\Phi F + \half \psi \wedge \psi\Big) + H\, \text{Tr}\Big( F \wedge F \Big) \right\}  \ .
 \end{align} 
 Here $\omega$ and $H$ are the K\"ahler two-form on the $\IP^1$ and the moment map $\iota_V \omega = dH$, respectively.
 We find it convenient to study the generating function $\langle e^{t \, {\CO}_{\IP^1}}\rangle $ of the correlators $\langle {\CO}_{\IP^1} \ldots {\CO}_{\IP^1} \rangle$. 
-In particular, the insertion of $\exp{(t  {\CO}_{\IP^1})}$ causes an extra shift of the instanton mass by $2tH|_p$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. This modifies \eqref{eq:coupling-shift} to $\Lambda|_p = \Lambda + (\frac{b}{2}+t)H|_p$.
+In particular, the insertion of $\exp{(t  {\CO}_{\IP^1})}$ causes an extra shift of the instanton mass by $2tH|_p$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. This modifies \eqref{eq:coupling-shift} to $\Lambda|_p = \Lambda + (\frac{b}{2}-t)H|_p$.
 Therefore the expectation value of the generating function is given by
 \begin{align}
   \label{eq:corgen}
@@ -370,8 +370,8 @@ where
 \begin{align}
   \label{eq:param-np-sp}
 \begin{split}
-  \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, \Lambda +  (\tfrac{b}{2}+t)\e_1, \vec{m} +\tfrac{1}{2}\e_1) \ , \\
-  \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, \Lambda +  (\tfrac{b}{2}+t)\e_2, \vec{m} +\tfrac{1}{2}\e_2)\ , \\
+  \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, \Lambda +  (\tfrac{b}{2}-t)\e_1, \vec{m} +\tfrac{1}{2}\e_1) \ , \\
+  \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, \Lambda +  (\tfrac{b}{2}-t)\e_2, \vec{m} +\tfrac{1}{2}\e_2)\ , \\
  \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, \Lambda, \vec{m}).
 \end{split}
 \end{align}
@@ -395,7 +395,7 @@ It can be viewed as the natural $S^1$ uplift of \eqref{eq:muC} via exponentiatio
   \label{eq:cor5d}
   \langle \mathcal{O}_{\IP^1}^{d}\rangle = \sum_{\vec{k} \in \Lambda}  \frac{\CZ^{(N),d}(\vec{k}) \cdot \CZ^{(S),d}(\vec{k})}{\CZ^{(0)}}
 \end{align} 
-with the definitions \eqref{eq:param-np-sp} understood. For the case of 5d pure $\mathcal{N}=1$ SYM, with a possible non-zero Chern-Simons level $\kappa$, the correlation function turns out to be \cite{Nakajima:2005fg,Gottsche:2006tn} 
+with the definitions \eqref{eq:param-np-sp} understood. For the case of 5d pure $\mathcal{N}=1$ SYM, the correlation function turns out to be \cite{Nakajima:2005fg} 
 \begin{align}
   \label{eq:cor5d-unity}
   \langle \mathcal{O}_{\IP^1}^{d}\rangle = 1 \quad \text{ for }\quad 0\leq d \leq d_\text{max}
@@ -405,9 +405,7 @@ $\mathcal{N}=1$ gauge theories with hypermultiplets, then writing down the corre
 \emph{necessary} condition for \eqref{eq:cor5d-unity} to hold true:
 \begin{align}
   \label{eq:cor5d-dmax}
-  d_\text{max} = \begin{dcases}
-  \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G \neq SU(N)\\ \textstyle h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i) & \quad \text{if}\quad  G = SU(N) \textcolor{red}{change}
-\end{dcases}
+  d_\text{max} = h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i)  - \kappa_\text{eff}
 \end{align}
 Furthermore, we conjecture that \eqref{eq:cor5d-dmax} is also sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will bring a wide variety of 5d $\mathcal{N}=1$ SCFTs later in Section~\ref{sec:example}, whose $\CZ$ is known from an alternative method, and confirm that \eqref{eq:cor5d-unity} with \eqref{eq:cor5d-dmax} is indeed true for the considered set of examples. We call the relation \eqref{eq:cor5d-unity} the blowup equation. 
 
@@ -448,7 +446,7 @@ where $p_1 \equiv e^{-\e_1},\, p_2 \equiv e^{-\e_2},\, y_i \equiv e^{-m_{i}}$ an
 Substituting them to \eqref{eq:recur-inst}, the combinations of three different $Z$'s are given by
 \begin{align}
   \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z}  &=  q^{\frac{\vec{k}\cdot\vec{k}}{2} } \, 
-  (p_1p_2)^{(d+\frac{b}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k}{6}d_{ijk}\,k^ik^jk^k} \nn\\&\times  e^{-(d+\frac{b}{2})(\vec{a}\cdot\vec{k})}\,
+  (p_1p_2)^{(\frac{b}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k}{6}d_{ijk}\,k^ik^jk^k} \nn\\&\times  e^{-(\frac{b}{2}-d)(\vec{a}\cdot\vec{k})}\,
   e^{-\frac{\kappa}{2}d_{ijk}\,a^ik^jk^k} \hspace{3.62cm} \text{for }Z=Z_\text{class},\\
   \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z} &= e^{\frac{h^\vee}{2}(\vec{a}\cdot\vec{k})}  \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)^{-1}  \hspace{2.5cm} \text{for }Z=Z_\text{1-loop}^\text{vec}, \\
   \frac{Z^{(N), d}(\vec{k}) \, Z^{(S), d}(\vec{k})}{Z} &= e^{-\frac{I_2(\boldsymbol{R}_\ell)}{4}(\vec{a}\cdot\vec{k})+\frac{I_3(\boldsymbol{R}_\ell)}{4}d_{ijk}\,a^ik^jk^k} (p_1p_2)^{\frac{I_2(\boldsymbol{R}_\ell)}{8}(\vec{k}\cdot\vec{k})-\frac{I_3(\boldsymbol{R}_\ell)}{12}d_{ijk}\,k^ik^jk^k}\nn \\
@@ -473,10 +471,10 @@ Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can b
 \begin{align}
   \label{eq:recursion}
   Z_n = &\sum_{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}  
-  \Bigg( (p_1p_2)^{(d+\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+  \Bigg( (p_1p_2)^{(\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
  e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k} \\& 
  \times    \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
- \cdot p_1^{(d+\frac{b}{2})\ell}p_2^{(d+\frac{b}{2})m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
+ \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
  \end{align}
  which is generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. 
 
@@ -486,12 +484,12 @@ The right-hand side of the recursion relation \eqref{eq:recursion} only involves
 At one instanton level, the formula \eqref{eq:recursion} can be written as follows:
 \begin{align}
   \label{eq:1inst}
-  Z_1 = p_1^{(d+\frac{b}{2})}Z^{(N)}_{1}  + p_2^{(d+\frac{b}{2})}  Z^{(S)}_1  + I_1^{(d)} \ , 
+  Z_1 = p_1^{(\frac{b}{2}-d)}Z^{(N)}_{1}  + p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1  + I_1^{(d)} \ , 
  \end{align}
  where  (with the fugacity variable $y_{\text{phy},l} \equiv e^{-m_{\text{phy},l}} = y_l / \sqrt{p_1p_2}$ understood)
  \begin{align}
   I_1^{(d)} = &\sum_{\vec{k} \in \Delta_l}  \Bigg( 
-     (p_1p_2)^{(d+\frac{b}{2} )  +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+     (p_1p_2)^{(\frac{b}{2}-d )  +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
     e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
   \times \frac{\prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ (1-p_1p_2 e^{-\vec{a} \cdot \vec{k} })(1-p_1^{-1} e^{\vec{a} \cdot \vec{k} })(1-p_2^{-1} e^{\vec{a} \cdot \vec{k} })(1-e^{\vec{a} \cdot \vec{k} })\prod_{\vec{\a} \cdot \vec{k} = -1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}
     \Bigg). \nn
@@ -515,54 +513,66 @@ For the other cases, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0
 \end{align}
 
 \paragraph{Range of $d$} 
-Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$. We want to narrow down the validity range of $d$ by doing a simple sanity check on \eqref{eq:1inst}. Specifically, we examine the double expansion of \eqref{eq:1inst} with respect to $y_{\text{phy},l} \ll \sqrt{p_1p_2} \ll 1$, identifying an exponent in $\sqrt{p_1p_2}$ of the leading term. 
-The expansion of the single terms in \eqref{eq:1inst} can be written as
-{\allowdisplaybreaks
+Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$. We want to narrow down the validity range of $d$ by doing a simple sanity check on \eqref{eq:1inst}. Specifically, we examine the expansion of the single terms in  \eqref{eq:1inst} with respect to $\sqrt{p_1p_2} \ll 1$, identifying the leading exponent as follows:{\allowdisplaybreaks
 \begin{align}
-  I_1^{(d)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{d+\frac{b}{2} + 1} g_0(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  Z_1 &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n}{2}} g_1(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  p_1^{(d+\frac{b}{2})}Z_1^{(N)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{d}{2}+\frac{b}{4}+\frac{n}{4}} g_2(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  p_2^{(d+\frac{b}{2})}  Z^{(S)}_1&\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{d}{2}+\frac{b}{4}+\frac{n}{4}} g_3(\vec{a}) + \cdots \right) + \cdots.
+  I_1^{(d)} &\sim \begin{dcases}
+    g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{2}-d + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
+    g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{2}-d } + \cdots    &  \text{for }N_\text{sym} = 1
+\end{dcases}
+  \nn \\
+  Z_1 &\sim   g_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
+  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} &\sim  g_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}   + \cdots   \nn \\
+  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
 \end{align}
 where  
+\begin{align}
+  n  = 
+  % \begin{dcases}
+    % \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
+    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff}
+    %  & \text{ for } G = SU(N).
+  % \end{dcases}
+\end{align}
+except for the special case of $SU(N)_{|\kappa|<N}$ gauge theory without a hypermultiplet, whose $n$ enhances to $n = h^\vee + |\k|$ \cite{Gottsche:2006bm}. We note that for the equation \eqref{eq:1inst} to hold, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Thus the following condition is  naturally imposed: 
 \begin{align}
   \label{eq:upperbound}
-  n  = \begin{dcases}
-    \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
-    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} & \text{ for } G = SU(N).
-  \end{dcases}
+     d - \frac{b}{2} \geq -\frac{n}{2}.
 \end{align}
-except for the special case of $SU(N)_{|\kappa|<N}$ gauge theory without a hypermultiplet, whose $n$ enhances to $n = h^\vee + |\k|$ \cite{Gottsche:2006bm}. We note that for the equation \eqref{eq:1inst} to hold, some terms on the right-hand side should have the leading exponent with respect to $\sqrt{p_1 p_2}$ less than or equal to that of $Z_1$. Thus the following condition is  naturally imposed: 
-\begin{align}
-  \frac{n}{2} \geq  d + \frac{b}{2}.
-\end{align}
-which sets an upper bound on $d$. Similarly, a lower bound on $d$ can be found from another expansion of \eqref{eq:1inst}, with respect to $y_{\text{phy},l} \ll 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the double expansion of the single terms in \eqref{eq:1inst} with respect to $y_{\text{phy},l} \ll 1/\sqrt{p_1p_2} \ll 1$.} 
+which sets a lower bound on $d$. 
+%
+Similarly, an upper bound on $d$ can be found from another expansion of \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.} 
 Each term in \eqref{eq:1inst} becomes
-{\allowdisplaybreaks
 \begin{align}
-  I_1^{(d)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (1/p_1p_2)^{-d-\frac{b}{2} + 1} h_0(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-d-\frac{b}{2} + 1}  h_1(\vec{a}) + \cdots \right) \nn \\
-  Z_1 &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n'}{2} + \frac{1}{2}\sum_l I_2(\mathbf{R}_l)} h_2(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{\frac{n'}{2}} h_3(\vec{a}) + \cdots \right) \nn \\
-  p_1^{(d+\frac{b}{2})}Z_1^{(N)} &\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}+ \frac{1}{4}\sum_l I_2(\mathbf{R}_l)} h_4(\vec{a}) + \cdots \right) + \cdots  \nn \\
-  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}} h_5(\vec{a}) + \cdots \right) \nn \\
-  p_2^{(d+\frac{b}{2})}  Z^{(S)}_1&\sim \prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}+ \frac{1}{4}\sum_l I_2(\mathbf{R}_l)} h_6(\vec{a}) + \cdots \right) + \cdots \nn\\
-  &+\prod_{l} y_{\text{phy},l}^{+I_2(\boldsymbol{R}_l)/2}  \left(  (p_1p_2)^{-\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}} h_5(\vec{a}) + \cdots \right) 
+  I_1^{(d)} &\sim \begin{dcases}
+    h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{d-\frac{b}{2} + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
+    h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{d-\frac{b}{2} } + \cdots    &  \text{for }N_\text{sym} = 1
+\end{dcases}
+  \nn \\
+  Z_1 &\sim   h_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
+  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} &\sim  h_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}   + \cdots   \nn \\
+  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim  h_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}  + \cdots   .
 \end{align}
-where  
+Again, for \eqref{eq:1inst} to be consistent, the leading exponent of $Z_1$ should be greater than or equal to those of some terms on the right-hand side. This requirement imposes that
 \begin{align}
   \label{eq:lowerbound}
-  n'  = \begin{dcases}
-    \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
-    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} & \text{ for } G = SU(N).
-  \end{dcases}
+      \frac{n}{2} \geq  d - \frac{b}{2}.
 \end{align}
-So actually the stronger bound on $d$ 
 
+Let us combine the two inequalities \eqref{eq:upperbound} and \eqref{eq:lowerbound}. Since $n=b$ for most cases, 
+\begin{align}
+  \label{eq:bound-1}
+  \textstyle 0  \leq d  \leq h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} .
+\end{align}
+which gives \eqref{eq:cor5d-dmax}. For $SU(N)_{|\kappa|<N}$ SYM without a hypermultiplet, $n = h^\vee + |\k|$ so that \cite{Gottsche:2006bm}
+\begin{align}
+  \label{eq:bound-2}
+  \textstyle -\frac{\k + |\k|}{2}  \leq d  \leq h^\vee + \frac{|\k|-\k}{2}.
+\end{align}
+Here we stress that this validity regime of $d$ is only a \emph{necessary} condition, obtained from the inspection at one instanton level. 
+Nonetheless, we speculate that the recursion relation \eqref{eq:recursion}  holds true at all instanton orders, with the above range of $d$. In fact, \eqref{eq:recursion} with \eqref{eq:bound-1} and \eqref{eq:bound-2} was tested for a number of theories, as summarized in Table~\ref{tbl:list}. It would be desirable to understand from the first principle the range of $d$ for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$.
+}
 
-\pagebreak
-
-
+\paragraph{Sol}
 % Let us narrow down the validity regime of $d$ by doing a sanity check on the expected formula \eqref{eq:recursion} at one instanton:
 % To do this, let us separate $n$-instanton partition function $Z_n$ from the above expression. 
 \begin{align}
