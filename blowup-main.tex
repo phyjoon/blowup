@@ -387,7 +387,7 @@ We now turn to 5d $\CN=1$ gauge theory wrapped on $S^1$. The Casimir invariant $
 \begin{align} 
   \mathcal{O}_{\IP^1}^{d} = \exp\bigg[
     d\int \bigg( & \omega \wedge \text{Tr}\Big(A \wedge dA + \frac{2}{3}A\wedge A \wedge A \Big) \\ \nonumber
-     + &\omega \wedge \Big( \phi \, F + \frac{1}{2}\psi \wedge \psi \Big)\wedge dt -H\, \text{Tr}\Big( F \wedge F \Big) \bigg)
+     + &\omega \wedge \Big( \phi \, F + \frac{1}{2}\psi \wedge \psi \Big)\wedge dt + H\, \text{Tr}\Big( F \wedge F \Big) \bigg)
      \bigg] \ .
 \end{align}
 It can be viewed as the natural $S^1$ uplift of \eqref{eq:muC} via exponentiation, where the coefficient $d$ is integer-valued as required by gauge invariance. The correlation function is given by
@@ -401,13 +401,15 @@ with the definitions \eqref{eq:param-np-sp} understood. For the case of 5d pure 
   \langle \mathcal{O}_{\IP^1}^{d}\rangle = 1 \quad \text{ for }\quad 0\leq d \leq d_\text{max}
 \end{align}
 where $d_\text{max} = h^\vee$. For $d_\text{max} = h^\vee \geq 2$, there are sufficient number of algebraic relations to determine the instanton partition function $\CZ$ iteratively, in increasing the order of instantons. This fact was utilized in \cite{Keller:2012da} to compute $\CZ$ in exceptional gauge theories, for which the ADHM construction of instanton moduli space is not known. In this paper, we aim at developing the relation \eqref{eq:cor5d-unity} for various 5d 
-$\mathcal{N}=1$ gauge theories with hypermultiplets, then writing down the corresponding $\CZ$ based on that. We will shortly see the following  
-\emph{necessary} condition for \eqref{eq:cor5d-unity} to hold true:
+$\mathcal{N}=1$ gauge theories with hypermultiplets, then writing down the corresponding $\CZ$ based on that. We will identify a certain bound on $d$ in Section~\ref{subsec:oneinst} as the \emph{necessary} condition on \eqref{eq:cor5d-unity} for the wide array of theories which have UV completion. 
+See Table~\ref{tbl:list} for the list of all considered examples. The bound can be summarized as follows:
 \begin{align}
   \label{eq:cor5d-dmax}
-  d_\text{max} = h^\vee - \frac{1}{2}\sum_i I_2(\mathbf{R}_i)  - \kappa_\text{eff}
+  h^\vee -\frac{1}{2}\sum_l I_2(\mathbf{R}_l) \textcolor{red}{(add)}
 \end{align}
-Furthermore, we conjecture that \eqref{eq:cor5d-dmax} is also sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will bring a wide variety of 5d $\mathcal{N}=1$ SCFTs later in Section~\ref{sec:example}, whose $\CZ$ is known from an alternative method, and confirm that \eqref{eq:cor5d-unity} with \eqref{eq:cor5d-dmax} is indeed true for the considered set of examples. We call the relation \eqref{eq:cor5d-unity} the blowup equation. 
+And also, we conjecture that the bound on $d$ is sufficient for \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we will compute an $n$-instanton partition function $Z_n$, based on the recursion formula that will be derived shortly from \eqref{eq:cor5d-unity}, and confirm the agreement with the known result obtained from an alternative method.
+We will call \eqref{eq:cor5d-unity} the blowup equation. 
+
 
 
 \subsection{Recursion formula}
@@ -477,10 +479,11 @@ Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can b
  \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
  \end{align}
  which is generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. 
+ The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$. Being so, one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
 
 
  \subsection{One instanton partition function}
-The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$. Being so, one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
+ \label{subsec:oneinst}
 At one instanton level, the formula \eqref{eq:recursion} can be written as follows:
 \begin{align}
   \label{eq:1inst}
@@ -488,8 +491,9 @@ At one instanton level, the formula \eqref{eq:recursion} can be written as follo
  \end{align}
  where  (with the fugacity variable $y_{\text{phy},l} \equiv e^{-m_{\text{phy},l}} = y_l / \sqrt{p_1p_2}$ understood)
  \begin{align}
+  \label{eq:1inst-i}
   I_1^{(d)} = &\sum_{\vec{k} \in \Delta_l}  \Bigg( 
-     (p_1p_2)^{(\frac{b}{2}-d )  +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+     (p_1p_2)^{(\frac{b}{2}-d ) } e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
     e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
   \times \frac{\prod_{l} y_{\text{phy},l}^{-I_2(\boldsymbol{R}_l)/2} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ (1-p_1p_2 e^{-\vec{a} \cdot \vec{k} })(1-p_1^{-1} e^{\vec{a} \cdot \vec{k} })(1-p_2^{-1} e^{\vec{a} \cdot \vec{k} })(1-e^{\vec{a} \cdot \vec{k} })\prod_{\vec{\a} \cdot \vec{k} = -1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}
     \Bigg). \nn
@@ -505,213 +509,213 @@ We are interested in 5d $\mathcal{N}=1$ gauge theories which are UV-complete as 
 \end{itemize}
 For the $SU(N)$ symmetric representation, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, or $\pm 2$.
 \begin{align}
+  \label{eq:weight-expansion-sym}
   \textstyle\prod_{\w \in \boldsymbol{\textbf{sym}}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle\prod_{\vec{k}\cdot \vec{\w} = 2} (1-y_\text{phy}\,  p_1p_2 e^{-\vec{a}\cdot \vec{\w}}) \times \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) \nn\\&\textstyle\times \prod_{\vec{k}\cdot \vec{\w} = -2} (1-y_\text{phy}\,  p_1^{-1} e^{-\vec{a}\cdot \vec{\w}})(1-y_\text{phy}\,  p_2^{-1} e^{-\vec{a}\cdot \vec{\w}}).
  \end{align}
 For the other cases, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, such that 
 \begin{align}
+  \label{eq:weight-expansion-non-sym}
   \textstyle\prod_{\w \in \boldsymbol{R}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) .
 \end{align}
 
-\paragraph{Range of $d$} 
-Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$. We want to narrow down the validity range of $d$ by doing a simple sanity check on \eqref{eq:1inst}. Specifically, we examine the expansion of the single terms in  \eqref{eq:1inst} with respect to $\sqrt{p_1p_2} \ll 1$, identifying the leading exponent as follows:{\allowdisplaybreaks
+% \paragraph{Range of $d$}
+\paragraph{Number of the blowup equations} 
+Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$. We want to narrow down the validity range of $d$ by doing a simple sanity check on \eqref{eq:1inst}. Specifically, we want to examine the expansion of all single terms in  \eqref{eq:1inst} with respect to $\sqrt{p_1p_2} \ll 1$, identifying the leading exponent as follows:{\allowdisplaybreaks
 \begin{align}
   I_1^{(d)} &\sim \begin{dcases}
     g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{2}-d + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
     g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{2}-d } + \cdots    &  \text{for }N_\text{sym} = 1
 \end{dcases}
   \nn \\
-  Z_1 &\sim   g_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
-  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} &\sim  g_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}   + \cdots   \nn \\
-  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
+  Z_1 &\sim   \ \ \, g_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
+  p_1^{(\frac{b}{2}-d)}Z_1^{(N)}\sim p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1 &\sim  \ \ \,  g_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}   + \cdots   .
+  % \nn \\ &\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
 \end{align}
-where  
-\begin{align}
-  n  = 
-  % \begin{dcases}
-    % \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)& \text{ for } G \neq SU(N)\\
-    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff}
-    %  & \text{ for } G = SU(N).
-  % \end{dcases}
-\end{align}
-except for the special case of $SU(N)_{|\kappa|<N}$ gauge theory without a hypermultiplet, whose $n$ enhances to $n = h^\vee + |\k|$ \cite{Gottsche:2006bm}. We note that for the equation \eqref{eq:1inst} to hold, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Thus the following condition is  naturally imposed: 
-\begin{align}
-  \label{eq:upperbound}
-     d - \frac{b}{2} \geq -\frac{n}{2}.
-\end{align}
-which sets a lower bound on $d$. 
-%
-Similarly, an upper bound on $d$ can be found from another expansion of \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.} 
-Each term in \eqref{eq:1inst} becomes
+where a numerical value of $n$ will be discussed shortly for a variety of gauge theories (Table~\ref{tbl:list}).
+Notice that for the equation \eqref{eq:1inst} to be true, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Therefore, the condition $d - \frac{b}{2} \geq -\frac{n}{2}$ is  naturally imposed, setting a lower bound on $d$. 
+
+Similarly, an upper bound on $d$ can be found from an expansion of \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.} 
+Each single term in \eqref{eq:1inst} can be written as
 \begin{align}
   I_1^{(d)} &\sim \begin{dcases}
     h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{d-\frac{b}{2} + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
     h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{d-\frac{b}{2} } + \cdots    &  \text{for }N_\text{sym} = 1
 \end{dcases}
   \nn \\
-  Z_1 &\sim   h_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
-  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} &\sim  h_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}   + \cdots   \nn \\
-  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim  h_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}  + \cdots   .
+  Z_1 &\sim  \ \ \,  h_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{n'}{2}}  + \cdots  \nn \\
+  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} \sim  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim \ \ \,  h_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}}   + \cdots   
+  % \nn \\&\sim  h_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}  + \cdots   .
 \end{align}
-Again, for \eqref{eq:1inst} to be consistent, the leading exponent of $Z_1$ should be greater than or equal to those of some terms on the right-hand side. This requirement imposes that
+Again, for \eqref{eq:1inst} to be consistent, the leading exponent of $Z_1$ should be greater than or equal to those of some terms on the right-hand side. Such requirement imposes the upper bound on $d$, namely  $\frac{n'}{2} \geq  d - \frac{b}{2}$.
+% \begin{align}
+%   \label{eq:lowerbound}
+%       \frac{n'}{2} \geq  d - \frac{b}{2}.
+% \end{align}
+Combining the two inequalities,  one can identify the following range
 \begin{align}
-  \label{eq:lowerbound}
-      \frac{n}{2} \geq  d - \frac{b}{2}.
+  \label{eq:bound}
+  -\frac{n}{2} + \frac{b}{2} \leq d \leq \frac{n'}{2} + \frac{b}{2},
 \end{align}
+as a necessary condition for \eqref{eq:1inst}. Furthermore, we explicitly checked that the $k$-instanton partition function $Z_k$ actually satisfies all the $(\frac{n+n'}{2})$ recursion relations up to a certain value of $k$, for numerous examples (Table~\ref{tbl:list}) whose $Z_k$ is already known from alternative methods, even though the bound \eqref{eq:bound} itself is merely a \emph{necessary} condition found from one-instanton analysis. Recall that the simple selection rule, governed by $\IZ_{4h^\vee - 2\sum_i I_2(\mathbf{R}_i)} \subset U(1)_R$, supports the validity of \eqref{eq:donaldson-4d} at all instanton orders in 4d Donaldson-twisted theories. 
+Based on the empirical observations, we claim that the 5d recursion formulae \eqref{eq:recursion} within the above range of $d$ are again true at all instanton orders. This implies that the non-perturbative partition function $Z_\text{inst}$ is completely fixed by the perturbative partition function! Note that we have arrived at this statement not by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis, but just by demanding consistency upon smooth deformation of the spacetime $\IC^2 \times S^1$. Such consistency condition turns out to be entirely non-perturbative.
+% that the QFT has to be well-defined regardless of its spacetime. 
 
-Let us combine the two inequalities \eqref{eq:upperbound} and \eqref{eq:lowerbound}. Since $n=b$ for most cases, 
+
+Another remarkable thing is that a numerical value of  $(n, n')$ exhibits the very simple pattern across a broad range of theories whose gauge group is not $SU(N)_\k$. (See Table~\ref{tbl:list}.)
 \begin{align}
-  \label{eq:bound-1}
-  \textstyle 0  \leq d  \leq h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l) - \k_\text{eff} .
+  \label{eq:n-np}
+ &n = n' \hspace{1.55cm}=\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  && \text{ for } \quad   G\neq SU(N)_\kappa \text{ nor } Sp(N) \nn\\
+ &n = n' - 2\{\tfrac{N_f}{2}\} =\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)
+ &&   \text{ for }  \quad G = Sp(N)_{\theta=0}\\
+ &n = n' + 2\{\tfrac{N_f}{2}\} =\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 1 &&   \text{ for }  \quad G = Sp(N)_{\theta=\pi}\nn
 \end{align}
-which gives \eqref{eq:cor5d-dmax}. For $SU(N)_{|\kappa|<N}$ SYM without a hypermultiplet, $n = h^\vee + |\k|$ so that \cite{Gottsche:2006bm}
+As the above numerical pattern \eqref{eq:n-np} emerges for all $G \neq SU(N)_\k$ examples that we studied, we speculate that \eqref{eq:n-np} is generally true, thereby taking the recursion formulae \eqref{eq:recursion} with
 \begin{align}
-  \label{eq:bound-2}
-  \textstyle -\frac{\k + |\k|}{2}  \leq d  \leq h^\vee + \frac{|\k|-\k}{2}.
+  \label{eq:d-range-nonsu}
+  0 \leq &\ \textstyle d \leq h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) &\text{ for } \quad G &\neq SU(N)_\kappa \text{ nor } Sp(N) \nn \\
+  0 \leq &\ \textstyle d \leq h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \{\tfrac{N_f}{2}\} &\text{ for }\quad G &=Sp(N)_{\theta=0} \\
+  -\tfrac{1}{2} \leq &\ \textstyle d \leq h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \tfrac{1}{2} - \{\tfrac{N_f}{2}\} &\text{ for }\quad G &=Sp(N)_{\theta=\pi} \nn
 \end{align}
-Here we stress that this validity regime of $d$ is only a \emph{necessary} condition, obtained from the inspection at one instanton level. 
-Nonetheless, we speculate that the recursion relation \eqref{eq:recursion}  holds true at all instanton orders, with the above range of $d$. In fact, \eqref{eq:recursion} with \eqref{eq:bound-1} and \eqref{eq:bound-2} was tested for a number of theories, as summarized in Table~\ref{tbl:list}. It would be desirable to understand from the first principle the range of $d$ for which $\langle \mathcal{O}_{\IP^1}^{d}\rangle = 1$.
-}
+as a basic assumption to obtain the partition function $\mathcal{Z}$ for any $G \neq SU(N)_\k$ gauge theory. 
+We will derive the general expression for the 1-instanton partition function $Z_1$, which applies for all $G \neq SU(N)_\k$ gauge theories having $h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) \geq 2$.
+It would be desirable to understand from the first principle the range  \eqref{eq:d-range-nonsu} of $d$ for which \eqref{eq:recursion} holds true.
 
-\paragraph{Sol}
-% Let us narrow down the validity regime of $d$ by doing a sanity check on the expected formula \eqref{eq:recursion} at one instanton:
-% To do this, let us separate $n$-instanton partition function $Z_n$ from the above expression. 
+On the contrary, it turns out to be more difficult to characterize a general pattern behind $(n, n')$ for $SU(N)_\kappa$ gauge theories, due to extra complication caused by the 5d Chern-Simons level $\kappa$. Here we consider two particular classes of $SU(N)_\kappa$ gauge theories as an illustration.  In $SU(N)_\kappa + N_f\mathbf{F}$ gauge theory with $N_f + 2|\kappa| \leq 2N$, we find that 
 \begin{align}
- Z_n = p_1^{(d+\frac{b}{2})n}Z^{(N)}_{n}  + p_2^{(d+\frac{b}{2})n}  Z^{(S)}_n    + I_n^{(d)} \ , 
+  \label{eq:sun-nf}
+  n &= \begin{dcases}
+  \textstyle \frac{N_f}{2}
+  & \hspace{2.1cm} \textstyle\text{ if }  \kappa_\text{eff} = N - N_f, \\
+  \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{F}) + |\k_\text{eff}| 
+  & \hspace{2.1cm}\textstyle\text{ otherwise}.
+  \end{dcases}\\
+  n' &=
+    \begin{dcases}
+     \textstyle \frac{N_f}{2}
+    &  \textstyle\text{ if }  \kappa_\text{eff} = -N, \\
+    \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{F}) + \left|\k_\text{eff} + \sum_{l}I_3(\mathbf{F})\right| 
+    &  \textstyle\text{ otherwise} \nn.
+    \end{dcases}  
 \end{align}
-with 
+Plugging these values in \eqref{eq:bound}, the range of $d$ becomes
 \begin{align}
-  I_n^{(d)} = &\sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}}  \Bigg( 
-     (p_1p_2)^{(d+\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{-(d-\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
-    e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
-  \times \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
-  \cdot p_1^{(d+\frac{b}{2})\ell}p_2^{(d+\frac{b}{2})m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg). \nn
+  \label{eq:sun-nf-range}
+  0 \leq &\ d \leq N &\text{ if } \kappa &= -N + \tfrac{N_f}{2} \nn \\
+  0 \leq &\ d \leq N-\tfrac{N_f}{2}-\kappa &\text{ if } \kappa & \in (-N +\tfrac{N_f}{2}, -\tfrac{N_f}{2}] \nn \\
+  0 \leq &\ d \leq N &\text{ if } \kappa &\in [-\tfrac{N_f}{2}, +\tfrac{N_f}{2}] \\
+  \tfrac{N_f}{2}-\kappa \leq &\ d \leq N & \text{ if } \kappa &\in [\tfrac{N_f}{2}, N -\tfrac{N_f}{2})  \nn \\
+  0 \leq &\ d \leq N & \text{ if } \kappa &= N -\tfrac{N_f}{2}  \nn 
 \end{align}
-  
-Let us state our final answer:
+including $0 \leq d \leq N$ in any case. Thus for $N\geq 2$,  the recursion formula \eqref{eq:recursion} determines the partition function $\CZ$ completely.
+In $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$  theory with $N_f + 2|\kappa| \leq N+4$, 
 \begin{align}
- Z_n (\vec{a}, \vec{m}^{\textrm{phy}}, \e_1, \e_2) &= \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ , 
+  n &= \min \textstyle 
+  \left(h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - (\k_\text{eff}-2),\ h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{\frac{\k_\text{eff}}{2}\}\right)\nn \\
+  n' &= \min \textstyle 
+  \left(h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + (\k_\text{eff}+\sum_{l}I_3(\mathbf{R}_l)+2),\right. \\& \left. \qquad \quad \ \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{-\frac{\k_\text{eff}}{2}+\frac{1}{2}\sum_{l}I_3(\mathbf{R}_l)\}\right), \nn
 \end{align}
-with 
+from which one can identify the validity range of $d$ by making substitution to \eqref{eq:bound}. So long as three distinct integers are allowed for $d$, at a given $(N, \kappa)$, the corresponding partition function $\CZ$ can be solved from the recursion formula \eqref{eq:recursion}. We will also consider $SU(6)_\kappa  + 1 \mathbf{TAS}$ theory with $|\kappa| \leq 3$ in Section~\ref{sec:example}. This model can be Higgsed to two disjoint copies of $SU(3)_\kappa$ theory without a bifundamental hypermultiplet \cite{Hayashi:2019yxj}. At the level of the partition function, the Higgsing is realized by turning off $m_\text{phys} = 0$ and imposing $SU(3)$ traceless conditions. As neither of them can modify $n$ and $n'$, the numerical value of $(n,n')$ must be identical to that of $SU(3)_\kappa$ gauge theory, which always contains $0\leq d \leq 3$. Therefore, the recursion formula \eqref{eq:recursion} sufficiently determines the full partition function $\CZ$ for $SU(6)_\kappa  + 1 \mathbf{TAS}$ theory as well.
 
 
+\paragraph{Solving the recursion formulae}
 
-
+We now turn to solve the recursion formulae \eqref{eq:recursion} for the one-instanton partition function $Z_1$. As long as there are at least 3 consecutive integers $\{d_0, d_0+1, d_0+2\}$ for $d$, the solution $Z_1$ to the three linear equations \eqref{eq:1inst} is given by
 \begin{align}
-  I_n^{(d)}(\vec{a}, m, \e_1, \e_2) = \sum_{\substack{\half \vec{k}\cdot\vec{k} + \ell + m = n \\ \ell, m < n}} e^{(d+d_0)\left( \vec{k} \cdot \vec{a} + \half \vec{k} \cdot \vec{k} (\e_1 + \e_2) + \ell \e_1 + m \e_2 \right)} g(\vec{k}) Z^{(N)}_{\ell}(\vec{k}) Z^{(S)}_m (\vec{k}) \ . 
-  \end{align}
-
-  
-
-where
-\begin{align}
-  Z_{\text{inst}}=\sum_{\vec{k}\in\Delta^{\vee}}&\,(p_1p_2)^{(d+b_0/2)(\vec{k}\cdot\vec{k})/2+\frac{\kappa}{6}d_{ijk}\,k^ik^jk^k}e^{-(d+b_0/2)(\vec{a}\cdot\vec{k})-\frac{\kappa}{2}d_{ijk}\,a^ik^jk^k}\nn\\
-  % &\,\times e^{(\frac{h^\vee}{2}-\sum_{l=1}^{N_f}\frac{I_2(\boldsymbol{R}_l)}{4})(\vec{a}\cdot\vec{k})+\sum_{l=1}^{N_f}\frac{I_3(\boldsymbol{R}_l)}{4}d_{ijk}\,a^ik^jk^k}\prod_{l=1}^{N_f}\left(M_l^{-\frac{I_2(\boldsymbol{R}_l)}{4}(\vec{k}\cdot\vec{k})}\right)(p_1p_2)^{\sum_{l=1}^{N_f}\frac{I_2(\boldsymbol{R}_l)}{8}(\vec{k}\cdot\vec{k})-\frac{I_3(\boldsymbol{R}_l)}{12}d_{ijk}\,k^ik^jk^k}\nn\\
-  % &\times\frac{\prod_{l=1}^{N_f}\prod_{\vec{\omega}\in\boldsymbol{R}_l}\mathcal{L}(e^{-m_l^\text{phy}-\vec{a}\cdot\vec{\omega}},\vec{k}\cdot\vec{\omega})}{\prod_{\vec{\alpha}\in\Delta}\mathcal{L}(e^{-\vec{a}\cdot\vec{\alpha}},\vec{k}\cdot\vec{\alpha})}\nn\\
-  % &\times Z_{\text{inst}}(\e_1,\e_2-\e_1,\vec{a}+\vec{k}\e_1,m-\frac{\e_1}{2},\Lambda+(d+\frac{b_0}{2})\e_1)\nn\\
-  % &\times Z_{\text{inst}}(\e_1-\e_2,\e_2,\vec{a}+\vec{k}\e_2,m-\frac{\e_2}{2},\Lambda+(d+\frac{b_0}{2})\e_2)
+  \label{eq:1inst-sol}
+  Z_1(\vec{a},\e_1,\e_2, \vec{m})=\frac{p_1p_2\,I_{1}^{(d_0+2)}-(p_1+p_2)\,I_{1}^{(d_0+1)}+I_{1}^{(d_0)}}{(1-p_1)(1-p_2)}
 \end{align}
-
-
-
+with $I_1^{(d)}$ defined in \eqref{eq:1inst-i}. It turns out to be more convenient to express \eqref{eq:1inst-sol} by decomposing $I_1^{(d)}$ into the flux sum, i.e., $I_1^{(d)} \equiv \sum_{\vec{k}\in\Delta_{l}} i_1^{(d)}(\vec{k})$, where
 \begin{align}
-%  g(\vec{k}) =  e^{\frac{h^\vee}{2}(\vec{k}\cdot \vec{a})}\prod_{\vec{\a} \in \Lambda}  
-\textrm{PE} \left[ e^{\vec{a} \cdot \vec{\a}}A(\vec{k} \cdot \vec{\a}, e^{\e_1} e^{\e_2})\right]\cdot 
- \prod_{i} \prod_{\vec{w} \in R_i} 
-%  e^{((\vec{a}\cdot \vec{w}+m^{\rm phy}_i) n_1 + \e_+ n_2}
-\textrm{PE} \left[- e^{\vec{a} \cdot \vec{w} + m^{\textrm{phy}}_i}A(\vec{k} \cdot \vec{w}, e^{\e_1} e^{\e_2})\right]
-\end{align} 
-where $i$ runs over various hypermultiplets in the theory and $p_1 = e^{\e_1}, p_2 = e^{\e_2}$. Here the function $A$ is given as
-\begin{align}
-\begin{split}
- A(k, p_1, p_2) &= \frac{1}{(1-p_1)(1-p_2)} -  \frac{p_1^k}{(1-p_1)(1-p_2/p_1)} -  \frac{p_2^k}{(1-p_1/p_2)(1-p_2)}  \ . 
-\end{split}
+  \label{eq:1inst-i-flux}
+  i_{1}^{(d)}(\vec{k})\equiv &\ (p_1p_2)^{(\frac{b}{2}-d)}\,e^{(d+\frac{\kappa_{\text{eff}}}{2})(\vec{a}\cdot\vec{k})}e^{-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\\
+  &\,\times\frac{\prod_{l}(y_{l}^{\text{phy}})^{-{I_2(\boldsymbol{R}_l)}/{2}}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})(1-p_1^{-1}e^{\vec{a}\cdot\vec{k}})(1-p_2^{-1}e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}.\nn
 \end{align}
-
-Upon taking PE, we obtain
+Using the property $i_{1}^{(d_0+\aleph)}(\vec{k}) /i_{1}^{(d_0)}(\vec{k})=(p_1p_2)^{-\aleph}\,e^{\aleph(\vec{a}\cdot\vec{k})}$, the above $Z_1$ can be written as
 \begin{align}
-\mathcal{L}_{k} (x, \e_1, \e_2) \equiv \textrm{PE}\left[ e^{x} A(k, e^{\e_1}, e^{\e_2}) \right] = 
-\begin{cases}
- {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le k-1}} \left( 1-e^{x+ m \e_1 +n  \e_2}\right)} & (k > 0) \\
- {\displaystyle \prod_{\substack{m, n \ge 0 \\ m+n \le -k-2}} \left(1-e^{x -(m+1)\e_1 - (n+1)\e_2} \right)} & (k < -1)  \\
- 1 & (k=0, -1)
-\end{cases}
-\end{align}   
-
-where $i$ runs over all the hypermultiplets. 
-
-
-% such as the ADHM quantum mechanics, topological vertex, or the modular bootstrap of partition function applied to their 6d origin, 
-
-
-
-
-
-Therefore, we obtain
-\begin{align} \label{eq:blowup5d}
- Z = \sum_{\vec{k} \in \Lambda} \exp\left( (d+d_0)\, \mu(\vec{k}) \right) Z^{(N), d}(\vec{k})  Z^{(S), d}(\vec{k})  \qquad (d=0, 1, \ldots, h^\vee - I(R)/2 ) \ , 
-\end{align} 
-for the 5d theories. We call the relation above as the blow-up equation.  \textcolor{red}{(up to here)}
-
-
-
-
-Now, we can solve for $Z_n, Z_n^{(N)}, Z_n^{(S)}$ by using the blow-up equation for $d=0, 1, 2$ to obtain
-\begin{align}
- Z_n (\vec{a}, m, \e_1, \e_2) = \frac{e^{n(\e_1 + \e_2)} I_n^{(0)} - (e^{n\e_1} + e^{n \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{n\e_1})(1-e^{n\e_2})} \ . 
+  \label{eq:1inst-formula}
+  Z_1=&\ \sum_{\vec{k}\in\Delta_l}\frac{(1-p_1^{-1}e^{\vec{a}\cdot\vec{k}})(1-p_2^{-1}e^{\vec{a}\cdot\vec{k}})}{(1-p_1)(1-p_2)}
+  \cdot i_1^{(d_0)}(\vec{k}) 
+  % \\=&\ \frac{(p_1p_2)^{(\frac{b}{2}-d_0)}\prod_{l}(y_{l}^{\text{phy}})^{-{I_2(\boldsymbol{R}_l)}/{2}}}{(1-p_1)(1-p_2)} \sum_{\vec{k}\in\Delta_l}\frac{e^{(d_0+\frac{\kappa_{\text{eff}}}{2})(\vec{a}\cdot\vec{k})-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1,2})}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}\nn
 \end{align}
-Since $I_n^{(d)}$ only depends on $Z_m$ with $m<n$ we can determine the instanton partition function recursively. 
-
-We now need to determine the $g(\vec{k})$, but this is also completely determined by the \emph{1-loop part} of the partition function. Therefore we land on a remarkable conclusion: The non-perturbative partition function is completely fixed by the perturbative partition function! Notice that we have arrived at this conclusion not by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis. Instead, we simply demand consistent answer upon deforming the spacetime geometry smoothly. This consistency condition is entirely non-perturbative, that the QFT has to be well-defined regardless of its spacetime. 
-
-In the remainder of this section we will give explicit formulae for 4d and 5d gauge theories. Especially, we will obtain a closed-form expression for the one-instanton partition function for a large class of gauge theories. 
-
-\subsection{Instanton partition function for the 5d theory}
-
-
-\paragraph{One-instanton partition function}
-Let us compute the 1-instanton partition function using our formula. In this case, we only take the sum over the long roots having $\vec{k}\cdot \vec{k} = 2$ and $\ell = m = 0$. Therefore, \textcolor{red}{(add the effect of $e^{- \frac{I_3(\mathbf{R})}{4} (d_{ijk} a_i k_j k_k )}$)}
+where the factor $\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1}, \e_{2})$ in \eqref{eq:1inst-i-flux} is explicitly written in \eqref{eq:weight-expansion-sym}~and~\eqref{eq:weight-expansion-non-sym}. Notice that there are multiple options for choosing $d_0$ in case of $\frac{n+n'}{2} > 2$. However, it was observed that \eqref{eq:1inst-formula} is independent of a specific choice of $d_0$. Once we choose $d_0 = 0$, for instance, which is an available choice in most cases,\footnote{A numerical value of $d_0$ should be a half-integer for theories with $G = Sp(N)_{\theta=\pi}$.} \eqref{eq:1inst-formula} becomes
 \begin{align}
- I_1^{(d)} = e^{d(\e_1+\e_2)} \sum_{\vec{\g} \in \Delta_l} \frac{e^{d \vec{\g} \cdot \vec{a} } M(\g) }{L(\g)} \ , 
-\end{align} 
-where $\Delta_l$ is the set of all long roots and
-\begin{align}
-\begin{split}
- L(\g) &\equiv \prod_{\a \in \Delta} \CL_{\g \cdot \a} (a \cdot \a, \e_1, \e_2) 
-  = \prod_{\g \cdot \a = \pm 2} \prod_{\g \cdot \a = 1} \CL_{\g \cdot \a} (a \cdot \a, \e_1, \e_2) \\
- & = (1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2})(1-e^{a_\g}) (1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a }) \ , 
-\end{split}
+  Z_1=\ \frac{(p_1p_2)^{\frac{b}{2}}\prod_{l}(y_{l}^{\text{phy}})^{-{I_2(\boldsymbol{R}_l)}/{2}}}{(1-p_1)(1-p_2)} \sum_{\vec{k}\in\Delta_l}\frac{e^{\frac{\kappa_{\text{eff}}}{2}(\vec{a}\cdot\vec{k})-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1,2})}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}.
 \end{align}
-where $a_\g \equiv \vec{a}\cdot \vec{\g}$ with $a_\a \equiv \vec{a}\cdot \vec{\a}$ and 
-\begin{align}
- M(\g) \equiv \prod_{\vec{w} \in R} e^{-\frac{(\vec{\g} \cdot \vec{w})^2}{4}m^{\textrm{phy}} }\CL_{\g \cdot w} (a_w, \e_1, \e_2)  = e^{-I(R)m^{\textrm{phy}}/2} \prod_{\vec{w} \in R} \CL_{\g \cdot w} (a_w, \e_1, \e_2) \ , 
-\end{align}
-with $a_w \equiv \vec{a} \cdot \vec{w}$ and $I(R)$ is the Dynkin index of the representation $R$. 
-Therefore, the one-instanton partition function can be written explicitly as 
-\begin{align}
-\begin{split}
-Z_1 &= \frac{e^{\e_1 + \e_2} I_n^{(0)} - (e^{\e_1} + e^{ \e_2}) I_n^{(1)} + I_n^{(2)} }{(1-e^{\e_1})(1-e^{\e_2})} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{(1-e^{a_\g+\e_1})(1-e^{a_\g+\e_2}) M(\g) }{L(\g)} \ . 
-\end{split}
-\end{align}
-For the case of pure SYM theory with no matters, $M(\g)=1$ so that 
-\begin{align}
-Z_1^{\textrm{SYM}} &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{1}{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2}}{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-\e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
-\end{align}
-which is the one derived in \cite{Keller:2011ek, Keller:2012da}. 
+We claim that \eqref{eq:1inst-formula} is the closed-form expression for the one-instanton partition function, which \emph{universally} holds for any gauge theory having $\frac{n+n'}{2} \geq 2$.
 
-For the case with fundamental matters, we find that for the long root $\g$, there are only weights with $\g \cdot w = 0, \pm 1$. Therefore, the $M(\g)$ can be simplified to give
+More generally, the $k$-instanton correction $Z_k$ can be determied by solving the following set of equations:
 \begin{align}
- M(\g) = \prod_{\g \cdot w = 0, \pm 1} \CL_{\g \cdot w} (a_w, \e_1, \e_2) = \prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) \ . 
+  \label{eq:kinst}
+  Z_k = p_1^{k(\frac{b}{2}-d)}Z^{(N)}_{k}  + p_2^{k(\frac{b}{2}-d)}  Z^{(S)}_k  + I_k^{(d)} \qquad \text{with an allowed range of $d$},
 \end{align}
-The one-instanton partition function is now given as
+where $I_{k}^{(d)}$ is defined as
 \begin{align}
-Z_1 &= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{\prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) }{ (1 - e^{a_\g})(1-e^{-a_\g-\e_1-e_2}) \prod_{\g \cdot \a = 1} (1-e^{a_\a })} \\
-&= \frac{e^{\e_1+\e_2} }{(1-e^{\e_1})(1-e^{\e_2})} \sum_{\g \in \Delta_l} \frac{e^{(h^\vee -1)a_\g/2} \prod_{\g \cdot w = 1} (1-e^{a_w + m^{\textrm{phy} }}) }{ (e^{a_\g/2} - e^{-a_\g/2})(1-e^{a_\g-\e_1-e_2}) {\prod_{\g \cdot \a = 1} (e^{a_\a/2}-e^{-a_\a/2 })} } \ , \nn
+  I_{k}^{(d)} = &\sum_{\stackrel{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = k}{\ell, m \neq k}}  
+  \Bigg( (p_1p_2)^{(\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
+ e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k} \\& 
+ \times    \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
+ \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn.
 \end{align}
-which we conjecture to be true for all the hypermultiplets with the representation with $|\g \cdot w| \le 1$ for all $w \in R$. 
+The $k$-instanton partition function $Z_k$ is given as the solution to the three linear equations \eqref{eq:kinst} with consecutive integers $\{d_0, d_0+1, d_0+2\}$.
+\begin{align}
+  Z_k(\vec{a},\e_1,\e_2, \vec{m})=\frac{p_1^k p_2^k \,I_{k}^{(d_0+2)}-(p_1^k+p_2^k)\,I_{k}^{(d_0+1)}+I_{k}^{(d_0)}}{(1-p_1^k)(1-p_2^k)}
+\end{align}
+Since $I_k^{(d)}$ only involves low-order instanton corrections, the $k$-instanton partition function $Z_k$ can be constructed from $Z_{m<k}$, allowing us to obtain the full non-perturbative part $Z_\text{inst}$ in a recursive manner. Again, this approach is applicable for any gauge theory having $\frac{n+n'}{2} \geq 2$.
+% We will not attempt to write down the closed-form expression for $Z_{k>1}$.
 
-\subsection{Instanton partition function for 4d gauge theory}
+
+
+\begin{table}[p]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    $G$ & matter & $r_0$ & $d_{\rm max}$\\
+    \hline
+    $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
+    \hline
+    $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
+    \hline
+    $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
+    \hline
+    $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
+    \hline
+    $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
+    \hline
+    $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
+    \hline
+    $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
+    \hline
+    $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
+    \hline
+    $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
+    \hline
+    $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
+    \hline
+    $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
+    \hline
+    \end{tabular}
+    \caption{list of theories}
+    \label{tbl:list}
+\vspace{1cm}
+  % \begin{tabular}{l|l|}
+  %   A & $n$ \\
+  % $SU(N)_\kappa + N_f \mathbf{F} $ & {$\!\begin{aligned} \begin{dcases}
+  %   \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \k_\text{eff}
+  %    & \text{ for } \k_\text{eff}  > 0\\
+  %    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) -  \k_\text{eff}
+  %    & \text{ for } \k_\text{eff} < 0
+  % \end{dcases} \end{aligned}$}
+  % except for the special case of $SU(N)_{\kappa}$ gauge theory with $\kappa =  h^\vee - \frac{1}{2}\sum_{l} I_2(\mathbf{R}_l)> 0$, 
+  % \end{tabular}
+  % \caption{asd}
+  % \label{tbl:list-sun}
+\end{table}
+
+
+
+
+
+% \subsection{Instanton partition function for 4d gauge theory}
 % Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
 % The perturbative partition functions for the vector and hypermultiplet are
 % \begin{align}
@@ -934,38 +938,6 @@ Some theories in Table~\ref{tbl:exceptional-theory} do not belong to the
 
 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-  \hline
-  $G$ & matter & $r_0$ & $d_{\rm max}$\\
-  \hline
-  $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
-  \hline
-  $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
-  \hline
-  $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
-  \hline
-  $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
-  \hline
-  $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
-  \hline
-  $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
-  \hline
-  $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
-  \hline
-  $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
-  \hline
-  $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
-  \hline
-  $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
-  \hline
-  $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
-  \hline
-  \end{tabular}
-  \caption{list of theories}
-  \label{tbl:list}
-\end{table}
 
 
 
@@ -1195,10 +1167,166 @@ which is in agreement with the blowup partition function (eqn). \textcolor{red}{
 \section{Conclusion} \label{sec:conclusion}
 
 
+
 \acknowledgments
 This work is supported in part by the UESTC Research Grant A03017023801317 (SSK), the National Research Foundation of Korea (NRF) Grants 2017R1D1A1B06034369 (KL, JS), and 2018R1A2B6004914 (KHL)
 
 
+\appendix
+\section{SU(N) theory}
+\label{sec:bound-su}
+We find that 
+\begin{align}
+  \hspace{-2.2cm}
+  \begin{dcases}
+  n = \textstyle \frac{N_f}{2}
+  & \hspace{0.8cm} \textstyle\text{ if }  \kappa_\text{eff} = N - N_f, \\
+  n = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + |\k_\text{eff}| 
+  & \hspace{0.8cm}\textstyle\text{ otherwise}.
+  \end{dcases}
+\end{align}
+for $SU(N)_\kappa + N_f\mathbf{F}$ theory  with $N_f + 2|\kappa| \leq 2N$, 
+\begin{align}
+  \begin{dcases}
+    % n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if }  \kappa_\text{eff} > 3 - \frac{N_f}{2} - (\frac{N}{2}-\lfloor\frac{N}{2}\rfloor),\\
+    n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if $N$: odd and }  \kappa_\text{eff} \geq 3 - \frac{N_f}{2},\\
+    n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if $N$: even and }  \kappa_\text{eff} > 3 - \frac{N_f}{2}  ,\\
+    n  \geq 
+     \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{\frac{\k_\text{eff}}{2}\}
+     &\textstyle\text{ otherwise}.
+  \end{dcases}
+\end{align}
+for $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory with $N_f + 2|\kappa| \leq N+4$. 
+
+\begin{align}
+  \begin{dcases}
+  n' = \textstyle \frac{N_f}{2}
+  & \hspace{0.8cm} \textstyle\text{ if }  \kappa_\text{eff} = -N, \\
+  n' = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \left|\k + \frac{1}{2}\sum_{l}I_2(\mathbf{R}_l)\right| 
+  & \hspace{0.8cm} \textstyle\text{ otherwise} \nn.
+  \end{dcases}
+\end{align}
+for $SU(N)_\kappa + N_f\mathbf{F}$ theory  with $N_f + 2|\kappa| \leq 2N$, 
+\begin{align}
+  \begin{dcases}
+    n'  = \textstyle h^\vee + \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  + \k_\text{eff} &  
+     \textstyle\text{ if $N$: odd and }   \kappa_\text{eff} \leq 1-N - \frac{N_f}{2} ,\\
+     n'  = \textstyle h^\vee + \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  + \k_\text{eff} &  
+     \textstyle\text{ if $N$: even and }   \kappa_\text{eff} < 1-N - \frac{N_f}{2},\\
+     n'  \geq 
+     \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{-\frac{\k_\text{eff}+N+N_f}{2}\}
+     &  \textstyle\text{ otherwise}.
+  \end{dcases}
+\end{align} 
+for $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory with $N_f + 2|\kappa| \leq N+4$. 
+
+
+
+
+
+
+
+
+
+\pagebreak
+
+i.e.,   and 
+
+In other words, This suggests that, as long as $\frac{b+b'}{2} > 2$, we can solve for the instanton partition function $Z_n$ 
+
+In summary, there are $(b+b')/2$ blowup equations 
+
+
+
+we have found   $n=n'=b = h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l)$. Thus the range of $d$ is constrained to
+\begin{align}
+  \label{eq:bound-1}
+  0  \leq d  \leq h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l)  \quad \text{ for the theories with }  G\neq SU(N).
+\end{align}
+
+
+
+
+
+  See Appendix~\ref{sec:bound-su} for the pattern on $n$ in  two classes of 
+
+
+
+Especially when $\k_\text{eff} = 0$, the value of $n$ is same as the above. 
+
+
+
+
+
+
+
+where we observe that 
+\begin{align}
+  n' &= \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)
+\end{align}
+for the theories with $G\neq SU(N)$,
+
+
+We need to be a bit careful when dealing with $SU(N)_\k$ theories. For $SU(N)_\kappa + N_f\mathbf{F}$ theory, the validity range of $d$ becomes
+\begin{align}
+  \begin{dcases}
+    d \in [0 , N] &\quad\text{ for }\quad \k = -N +\tfrac{N_f}{2} \\
+    d \in [0, N-\tfrac{N_f}{2}-\kappa] &\quad\text{ for } \quad \k \in (-N +\tfrac{N_f}{2}, -\tfrac{N_f}{2}]\\
+    d \in [0, N] &\quad\text{ for } \quad \k \in [-\tfrac{N_f}{2}, +\tfrac{N_f}{2}] \\
+    d \in [\tfrac{N_f}{2}-\kappa, N] &\quad\text{ for } \quad\k \in [+\tfrac{N_f}{2}, N-\tfrac{N_f}{2}) \\
+    d \in [0, N] &\quad\text{ for }\quad  \k = +N -\tfrac{N_f}{2} 
+  \end{dcases}
+\end{align}
+which always includes $0 \leq d \leq N$. For $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory, 
+
+
+Substituting $(n, n')$ to \eqref{eq:bound},  $d$ takes a value in the following range:
+\begin{align}
+  \begin{dcases}
+    d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N] &\quad\text{ for }\quad \k \in [-2-\tfrac{N}{2}+\tfrac{N_f}{2}, 1-N-\tfrac{N_f}{2}] \\
+    d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in (1-N-\tfrac{N_f}{2}, 3-\tfrac{N_f}{2})\\
+    d \in [-1, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in [3-\tfrac{N_f}{2}, +\tfrac{N_f}{2}, 2+\tfrac{N}{2}-\tfrac{N_f}{2}]
+  \end{dcases}
+\end{align}
+with odd $N$, and 
+\begin{align}
+  \begin{dcases}
+    d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N] &\quad\text{ for }\quad \k \in [-2-\tfrac{N}{2}+\tfrac{N_f}{2}, 1-N-\tfrac{N_f}{2}] \\
+    d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in (1-N-\tfrac{N_f}{2}, 3-\tfrac{N_f}{2})\\
+    d \in [-1, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in [3-\tfrac{N_f}{2}, +\tfrac{N_f}{2}, 2+\tfrac{N}{2}-\tfrac{N_f}{2}]
+  \end{dcases}
+\end{align}
+with even $N$, where $a$ and $b$ are defined by $a=2 \k-N-N_f$ and $b = 2\k+N+N_f$. Although these patterns look 
+ 
+
+ \begin{align}
+  -\frac{\k_\text{eff}}{2} - \{\frac{\k_\text{eff}}{2}\} \leq d \leq N \quad \text{ for } -N \leq \k_\text{eff}\leq 1-N-\frac{N_f}{2  }
+ \end{align}
+\begin{align}
+ -\frac{\k_\text{eff}}{2}-\{\frac{\k_\text{eff}}{2}\} \leq d \leq N+1 -\frac{\k_\text{eff}+N+N_f}{2} + \{-\frac{\k_\text{eff}+N+N_f}{2}\}
+\end{align}
+\begin{align}
+  -1 \leq d \leq N+1 -\frac{\k_\text{eff}+N+N_f}{2} + \{-\frac{\k_\text{eff}+N+N_f}{2}\}
+ \end{align}
+\begin{figure}[t]
+  \centering
+  \includegraphics[scale=0.8]{/Users/jkim/Documents/GitHub/blowup/SUF.pdf}
+  \caption{asd}
+  \label{fig:SUN-Nf}
+%   \begin{dcases}
+%   0  \leq d  \leq N  & \text{ if }  \k = \pm (N- \tfrac{N_f}{2})\\
+%   \tfrac{N_f}{2}- \k  \leq d  \leq N  & \text{ if }  +\tfrac{N_f}{2} \leq \kappa \\
+%   0  \leq d  \leq N  & \text{ if } -\tfrac{N_f}{2} < \k < \tfrac{N_f}{2} \\
+%   0  \leq d  \leq N - N_f - \k_\text{eff}  & \text{ if }  \k_\text{eff} <-N_f 
+% \end{dcases}
+\end{figure}
+
+% which gives \eqref{eq:cor5d-dmax}. 
+For $SU(N)_{|\kappa|<N}$ SYM without a hypermultiplet, $n = h^\vee + |\k|$ so that \cite{Gottsche:2006bm}
+\begin{align}
+  \label{eq:bound-2}
+  \textstyle -\frac{\k + |\k|}{2}  \leq d  \leq h^\vee + \frac{|\k|-\k}{2}.
+\end{align}
 \bibliographystyle{JHEP}
 \bibliography{ref}
 
