@@ -482,7 +482,7 @@ Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can b
  The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$. Being so, one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
 
 
- \subsection{One instanton partition function}
+ \subsection{General 1-instanton partition function}
  \label{subsec:oneinst}
 At one instanton level, the formula \eqref{eq:recursion} can be written as follows:
 \begin{align}
@@ -835,7 +835,73 @@ Since $I_k^{(d)}$ only involves low-order instanton corrections, the $k$-instant
 
 \section{Examples} \label{sec:example}
 
-As a remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to employ the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj}, and/or to apply the topological vertex formalism based on the geometric engineering of 5d $\mathcal{N}=1$ gauge theory \cite{Gopakumar:1998jq,Aganagic:2003db}. An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
+Recall that the recursion formula \eqref{eq:recursion} for the $k$-instanton partition function, and especially the general expression \eqref{eq:1inst-formula} at one-instanton order, are widely applicable to 5d $\mathcal{N}=1$ gauge theory whose $(n,n')$ satisfies $\frac{n+n'}{2}\geq 2$. Combined with the observation that $(n,n')$ follows \eqref{eq:n-np} in most cases, they actually become  a very efficient approach at obtaining the BPS partition function on $\IC^2 \times S^1$, unless a matter representation is too large. 
+
+Conventionally, the instanton partition function has been  computed by employing the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj} or by applying the topological vertex formalism to the 5-brane web \cite{Aganagic:2003db,Iqbal:2007ii}. Both are based on a certain UV realization of 5d $\mathcal{N}=1$ gauge theory,  motivated by its string theory engineering. Sometimes the UV completion of the gauge theory can be achieved only with specific string theory realizations, but not with the others. For instance, $SU(2) + N_f \mathbf{F}$ gauge theory with $N_f\geq 5$ must be embedded into D4-D8-O8 brane system, to be UV-completed as 5d $E_{N_f+1}$ Minahan-Nemeschansky SCFT, instead of a typical $(p,q)$ 5-brane web with colliding branes which indicate UV inconsistency. A sensible UV observable can thus be 
+obtained only through a proper embedding of the gauge theory into string theory. At some occasions, an extra factor entangled with a true QFT observable may  appear during the above instanton computation, which is sensitive to the choice of a string theory embedding.
+
+
+Our blow-up formula \eqref{eq:recursion} implicitly assumes a particular string theory embedding of the gauge theory.  There are a wide variety of `exceptional' gauge theories, whose UV completion is found as M-theory wrapped on a singular Calabi-Yau 3-fold \cite{Diaconescu:1998cn, Jefferson:2018irk, Bhardwaj:2018yhy, Apruzzi:2019opn}, but for which neither the ADHM quantum mechanics nor the topological vertex formalism has been developed. We will illustrate that bootstrapping the partition function $\CZ$ based on the recursion formula \eqref{eq:recursion} works well for those `exceptional' theories, providing their BPS spectrum efficiently.
+
+
+
+
+
+\subsection{Theories with the known ADHM description}
+\label{subsec:ex-adhm}
+
+Let us first consider the `standard' gauge theories with classical gauge groups, whose hypermultiplet admits UV realization as a perturbative string ending on non-perturbative branes. In these cases, the ADHM construction of the instanton moduli space is well-known \cite{Atiyah:1978ri,Nekrasov:2002qd,Shadchin:2005mx}. 
+As for the $k$-instanton partition function $Z_k$, the Witten index of the relevant ADHM quantum mechanics can be computed by SUSY localization \cite{Kim:2011mv, Hwang:2014uwa,Hwang:2016gfw, Lee:2017lfw}, ending up collecting all Jeffrey-Kirwan residues of a multi-dimensional contour integral. We will make sure whether the recursion formula \eqref{eq:recursion} produces  the same result as the localization computation.
+
+In the $SU(N)$
+
+
+% Consequently, a naive application of the recursion formula does not always 
+Still, 
+
+
+
+
+
+
+
+
+
+\footnote{
+  
+}
+
+can be applied to extract the relevant BPS data. 
+of the gauge theory,
+
+particular UV choice
+topological string blowup
+
+
+
+based on the geometric engineering of 5d $\mathcal{N}=1$ gauge theory \cite{Gopakumar:1998jq,Aganagic:2003db}
+
+
+
+
+As a remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to  , and/or to apply the topological vertex formalism . An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
+
+\label{eq:d-range-nonsu}
+We propose a general blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not too large.
+
+
+\subsection{Theories with $N_s$ spinor hypermultiplets}
+\subsection{Theories with an exceptional gauge group}
+\subsection{Theories with a rank-3 antisymmetic hypermultiplet}
+
+
+
+
+
+
+especially for `exceptional' gauge theories 
+
+
 
 There are multiple and distinct blow-up equations \eqref{eq:blowup5d} at different values of $d$, ranged over $0 \leq d \leq d_{\rm max}$ where $d_{\rm max} \equiv h^\vee 
 % -  |\kappa_{\rm eff}| 
