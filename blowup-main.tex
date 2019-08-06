@@ -443,7 +443,7 @@ We recall the known expressions for the classical and 1-loop partition function 
 \end{align}
 where $p_1 \equiv e^{-\e_1},\, p_2 \equiv e^{-\e_2},\, y_i \equiv e^{-m_{i}}$ and the PE represents the Plethystic exponential
 \begin{align}
-  \textstyle\text{PE}\left[f(\vec{a},\e_1,\e_2,\Lambda,\vec{m})\right] \equiv \exp\Big(\sum_{n=1}^\infty\frac{1}{n} f(n\vec{a},n\e_1,n\e_2,n\Lambda,n\vec{m})\Big).
+  \text{PE}\left[f(\vec{a},\e_1,\e_2,\Lambda,\vec{m})\right] \equiv \exp\left(\sum_{n=1}^\infty\frac{1}{n} f(n\vec{a},n\e_1,n\e_2,n\Lambda,n\vec{m})\right).
 \end{align}
 Substituting them to \eqref{eq:recur-inst}, the combinations of three different $Z$'s are given by
 \begin{align}
@@ -510,12 +510,12 @@ We are interested in 5d $\mathcal{N}=1$ gauge theories which are UV-complete as 
 For the $SU(N)$ symmetric representation, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, or $\pm 2$.
 \begin{align}
   \label{eq:weight-expansion-sym}
-  \textstyle\prod_{\w \in \boldsymbol{\textbf{sym}}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle\prod_{\vec{k}\cdot \vec{\w} = 2} (1-y_\text{phy}\,  p_1p_2 e^{-\vec{a}\cdot \vec{\w}}) \times \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) \nn\\&\textstyle\times \prod_{\vec{k}\cdot \vec{\w} = -2} (1-y_\text{phy}\,  p_1^{-1} e^{-\vec{a}\cdot \vec{\w}})(1-y_\text{phy}\,  p_2^{-1} e^{-\vec{a}\cdot \vec{\w}}).
+  \prod_{\w \in \boldsymbol{\textbf{sym}}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \prod_{\vec{k}\cdot \vec{\w} = 2} (1-y_\text{phy}\,  p_1p_2 e^{-\vec{a}\cdot \vec{\w}}) \times \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) \nn\\&\times \prod_{\vec{k}\cdot \vec{\w} = -2} (1-y_\text{phy}\,  p_1^{-1} e^{-\vec{a}\cdot \vec{\w}})(1-y_\text{phy}\,  p_2^{-1} e^{-\vec{a}\cdot \vec{\w}}).
  \end{align}
 For the other cases, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, such that 
 \begin{align}
   \label{eq:weight-expansion-non-sym}
-  \textstyle\prod_{\w \in \boldsymbol{R}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \textstyle \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) .
+  \prod_{\w \in \boldsymbol{R}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &=  \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) .
 \end{align}
 
 % \paragraph{Range of $d$}
