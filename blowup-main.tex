@@ -927,8 +927,8 @@ So far, we have investigated the `standard' gauge theories which have certain D-
 There are also `exceptional' gauge theories, which involve exceptional gauge groups or matters that cannot be engineered from perturbative open strings ending on non-perturbative branes. Instead, their UV embedding is geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. Since the exceptional theories lack for the ADHM formalism, their instanton partition function $\CZ$ has been studied on a case-by-case basis; Once the 5-brane web configuration engineering an exceptional theory is identified, the topological vertex formalism can be applied to compute the relevant partition function $\CZ$. Alternatively, one can first construct the $\IC^2 \times T^2$ partition function for a related 6d gauge theory, based on its modularity and anomaly, then take the circle reduction to obtain the 5d partition function $\CZ$. Several interesting exceptional theories have been studied so far, based on the above two approaches.
 
 We can take advantage of the universality of the blowup equation. Recall that the blow-up recursion formula \eqref{eq:recursion} holds for a certain range of $d$, i.e., the set of all integers between $0 \leq d \leq h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l)$, when the gauge group $G$ is neither $ SU(N)_\k$ nor $Sp(N)_\theta$ so that an extra complication due to the Chern-Simons level $\kappa$ or  the theta angle $\theta$ cannot occur. 
-One can solve the recursion formulae for the $k$-instanton correction $Z_k$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We assume that  $Z_k$ solved from the recursion formulae would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested through comparison with \cite{Kim:2018gjo, 
-DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for certain exceptional theories. We will show the novel results for the $SO(N)$ gauge theories with spinor hypermultiplets in Section~\ref{subsec:spinor}, for the gauge theories with exceptional groups in Section~\ref{subsec:exceptional}, and for the $SU(6)$ gauge theories with rank-3 antisymmetric hypermultiplets in Section~\ref{subsec:rank3}. (See Table~???)
+One can solve the recursion formulae for the $k$-instanton correction $Z_k$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We assume that  $Z_k$ solved from the recursion formulae would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested via comparison with \cite{Kim:2018gjo, 
+DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for some exceptional cases. 
 
 
 \begin{table}[t!]
@@ -955,20 +955,82 @@ DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for certain exceptional th
     \label{tbl:spinor}
 \end{table}
 
+In this section, we will focus on the $SO(N)$ gauge theories with spinor hypermultiplets.
 There are a sufficient number of recursion formulae \eqref{eq:recursion} to fix the $k$-instanton partition function $Z_k$ of the $SO(N)$ gauge theory, if and only if  
 \begin{align}
+  \label{eq:spinor-range}
   \begin{split}
-  N-4 &\geq n_{\bf v} + 2^{\frac{N-7}{2}}\cdot n_{\bf s} \qquad\qquad\qquad \text{ for odd $N$}\\
-  N-4 &\geq n_{\bf v} + 2^{\frac{N-8}{2}}\cdot (n_{\bf s} + n_{\bf c})\qquad\quad \text{ for even $N$}
+  N-4 &\geq N_{\bf v} + 2^{\frac{N-7}{2}}\cdot N_{\bf s} \qquad\qquad\qquad \text{ for odd $N$}\\
+  N-4 &\geq N_{\bf v} + 2^{\frac{N-8}{2}}\cdot (N_{\bf s} + N_{\bf c})\qquad\quad \text{for even $N$}
   \end{split}
 \end{align}
-where $n_{\bf v}$, $n_{\bf s}$, and $n_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. 
+where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. Let us first consider the special cases whose $Z_k$ is already known.
 
-\paragraph{SO(7)} 
+\paragraph{SO(7)} The $k$-instanton contribution $Z_k$ of $SO(7) + N_{\bf s}\,\mathbf{S}$ theory can be obtained from the SUSY quantum mechanics proposed in  \cite{Kim:2018gjo}, which can be summarized as the following $SU(4)$ Young tableau expression:
+\begin{align}
+  Z_k^\text{YD} = \sum_{|\vec{Y}| = k} &\prod_{i=1}^4\prod_{s \in Y_i}\frac{2\sinh{(\phi(s))} \ 2\sinh{(\phi(s)-\e_+)} \ \prod_{l=1}^{N_\textbf{s}}2\sinh(\frac{m_l \pm \phi(s)}{2}) }{\prod_{j=1}^4 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}\,2\sinh{\frac{\e_+ - \phi(s) - a_j}{2}}} \\ \times &\prod_{i \leq j}^4 \prod_{\stackrel{s_{i,j} \in Y_{i,j}}{s_i < s_j}} \frac{2\sinh{\frac{\phi(s_i)+\phi(s_j)}{2}}\, 2\sinh{\frac{\phi(s_i)+\phi(s_j)-2\e_+}{2}}}{ 2\sinh{\frac{\e_1 - \phi(s_i)-\phi(s_j)}{2}} \, 2\sinh{\frac{\e_2 - \phi(s_i)-\phi(s_j)}{2}}}
+\end{align}
+We checked the agreement between $Z_1^\text{YD}$ and the 1-instanton formula $Z_1$ in \eqref{eq:1inst-formula} for $N_{\bf s} \leq 3$. At two instantons, it was also confirmed for $N_{\bf s} \leq 3$ that $Z_2^\text{YD} = Z_2$, where $Z_2$ is  the solution of the recursion formula \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}. Such explicit comparison implies that the blow-up recursion formula \eqref{eq:recursion} actually works for the $SO(7) + N_{\bf s}\,\mathbf{S}$ theory. 
+
+The 1-instanton partition function of $SO(7) + 4\mathbf{S} + 1\mathbf{V}$  theory is written in (H.15) of \cite{DelZotto:2018tcj}.
+We deduced the 1-instanton correction of $SO(7) + N_{\bf s}\,\mathbf{S} + N_{\bf v}\mathbf{V}$ theory with $( N_{\bf s}, N_{\bf v}) \leq ( 2,1)$  from that,   by taking several flavor chemical potentials to infinity. All of those were confirmed to be in agreement with our general 1-instanton expression \eqref{eq:1inst-formula} up to $(p_1p_2)^{13/2}$.
+
+\paragraph{SO(8)}
+
+The 1-instanton result of $SO(8) + 1\mathbf{S} + 1\mathbf{C} + 1\mathbf{V}$ theory is found in (H.28) of \cite{DelZotto:2018tcj}.
+We obtained the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from that by sending certain mass parameters to infinity.
+All of those were found to be consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $(p_1p_2)^{13/2}$. 
+Furthermore, we have identified the unknown part of (H.28) as follows:
+\begin{align}
+  &\sum_{n=0}^\infty (p
+  _1p_2)^{3+n} \left(\chi^G_{(1n00)}+\chi^G_{(0n10)}+\chi^G_{(0n01)}\right)\chi^F_{???} \nn \\\longrightarrow&
+  \sum_{n=0}^\infty (p_1p_2)^{3+n} \left(\chi^G_{(1n00)}\chi^s_{(1)}\chi^c_{(1)}+\chi^G_{(0n10)}\chi^s_{(1)}\chi^v_{(1)}+\chi^G_{(0n01)}\chi^c_{(1)}\chi^v_{(1)}\right)
+\end{align}
+
+
+$SO(8) + 2\,\mathbf{S} + 2\,\mathbf{C} + 2\,\mathbf{V}$ (Lockhart)
+
+
+\paragraph{SO(9)}
+
+$SO(9) + 2\,\mathbf{S} + 3\,\mathbf{V}$ (Lockhart)
+
+
+\paragraph{SO(10)}
+
+$SO(10) + 2\,\mathbf{S} + 2\,\mathbf{C} + 4\,\mathbf{V}$ (Lockhart)
+
+
+\paragraph{SO(11)}
+
+
+\paragraph{SO(12)}
+
+$SO(12) + 1\,\mathbf{S} + 6\,\mathbf{V}$ (Lockhart) 
+
+\paragraph{SO(13)}
+
+$SO(12) + 1\,\mathbf{S} + 6\,\mathbf{V}$ (Lockhart) 
+
+
+The SUSY quantum mechanics, whose Witten index is the $k$-instanton partition function 
+
+
+
+
+Let us first consider the cases which have the known 
+
+
+For $SO(7) + N_{\bf s}\,\mathbf{S}$ theory, 
+
+
+The following results are organized according to $(N,N_{\bf v})$.
+
+
+
 
 condition $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$ is equivalent to 
 
-Our 1-instanton expression \eqref{eq:1inst-formula} and the recursion formulae \eqref{eq} is valid for 
 
 
 \paragraph{SO(8)} 
@@ -991,7 +1053,7 @@ We propose a general blow-up formula for general gauge theory with arbitrary rep
 \label{subsec:rank3}
 % \input{sec-SU6.tex}
 
-
+We will show the novel results for the $SO(N)$ gauge theories with spinor hypermultiplets in Section~\ref{subsec:spinor}, for the gauge theories with exceptional groups in Section~\ref{subsec:exceptional}, and for the $SU(6)$ gauge theories with rank-3 antisymmetric hypermultiplets in Section~\ref{subsec:rank3}. (See Table~???)
 
 
 
