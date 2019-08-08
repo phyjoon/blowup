@@ -609,6 +609,7 @@ Plugging these values in \eqref{eq:bound}, the range of $d$ becomes
 including $0 \leq d \leq N$ in any case. Thus for $N\geq 2$,  the recursion formula \eqref{eq:recursion} determines the partition function $\CZ$ completely.
 In $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$  theory with $N_f + 2|\kappa| \leq N+4$, 
 \begin{align}
+  \label{eq:sun-nf-na}
   n &= \min \textstyle 
   \left(h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) - (\k_\text{eff}-2),\ h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{\frac{\k_\text{eff}}{2}\}\right)\nn \\
   n' &= \min \textstyle 
@@ -837,7 +838,7 @@ Since $I_k^{(d)}$ only involves low-order instanton corrections, the $k$-instant
 
 Recall that the recursion formula \eqref{eq:recursion} for the $k$-instanton partition function, and especially the general expression \eqref{eq:1inst-formula} at one-instanton order, are widely applicable to 5d $\mathcal{N}=1$ gauge theory whose $(n,n')$ satisfies $\frac{n+n'}{2}\geq 2$. Combined with the observation that $(n,n')$ follows \eqref{eq:n-np} in most cases, they actually become  a very efficient approach at obtaining the BPS partition function on $\IC^2 \times S^1$, unless a matter representation is too large. 
 
-Conventionally, the instanton partition function has been  computed by employing the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj} or by applying the topological vertex formalism to the 5-brane web \cite{Aganagic:2003db,Iqbal:2007ii}. Both are based on a certain UV realization of 5d $\mathcal{N}=1$ gauge theory,  motivated by its string theory engineering. Sometimes the UV completion of the gauge theory can be achieved only with specific string theory realizations, but not with the others. For instance, $SU(2) + N_f \mathbf{F}$ gauge theory with $N_f\geq 5$ must be embedded into D4-D8-O8 brane system, to be UV-completed as 5d $E_{N_f+1}$ Minahan-Nemeschansky SCFT, instead of a typical $(p,q)$ 5-brane web with colliding branes which indicate UV inconsistency. A sensible UV observable can thus be 
+Conventionally, the instanton partition function has been  computed by employing the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj} or by applying the topological vertex formalism to the 5-brane web \cite{Aganagic:2003db,Iqbal:2007ii}. Both are based on a certain UV realization of 5d $\mathcal{N}=1$ gauge theory,  motivated by its string theory engineering. Sometimes the UV completion of the gauge theory can be achieved only with specific string theory realizations, but not with the others. For instance, $SU(2) + N_f \mathbf{F}$ gauge theory with $N_f\geq 5$ must be embedded into D4-D8-O8 brane system, to be UV-completed as 5d $E_{N_f+1}$ Minahan-Nemeschansky SCFT, instead of a typical $(p,q)$ 5-brane web with colliding branes which indicate UV inconsistency. A sensible UV QFT observable can thus be 
 obtained only through a proper embedding of the gauge theory into string theory. At some occasions, an extra factor entangled with a true QFT observable may  appear during the above instanton computation, which is sensitive to the choice of a string theory embedding.
 
 
@@ -851,13 +852,56 @@ Our blow-up formula \eqref{eq:recursion} implicitly assumes a particular string 
 \label{subsec:ex-adhm}
 
 Let us first consider the `standard' gauge theories with classical gauge groups, whose hypermultiplet admits UV realization as a perturbative string ending on non-perturbative branes. In these cases, the ADHM construction of the instanton moduli space is well-known \cite{Atiyah:1978ri,Nekrasov:2002qd,Shadchin:2005mx}. 
-As for the $k$-instanton partition function $Z_k$, the Witten index of the relevant ADHM quantum mechanics can be computed by SUSY localization \cite{Kim:2011mv, Hwang:2014uwa,Hwang:2016gfw, Lee:2017lfw}, ending up collecting all Jeffrey-Kirwan residues of a multi-dimensional contour integral. We will make sure whether the recursion formula \eqref{eq:recursion} produces  the same result as the localization computation.
+As for the $k$-instanton partition function $Z_k$, the Witten index of the relevant ADHM quantum mechanics can be computed by SUSY localization \cite{Kim:2011mv, Hwang:2014uwa,Hwang:2016gfw, Lee:2017lfw}, ending up collecting all Jeffrey-Kirwan residues of a multi-dimensional contour integral. We will examine whether the recursion formula \eqref{eq:recursion} actually produces  the same result as the localization computation.
 
-In the $SU(N)$
+\paragraph{SU(N)}
+
+The ADHM computation of the $k$-instanton partition function, for $SU(N)_\kappa +N_f \mathbf{F}$ theories with $N_f + 2|\kappa| \leq 2N$, can be summarized as the  Young tableaux sum expression.
+\begin{align}
+  \label{eq:SUn-young}
+  Z_k^\text{ADHM} = \sum_{|\vec{Y}| = k}\prod_{i=1}^N\prod_{s \in Y_i}\frac{e^{-\kappa \phi(s)} \prod_{l=1}^{N_f} 2\sinh{\frac{\phi(s)+m_l}{2}}  }{\prod_{j=1}^N 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}}
+\end{align}
+where
+\begin{align*}
+  % \begin{split}
+  E_{ij}(s) &= a_i - a_j - \e_1 h_i(s)+ \e_2(v_j(s)+1)\\
+  \varphi(s)&= a_i  -\e_+-(n-1)\e_1-(m-1)\e_2
+  % \end{split}
+   \quad \qquad\text{ for }\quad s = (m,n) \in Y_i.
+\end{align*}
+$h_i(s)$ denotes the distance from $s$ to the right end of the diagram $Y_i$ by moving right. $v_j(s)$ denotes the distance from $s$ to the bottom of the diagram $Y_j$ by moving down.
+
+We checked that the instanton corrections $Z_1$ and $Z_2$ obtained from the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-range} and the 1-instanton expression \eqref{eq:1inst-formula} precisely agree with the above  $Z_{k=1,2}^\text{ADHM}$ for $N=2,3,4$. Recall that $Z_k^\text{ADHM}$ often contains an additional factor $Z_\text{extra}$ that captures the contribution from an extra branch of vacua. It is sensitive to the string theory embedding of gauge theory and regarded as spurious from the 5d QFT perspective. It is usually factorized from the true QFT partition function as 
+\begin{align}
+  \textstyle 1 + \sum_{k=1}^\infty q^k \,Z_k^\text{ADHM}(\vec{a}, \e_{1},\e_2, \vec{m}) = Z_\text{QFT}(\vec{a}, \e_{1},\e_2, \vec{m},\Lambda) \cdot Z_\text{extra}(\e_{1},\e_2,  \vec{m},\Lambda).
+\end{align}
+A non-trivial $Z_\text{extra}\neq 1$ appears in the above expression \eqref{eq:SUn-young} if and only if $N_f + 2|\kappa| = 2N$. This factor can be identified as the contribution of D1-branes escaping from D5-branes which engineer the $SU(N)_\kappa + N_f\mathbf{F}$ gauge theory. Since $Z_k = Z_k^\text{ADHM}$, the same factor $Z_\text{extra}$ emerges from the recursion formula \eqref{eq:recursion} as well. The 5-brane web construction of the gauge theory is thus indirectly reflected in the recursion formula. 
+
+A similar observation is that the 1-instanton expression \eqref{eq:1inst-formula} applied to $SU(2)_\kappa+N_f\mathbf{F}$ with $N_f \geq 5$ does not match the Witten index of the D0-D4-D8-O8${}^-$  quantum mechanics, which is the correct 1-instanton partition function.\footnote{The case with $SU(2) \simeq Sp(1
+)$ is an exception, which allows $N_f \leq 7$ fundamental hypermultiplets \cite{Seiberg:1996bd}.} Instead, it coincides with the topological vertex computation applied to the 5-brane web with a colliding pair of branes, which engineers the $SU(2)$ gauge theory with $N_f \geq 5$ in IR, but behaves badly in UV. Again, this suggests that the recursion formula \eqref{eq:recursion} is rooted in a specific string theory construction of the gauge theory, i.e., the web of $(p,q)$ 5-branes. It would be more satisfactory if one can trace at which step in our formulation of \eqref{eq:recursion} the particular UV embedding of the gauge theory has been chosen. 
+In fact, there must be a broader set of blow-up relations for the 5d Nekrasov partition function $\CZ$, similar to those recently found for 6d SCFTs \cite{Gu:2017ccq,Huang:2017mis,Gu:2018gmy,Gu:2019dan}. We expect that some recursion formulae, derived from the generalized blow-up equations, may realize a different string theory embedding of the gauge theory. It would be very interesting if one can reveal the connection between the choice of UV embedding and the blow-up equations.
+
+In $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$ theory with $N_f + 2|\kappa| \leq N+4$, the ADHM quantum mechanics is the worldvolume theory of D1-branes, probing the D5-NS5-D7-O7${}^{-}$ brane configuration that realizes the gauge theory. The Witten index for the one and two D1-branes is given by
+\begin{align}
+  Z_1^\text{ADHM} &=\\
+  Z_2^\text{ADHM} &=
+\end{align}
+We checked that the general 1-instanton expression \eqref{eq:1inst-formula} agrees with $Z_1^\text{ADHM}$ at $N=3,4,5$. $Z_2 = Z_2^\text{ADHM}$  was confirmed  as well, for $N=3,4,5$, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-na}.
+We remark that $Z_k = Z_k^\text{ADHM}$ captures an extra factor $Z_\text{extra} \neq 1$ when $N_f + 2|\k| = N+4$, displaying the BPS spectrum of escaping D1-branes from the D5-branes on which the gauge symmetry is supported. The appearance of the non-trivial $Z_\text{extra}$ is therefore an artifact of the string theory embedding, spurious from the 5d QFT perspective. It indicates our recursion formula implicitly assumes the D5-NS5-D7-O7${}^{-}$ brane system.\footnote{An exceptional case is the $SU(2)$ gauge theory, in which the antisymmetric hypermultiplet decouples and never affects the recursion formula. The corresponding $Z_k$ is the same as the Young tableau formula \eqref{eq:SUn-young}.}
+
+\paragraph{Sp(N)}
+The instanton partition function for $Sp(N)_\theta + N_f \mathbf{F}$ theory with $N_f \leq 2N+4$ can be obtained from the ADHM quantum mechanics of the D1-D5-O5${}^-$ brane system, engineering the gauge theory. For one and two D1-branes, the corresponding Witten index is given by
+\begin{align}
+  Z_1^\text{ADHM} &=\\
+  Z_2^\text{ADHM} &=
+\end{align}
+Our 1-instanton formula \eqref{eq:1inst-formula} was found to be in agreement with $Z_1^\text{ADHM}$ at $N=2,3$. 
 
 
-% Consequently, a naive application of the recursion formula does not always 
-Still, 
+---
+
+
+$Sp(N) + N_f \mathbf{F} + 1\mathbf{AS}$
 
 
 
@@ -866,10 +910,8 @@ Still,
 
 
 
-
-\footnote{
-  
-}
+\paragraph{SO(N)}
+\pagebreak
 
 can be applied to extract the relevant BPS data. 
 of the gauge theory,
@@ -892,8 +934,8 @@ We propose a general blow-up formula for general gauge theory with arbitrary rep
 
 \subsection{Theories with $N_s$ spinor hypermultiplets}
 \subsection{Theories with an exceptional gauge group}
-\subsection{Theories with a rank-3 antisymmetic hypermultiplet}
-
+% \subsection{Theories with a rank-3 antisymmetic hypermultiplet}
+\input{sec-SU6.tex}
 
 
 
