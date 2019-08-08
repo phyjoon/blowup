@@ -881,61 +881,115 @@ A similar observation is that the 1-instanton expression \eqref{eq:1inst-formula
 )$ is an exception, which allows $N_f \leq 7$ fundamental hypermultiplets \cite{Seiberg:1996bd}.} Instead, it coincides with the topological vertex computation applied to the 5-brane web with a colliding pair of branes, which engineers the $SU(2)$ gauge theory with $N_f \geq 5$ in IR, but behaves badly in UV. Again, this suggests that the recursion formula \eqref{eq:recursion} is rooted in a specific string theory construction of the gauge theory, i.e., the web of $(p,q)$ 5-branes. It would be more satisfactory if one can trace at which step in our formulation of \eqref{eq:recursion} the particular UV embedding of the gauge theory has been chosen. 
 In fact, there must be a broader set of blow-up relations for the 5d Nekrasov partition function $\CZ$, similar to those recently found for 6d SCFTs \cite{Gu:2017ccq,Huang:2017mis,Gu:2018gmy,Gu:2019dan}. We expect that some recursion formulae, derived from the generalized blow-up equations, may realize a different string theory embedding of the gauge theory. It would be very interesting if one can reveal the connection between the choice of UV embedding and the blow-up equations.
 
-In $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$ theory with $N_f + 2|\kappa| \leq N+4$, the ADHM quantum mechanics is the worldvolume theory of D1-branes, probing the D5-NS5-D7-O7${}^{-}$ brane configuration that realizes the gauge theory. The Witten index for the one and two D1-branes is given by
+In $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$ theory with $N_f + 2|\kappa| \leq N+4$, the ADHM quantum mechanics is the worldvolume theory of D1-branes, probing the D5-NS5-D7-O7${}^{-}$ brane configuration that realizes the gauge theory. Let us compute the Witten index for 1 and 2 D1-branes, then compare with the blow-up computation based on the recursion formula \eqref{eq:recursion}. For instance, the Witten index for the single D1-brane can be written as
 \begin{align}
-  Z_1^\text{ADHM} &=\\
-  Z_2^\text{ADHM} &=
+  &Z_1^\text{ADHM} = - \sum_{i=1}^N \frac{e^{-\k (a_i - \e_+)}}{2\sinh{\frac{\e_1}{2}}\,2\sinh{\frac{\e_2}{2}}} \frac{\prod_{l=1}^{N_f}2\sinh{\frac{-\e_+ + a_i + m_l}{2}}}{2\sinh{\frac{-3\e_+ + 2a_i + m_a}{2}}} \prod_{j \neq i}\frac{2\sinh{\frac{a_i + a_j + m_a - \e_+}{2}}}{2\sinh{ \frac{a_{i}-a_j}{2}}\, 2\sinh{\frac{2\e_+ - a_i + a_j}{2}}} \nn \\
+  &- \frac{1}{2}\ \frac{e^{-\frac{\k}{2}(\e_+ - m_a)}}{2\sinh{\frac{\e_1}{2}}\,2\sinh{\frac{\e_2}{2}}} \left(\frac{\prod_{l=1}^{N_f} 2\sinh{\frac{\e_+ + 2m_l - m_a}{4}}}{\prod_{i=1}^N 2\sinh{\frac{3\e_+ - M - 2a_i}{4}}} - (-1)^{\k + (N-N_f)/2}\frac{\prod_{l=1}^{N_f} 2\cosh{\frac{\e_+ + 2m_l - m_a}{4}}}{\prod_{i=1}^N 2\cosh{\frac{3\e_+ - M - 2a_i}{4}}}\right).
 \end{align}
-We checked that the general 1-instanton expression \eqref{eq:1inst-formula} agrees with $Z_1^\text{ADHM}$ at $N=3,4,5$. $Z_2 = Z_2^\text{ADHM}$  was confirmed  as well, for $N=3,4,5$, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-na}.
-We remark that $Z_k = Z_k^\text{ADHM}$ captures an extra factor $Z_\text{extra} \neq 1$ when $N_f + 2|\k| = N+4$, displaying the BPS spectrum of escaping D1-branes from the D5-branes on which the gauge symmetry is supported. The appearance of the non-trivial $Z_\text{extra}$ is therefore an artifact of the string theory embedding, spurious from the 5d QFT perspective. It indicates our recursion formula implicitly assumes the D5-NS5-D7-O7${}^{-}$ brane system.\footnote{An exceptional case is the $SU(2)$ gauge theory, in which the antisymmetric hypermultiplet decouples and never affects the recursion formula. The corresponding $Z_k$ is the same as the Young tableau formula \eqref{eq:SUn-young}.}
+Note that $Z_k^\text{ADHM}$ captures an extra factor $Z_\text{extra} \neq 1$ if $N_f + 2|\k| = N+4$, displaying the BPS spectrum of  D1-branes escaping from the D5-branes on which the gauge theory is supported. 
+The appearance of $Z_\text{extra}\neq 1$ is an artifact of the string theory embedding, spurious from the 5d QFT perspective.
+We checked the agreement between $Z_1^\text{ADHM}$ and the 1-instanton formula \eqref{eq:1inst-formula} for the $SU(3)$, $SU(4)$, $SU(5)$ theories whose  $(n,n')$ satisfies $\frac{n+n'}{2} \geq 2$. We confirmed 
+$Z_2 = Z_2^\text{ADHM}$ as well, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-na}. The same spurious factor $Z_\text{extra}$ arises from the recursion formula, implying that our blowup equations are implicitly based on the D5-NS5-D7-O7${}^{-}$ brane realization of the gauge theory.\footnote{An exceptional case is the $SU(2)$ gauge theory, in which the antisymmetric hypermultiplet decouples and never affects the recursion formula. The corresponding $Z_k$ is the same as the Young tableau formula \eqref{eq:SUn-young}.}
 
 \paragraph{Sp(N)}
-The instanton partition function for $Sp(N)_\theta + N_f \mathbf{F}$ theory with $N_f \leq 2N+4$ can be obtained from the ADHM quantum mechanics of the D1-D5-O5${}^-$ brane system, engineering the gauge theory. For one and two D1-branes, the corresponding Witten index is given by
+The $k$-instanton partition function for $Sp(N)_\theta + N_f \mathbf{F}$ theory with $N_f \leq 2N+4$ can be computed from the ADHM quantum mechanics of D1-D5-NS5-O5 branes, which engineers the gauge theory and its instantons. The Witten index for a D1-brane can be written as
 \begin{align}
-  Z_1^\text{ADHM} &=\\
-  Z_2^\text{ADHM} &=
+  Z_1^\text{ADHM} &= \frac{1}{2}\,\frac{1}{2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}}\Bigg(\frac{\prod_{l=1}^{N_f}\,2\sinh\frac{m_l}{2}}{\prod_{i=1}^{N}2\sinh\frac{\e_+\pm a_i}{2}}+e^{i\theta}\frac{\prod_{l=1}^{N_f}\,2\cosh\frac{m_l}{2}}{\prod_{i=1}^{N}2\cosh\frac{\e_+\pm a_i}{2}}\Bigg).
 \end{align}
-Our 1-instanton formula \eqref{eq:1inst-formula} was found to be in agreement with $Z_1^\text{ADHM}$ at $N=2,3$. 
+Our 1-instanton formula \eqref{eq:1inst-formula} was checked to be in agreement with $Z_1^\text{ADHM}$ for the $Sp(2)$ and $Sp(3)$ gauge theories satisfying $N-1 \geq \lfloor \frac{N_f}{2} \rfloor$ (at $\theta = 0$) and $N \geq \lceil \frac{N_f}{2} \rceil$ (at $\theta = \pi$). 
+It was also confirmed that $Z_2^\text{ADHM} =  Z_2$, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}. Note that $Z_\text{extra}$ does not appear in $Z_k^\text{ADHM} = Z_k $ for the above theories.
 
 
----
+In $Sp(N)_\theta + N_f \mathbf{F} + 1\mathbf{AS}$ theory with $N_f \leq 7$, the relevant ADHM quantum mechanics is the worldvolume gauge theory of D0-branes which probe the D4-D8-O8 brane configuration. The QFT on D4-branes sees an enhanced $E_{N_f + 1}$ flavor symmetry at the UV fixed point \cite{Seiberg:1996bd}. Let us consider the Witten index for one and two D0-branes \cite{Kim:2012gu,Hwang:2014uwa}. For a single D0-brane, 
+\begin{align}
+  Z_1^{\text{ADHM}}&=\frac{1}{2} \, \frac{1}{2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}\, 2\sinh\frac{m_a+ \e_+}{2} \, 2\sinh\frac{m_a-\e_+}{2}} \\& \times\Bigg(\,\frac{\prod_{i=1}^{N}2\sinh\frac{m_a\pm a_i}{2}\prod_{l=1}^{N_f}\,2\sinh\frac{m_l}{2}}{\prod_{i=1}^{N}2\sinh\frac{\e_+\pm a_i}{2}}
+  +\frac{e^{i\theta}\prod_{i=1}^{N}2\cosh\frac{m_a\pm a_i}{2}\prod_{l=1}^{N_f}\,2\cosh\frac{m_l}{2}}{ \prod_{i=1}^{N}2\cosh\frac{\e_+\pm a_i}{2}}\Bigg).\nn
+\end{align}
+We checked $Z_1^{\text{ADHM}}$ itself is \emph{not} the same as the 1-instanton expression \eqref{eq:1inst-formula} for the $Sp(2)_\theta$, $Sp(3)_\theta$ theories with $N_f \leq 1$ (at $\theta=0$) and $N_f \leq 2$ (at $\theta=\pi$). Instead, the difference between $Z_1$ and $Z_1^{\text{ADHM}}$ can be identified as the BPS index of D0-branes moving away from the D4-D8-O8 brane system \cite{Kim:2012gu,Hwang:2014uwa}. Similarly, it was confirmed that the 2-instanton correction $Z_2$ captures the same 5d QFT spectrum as in $Z_2^\text{ADHM}$, while excluding the spurious contribution of escaping D0-branes. Our blow-up formulae seem to reflect a different UV embedding of the gauge theory, which does \emph{not} allow an extra branch of vacua  leading  to $Z_\text{extra} \neq 1$.
 
 
-$Sp(N) + N_f \mathbf{F} + 1\mathbf{AS}$
+\paragraph{SO(N)} One can compute the instanton partition function of $SO(N) + N_v \mathbf{V}$  theory with $N_v \leq N-4$ using the ADHM quantum mechanics of the D1-D5-NS5-O5 brane system. At even $N$, the Witten index for a D1-brane can be written as
+\begin{align}
+Z_1^\text{ADHM} = \sum_{i=1}^{N/2}\bigg(\frac{2\sinh(2\e_+-a_i)\,2\sinh(a_i-\e_+)\prod_{l=1}^{N_v}2\sinh\frac{m_l\pm(a_i-\e_+)}{2}}{2 \cdot 2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}\prod_{j\neq i}2\sinh\frac{a_i\pm a_j}{2}\,2\sinh\frac{2\e_+-a_i\pm a_j}{2}}+(a_i\rightarrow -a_i)\bigg).
+\end{align}
+At odd $N$,
+\begin{align}
+  Z_1^\text{ADHM} =\sum_{i=1}^{\lfloor N/2\rfloor}\bigg(\frac{2\cosh\frac{2\e_+-a_i}{2}\,2\sinh(a_i-\e_+)\,\prod_{l=1}^{N_f}2\sinh\frac{m_l\pm(a_i-\e_+)}{2}}{2 \cdot 2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}\, 2\sinh\frac{a_i}{2}\prod_{j\neq i}2\sinh\frac{a_i\pm a_j}{2}\,2\sinh\frac{2\e_+-a_i\pm a_j}{2}}+(a_i\rightarrow -a_i)\bigg).
+\end{align}
+The general 1-instanton expression \eqref{eq:1inst-formula} and the recursion formula \eqref{eq:recursion} are applicable for all  $N_v \leq N-4$. We explicitly confirmed that $Z_k^\text{ADHM} = Z_k$, where $Z_1$ was written in \eqref{eq:1inst-formula} and $Z_2$ was obtained as the solution of the recursion formula \eqref{eq:recursion}, for $4 \leq N \leq 9$. Notice that $Z_k^\text{ADHM} = Z_k$ involves a non-trivial extra factor $Z_\text{extra} \neq 1$ when $N_v = N-4$. This extra factor is associated to D1-branes moving away from the D5-NS5-O5 brane system, where the 5d QFT lives. It implies that the specific UV realization of the gauge theory, i.e., IIB string theory with D1-D5-NS5-O5, is implicit in our  recursion formulae \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}.
+ 
+
+\subsection{Theories with spinor hypermultiplets}
+\label{subsec:spinor}
+
+So far, we have investigated the `standard' gauge theories which have certain D-brane set-ups in IIA/IIB string theory to realize themselves and their non-perturbative solitons. Once there are a sufficient number of the blowup equations, the $k$-instanton partition function $Z_k$ can be obtained as the solution. Solving specifically at 1-instanton level, $Z_1$ is expressed as \eqref{eq:1inst-formula}. All these results were found to be in agreement with the ADHM instanton calculus, sometimes modulo an extra factor $Z_\text{extra}$  sensitive to the string theory embedding of the gauge theory.
+
+There are also `exceptional' gauge theories, which involve exceptional gauge groups or matters that cannot be engineered from perturbative open strings ending on non-perturbative branes. Instead, their UV embedding is geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. Since the exceptional theories lack for the ADHM formalism, their instanton partition function $\CZ$ has been studied on a case-by-case basis; Once the 5-brane web configuration engineering an exceptional theory is identified, the topological vertex formalism can be applied to compute the relevant partition function $\CZ$. Alternatively, one can first construct the $\IC^2 \times T^2$ partition function for a related 6d gauge theory, based on its modularity and anomaly, then take the circle reduction to obtain the 5d partition function $\CZ$. Several interesting exceptional theories have been studied so far, based on the above two approaches.
+
+We can take advantage of the universality of the blowup equation. Recall that the blow-up recursion formula \eqref{eq:recursion} holds for a certain range of $d$, i.e., the set of all integers between $0 \leq d \leq h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l)$, when the gauge group $G$ is neither $ SU(N)_\k$ nor $Sp(N)_\theta$ so that an extra complication due to the Chern-Simons level $\kappa$ or  the theta angle $\theta$ cannot occur. 
+One can solve the recursion formulae for the $k$-instanton correction $Z_k$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We assume that  $Z_k$ solved from the recursion formulae would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested through comparison with \cite{Kim:2018gjo, 
+DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for certain exceptional theories. We will show the novel results for the $SO(N)$ gauge theories with spinor hypermultiplets in Section~\ref{subsec:spinor}, for the gauge theories with exceptional groups in Section~\ref{subsec:exceptional}, and for the $SU(6)$ gauge theories with rank-3 antisymmetric hypermultiplets in Section~\ref{subsec:rank3}. (See Table~???)
 
 
+\begin{table}[t!]
+  \centering
+  \begin{tabular}{@{}cl@{}}
+    \toprule
+    Gauge group  & Hypermultiplets    \\  \midrule
+    $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
+    $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
+    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
+    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+    $SO(11)$  & $n_{\bf s}= 2$ \\
+    $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
+    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
+    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
+    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+    $SO(9)$  & $n_{\bf s}  = 3$ \\
+    $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
+    $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
+    $SO(8)$  & $n_{\bf s} + n_{\bf c}+ n_{\bf v} = 4$ \\
+    $SO(7)$  & $n_{\bf s} + n_{\bf v}  =3$\\ \bottomrule
+    \end{tabular}
+    \caption{asd}
+    \label{tbl:spinor}
+\end{table}
+
+There are a sufficient number of recursion formulae \eqref{eq:recursion} to fix the $k$-instanton partition function $Z_k$ of the $SO(N)$ gauge theory, if and only if  
+\begin{align}
+  \begin{split}
+  N-4 &\geq n_{\bf v} + 2^{\frac{N-7}{2}}\cdot n_{\bf s} \qquad\qquad\qquad \text{ for odd $N$}\\
+  N-4 &\geq n_{\bf v} + 2^{\frac{N-8}{2}}\cdot (n_{\bf s} + n_{\bf c})\qquad\quad \text{ for even $N$}
+  \end{split}
+\end{align}
+where $n_{\bf v}$, $n_{\bf s}$, and $n_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. 
+
+\paragraph{SO(7)} 
+
+condition $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$ is equivalent to 
+
+Our 1-instanton expression \eqref{eq:1inst-formula} and the recursion formulae \eqref{eq} is valid for 
 
 
+\paragraph{SO(8)} 
+\paragraph{SO(9)} 
+\paragraph{SO(10)} 
+\paragraph{SO(11)} 
+\paragraph{SO(12)} 
+\paragraph{SO(13)} 
+\paragraph{SO(14)} 
 
 
+  As a remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to  , and/or to apply the topological vertex formalism . An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
 
-
-\paragraph{SO(N)}
-\pagebreak
-
-can be applied to extract the relevant BPS data. 
-of the gauge theory,
-
-particular UV choice
-topological string blowup
-
-
-
-based on the geometric engineering of 5d $\mathcal{N}=1$ gauge theory \cite{Gopakumar:1998jq,Aganagic:2003db}
-
-
-
-
-As a remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to  , and/or to apply the topological vertex formalism . An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
-
-\label{eq:d-range-nonsu}
+% \label{eq:d-range-nonsu}
 We propose a general blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not too large.
 
-
-\subsection{Theories with $N_s$ spinor hypermultiplets}
 \subsection{Theories with an exceptional gauge group}
-% \subsection{Theories with a rank-3 antisymmetic hypermultiplet}
-\input{sec-SU6.tex}
+\label{subsec:exceptional}
+\subsection{Theories with a rank-3 antisymmetic hypermultiplet}
+\label{subsec:rank3}
+% \input{sec-SU6.tex}
 
 
 
@@ -1049,57 +1103,6 @@ Some theories in Table~\ref{tbl:exceptional-theory} do not belong to the
 
 
 
-\subsection{Known examples}
-
-
-
-\subsection{Ki-Hong's note}
-\paragraph{Unity Blowup equations}
-
-\paragraph{Instanton partition functions from blowup equations}
-From blowup equations one can compute the partition functions as follows. Rewriting the blowup equation as
-\begin{align}
-1=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}f_{\vec{k}}\,l_{\vec{k}}\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}
-\end{align}
-where $f_{\vec{k}}=Z^{(1)}_{\textrm{class}}Z^{(2)}_{\textrm{class}}/Z_{\textrm{class}}$ and $l_{\vec{k}}=Z^{(1)}_{\textrm{1-loop}}Z^{(2)}_{\textrm{1-loop}}/Z_{\textrm{1-loop}}$ with abbreviated notation 
-\begin{align}
-Z^{(1)}=Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\,\epsilon_1,m_i+r_i\,\epsilon_1,m_0+r_0\,\epsilon_1)\nonumber\\
-Z^{(2)}=Z(\epsilon_1-\epsilon_2,\epsilon_2,\vec{a}+\vec{k}\,\epsilon_2,m_i+r_i\,\epsilon_2,m_0+r_0\,\epsilon_2)
-\end{align} 
-Here note that $l_{\vec{k}}$ is independent of $Q=e^{-m_0}$, and $f_{\vec{k}}$ is some overall factor in the order of $Q^{\vec{k}\cdot\vec{k}/2}$. Expanding the equation by instanton fugacity $Q$, then at each $Q^{n}$ level the equation is written by 
-\begin{align}
-\delta_{n,0}=p_1^{r_0}Z^{(1)}_{n}+p_2^{r_0}Z^{(2)}_{n}-Z_{n}+\sum_{\vec{k}\neq 0}f_{\vec{k},r_0}l_{\vec{k}}\Bigg(\frac{Z^{(1)}_{\textrm{inst}}Z^{(2)}_{\textrm{inst}}}{Z_{\textrm{inst}}}\Bigg)\Bigg|_{O(Q^{n-\vec{k}\cdot\vec{k}/2})}.
-\label{eq:be_n}
-\end{align}
-Since each $Z_{k}$ and $Z^{(1,2)}_{k}$ are independent of $r_0$, one can solve \eqref{eq:be_n} with three blowup equations with same $r_i$'s but different $r_0$'s. 
-
-The blowup equations for instanton partition functions of pure YM theory with generic gauge group were already studied in \cite{Keller:2012da}. They are actually \eqref{eq:bueq_gen} with 
-\begin{align}
-\vec{r}_a=0,\qquad r_0=d-h^{\lor}/2
-\end{align}
-where $d=0,\cdots, h^{\lor}$. We extend these blowup equations to the theories with matters based on pure YM blowup equations. If one restrict the cases to $\vec{r}_a=0$, as we explained in the previous section, the $r_i$'s are technically required to be half intergers. Thus we look for the $r_0$'s that provides the correct instanton partition functions by solving \eqref{eq:be_n} while fixing $\vec{r}_a=0$ and $r_i=1/2$. Here are the results.
-
-
-
-They were tested by comparing the resulting instanton partition functions with the known results from \cite{Kim:2018gjo}($SO(7)$ and $G_2$) and \cite{DelZotto:2018tcj}($F_4$ with $N_{\boldsymbol{26}}=2$). They were compared numerically, putting random numbers on the fugacities.
-Note that matters shift the $r_0$, each by one quarter of their Dynkin indices. It seems to differ from blowup formula for $SU(N)_\kappa+N_f$ instantons, where $r_0$ was affected only by its CS-level $\kappa$. However, one can rewrite the $r_0$ as
-\begin{align}
-r_0=&\,d-N/2-\left(\kappa+\frac{1}{2}N_f\right)/2+N_f/4\nonumber\\
-=&\,d-N/2-\kappa_{\textrm{eff}}/2+N_f\times I_{\textrm{fund}}.
-\end{align}
-Since fundamental matters shifts the effective CS-level, they cancel their index contributions and consequently the $r_0$ apparently looks independent of matters. 
-
-By above observations, we write the unity blowup equation for generic gauge groups and matter representations.
-\begin{align}
-Z(\epsilon_1,\epsilon_2,\vec{a},m_i,m_0)=\sum_{\vec{k}\in\vec{\alpha}^{\lor}}&\,Z(\epsilon_1,\epsilon_2-\epsilon_1,\vec{a}+\vec{k}\epsilon_1,m_i+\epsilon_1/2,m_0+r_0\epsilon_1)\nonumber\\
-&\times\,Z(\epsilon_1-\epsilon_2,\vec{a}+\vec{k}\epsilon_2,m_i+\epsilon_2/2,m_0+r_0\epsilon_2)
-\end{align}
-with 
-\begin{align}
-r_0=d-h^{\lor}/2-\kappa_{\textrm{eff}}/2+N_{\boldsymbol{R}}\times I_{\boldsymbol{R}}.
-\end{align}
-Here $I_{\boldsymbol{R}}$ is the Dynkin index of $\boldsymbol{R}$ representation.
-
 \paragraph{$SU(6)_3+1\times\boldsymbol{20}$}
 
 As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
@@ -1128,9 +1131,6 @@ It is Higgsed by
 
 
 
-\subsection{$SU(6)_3$ with a rank-3 antisymmetric hyper}
-
-\textcolor{red}{(describe blow-up computation)}
 
 
 It was recently found in \cite{Hayashi:2019yxj} that the 5d $SU(6)_3$ gauge theory with a rank-3 antisymmetric hypermultiplet can be engineered from the 5-brane web configuration, depicted in Figure~\ref{fig:SU6-monopole}. Given a web diagram, we utilize  the topological vertex method \cite{Aganagic:2003db,Iqbal:2007ii} to compute all genus topological string amplitudes, which is the logarithm of the 5d Nekrasov partition function on $\Omega$-deformed $\mathbf{R}^4\times S^1$ \cite{Gopakumar:1998jq}. We will check its agreement with the blowup partition function (eqn), providing a supporting evidence to the suggested blow-up equation (eqn).
