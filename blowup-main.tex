@@ -964,7 +964,7 @@ There are a sufficient number of recursion formulae \eqref{eq:recursion} to fix 
   N-4 &\geq N_{\bf v} + 2^{\frac{N-8}{2}}\cdot (N_{\bf s} + N_{\bf c})\qquad\quad \text{for even $N$}
   \end{split}
 \end{align}
-where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. Let us first consider the special cases whose $Z_k$ is already known.
+where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. Let us consider the special cases whose $Z_k$ is already known.
 
 \paragraph{SO(7)} The $k$-instanton contribution $Z_k$ of $SO(7) + N_{\bf s}\,\mathbf{S}$ theory can be obtained from the SUSY quantum mechanics proposed in  \cite{Kim:2018gjo}, which can be summarized as the following $SU(4)$ Young tableau expression:
 \begin{align}
@@ -978,77 +978,150 @@ We deduced the 1-instanton correction of $SO(7) + N_{\bf s}\,\mathbf{S} + N_{\bf
 \paragraph{SO(8)}
 
 The 1-instanton result of $SO(8) + 1\mathbf{S} + 1\mathbf{C} + 1\mathbf{V}$ theory is found in (H.28) of \cite{DelZotto:2018tcj}.
-We obtained the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from that by sending certain mass parameters to infinity.
-All of those were found to be consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $(p_1p_2)^{13/2}$. 
-Furthermore, we have identified the unknown part of (H.28) as follows:
+That is expressed in terms of irreducible characters $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ means either the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. Their representation $\mathbf{R}$ is specified by the Dynkin label in the subscript. All irreducible characters for the flavor symmetry are assumed to be written in the orthogonal basis, to be compatible with our convention of mass parameters in \eqref{eq:1-loop-hyp}, \eqref{eq:recursion}, \eqref{eq:1inst-formula}. The mass parameters will be often distinguished by the superscript $S \in \{s,c,v\}$ according to the matter representation. The flavor symmetry is $Sp(N_{\bf v})_v \times Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c$.
+
+We obtained the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from (H.28) by sending appropriate mass parameters to infinity.
+All of those were consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $t^{20}$ order, where $t \equiv \sqrt{p_1p_2}$. 
+Furthermore, we could determine the unknown part of (H.28) of \cite{DelZotto:2018tcj} as 
 \begin{align}
-  &\sum_{n=0}^\infty (p
-  _1p_2)^{3+n} \left(\chi^G_{(1n00)}+\chi^G_{(0n10)}+\chi^G_{(0n01)}\right)\chi^F_{???} \nn \\\longrightarrow&
-  \sum_{n=0}^\infty (p_1p_2)^{3+n} \left(\chi^G_{(1n00)}\chi^s_{(1)}\chi^c_{(1)}+\chi^G_{(0n10)}\chi^s_{(1)}\chi^v_{(1)}+\chi^G_{(0n01)}\chi^c_{(1)}\chi^v_{(1)}\right)
+  \label{eq:SO8-v1s1c1}
+  \hat{Z}_1 &=  t^4 + \sum_{n=0}^\infty t^{5+2n}(\chi_{(0n00)}^G \chi^v_{(1)}\chi^s_{(1)}\chi^c_{(1)} + \sum_{n=0}^\infty t^{6+2n}(\chi_{(1n00)}^G \chi^s_{(1)}\chi^c_{(1)}+ \chi_{(0n10)}^G \chi^s_{(1)}\chi^v_{(1)}\\&
+  +\chi_{(0n01)}^G \chi^c_{(1)}\chi^v_{(1)}) + \sum_{n=0}^\infty t^{7+2n} (\chi^G_{(1n10)}\chi^s_{(1)} + \chi^G_{(1n01)}\chi^c_{(1)}+\chi^G_{(0n11)}\chi^v_{(1)})- \sum_{n=0}^\infty t^{8+2n}\chi^G_{(1n11)}\nn,
+\end{align}
+where $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1,2}}{2}}) \cdot Z_1$ is the 1-instanton result after removing the center-of-mass factor. 
+
+
+Now we compare \eqref{eq:1inst-formula} with the 1-instanton partition function of $SO(8) + 2\mathbf{S}
+ + 2\mathbf{C} + 2\mathbf{V}$ theory, written in (H.19) of \cite{DelZotto:2018tcj}. Our 1-instanton formula \eqref{eq:1inst-formula} applied to the $SO(8)$ theories having $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,1,1), (1,2,2), (1,1,2),(2,2,0),(2,0,2),(0,2,2)$ was consistent with (H.19) up to $t^{20}$ order, after suitably setting some mass parameters in (H.19) to infinity. By comparison, we could further determine the unknown part of (H.19)  of \cite{DelZotto:2018tcj}  as 
+ \begin{align}
+  \label{eq:SO8-v2s2c2}
+  \hat{Z}_1 &= t^{-1} - t^3(\chi_{(01)}^v+\chi_{(01)}^s+\chi_{(01)}^c) 
+  +t^5(\chi^G_{(1000)}\chi^s_{(10)}\chi^c_{(10)}+\chi^G_{(0010)}\chi^s_{(10)}\chi^v_{(10)}+\chi^G_{(0001)}\chi^c_{(10)}\chi^v_{(10)}) \nn \\&
+  -t^6(\chi^G_{(1010)}\chi_{(10)}^s+\chi^G_{(1001)}\chi_{(10)}^c+\chi^G_{(0011)}\chi_{(10)}^v) + t^7 \chi_{(1011)}^G - \sum_{n=0}^\infty \Big(t^{5+2n}\chi_{(0n00)}^G \chi^s_{(10)}\chi^c_{(10)} \chi^v_{(10)}  \nn \\&
+  + t^{6+2n}(\chi^G_{(1n00)}\chi^s_{(01)}\chi^c_{(01)}\chi^v_{(10)}+\chi^G_{(0n10)}\chi^s_{(01)}\chi^c_{(10)}\chi^v_{(01)}+\chi^G_{(0n01)}\chi^s_{(10)}\chi^c_{(01)}\chi^v_{(01)}) \nn \\&- t^{7+2n} 
+  (\chi^G_{(1n10)}\chi^s_{(01)}\chi^c_{(10)}\chi^v_{(10)}+\chi^G_{(1n01)}\chi^s_{(10)}\chi^c_{(01)}\chi^v_{(10)}+\chi^G_{(0n11)}\chi^s_{(10)}\chi^c_{(10)}\chi^v_{(01)})  \\& +  t^{8+2n}
+  (\chi^G_{(2n10)}\chi^s_{(01)}\chi^c_{(10)}+\chi^G_{(2n01)}\chi^s_{(10)}\chi^c_{(01)}+\chi^G_{(1n20)}\chi^s_{(01)}\chi^v_{(10)}+\chi^G_{(1n02)}\chi^c_{(01)}\chi^v_{(10)} \nn\\&
+  +\chi^G_{(0n21)}\chi^s_{(10)}\chi^v_{(01)}+\chi^G_{(0n12)}\chi^c_{(10)}\chi^v_{(01)}) - t^{9+2n}(\chi^G_{(2n11)}\chi^s_{(10)}\chi^c_{(10)}+\chi^G_{(1n21)}\chi^s_{(10)}\chi^v_{(10)} \nn\\&
+  +\chi^G_{(1n12)}\chi^c_{(10)}\chi^v_{(10)}) +  t^{10+2n} (\chi^G_{(2n21)}\chi^s_{(10)}+\chi^G_{(2n12)}\chi^c_{(10)} + \chi^G_{(1n22)}\chi^v_{(10)}) -  t^{11+2n} \chi^G_{(2n22)}\Big). \nn
+\end{align}
+Notice that \eqref{eq:SO8-v1s1c1} and \eqref{eq:SO8-v2s2c2} are manifestly invariant under the $SO(8)$ triality, transforming the $SO(8)$ representations as $(n_vn_an_cn_s) \rightarrow (n_sn_an_vn_c)$ 
+along with $\chi^v_\mathbf{R} \rightarrow \chi^s_\mathbf{R} \rightarrow \chi^c_\mathbf{R} \rightarrow \chi^v_\mathbf{R}$.
+It can be done by shuffling the Coulomb VEVs and renaming the flavor chemical potentials. We rearranged $Z_1$ in terms of the new variables $\vec{a}'$ or $\vec{a}''$, 
+\begin{align}
+  \label{eq:so8-triality}
+  \begin{split}
+  (a_1',a_2',a_3',a_4') &= \textstyle(\frac{-a_1+a_2+a_3-a_4}{2},\frac{-a_1+a_2+a_3-a_4}{2},\frac{-a_1+a_2+a_3-a_4}{2},\frac{-a_1+a_2+a_3-a_4}{2}) \\
+  (a_1'',a_2'',a_3'',a_4'') &= \textstyle(\frac{+a_1-a_2-a_3-a_4}{2},\frac{-a_1+a_2-a_3-a_4}{2},\frac{-a_1-a_2+a_3-a_4}{2},\frac{+a_1+a_2+a_3-a_4}{2}),
+  \end{split}
+\end{align}
+which exchanges the $SO(8)$ irreducible characters as
+\begin{align}
+  \chi_{(n_cn_an_sn_v)} (\vec{a}) &= \chi_{(n_vn_an_cn_s)} (\vec{a}')|_{\vec{a}' \rightarrow \vec{a}}, &
+  \chi_{(n_sn_an_vn_c)} (\vec{a}) &= \chi_{(n_vn_an_cn_s)} (\vec{a}'')|_{\vec{a}'' \rightarrow \vec{a}}.
+\end{align}
+Dropping off primes from $Z_1 (\vec{a}', \epsilon_1,\epsilon_2; \vec{m}^s,\vec{m}^c,\vec{m}^v)$ or $Z_1 (\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) $, we confirmed
+\begin{align}
+  \begin{split}
+  Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) &= Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}', \epsilon_1,\epsilon_2;\vec{m}^v,\vec{m}^s,\vec{m}^c)|_{\vec{a}' \rightarrow \vec{a}}\\
+  Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) &= Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^c,\vec{m}^v,\vec{m}^s)|_{\vec{a}'' \rightarrow \vec{a}}.
+  \end{split}
 \end{align}
 
-
-$SO(8) + 2\,\mathbf{S} + 2\,\mathbf{C} + 2\,\mathbf{V}$ (Lockhart)
+Similarly, we also found the 1-instanton formula \eqref{eq:1inst-formula} applied to $SO(8)$ theories with $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (4,0,0)$ or $(0,4,0)$ is compatible with the $SO(8)$ triality.
+Starting with the 1-instanton result $Z_1^\text{ADHM} = Z_1^\text{ADHM} (\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) $ obtained from the relevant ADHM quantum mechanics for $SO(8) +  N_{\bf v}\mathbf{V}$ theory with $ N_{\bf v} \leq 4$, we checked that
+\begin{align}
+  \begin{split}
+  Z_1^{N_{\bf c}, \, N_{\bf c}= N_{\bf v}= 0}\,(\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) &= Z_1^{\text{ADHM}}(\vec{a}', \epsilon_1,\epsilon_2, \vec{m})|_{\vec{a}' \rightarrow \vec{a}}\\
+  Z_1^{N_{\bf s}, \, N_{\bf s}= N_{\bf v}= 0}\,(\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) &= Z_1^{\text{ADHM}}(\vec{a}'', \epsilon_1,\epsilon_2, \vec{m})|_{\vec{a}'' \rightarrow \vec{a}}.
+  \end{split}
+\end{align}
 
 
 \paragraph{SO(9)}
 
-$SO(9) + 2\,\mathbf{S} + 3\,\mathbf{V}$ (Lockhart)
+The 1-instanton formula \eqref{eq:1inst-formula} can be applied to $SO(9) + N_\mathbf{s}\mathbf{S} + N_\mathbf{v}\mathbf{V}$ theory with $(N_\mathbf{s}, N_{\mathbf{v}}) \leq (1,3)$ or $(2,1)$, which has $Sp(N_\mathbf{s})_s \times Sp(N_\mathbf{v})_v$ flavor symmetry. It can be compared with the 1-instanton partition function of $SO(9) + 2\mathbf{S} + 3\mathbf{V}$ theory, which is written in (H.20) of \cite{DelZotto:2018tcj} up to $t^7$ order, after appropriately taking some mass parameters to infinity. We checked all their consistency up to the given order. For example, the character expansion of $\hat{Z}_{1}$ for $SO(9) + 2\mathbf{S} + 1\mathbf{V}$  can be written as  
+\begin{align}
+  \label{eq:SO9-v1s2}
+  \hat{Z}_1&=\, t^4\chi^v_{(1)}+t^5\chi^s_{(20)}-t^6\chi_{(0001)}^G\chi^s_{(10)}
+  +\sum_{n=0}^{\infty}\Big(t^{6+2n}\chi^G_{(0n00)}\chi^s_{(02)}\chi^v_{(1)}
+  \nn\\&-t^{7+2n}(\chi^G_{(1n00)}\chi^s_{(02)}+\chi^G_{(0n01)}\chi^s_{(11)}\chi^v_{(1)}) \nn\\&+t^{8+2n}(\chi^G_{(1n01)}\chi^s_{(11)}+\chi^G_{(0n10)}\chi^s_{(20)}\chi^v_{(1)} 
+  +\chi^G_{(0n02)}\chi^s_{(01)}\chi^v_{(1)})
+  \nn\\&-t^{9+2n}(\chi^G_{(1n10)}\chi^s_{(20)}+\chi^G_{(1n02)}\chi^s_{(01)}+\chi^G_{(0n11)}\chi^s_{(10)}\chi^v_{(1)})\\
+  &+t^{10+2n}(\chi^G_{(1n11)}\chi^s_{(10)}+\chi^G_{(0n20)}\chi^v_{(1)})-t^{11+2n}\chi^G_{(1n20)}\Big),\nn
+  \end{align}
+which was tested against the general formula \eqref{eq:1inst-formula} up to $t^{20}$ order. It is the same as (H.20) of \cite{DelZotto:2018tcj} after reducing the $Sp(3)_v$ characters
+\begin{align}
+  \chi^{v}_{(001)}\rightarrow \chi^{v}_{(1)},\qquad \chi^{v}_{(010)}\rightarrow 1,\qquad \chi^{v}_{(100)}\rightarrow 0,\qquad\chi^{v}_{(000)}\rightarrow 0.
+\end{align}
+
 
 
 \paragraph{SO(10)}
+We apply our 1-instanton expression \eqref{eq:1inst-formula} to $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ theory with $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,0,2),(1,1,2), (0,2,2),(1,0,4),(0,1,4)$. The relevant flavor symmetry is $U(N_\mathbf{s}) \times U(N_\mathbf{c}) \times Sp(N_\mathbf{v})$ because  the $SO(10)$ (conjugate) spinor is a complex representation. Since the $SO(10)$ charge conjugation exchanges the spinor and conjugate spinor representations, i.e., $\chi_{(00001)}^G = (\chi_{(00010)}^G)^*$, the instanton partition function for $SO(10) + (N_{\mathbf s}\mp 1)\mathbf{S} + (N_{\mathbf c}\pm 1)\mathbf{C} + N_{\mathbf v}\mathbf{V}$  must be identified with that of $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ simply by flipping the sign of mass parameters for (conjugate) spinor hypermultiplets. 
+\begin{align}
+  \hat{Z}_{1}^{N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}}; m^c_{1,\cdots,N_\mathbf{c}}) &= \hat{Z}_{1}^{N_{\mathbf{s}}-1,N_\mathbf{c}+1,N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}-1}; m^c_{1,\cdots,N_\mathbf{c}+1})\big|_{m^c_{N_\mathbf{c}+1} = -m^s_{N_\mathbf{s}}}\nn\\ 
+  &= \hat{Z}_{1}^{N_{\mathbf{s}}+1,N_\mathbf{c}-1,N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}+1}; m^c_{1,\cdots,N_\mathbf{c}-1})\big|_{m^s_{N_\mathbf{s}+1} = -m^c_{N_\mathbf{c}}}
+\end{align}
+This relation was explicitly confirmed in all above cases at 1-instanton order. We may want to compare \eqref{eq:1inst-formula} with the known 1-instanton partition function of $SO(10) + 1\mathbf{S} + 1\mathbf{C} + 4\mathbf{V}$ theory, written in (H.21) of \cite{DelZotto:2018tcj}, after  taking relevant mass parameters  to infinity. However, (H.21) specifies $\hat{Z}_1$ only up to $\mathcal{O}(t^5)$, which leaves nothing for comparison once we reduce the mass parameters. Thus the consistency between two expressions could be only weakly tested. For instance, $\hat{Z}_{1}$ obtained  from \eqref{eq:1inst-formula} for $SO(10) + N_\mathbf{s}\mathbf{S}+ N_\mathbf{c}\mathbf{C} + 4\mathbf{V}$ theory with $ N_\mathbf{s} 
++ N_\mathbf{c} = 2$ is displayed in \eqref{eq:so10-2s2v}, which turns out to be void until $t^4$ order.
 
-$SO(10) + 2\,\mathbf{S} + 2\,\mathbf{C} + 4\,\mathbf{V}$ (Lockhart)
-
-
-\paragraph{SO(11)}
 
 
 \paragraph{SO(12)}
 
-$SO(12) + 1\,\mathbf{S} + 6\,\mathbf{V}$ (Lockhart) 
-
-\paragraph{SO(13)}
-
-$SO(12) + 1\,\mathbf{S} + 6\,\mathbf{V}$ (Lockhart) 
-
-
-The SUSY quantum mechanics, whose Witten index is the $k$-instanton partition function 
-
-
+The 1-instanton partition function of $SO(12) + 1\mathbf{S} + 6\mathbf{V}$ theory  is written in (H.22) of \cite{DelZotto:2018tcj}, up to $t^8$ order. It can be compared with our 1-instanton formula \eqref{eq:1inst-formula} applied to $SO(12) + N_\mathbf{s}\mathbf{S} + N_\mathbf{c}\mathbf{C} + N_\mathbf{v}\mathbf{V}$ theory with $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}}) \leq (1,0,4)$ or $(0,1,4)$, whose flavor symmetry acting on matter multiplets is $SO(2N_\mathbf{s})_s \times SO(2N_\mathbf{c})_c \times Sp(N_\mathbf{v})_v$. For comparison, we need to appropriately decouple some mass parameters in (H.22) to infinity. It reduces the $Sp(6)_v$ characters in (H.22) to, e.g., the $Sp(4)_v$ irreducible characters as follows:
+\begin{align}
+  \chi^{v}_{(000000)} &\rightarrow 0, & \chi^{v}_{(100000)}&\rightarrow 0,& \chi^{v}_{(010000)}&\rightarrow 1, \\ \chi^{v}_{(001000)}&\rightarrow \chi^{v}_{(1000)}, & \chi^{v}_{(000100)}&\rightarrow \chi^{v}_{(0100)}, & \chi^{v}_{(000001)}&\rightarrow \chi^{v}_{(0001)}\nn
+\end{align}
+The agreement between (H.22) and \eqref{eq:1inst-formula} was explicitly confirmed up to the given order, for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}}) = (1,0,4)$. Moreover, we checked that the 1-instanton results ${Z}_1$ from \eqref{eq:1inst-formula} for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}})= (1,0,N_\mathbf{v})$ and $(0,1,N_\mathbf{v})$ could be interchanged as follows: 
+\begin{align}
+  \hat{Z}_{1}^{N_{\mathbf{s}}=1,N_\mathbf{c}=0,N_{\mathbf{v}}}(a_1,a_2,a_3,a_4,a_5,a_6) = \hat{Z}_{1}^{N_{\mathbf{s}}=0,N_\mathbf{c}=1,N_{\mathbf{v}}}(a_1,a_2,a_3,a_4,a_5,-a_6).
+\end{align}
 
 
-Let us first consider the cases which have the known 
+We have compared so far the solution $Z_1$ of the recursion formulae \eqref{eq:recursion} with the known $1$-instanton partition function   for various $SO(N)$ theories with spinor hypermultiplets. The comparison showed consistency for all the examples whose $Z_1$ had been computed \cite{Kim:2018gjo,DelZotto:2018tcj}. We also collect the character expansion of the 1-instanton partition function \eqref{eq:1inst-formula} in Appendix~\ref{sec:data} for novel $SO(N)$ theories with spinor matters. See Table~\ref{tbl:son-data} for the list of character expansions.
 
 
-For $SO(7) + N_{\bf s}\,\mathbf{S}$ theory, 
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{cc|cc}
+    Gauge Group & Hypermultiplets & Equation No. & Attachment \\\hline\hline 
+    $SO(8)$ & $1\mathbf{S}+1\mathbf{C}+1\mathbf{V}$ & \eqref{eq:SO8-v1s1c1}\\
+    $SO(8)$ & $2\mathbf{S}+2\mathbf{C}+2\mathbf{V}$ & \eqref{eq:SO8-v2s2c2}\\
+    $SO(9)$ & $2\mathbf{S}+1\mathbf{V}$ & \eqref{eq:SO9-v1s2}\\
+    $SO(10)$ & $2\mathbf{S}+4\mathbf{V}$ & \eqref{eq:so10-2s2v}\\
+    $SO(10)$ & $1\mathbf{S}+1\mathbf{C}+4\mathbf{V}$ & \eqref{eq:so10-2s2v}\\
+    $SO(10)$ & $2\mathbf{C}+4\mathbf{V}$ & \eqref{eq:so10-2s2v}\\\hline
+    $SO(8)$ & $3\mathbf{S}+1\mathbf{C}$ & \\
+    $SO(8)$ & $3\mathbf{C}+1\mathbf{V}$ & \\
+    $SO(8)$ & $3\mathbf{C}+1\mathbf{V}$ & \\
+  \end{tabular}
+  \caption{Character expansion of $SO(N)$ theory with spinor hypermultiplets}
+  \label{tbl:son-data}
+\end{table}
 
 
-The following results are organized according to $(N,N_{\bf v})$.
+\subsection{Theories with an exceptional gauge group}
+\label{subsec:exceptional}
+
+
+, and especially the general 1-instaon expression 
+$Z_1$ indeed produces 
+
+
+We also obtain various
+
+\pagebreak
 
 
 
 
-condition $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$ is equivalent to 
-
-
-
-\paragraph{SO(8)} 
-\paragraph{SO(9)} 
-\paragraph{SO(10)} 
-\paragraph{SO(11)} 
-\paragraph{SO(12)} 
-\paragraph{SO(13)} 
-\paragraph{SO(14)} 
-
-
-  As a remarkable application of the blow-up equation, we construct the instanton partition function of various 5d gauge theories on $\mathbb{C}^2 \times S^1 $. The standard method to compute the multi-instanton correction to the partition function is to  , and/or to apply the topological vertex formalism . An alternative approach that comes from the consistency requirement for the blow-up $\hat{\mathbb{C}}^2$ will turn out to be very efficient for bootstrapping the $\mathbb{C}^2 \times S^1 $ partition function of exceptional gauge theories \cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
+  
+\cite{Keller:2012da, Huang:2017mis, Gu:2018gmy}.
 
 % \label{eq:d-range-nonsu}
 We propose a general blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not too large.
 
-\subsection{Theories with an exceptional gauge group}
-\label{subsec:exceptional}
 \subsection{Theories with a rank-3 antisymmetic hypermultiplet}
 \label{subsec:rank3}
 % \input{sec-SU6.tex}
@@ -1061,276 +1134,276 @@ especially for `exceptional' gauge theories
 
 
 
-There are multiple and distinct blow-up equations \eqref{eq:blowup5d} at different values of $d$, ranged over $0 \leq d \leq d_{\rm max}$ where $d_{\rm max} \equiv h^\vee 
-% -  |\kappa_{\rm eff}| 
-- \frac{1}{2}\sum_{i} I(\mathbf{R}_i)$. We need at least three distinct equations to solve for the instanton partition function, thus the bootstrap method is applicable only for gauge theories which satisfy $d_{\rm max} \geq 2$. Here we constrain our discussion to the theories having simple gauge groups, which are classified to have a 5d UV fixed point \cite{Jefferson:2017ahm}. 
+% There are multiple and distinct blow-up equations \eqref{eq:blowup5d} at different values of $d$, ranged over $0 \leq d \leq d_{\rm max}$ where $d_{\rm max} \equiv h^\vee 
+% % -  |\kappa_{\rm eff}| 
+% - \frac{1}{2}\sum_{i} I(\mathbf{R}_i)$. We need at least three distinct equations to solve for the instanton partition function, thus the bootstrap method is applicable only for gauge theories which satisfy $d_{\rm max} \geq 2$. Here we constrain our discussion to the theories having simple gauge groups, which are classified to have a 5d UV fixed point \cite{Jefferson:2017ahm}. 
 
 
-There are two 
-
-
-
-
-We will 
+% There are two 
 
 
 
-The complete list of $\mathcal{N}=1$ gauge theories, satisfying $d_{\rm max} \geq 2$, is displayed in Table~\ref{tbl:infinite-theory}~and~\ref{tbl:exceptional-theory}.
-All infinite families of theories, whose rank of the gauge group can be arbitrarily large, are summarized in Table~\ref{tbl:infinite-theory}. There are also finite families of theories, summarized in Table~\ref{tbl:exceptional-theory}, which involve an exceptional gauge group or a spinor hypermultiplet. 
 
-\textcolor{red}{(comparison with IMS bound, etc) (SCFT bound)} 
-Some theories in Table~\ref{tbl:exceptional-theory} do not belong to the 
-
-\begin{table}[tbp]
-  \centering
-  \begin{tabular}{@{}cl@{}}
-    \toprule
-    Gauge group  & Hypermultiplets    \\ \midrule
-    $SU(N)_\kappa$ &x                               \\
-    $SO(2N+1)$ & $n_{\mathbf{v}} \leq 2(N-1)$ \\
-    $SO(2N)$   & $n_{\mathbf{v}} \leq 2(N-2)$ \\
-    $USp(2N)$  & $n_{\bf f} \leq 2N$ \\
-    $USp(2N)$  & $n_{\Lambda^2} = 1$ and $n_{\bf f} \leq 2$ \\ \bottomrule
-    \end{tabular}
-    \caption{asd}
-    \label{tbl:infinite-theory}
-\end{table}
-\begin{table}[tbp]
-  \centering
-  \begin{tabular}{@{}cl@{}}
-    \toprule
-    Gauge group  & Hypermultiplets    \\  \midrule
-    $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
-    $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
-    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
-    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(11)$  & $n_{\bf s}= 2$ \\
-    $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(9)$  & $n_{\bf s}  = 3$ \\
-    $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(8)$  & $n_{\bf s} + n_{\bf c} = 4$ \\
-    $SO(8)$  & $n_{\bf s} + n_{\bf c} = 3$ and  $n_{\bf v}  =1$\\
-    $SO(8)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(8)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 3$\\
-    $SO(7)$  & $n_{\bf s} = 4$ \\
-    $SO(7)$  & $n_{\bf s} = 3$ and  $n_{\bf v}  =1$\\
-    $SO(7)$  & $n_{\bf s} = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(7)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 3$\\
-    $G_2$  & $n_{\bf 7}\leq 2$ \\
-    $F_4$  & $n_{\bf 26}\leq 2$ \\
-    $E_6$  & $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$\\
-    $E_7$  & $n_{\bf 56} \leq 2$ \\ 
-    $E_8$  & $\varnothing$ \\ \bottomrule
-    \end{tabular}
-    \caption{asd}
-    \label{tbl:exceptional-theory}
-\end{table}
+% We will 
 
 
 
-% \begin{itemize}
-  % \item $G=E_8$: pure YM
-  % \item $G=E_7$: $I_{\bf 56} = 12$. $n_{\bf 56} \leq 2$. 
-  % \item $G=E_6$: $I_{\bf 27} = I_{\bf \overline{27}} = 6$. $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$. 
-  % \item $G=F_4$: $I_{\bf 26} = 6$. $n_{\bf 26}\leq 2$. 
-  % \item $G=G_2$: $I_{\bf 7} = 2$. $n_{\bf 7}\leq 2$. 
-  % \item $G=D_N$: $I(spinor) = 2^{N-3}$. $I(vector) = 2$.\\
-  %  $G= D_7$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
-  %  $G=D_6$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
-  %  $G=D_5$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
-  %  $G=D_4$: $n_{\bf s}  + n_{\bf v} \leq 4$
-  %  \item $G=B_N$: $I(spinor) = 2^{N-2}$. $I(vector) = 2$.\\
-  %  $G= B_6$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
-  %  $G=B_5$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
-  %  $G=B_4$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
-  %  $G=B_3$: $n_{\bf s}  + n_{\bf v} \leq 4$
-  %  \item $G=C_N$:  $I(vector) = 1$. $I(anti) = 2N-2$. $I(\text{rank-3 anti}) = (N-2)(2N -1)$.\\
-  %  $G= C_{N}$:  $n_{\bf v} + (2N-2) n_{\Lambda^2} \leq 2N$ . \\
-  %  $G= C_3$: $n_{ \Lambda^3} = 1$, $n_{ \Lambda^2} = 0$, $n_{\bf v}  \leq 1$ in addition to the above.\\
-  %  ------------------------------------------------------
-%    \item $G=A_N$:  $I(fnd) = 1$. $I(anti) = N-2$. $I(sym) = N+2$. $I(\text{rank-3 anti}) = (N - 3) (N - 2)/2$. $I(\text{rank-4 anti}) = (N-4)(N - 3) (N - 2)/3!$. 
-%    \begin{align}
-%     \kappa_{\rm eff} = \kappa_\text{cl} -\text{sgn}(m) \frac{\mathcal{A}_\mathbf{R_i} }{2}\cdot n_\mathbf{R_i}
-%    \end{align}
-% \end{itemize}
+% The complete list of $\mathcal{N}=1$ gauge theories, satisfying $d_{\rm max} \geq 2$, is displayed in Table~\ref{tbl:infinite-theory}~and~\ref{tbl:exceptional-theory}.
+% All infinite families of theories, whose rank of the gauge group can be arbitrarily large, are summarized in Table~\ref{tbl:infinite-theory}. There are also finite families of theories, summarized in Table~\ref{tbl:exceptional-theory}, which involve an exceptional gauge group or a spinor hypermultiplet. 
 
+% \textcolor{red}{(comparison with IMS bound, etc) (SCFT bound)} 
+% Some theories in Table~\ref{tbl:exceptional-theory} do not belong to the 
+
+% \begin{table}[tbp]
+%   \centering
+%   \begin{tabular}{@{}cl@{}}
+%     \toprule
+%     Gauge group  & Hypermultiplets    \\ \midrule
+%     $SU(N)_\kappa$ &x                               \\
+%     $SO(2N+1)$ & $n_{\mathbf{v}} \leq 2(N-1)$ \\
+%     $SO(2N)$   & $n_{\mathbf{v}} \leq 2(N-2)$ \\
+%     $USp(2N)$  & $n_{\bf f} \leq 2N$ \\
+%     $USp(2N)$  & $n_{\Lambda^2} = 1$ and $n_{\bf f} \leq 2$ \\ \bottomrule
+%     \end{tabular}
+%     \caption{asd}
+%     \label{tbl:infinite-theory}
+% \end{table}
+% \begin{table}[tbp]
+%   \centering
+%   \begin{tabular}{@{}cl@{}}
+%     \toprule
+%     Gauge group  & Hypermultiplets    \\  \midrule
+%     $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
+%     $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
+%     $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
+%     $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+%     $SO(11)$  & $n_{\bf s}= 2$ \\
+%     $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
+%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
+%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
+%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+%     $SO(9)$  & $n_{\bf s}  = 3$ \\
+%     $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
+%     $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
+%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 4$ \\
+%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 3$ and  $n_{\bf v}  =1$\\
+%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
+%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 3$\\
+%     $SO(7)$  & $n_{\bf s} = 4$ \\
+%     $SO(7)$  & $n_{\bf s} = 3$ and  $n_{\bf v}  =1$\\
+%     $SO(7)$  & $n_{\bf s} = 2$ and  $n_{\bf v}  \leq 2$\\
+%     $SO(7)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 3$\\
+%     $G_2$  & $n_{\bf 7}\leq 2$ \\
+%     $F_4$  & $n_{\bf 26}\leq 2$ \\
+%     $E_6$  & $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$\\
+%     $E_7$  & $n_{\bf 56} \leq 2$ \\ 
+%     $E_8$  & $\varnothing$ \\ \bottomrule
+%     \end{tabular}
+%     \caption{asd}
+%     \label{tbl:exceptional-theory}
+% \end{table}
+
+
+
+% % \begin{itemize}
+%   % \item $G=E_8$: pure YM
+%   % \item $G=E_7$: $I_{\bf 56} = 12$. $n_{\bf 56} \leq 2$. 
+%   % \item $G=E_6$: $I_{\bf 27} = I_{\bf \overline{27}} = 6$. $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$. 
+%   % \item $G=F_4$: $I_{\bf 26} = 6$. $n_{\bf 26}\leq 2$. 
+%   % \item $G=G_2$: $I_{\bf 7} = 2$. $n_{\bf 7}\leq 2$. 
+%   % \item $G=D_N$: $I(spinor) = 2^{N-3}$. $I(vector) = 2$.\\
+%   %  $G= D_7$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
+%   %  $G=D_6$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
+%   %  $G=D_5$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
+%   %  $G=D_4$: $n_{\bf s}  + n_{\bf v} \leq 4$
+%   %  \item $G=B_N$: $I(spinor) = 2^{N-2}$. $I(vector) = 2$.\\
+%   %  $G= B_6$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
+%   %  $G=B_5$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
+%   %  $G=B_4$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
+%   %  $G=B_3$: $n_{\bf s}  + n_{\bf v} \leq 4$
+%   %  \item $G=C_N$:  $I(vector) = 1$. $I(anti) = 2N-2$. $I(\text{rank-3 anti}) = (N-2)(2N -1)$.\\
+%   %  $G= C_{N}$:  $n_{\bf v} + (2N-2) n_{\Lambda^2} \leq 2N$ . \\
+%   %  $G= C_3$: $n_{ \Lambda^3} = 1$, $n_{ \Lambda^2} = 0$, $n_{\bf v}  \leq 1$ in addition to the above.\\
+%   %  ------------------------------------------------------
+% %    \item $G=A_N$:  $I(fnd) = 1$. $I(anti) = N-2$. $I(sym) = N+2$. $I(\text{rank-3 anti}) = (N - 3) (N - 2)/2$. $I(\text{rank-4 anti}) = (N-4)(N - 3) (N - 2)/3!$. 
+% %    \begin{align}
+% %     \kappa_{\rm eff} = \kappa_\text{cl} -\text{sgn}(m) \frac{\mathcal{A}_\mathbf{R_i} }{2}\cdot n_\mathbf{R_i}
+% %    \end{align}
+% % \end{itemize}
+
+% % \pagebreak
+
+
+
+
+
+
+% \paragraph{$SU(6)_3+1\times\boldsymbol{20}$}
+
+% As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
+
+% \textcolor{red}{(Written before computing the $SU(6)_3+20$ instanton partition function.)}\\
+% Rather than comparing instanton partition functions directly, we consider an interesting Higgsing procedure. We consider the $SU(3)\times SU(3)\times U(1)\subset SU(6)$ where the $SU(6)$ multiplets are decomposed by
+% \begin{align}
+% A_{i\bar{j}}:\,\boldsymbol{35}\longrightarrow&\,(\boldsymbol{8},1)_0\oplus (1,\boldsymbol{8})_0\oplus (\boldsymbol{3},\bar{\boldsymbol{3}})_2\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_{-2}\oplus(1,1)_0,\nonumber\\
+% \Phi_{ijk}:\,\boldsymbol{20}\longrightarrow&\,(\boldsymbol{3},\bar{\boldsymbol{3}})_{-1}\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_1\oplus(1,1)_3\oplus(1,1)_{-3}.
+% \end{align} 
+% Here to fit with the web-diagram, we set $\Phi_{156}$ and $\Phi_{234}$ are $(1,1)_3$ and $(1,1)_{-3}$. Once $\Phi_{156}$ and $\Phi_{234}$ get non-zero VEVs, 
+
+%  When $a_5=-a_1-a_6$, the web-diagram factorizes to two $SU(3)_3$ whose Coulomb VEVs are $(a_1, a_5, a_6)$ and $(a_2, a_3, a_4)$. In the gauge theory, it can be seen partly from prepotential. The prepotential of $S(6)_3+1\times\boldsymbol{20}$ is
+% \begin{align}
+% \mathcal{F}=\frac{1}{2}m_0\sum_{i=1}^{6}a_i^2+\frac{1}{2}\sum_{i=1}^{6}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3-\frac{1}{6}\sum_{1<i<j}(a_1+a_j+a_k)^3
+% \end{align}
+% at the Weyl chamber $a_1>\cdots>a_6$. As one sets the Coulomb VEV $a_6=-a_1-a_5$ and $a_4=-a_2-a_3$, one can check
+% \begin{align}
+% \mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)=\mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4)
+% \end{align}
+% where
+% \begin{align}
+% \mathcal{F}_{SU(3)_3}(m_0,a_1,a_2,a_3)=\frac{1}{2}m_0\sum_{i=1}^{3}a_i^2+\frac{1}{2}\sum_{i=1}^{3}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3.
+% \end{align}
+% It is Higgsed by 
+
+
+
+
+
+% It was recently found in \cite{Hayashi:2019yxj} that the 5d $SU(6)_3$ gauge theory with a rank-3 antisymmetric hypermultiplet can be engineered from the 5-brane web configuration, depicted in Figure~\ref{fig:SU6-monopole}. Given a web diagram, we utilize  the topological vertex method \cite{Aganagic:2003db,Iqbal:2007ii} to compute all genus topological string amplitudes, which is the logarithm of the 5d Nekrasov partition function on $\Omega$-deformed $\mathbf{R}^4\times S^1$ \cite{Gopakumar:1998jq}. We will check its agreement with the blowup partition function (eqn), providing a supporting evidence to the suggested blow-up equation (eqn).
+% % We use the notation of \cite{Bao:2013pwa} for the following topological vertex computation. 
+
+% By applying the topological vertex method to Figure~\ref{fig:SU6-monopole}, we find that the instanton partition function can be  written as the following sum over all possible 6 Young diagrams:
+% \begin{align}
+%   \label{eq:znek-su6}
+%   Z_{\text{Nek}} 
+%   =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
+%   &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
+%   \end{align}
+%   where the K\"ahler parameters can be identified as 
+% \begin{align}
+% A_i = e^{-a_i}, \qquad q = e^{-\frac{8\pi^2}{g^2}}, \qquad g=e^{-\epsilon_-}.
+% \end{align}
+% We briefly explain our notation: For a given Young diagram $\mu$, $|\mu|$ denotes the total number of boxes. $\mu_i$ is the number of boxes in the $i$-th row of $\mu$. $\mu^t$ is the transpose of $\mu$. We also use
+% \begin{align}
+% f_\mu(g) = (-1)^{|\mu|}g^{\frac{1}{2}({\Vert \mu^t\Vert ^2 - \Vert \mu\Vert ^2})}, \qquad \tilde{Z}_{\lambda}(g) 
+% = \prod_{(i,j) \in \lambda} {(1 - g^{\lambda_i + \lambda^t_j - i - j +1} )^{-1}}
+% \end{align}
+% with $\Vert \mu \Vert^2   = \sum_{i} \mu_i^2$. The factor $Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$ involves a single summation over all possible Young diagrams, i.e.,
+% \begin{align}
+% Z_{\text{left}}(\vec{Y})= \,
+% \sum_{Y_0} &( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
+% g^{\frac{\Vert Y_0^t\Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}(g)^2
+% \ \textstyle\prod_{i=1}^6 g^{\frac{\Vert Y_i\Vert ^2}{2}} \tilde{Z}_{Y_i} (g)
+% \cr 
+% & 
+% \times 
+% R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_0^t }^{-1} (A_1^2A_6) \cr 
+% & 
+% \times  
+%  \textstyle\prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})\ 
+%  \prod_{i=2}^5 R_{Y_0^t Y_i} (A_1 A_i  A_6) ,
+% \end{align}
+% in which we introduce
+% \begin{align}
+% R_{\lambda \mu} (Q)=R_{ \mu\lambda} (Q)
+% &= \text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
+% \times N_{\lambda^t \mu} (Q)
+% \end{align}
+% with PE representing the Plethystic exponential
+%  and 
+% \begin{align}
+% N_{\lambda \mu} (Q) 
+% = \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
+% \prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right).
+% \end{align}
+% We also recall that the Nekrasov partition function is divided into the perturbative partition function $Z_{\text{pert}}$ and the weighted sum of $k$-instanton partition function $Z_k$.
+% \begin{align}
+% Z_{\text{Nek}} = Z_{\text{pert}}\Big(1 + \sum_{k=1}^{\infty}q^kZ_k\Big).
+% \end{align}
+
+% The perturbative part of the partition function $Z_{\text{pert}}$ comes from the summand of \eqref{eq:znek-su6} at empty Young diagrams, i.e., $(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)$. It is given by
+% \begin{align}
+%   \label{eq:zpert-top}
+% Z_{\rm pert} 
+% =& \,
+% Z_{\text{half}}(\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)^2
+% \cr
+% =&\, 
+% \text{PE} \Biggl[ 
+% \frac{2g}{(1-g)^2} 
+% \Bigl( \frac{A_1}{A_6} + \frac{1}{A_1A_6^2} + A_1^2  A_6 
+% + \sum_{2 \le i <  j \le 5} \frac{A_i}{A_j}
+% - \sum_{i=2}^5 A_1 A_i  A_6
+% \Bigr)
+% \Biggr]
+% \cr 
+% & 
+% \times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
+% g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
+% \cr 
+% & \qquad \qquad
+% \textstyle N_{Y_0^t \varnothing }^{-1} (A_1{}^{-1} A_6{}^{-2})
+%  N^{-1}_{Y_0 \varnothing } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \varnothing } (A_1 A_i  A_6)\bigg)^2 ,
+% \end{align}
+% where the last two lines can be  combined into the following closed-form expression:
+% \begin{align}
+%   \text{PE} \Biggl[ 
+%     \frac{2g}{(1-g)^2} 
+%     \Bigl(\sum_{i=2}^5  \frac{A_1}{A_i} +\sum_{i=2}^5  \frac{A_i}{A_6} - \frac{1}{A_1A_6^2} - A_1^2  A_6 
+%     - \sum_{2\leq i<j \leq 5} A_1 A_i  A_j + \mathcal{O}(A_1^6)
+%     \Bigr)
+%     \Biggr].
+% \end{align}
+% So \eqref{eq:zpert-top} is manifestly consistent with the equivariant index  \cite{Shadchin:2005mx} for 5d $SU(6)$ gauge theory with a hypermultiplet in the rank-3 antisymmetric representation $\mathbf{20}$, i.e., 
+% \begin{align}
+%   Z_{\rm pert}  = \text{PE} \Biggl[ 
+%     \frac{2g}{(1-g)^2} 
+%     \Bigl(\sum_{1\leq i<j \leq 6}  \frac{A_i}{A_j} 
+%     - \sum_{2\leq i<j \leq 6} A_1 A_i  A_j + \mathcal{O}(A_1^6)
+%     \Bigr)
+%     \Biggr].
+% \end{align}
+
+% The 1-instanton partition function $Z_1$ can be obtained from the summands of \eqref{eq:znek-su6} at Young diagrams satisfying $\sum_{i=1}^6 |Y_i|=1$. There are 6 different profiles of Young diagrams. The configuration $|Y_i| = 1$ and $Y_{j\neq i} = \varnothing$ contributes to $Z_{1}$ by
+% \begin{align}
+%   + \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
+%   \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
+%  \Bigr)^2. 
+% \end{align}
+% Summing over all six contributions, we find
+% \begin{align}
+%   Z_1 = \sum_{i=1}^6 \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
+%   \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
+%  \Bigr)^2. 
+% \end{align}
+% which is in agreement with the blowup partition function (eqn). \textcolor{red}{(overall sign: looking at the GV invariant for single W-boson + single instanton (which should be -2), the topological vertex computation seems to be correct. blowup should have an overall sign issue)}
 % \pagebreak
 
+% %---------  Figure  ---------------%
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=10cm]{SU6-monopole.pdf}
+% \caption{A 5-brane web for $SU(6)_3+1{\bf TAS}$ with massless ${\bf TAS}$.}
+% \label{fig:SU6-monopole}
+% \end{figure}
+% %----------------------------------%
 
+%   %---------  Figure  ---------------%
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=12cm]{SU6-Higgsing.pdf}
+% \caption{(a) A Higgsing from from $SU(6)_3+1{\bf TAS}$ to two $SU(3)_3$ theories. (a) Two $SU(3)_3$ theories are painted in blue and in pink respectively. A new decoupled mode emerges.}
+% \label{fig:SU6-Higgsing}
+% \end{figure}
+% %----------------------------------%
 
-
-
-
-\paragraph{$SU(6)_3+1\times\boldsymbol{20}$}
-
-As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
-
-\textcolor{red}{(Written before computing the $SU(6)_3+20$ instanton partition function.)}\\
-Rather than comparing instanton partition functions directly, we consider an interesting Higgsing procedure. We consider the $SU(3)\times SU(3)\times U(1)\subset SU(6)$ where the $SU(6)$ multiplets are decomposed by
-\begin{align}
-A_{i\bar{j}}:\,\boldsymbol{35}\longrightarrow&\,(\boldsymbol{8},1)_0\oplus (1,\boldsymbol{8})_0\oplus (\boldsymbol{3},\bar{\boldsymbol{3}})_2\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_{-2}\oplus(1,1)_0,\nonumber\\
-\Phi_{ijk}:\,\boldsymbol{20}\longrightarrow&\,(\boldsymbol{3},\bar{\boldsymbol{3}})_{-1}\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_1\oplus(1,1)_3\oplus(1,1)_{-3}.
-\end{align} 
-Here to fit with the web-diagram, we set $\Phi_{156}$ and $\Phi_{234}$ are $(1,1)_3$ and $(1,1)_{-3}$. Once $\Phi_{156}$ and $\Phi_{234}$ get non-zero VEVs, 
-
- When $a_5=-a_1-a_6$, the web-diagram factorizes to two $SU(3)_3$ whose Coulomb VEVs are $(a_1, a_5, a_6)$ and $(a_2, a_3, a_4)$. In the gauge theory, it can be seen partly from prepotential. The prepotential of $S(6)_3+1\times\boldsymbol{20}$ is
-\begin{align}
-\mathcal{F}=\frac{1}{2}m_0\sum_{i=1}^{6}a_i^2+\frac{1}{2}\sum_{i=1}^{6}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3-\frac{1}{6}\sum_{1<i<j}(a_1+a_j+a_k)^3
-\end{align}
-at the Weyl chamber $a_1>\cdots>a_6$. As one sets the Coulomb VEV $a_6=-a_1-a_5$ and $a_4=-a_2-a_3$, one can check
-\begin{align}
-\mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)=\mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4)
-\end{align}
-where
-\begin{align}
-\mathcal{F}_{SU(3)_3}(m_0,a_1,a_2,a_3)=\frac{1}{2}m_0\sum_{i=1}^{3}a_i^2+\frac{1}{2}\sum_{i=1}^{3}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3.
-\end{align}
-It is Higgsed by 
-
-
-
-
-
-It was recently found in \cite{Hayashi:2019yxj} that the 5d $SU(6)_3$ gauge theory with a rank-3 antisymmetric hypermultiplet can be engineered from the 5-brane web configuration, depicted in Figure~\ref{fig:SU6-monopole}. Given a web diagram, we utilize  the topological vertex method \cite{Aganagic:2003db,Iqbal:2007ii} to compute all genus topological string amplitudes, which is the logarithm of the 5d Nekrasov partition function on $\Omega$-deformed $\mathbf{R}^4\times S^1$ \cite{Gopakumar:1998jq}. We will check its agreement with the blowup partition function (eqn), providing a supporting evidence to the suggested blow-up equation (eqn).
-% We use the notation of \cite{Bao:2013pwa} for the following topological vertex computation. 
-
-By applying the topological vertex method to Figure~\ref{fig:SU6-monopole}, we find that the instanton partition function can be  written as the following sum over all possible 6 Young diagrams:
-\begin{align}
-  \label{eq:znek-su6}
-  Z_{\text{Nek}} 
-  =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
-  &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
-  \end{align}
-  where the K\"ahler parameters can be identified as 
-\begin{align}
-A_i = e^{-a_i}, \qquad q = e^{-\frac{8\pi^2}{g^2}}, \qquad g=e^{-\epsilon_-}.
-\end{align}
-We briefly explain our notation: For a given Young diagram $\mu$, $|\mu|$ denotes the total number of boxes. $\mu_i$ is the number of boxes in the $i$-th row of $\mu$. $\mu^t$ is the transpose of $\mu$. We also use
-\begin{align}
-f_\mu(g) = (-1)^{|\mu|}g^{\frac{1}{2}({\Vert \mu^t\Vert ^2 - \Vert \mu\Vert ^2})}, \qquad \tilde{Z}_{\lambda}(g) 
-= \prod_{(i,j) \in \lambda} {(1 - g^{\lambda_i + \lambda^t_j - i - j +1} )^{-1}}
-\end{align}
-with $\Vert \mu \Vert^2   = \sum_{i} \mu_i^2$. The factor $Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$ involves a single summation over all possible Young diagrams, i.e.,
-\begin{align}
-Z_{\text{left}}(\vec{Y})= \,
-\sum_{Y_0} &( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
-g^{\frac{\Vert Y_0^t\Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}(g)^2
-\ \textstyle\prod_{i=1}^6 g^{\frac{\Vert Y_i\Vert ^2}{2}} \tilde{Z}_{Y_i} (g)
-\cr 
-& 
-\times 
-R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_0^t }^{-1} (A_1^2A_6) \cr 
-& 
-\times  
- \textstyle\prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})\ 
- \prod_{i=2}^5 R_{Y_0^t Y_i} (A_1 A_i  A_6) ,
-\end{align}
-in which we introduce
-\begin{align}
-R_{\lambda \mu} (Q)=R_{ \mu\lambda} (Q)
-&= \text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
-\times N_{\lambda^t \mu} (Q)
-\end{align}
-with PE representing the Plethystic exponential
- and 
-\begin{align}
-N_{\lambda \mu} (Q) 
-= \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
-\prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right).
-\end{align}
-We also recall that the Nekrasov partition function is divided into the perturbative partition function $Z_{\text{pert}}$ and the weighted sum of $k$-instanton partition function $Z_k$.
-\begin{align}
-Z_{\text{Nek}} = Z_{\text{pert}}\Big(1 + \sum_{k=1}^{\infty}q^kZ_k\Big).
-\end{align}
-
-The perturbative part of the partition function $Z_{\text{pert}}$ comes from the summand of \eqref{eq:znek-su6} at empty Young diagrams, i.e., $(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)$. It is given by
-\begin{align}
-  \label{eq:zpert-top}
-Z_{\rm pert} 
-=& \,
-Z_{\text{half}}(\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)^2
-\cr
-=&\, 
-\text{PE} \Biggl[ 
-\frac{2g}{(1-g)^2} 
-\Bigl( \frac{A_1}{A_6} + \frac{1}{A_1A_6^2} + A_1^2  A_6 
-+ \sum_{2 \le i <  j \le 5} \frac{A_i}{A_j}
-- \sum_{i=2}^5 A_1 A_i  A_6
-\Bigr)
-\Biggr]
-\cr 
-& 
-\times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
-g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
-\cr 
-& \qquad \qquad
-\textstyle N_{Y_0^t \varnothing }^{-1} (A_1{}^{-1} A_6{}^{-2})
- N^{-1}_{Y_0 \varnothing } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \varnothing } (A_1 A_i  A_6)\bigg)^2 ,
-\end{align}
-where the last two lines can be  combined into the following closed-form expression:
-\begin{align}
-  \text{PE} \Biggl[ 
-    \frac{2g}{(1-g)^2} 
-    \Bigl(\sum_{i=2}^5  \frac{A_1}{A_i} +\sum_{i=2}^5  \frac{A_i}{A_6} - \frac{1}{A_1A_6^2} - A_1^2  A_6 
-    - \sum_{2\leq i<j \leq 5} A_1 A_i  A_j + \mathcal{O}(A_1^6)
-    \Bigr)
-    \Biggr].
-\end{align}
-So \eqref{eq:zpert-top} is manifestly consistent with the equivariant index  \cite{Shadchin:2005mx} for 5d $SU(6)$ gauge theory with a hypermultiplet in the rank-3 antisymmetric representation $\mathbf{20}$, i.e., 
-\begin{align}
-  Z_{\rm pert}  = \text{PE} \Biggl[ 
-    \frac{2g}{(1-g)^2} 
-    \Bigl(\sum_{1\leq i<j \leq 6}  \frac{A_i}{A_j} 
-    - \sum_{2\leq i<j \leq 6} A_1 A_i  A_j + \mathcal{O}(A_1^6)
-    \Bigr)
-    \Biggr].
-\end{align}
-
-The 1-instanton partition function $Z_1$ can be obtained from the summands of \eqref{eq:znek-su6} at Young diagrams satisfying $\sum_{i=1}^6 |Y_i|=1$. There are 6 different profiles of Young diagrams. The configuration $|Y_i| = 1$ and $Y_{j\neq i} = \varnothing$ contributes to $Z_{1}$ by
-\begin{align}
-  + \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
-  \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
- \Bigr)^2. 
-\end{align}
-Summing over all six contributions, we find
-\begin{align}
-  Z_1 = \sum_{i=1}^6 \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
-  \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
- \Bigr)^2. 
-\end{align}
-which is in agreement with the blowup partition function (eqn). \textcolor{red}{(overall sign: looking at the GV invariant for single W-boson + single instanton (which should be -2), the topological vertex computation seems to be correct. blowup should have an overall sign issue)}
-\pagebreak
-
-%---------  Figure  ---------------%
-\begin{figure}[t]
-\centering
-\includegraphics[width=10cm]{SU6-monopole.pdf}
-\caption{A 5-brane web for $SU(6)_3+1{\bf TAS}$ with massless ${\bf TAS}$.}
-\label{fig:SU6-monopole}
-\end{figure}
-%----------------------------------%
-
-  %---------  Figure  ---------------%
-\begin{figure}[t]
-\centering
-\includegraphics[width=12cm]{SU6-Higgsing.pdf}
-\caption{(a) A Higgsing from from $SU(6)_3+1{\bf TAS}$ to two $SU(3)_3$ theories. (a) Two $SU(3)_3$ theories are painted in blue and in pink respectively. A new decoupled mode emerges.}
-\label{fig:SU6-Higgsing}
-\end{figure}
-%----------------------------------%
-
-%---------  Figure  ---------------%
-\begin{figure}[t]
-\centering
-\includegraphics[width=10cm]{SU6young.pdf}
-\caption{A labeling of Young diagrams assigned to the horizontal lines in Figure \ref{fig:SU6-monopole}.}
-\label{fig:SU6young}
-\end{figure}
-%----------------------------------%
+% %---------  Figure  ---------------%
+% \begin{figure}[t]
+% \centering
+% \includegraphics[width=10cm]{SU6young.pdf}
+% \caption{A labeling of Young diagrams assigned to the horizontal lines in Figure \ref{fig:SU6-monopole}.}
+% \label{fig:SU6young}
+% \end{figure}
+% %----------------------------------%
 
 
 
@@ -1341,8 +1414,256 @@ which is in agreement with the blowup partition function (eqn). \textcolor{red}{
 \acknowledgments
 This work is supported in part by the UESTC Research Grant A03017023801317 (SSK), the National Research Foundation of Korea (NRF) Grants 2017R1D1A1B06034369 (KL, JS), and 2018R1A2B6004914 (KHL)
 
+\pagebreak
+
 
 \appendix
+\section{One-instanton partition functions}
+\label{sec:data}
+
+This appendix collects the character expansion of the 1-instanton partition function $Z_1$ for a variety of 5d $\mathcal{N}=1$ gauge theories. For simplicity, we display the $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1,2}}{2}}) \cdot Z_1$ which takes off the center-of-mass factor. They are written in terms of irreducible characters $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ indicates the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. The representation $\mathbf{R}$ of an irreducible character $\chi_{\mathbf{R}}^S$ is specified by its Dynkin label.\footnote{In this paper, we follow the convention of  LieART \cite{Feger:2012bs} to denote the Dynkin label of a representation $\mathbf{R}$.} An irreducible character for the flavor symmetry is assumed to be in the orthogonal basis, such that it can be consistent with the mass parameters $m_\ell$ introduced in Section~\ref{sec:blowup}. We will often distinguish the mass parameters by the superscript $S \in \{s,c,v\}$ according to the matter representation. 
+
+\paragraph{SO(8)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ matter multiplets is given by $Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c \times Sp(N_{\bf v})_v$. For $(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)$, the character expansion of the 1-instanton result $\hat{Z}_1$ is 
+\begin{align}
+  \label{eq:so8-s3c1}
+\hat{Z}_1=\textstyle\sum_{n=0}^{\infty}&\,\Big(t^{5+2n}\chi^G_{(0n00)}\chi^s_{(001)}\chi^v_{(1)}-t^{6+2n}(\chi^G_{(0n01)}\chi^s_{(010)}\chi^v_{(1)}+\chi^G_{(1n00)}\chi^s_{(001)})\nn\\
+&+\,t^{7+2n}(\chi^G_{(1n01)}\chi^s_{(010)}+\chi^G_{(0n02)}\chi^s_{(100)}\chi^v_{(1)})\\
+&-t^{8+2n}(\chi^G_{(1n02)}\chi^s_{(100)}+\chi^G_{(0n03)}\chi^v_{(1)})+t^{9+2n}\chi^G_{(1n03)}\Big)\nn.
+\end{align}
+which was compared with the closed-form expression \eqref{eq:1inst-formula} up to $t^{20}$ order.
+We checked that the 1-instanton partition functions ${Z}_1$ from \eqref{eq:1inst-formula} for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}})= (3,1,0)$ and $(1,3,0)$ could be interchanged as follows: 
+\begin{align}
+  Z_{1}^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (1,3,0)}(a_1,a_2,a_3,a_4) = Z_{1}^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)}(a_1,a_2,a_3,-a_4).
+\end{align}
+The $SO(8)$ triality \eqref{eq:so8-triality} was also confirmed as in Section~\ref{subsec:spinor}. Namely, we found that 
+\begin{align}
+  \begin{split}
+  Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,0)  &= Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (0,3,1)}\,(\vec{a}', \epsilon_1,\epsilon_2;0,\vec{m}^s,\vec{m}^c)|_{\vec{a}' \rightarrow \vec{a}}\\
+  &= Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (1,0,3)}\,(\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^c,0,\vec{m}^s)|_{\vec{a}'' \rightarrow \vec{a}}
+  \end{split}\\
+  \begin{split}
+    Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (1,3,0)}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,0)  &= Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (0,1,3)}\,(\vec{a}', \epsilon_1,\epsilon_2;0,\vec{m}^s,\vec{m}^c)|_{\vec{a}' \rightarrow \vec{a}}\\
+    &= Z_1^{(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,0,1)}\,(\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^c,0,\vec{m}^s)|_{\vec{a}'' \rightarrow \vec{a}}
+    \end{split}
+\end{align}
+The character expansion for other $SO(8)$ theories with less number of hypermultiplets can be obtained from \eqref{eq:so8-s3c1} by decoupling some mass parameters to infinity. It was checked that the general 1-instanton formula \eqref{eq:1inst-formula} agrees with that.
+
+
+
+\paragraph{SO(10)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s})_s \times U(N_{\bf c})_c \times Sp(N_{\bf v})_v$, reflecting  that the $SO(10)$ (conjugate) spinor representation is complex. For $N_{\bf s} + N_{\bf c} = 2$ and $N_{\bf v} = 2$, the character expansion of $\hat{Z}_1$ is given by 
+\begin{align}
+  \label{eq:so10-2s2v}
+\hat{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00010)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00001)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
+&+\chi^G_{(10000)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2}))+t^8(\chi^G_{(00100)}\chi^v_{(10)}+\chi^G_{(10010)}\chi^s_{(1)_{-1}}+\chi^G_{(10001)}\chi^s_{(1)_1})-t^9\chi^G_{(10100)}\nn\\
+&\textstyle+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
++\chi^G_{(0n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(01)} +\chi^G_{(1n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(10)})\nn\\
+&\qquad\quad+t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(01)}+\chi^G_{(0n020)}\chi^s_{(0)_{-2}}\chi^v_{(01)}+\chi^G_{(0n002)}\chi^s_{(0)_2}\chi^v_{(01)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(0n011)}\chi^s_{(2)_0}\chi^v_{(01)}+\chi^G_{(1n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(10)}+\chi^G_{(1n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(10)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(2n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0}))\nn\\
+&\qquad\quad-t^{10+2n}(\chi^G_{(0n110)}\chi^s_{(1)_{-1}}\chi^v_{(01)}+\chi^G_{(0n101)}\chi^s_{(1)_1}\chi^v_{(01)}+\chi^G_{(1n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(10)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(1n020)}\chi^s_{(0)_{-2}}\chi^v_{(10)}+\chi^G_{(1n002)}\chi^s_{(0)_2}\chi^v_{(10)}+\chi^G_{(1n011)}\chi^s_{(2)_0}\chi^v_{(10)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(2n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})+\chi^G_{(2n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\nn\\
+&\qquad\quad+t^{11+2n}(\chi^G_{(1n200)}\chi^v_{(01)}+\chi^G_{(1n110)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(1n101)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(2n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\nn\\
+&\qquad\qquad\qquad+\chi^G_{(2n020)}\chi^s_{(0)_{-2}}+\chi^G_{(2n002)}\chi^s_{(0)_2}+\chi^G_{(2n011)}\chi^s_{(2)_0})\nn\\
+&\qquad\quad-t^{12+2n}(\chi^G_{(1n200)}\chi^v_{(10)}+\chi^G_{(2n110)}\chi^s_{(1)_{-1}}+\chi^G_{(2n101)}\chi^s_{(1)_1})+t^{13+2n}\chi^G_{(2n200)}\Big)
+\end{align}
+where the $U(2)$ character $\chi^s_{(j)_b}$ is defined as (with $y_{s,i} \equiv e^{-m_i^s}$ and $y_{c,i} \equiv e^{-m_i^c}$ understood)
+\begin{align}
+  \chi^s_{(j)_b} = \begin{dcases}
+    (y_{s,1}\,y_{s,2})^{b/2} \cdot \textstyle\sum_{a=0}^{j} \big({y_{s,1}}/{y_{s,2}}\big)^{-j/2+a}& \text{ for } \quad (N_\mathbf{s}, N_\mathbf{c})=(2,0)\\
+    (y_{s,1}/y_{c,1})^{b/2} \cdot \textstyle\sum_{a=0}^{j} \big(y_{s,1}\,y_{c,1}\big)^{-j/2+a}& \text{ for } \quad (N_\mathbf{s}, N_\mathbf{c})=(1,1)\\
+    (y_{c,1}\,y_{c,2})^{-b/2} \cdot \textstyle\sum_{a=0}^{j} \big(y_{c,1}/y_{c,2}\big)^{-j/2+a}& \text{ for } \quad (N_\mathbf{s}, N_\mathbf{c})=(0,2).
+  \end{dcases}
+\end{align}
+Similarly, for $N_{\bf s} + N_{\bf c} = 3$ and $N_{\bf v} = 0$, the character expansion of $\hat{Z}_1$ is given by 
+\begin{align}
+  \label{eq:so10-s3}
+\hat{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(20)_{-2}}+\chi^s_{(02)_2})-t^6
+(\chi^s_{(10)_{-1}}+\chi^s_{(01)_1})+t^7\chi^G_{(00100)}\nn\\
+&+\textstyle\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(04)_{-2}}+\chi^s_{(40)_2}))\nn\\
+&\qquad \quad \ -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(01)_{-5}}+\chi^s_{(30)_3}+\chi^s_{(13)_{-1}})+\chi^G_{(0n001)}(\chi^s_{(10)_5}+\chi^s_{(03)_{-3}}+\chi^s_{(31)_1}))\nn\\
+&\qquad \quad \ +t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(02)_{-4}}+\chi^s_{(20)_4}+\chi^s_{(22)_0})+\chi^G_{(0n011)}(\chi^s_{(12)_{-2}}+\chi^s_{(21)_2})\nn\\
+& \qquad \qquad\qquad+\chi^G_{(0n020)}(\chi^s_{(10)_{-4}}+\chi^s_{(03)_0})+\chi^G_{(0n002)}(\chi^s_{(01)_4}+\chi^s_{(30)_0}))\\
+&\qquad \quad \ -t^{10+2n}(\chi^G_{(0n110)}(\chi^s_{(11)_{-3}}+\chi^s_{(12)_1})+\chi^G_{(0n101)}(\chi^s_{(11)_3}+\chi^s_{(21)_{-1}})\nn\\
+& \qquad \qquad\qquad+\chi^G_{(0n030)}\chi^s_{(00)_{-3}}+\chi^G_{(0n003)}\chi^s_{(00)_3}+\chi^G_{(0n021)}\chi^s_{(02)_{-1}}+\chi^G_{(0n012)}\chi^s_{(20)_1})\nn\\
+&\qquad \quad \ +t^{11+2n}(\chi^G_{(0n200)}(\chi^s_{(20)_{-2}}+\chi^s_{(02)_2})+\chi^G_{(0n120)}\chi^s_{(01)_{-2}}+\chi^G_{(0n102)}\chi^s_{(10)_2}+\chi^G_{0n111)}\chi^s_{(11)_0})\nn\\
+&\qquad \quad \ -t^{12+2n}(\chi^G_{(0n210)}\chi^s_{(10)_{-1}}+\chi^G_{(0n201)}\chi^s_{(01)_1})+t^{13+2n}\chi_{(0n300)}\Big)\nn
+\end{align}
+where the $U(3)$ character $\chi^s_{(mn)_c}$ is defined as
+\begin{align}
+  \chi^s_{(mn)_c} =
+    (w_1 w_2w_3)^{\frac{c-m+n}{3}} \cdot\bigg( \sum_{\substack{1\leq i_1\leq\cdots\leq i_m\leq3\\1\leq j_1\leq\cdots\leq j_n\leq 3}}\frac{w_{i_1}\cdots w_{i_m}}{w_{j_1}\cdots w_{j_n}}-\sum_{\substack{1\leq i_1\leq\cdots\leq i_{m-1}\leq3\\1\leq j_1\leq\cdots\leq j_{n-1}\leq 3}}\frac{w_{i_1}\cdots w_{i_{m-1}}}{w_{j_1}\cdots w_{j_{n-1}}}\bigg)
+\end{align}
+with
+\begin{align}
+(w_1,w_2,w_3)=
+\begin{cases}
+(y_{s,1},y_{s,2},y_{s,3}) & \text{for}\quad (N_\mathbf{s}, N_\mathbf{c})=(3,0)\\
+(y_{s,1},y_{s,2},y_{c,1}^{-1}) & \text{for}\quad (N_\mathbf{s}, N_\mathbf{c})=(2,1)\\
+(y_{s,1},y_{c,1}^{-1},y_{c,2}^{-1}) & \text{for}\quad (N_\mathbf{s}, N_\mathbf{c})=(1,2)\\
+(y_{c,1}^{-1},y_{c,2}^{-1},y_{c,3}^{-1}) & \text{for}\quad (N_\mathbf{s}, N_\mathbf{c})=(0,3)
+\end{cases}
+\end{align}
+Again, \eqref{eq:so10-2s2v} and \eqref{eq:so10-s3} was tested against the closed-form expression \eqref{eq:1inst-formula} up to $t^{20}$ order.
+
+
+\paragraph{SO(11)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. For $N_{\bf s}=1$ and  $N_{\bf v} = 3$, the character expansion of  $\hat{Z}_1$ can be written as
+\begin{align}
+\hat{Z}_1&=\,t^5+t^6(\chi^v_{(001)}+(y_s^2+y_s^{-2})\chi^v_{(100)})+t^7((y_s^2+y_s^{-2}+1)\chi^v_{(010)}-(y_s^{2}+y_s^{-2})\chi^G_{(10000)})\nn\\
+&\,-t^8((y_s+y_s^{_1})\chi^G_{(00001)}\chi^v_{(010)}+(y_s^2+y_s^{-2}+1)\chi^G_{(10000)}\chi^v_{(100)}+\chi^G_{(01000)}\chi^v_{(100)})\nn\\
+&\,+t^9(\chi^G_{(00100)}\chi^v_{(010)}+\chi^G_{(10001)}(y_s+y_s^{-1})\chi^v_{(100)}+\chi^G_{(20000)}(y_s^2+y_s^{-2}+1)+\chi^G_{(11000)})\nn\\
+&\,-t^{10}(\chi^G_{(10100)}\chi^v_{(100)}+\chi^G_{(20001)}(y_s+y_s^{-1}))+t^{11}\chi^G_{(20100)}\\
+&\,+\textstyle\sum_{n=0}^{\infty}\Big(t^{8+2n}(\chi^G_{(0n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(001)})\nn\\
+&\quad\qquad\ -t^{9+2n}(\chi^G_{(0n001)}(y_s^3+y_s^{-3})\chi^v_{(001)}+\chi^G_{(0n001)}(y_s+y_s^{-1})\chi^v_{(001)}+\chi^G_{(1n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(010)})\nn\\
+&\qquad\quad\ +t^{10+2n}(\chi^G_{(0n010)}(y_s^2+y_s^{-2})\chi^v_{(001)}+\chi^G_{(0n100)}(y_s^2+y_s^{-2}+1)\chi^v_{(001)}+\chi^G_{(0n002)}\chi^v_{(001)}\nn\\
+&\qquad\qquad\qquad\ +\chi^G_{(1n001)}(y_s^3+y_s+y_s^{-1}+y_s^{-3})\chi^v_{(010)}+\chi^G_{(2n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(100)})\nn\\
+&\qquad\quad\ -t^{11+2n}(\chi^G_{(0n101)}(y_s+y_s^{-1})\chi^v_{(001)}+\chi^G_{(1n100)}(y_s^2+y_s^{-2}+1)\chi^v_{(010)}+\chi^G_{(1n010)}(y_s^2+y_s^{-2})\chi^v_{(010)}\nn\\
+&\qquad\qquad\qquad\ +\chi^G_{(1n002)}\chi^v_{(010)}+\chi^G_{(2n001)}(y_s^3+y_s+y_s^{-1}+y_s^{-3})\chi^v_{(100)}+\chi^G_{(3n000)}(y_s^4+y_s^{-4}+1))\nn\\
+&\qquad\quad\ +t^{12+2n}(\chi^G_{(0n200)}\chi^v_{(001)}+\chi^G_{(1n101)}(y_s+y_s^{-1})\chi^v_{(010)}+\chi^G_{(2n100)}(y_s^2+y_s^{-2}+1)\chi^v_{(100)}\nn\\
+&\qquad\qquad\qquad\ +\chi^G_{(2n010)}(y_s^2+y_s^{-2})\chi^v_{(100)}+\chi^G_{(2n002)}\chi^v_{(100)}+\chi^G_{(3n001)}(y_s^3+y_s+y_s^{-1}+y_s^{-3}))\nn\\
+&\qquad\quad\ -t^{13+2n}(\chi^G_{(1n200)}\chi^v_{(010)}+\chi^G_{(2n101)}(y_s+y_s^{-1})\chi^v_{(100)}+\chi^G_{(3n100)}(y_s^2+y_s^{-2}+1)\nn\\
+&\qquad\qquad\qquad\ +\chi^G_{(3n010)}(y_s^2+y_s^{-2})+\chi^G_{(3n002)})\nn\\
+&\qquad\quad\ +t^{14+2n}(\chi^G_{2n200)}\chi^v_{(100)}+\chi^G_{(3n101)}(y_s+y_s^{-1}))-t^{15+2n}\chi^G_{(3n200)}\Big) \nn
+\end{align}
+which was compared with the closed-form expression \eqref{eq:1inst-formula} up to $t^{20}$ order.
+
+\paragraph{SO(12)} 
+The flavor symmetry acting on $N_{\bf s} \mathbf{S} +N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times SO(2N_{\bf c})_c \times  Sp(N_{\bf v})_v$. Here we turn off the Coulomb VEV $\vec{a} = 0$ for simplicity. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (2,0,0)$ can be written as
+\begin{align}
+  \hat{Z}_1&= \frac{t^{18}}{(1-t^2)^{18}}\Big(
+  -96096\, (\chi^s_{(13)}+\chi^s_{(31)})\cdot {(7t^4+42t^2+72+42t^{-2}+7t^{-4})}\\
+  &+10010\,(\chi^s_{(24)}+\chi^s_{(42)})\cdot {(9t^5+88t^3+243t+243t^{-1}+88t^{-3}+9t^{-5})}\nn\\
+  &-352\,(\chi^s_{(15)}+\chi^s_{(51)})\cdot {(25t^6+474t^4+2169t^2+3504+2169t^{-2}+474t^{-4}+25t^{-6})}\nn\\
+  &-2464\,(\chi^s_{(35)}+\chi^s_{(53)})\cdot {(2t^6+27t^4+108t^2+168+108t^{-2}+27t^{-4}+2t^{-6})}\nn\\
+  &+11\,(\chi^s_{(06)}+\chi^s_{(60)})\cdot {(42t^7+1194t^5+8451t^3+21253t+21253t^{-1}+\cdots+42t^{-7})}\nn\\
+  &+11\,(\chi^s_{(26)}+\chi^s_{(62)})\cdot (45t^7+1101t^5+6983t^3+16623t+16623t^{-1} + \cdots + 45t^{-7})\nn\\
+  &-32\,(\chi^s_{(17)}+\chi^s_{(71)})\cdot (t^8+36t^6+336t^4+1176t^2+17641+1176t^{-2}+\cdots+t^{-8})\nn\\
+  &+99\,\chi^s_{(22)}\cdot {(5t^9-90t^7+1623t^5+26743t^3+83103t+ (t\rightarrow t^{-1}))}\nn\\
+  &+462\,(\chi^s_{(02)}+\chi^s_{(20)})\cdot {(t^{9}-18t^7+153t^5+4059t^3+13485t+ (t\rightarrow t^{-1}))}\nn\\
+  &-32\,\chi^s_{(33)}\cdot {(t^{10}-18t^8+450t^6+13340t^4+66977t^2+110772+66977t^{-2}+\cdots+t^{-10})}\nn\\
+  &+\chi^s_{(44)}\cdot {(t^{11}-18t^9+615t^7+26332t^5+187749t^3+466001t^{1}+466001t^{-1}+\cdots+t^{-11})}\nn\\
+  &+(\chi^s_{(04)}+\chi^s_{(40)})\cdot (t^{13}-18t^{11}+153t^9-816t^7+58115t^5+730170t^{3}+2129595t^{1}+(t\rightarrow t^{-1}))\nn\\
+  &-352\,\chi^s_{(11)}\cdot{(t^{10}-4t^8-99t^6+2496t^4+18246t^2+32976+18246t^{-2}+\cdots+t^{-10})}\nn\\
+  &+(\chi^s_{(08)}+\chi^s_{(80)})\cdot {(t^9+48t^7+603t^5+2898t^3+6174t+(t\rightarrow t^{-1}))}\nn\\
+  &+(t^{17}-18t^{15}+153t^{13}-739t^{11}+3753t^9-20195t^{7}+49881t^{5}+1203597t^{3}+4481279t^{1}+(t\rightarrow t^{-1}))\Big)\nn
+\end{align}
+It was explicitly checked that the 1-instanton partition function $Z_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (0,2,0)$ could be identified with the above as
+\begin{align}
+  {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (0,2,0)}(a_1,a_2,a_3,a_4,a_5,a_6) = {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (2,0,0)}(a_1,a_2,a_3,a_4,a_5,-a_6).
+\end{align}
+Similarly, the character expansion of $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,1,0)$ can be displayed as follows:
+\begin{align}
+  \hat{Z}_1&=\frac{t^{18}}{(1-t^2)^{18}}\sum_{\pm}\Big(
+  -2462\,(y_s^{\pm1}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm1})\cdot{(2t^6+27t^4+108t^2+168+108t^{-2}+27t^{-4}+2t^{-6})}\nn\\
+  &+11\,(y_s^{\pm2}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm2})\cdot{(45t^7+1101t^5+6983t^3+16623t+ (t\rightarrow t^{-1}))}\nn\\
+  &+44\,(y_s^{\pm3}y_c^{\pm3})\cdot{(23t^7+587t^5+3925t^3+9609t+ (t\rightarrow t^{-1}))}\\
+  &+44\,(y_s^{\pm1}y_c^{\pm3}+y_s^{\pm3}y_c^{\pm1})\cdot{(23t^7+2927t^5+26025t^3+70033t+(t\rightarrow t^{-1}))}\nn\\
+  &-32\,(y_s^{\pm3}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm3})\cdot{(t^8+36t^6+336t^4+1176t^2+1764+1176t^{-2}+\cdots+t^{-8})}\nn\\
+  &-32\,(y_s^{\pm2}y_c^{\pm3}+y_s^{\pm3}y_c^{\pm2})\cdot{(t^8+465t^6+7629t^4+33351t^2+53244+33351t^{-2}+\cdots+t^{-8})}\nn\\
+  &+(y_s^{\pm4}y_c^{\pm4})\cdot {(t^9+48t^7+603t^5+2898t^3+6174t+(t\rightarrow t^{-1}))}\nn\\
+  &-32\,(y_s^{\pm1}y_c^{\pm2}+y_s^{\pm2}y_c^{\pm1})\cdot (t^{10}-17t^8+1069t^6+44069t^4+234770t^2+393168+234770t^{-2} +\cdots+t^{-10})\nn\\
+  &-32\,(y_s^{\pm3}+y_c^{\pm3})\cdot{(t^{10}-17t^8+750t^6+17526t^4+83553t^2+136714+83358t^{-2}+\cdots+t^{-10})}\nn\\
+  &-32\,(y_s^{\pm1}+y_c^{\pm1})\cdot (13t^{10}-79t^8+408t^6+97724t^4+587351t^2+1011546+587351t^{-2}+\cdots +13t^{-10}))\nn\\
+  &+(y_s^{\pm4}+y_c^{\pm4})\cdot{(t^{11}-18t^9+615t^7+26332t^5+187749t^3+466001t+(t\rightarrow t^{-1}))}\nn\\
+  &\,+(y_s^{\pm2}+y_c^{\pm2}) \cdot (t^{11}+477t^{9}-7305t^7+391411t^5+4750692t^3+13923764t^{1}+ (t\rightarrow t^{-1}))\nn\\
+  &+4\,(y_s^{\pm1}y_c^{\pm1})\cdot{(3t^{11}+199t^9+132676t^7+1864041t^5+5630341t^3+5630341t^+(t\rightarrow t^{-1}))}\nn\\
+  &+(y_s^{\pm2}y_c^{\pm2})(t^{13}-17t^{11}+1136t^9+804t^7+200385t^5+1971471t^{3}+5450836t+(t\rightarrow t^{-1}))\nn\\
+  &+(t^{15}-17t^{13}+214t^{11}+1414t^9-33152t^7+704404t^{5}+11381979t^{3}+35592757t+(t\rightarrow t^{-1}))\Big)\nn
+\end{align}
+in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\pm1} = xy+xy^{-1}+x^{-1}y+x^{-1}y^{-1}$, $\sum_{\pm}x^{\pm1} = x+x^{-1}$, and $\sum_{\pm} 1 = 1$.
+
+\paragraph{SO(13)} The flavor symmetry  on $N_{\bf s} \mathbf{S}+ N_{\bf v} \mathbf{V}$ matter multiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s}, N_{\bf v}) = (1,1)$ is written below, after setting the Coulomb VEV $\vec{a} = 0$ to keep the expression concise. 
+\begin{align}
+  \hat{Z}_1&=\frac{t^{20}}{(1-t^2)^{20}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(1)}\cdot (t^{10}+58 t^8+905 t^6+5580 t^4+15876 t^2+22344++15876 t^{-2} \cdots + t^{-10})\nn\\
+  &-64\,y_s^{\pm7}\chi^V_{(1)} \cdot (t^9+45 t^7+540 t^5+2520 t^3+5292 t + (t\rightarrow t^{-1}))\nn\\
+  &+26\,y_s^{\pm6}\chi^V_{(1)}\cdot (77 t^8+2541 t^6+22226 t^4+74811 t^2+110770 + 74811 t^{-2} + \cdots + 77 t^{-8})\nn\\
+  &-5824\,y_s^{\pm5}\chi^V_{(1)} \cdot (7 t^7+154 t^5+924 t^3+2145 t + (t\rightarrow t^{-1}) )\nn\\
+  &+y_s^{\pm4}\chi^V_{(1)} \cdot (t^{14}-19 t^{12}+170 t^{10}+766 t^8+576628 t^6 +7601283 t^4+29870761 t^2\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+46175700+ 29870761
+  t^{-2} + 7601283 t^{-4}+\cdots +t^{-14})\nn\\
+  &-64\,y_s^{\pm3}\chi^V_{(1)} \cdot (t^{11}-20 t^9+1256 t^7+83074 t^5+628311 t^3+1580032 t+ (t\rightarrow t^{-1}))\nn\\
+  &+2002\,y_s^{\pm2}\chi^V_{(1)}\cdot (t^{10}-19 t^8+756 t^6+15006 t^4+66051 t^2+105146+66051 t^{-2} + \cdots + t^{-10})\nn\\
+  &-64\,y_s^{\pm1}\chi^V_{(1)} \cdot (13 t^{11}-51 t^9-436 t^7+182670 t^5+1603925 t^3+4218449 t + (t\rightarrow t^{-1}))\nn\\
+  &+\chi^V_{(1)} \cdot (t^{16}-19 t^{14}+274 t^{12}+3185 t^{10}-73808 t^8+1918679 t^6+46355974 t^4+212905247t^2\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad+342439014+212905247t^{-2}+46355974 t^{-4}+\cdots +t^{-16})\nn\\
+  &-13\,y_s^{\pm8} \cdot (t^9+35 t^7+365 t^5+1575 t^3+3192 t+ (t\rightarrow t^{-1}))\nn\\
+  &+256\,y_s^{\pm7}\cdot (3 t^8+80 t^6+630 t^4+2016
+  t^2+2940+2016t^{-2}+\cdots+{3}t^{-8})\nn\\
+  &-26\,y_s^{\pm6} \cdot (847 t^7+15989 t^5+89887 t^3+203357
+  t+ (t\rightarrow t^{-1}) )\nn\\
+  &-64\,y_s^{\pm5}\cdot (t^{10}-20 t^8-6180 t^6-75228 t^4-286725
+  t^2-439416-{286725}t^{-2} +\cdots + t^{-10})\nn\\
+  &+y_s^{\pm4}\cdot (t^{13}-20 t^{11}+2907 t^9-74785 t^7-4557934 t^5-33690015 t^3-83955034 t +  (t\rightarrow t^{-1}) )\nn\\
+  &-64\,y_s^{\pm3}\cdot (t^{12}-19 t^{10}+807 t^8-24636 t^6-510121 t^4-2255129
+  t^2-3592422\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad -{2255129}t^{-2}-510121 t^{-4}-24636 t^{-6} + \cdots + t^{-12})\nn\\
+  &+2\,y_s^{\pm2}\cdot (7 t^{13}-140 t^{11}+3189 t^9+86972 t^7-7685485 t^5-71293018 t^3-190116261 t + (t\rightarrow t^{-1}))\nn\\
+  &-64\,y_s^{\pm1} \cdot (t^{12}-84 t^{10}+2667 t^8-36526 t^6-1227485 t^4-5926190
+  t^2-9643046
+    \nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad -{5926190}{t^{-2}}-1227485 t^{-4} -36526 t^{-6}+\cdots + t^{-12})\nn\\
+  &+(t^{15}-20 t^{13}-602 t^{11}+5691 t^9+495005 t^7-22183672 t^5-225823570 t^3-617150913t+  (t\rightarrow t^{-1}) )\Big)
+  \end{align}
+
+  \paragraph{SO(14)} The classical flavor symmetry  on $N_{\bf s} \mathbf{S}+N_{\bf c} \mathbf{C}+ N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s})_s \times U(N_{\bf c})_c  \times Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,0,2)$ is written below, after turning off the $SO(14)$ Coulomb VEV $\vec{a} = 0$. 
+  \begin{align}
+  \hat{Z}_1&=\frac{t^{22}}{(1-t^2)^{22}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(01)}\cdot (t^{11}+69 t^9+1309 t^7+10065 t^5+36828 t^3+69300
+  t+  (t\rightarrow t^{-1}) )\nn\\
+  &-64\,y_s^{\pm7}\chi^V_{(01)}\cdot (t^{10}+55 t^8+825 t^6+4950 t^4+13860
+  t^2+19404+13860t^{-2} + \cdots + t^{-10})\nn\\
+  &+26\,y_s^{\pm6}\chi^V_{(01)}\cdot (77 t^9+3234 t^7+36667 t^5+164401 t^3+338261
+  t+  (t\rightarrow t^{-1}))\nn\\
+  &-5824\,y_s^{\pm5}\chi^V_{(01)}\cdot (7 t^8+210 t^6+1694 t^4+5434
+  t^2+7920+ 5434t^{-2} + \cdots + 7t^{-8}) \nn\\
+  &+y_s^{\pm4}\chi^V_{(01)}\cdot (t^{15}-22 t^{13}+231 t^{11}-1540 t^9+614558 t^7\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +11510191 t^5+62671224 t^3+139186397t+  (t\rightarrow t^{-1}))\nn\\
+  &-832\,y_s^{\pm3}\chi^V_{(01)}\cdot (33 t^8+7744 t^6+83776 t^4+300104
+  t^2+451192+300104t^{-2} + \cdots + 33t^{-8})\nn\\
+  &+2002\,y_s^{\pm2}\chi^V_{(01)}\cdot (t^{11}-22 t^9+621 t^7+21262 t^5+134245 t^3+314181t+  (t\rightarrow t^{-1}) )\nn\\
+  &-832\,y_s^{\pm1}\chi^V_{(01)}\cdot (t^{12}-t^{10}-231 t^8+15631 t^6+206987 t^4+790240t^2+1207976+ \nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +790240t^{-2} +206987 t^{-4} +  15631 t^{-6} + \cdots + t^{-12}) \nn\\
+  &+\chi^V_{(01)}\cdot (t^{17}-22 t^{15}+335 t^{13}+3179 t^{11}-84595 t^9+1320011 t^7\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +63966077 t^5+427850621 t^3+1020096033t+  (t\rightarrow t^{-1}) ) \nn\\
+  &-14\,y_s^{\pm8}\chi^V_{(10)}\cdot  (t^{10}+42 t^8+539 t^6+2948 t^4+7854
+  t^2+10824+ 7854t^{-2} + \cdots + t^{-10})\nn\\
+  &+832\,y_s^{\pm7}\chi^V_{(10)}\cdot (t^9+33 t^7+330 t^5+1386 t^3+2772
+  t + (t\rightarrow t^{-1}) )\nn\\
+  &-2184 \, y_s^{\pm6}\chi^V_{(10)}\cdot (11 t^8+270 t^6+2002 t^4+6182t^2+8910+6182t^{-2} + \cdots + 11 t^{-8})\nn\\
+  &+5824 \, y_s^{\pm5}\chi^V_{(10)}\cdot (77 t^7+1281 t^5+6677 t^3+14575
+  t+ (t\rightarrow t^{-1}) )\nn\\
+  &+52\, y_s^{\pm4}\chi^V_{(10)}\cdot (33 t^{10}-726 t^8-109153 t^6-1133396 t^4-3996580t^2-5980436 \nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad -3996580t^{-2} -1133396 t^{-4} -109153 t^{-6}+ \cdots +  33 t^{-10})\nn\\
+  &-64\, y_s^{\pm3}\chi^V_{(10)}\cdot (t^{13}-22 t^{11}+868 t^9-20559 t^7-726341 t^5-4583956 t^3-10718569t + (t\rightarrow t^{-1}) )\nn\\
+  &+8008\, y_s^{\pm2}\chi^V_{(10)}\cdot (49 t^8-2102 t^6-29678 t^4-115094
+  t^2-176638 -115094t^{-2} + \cdots + 49t^{-8})\nn\\
+  &+4928\, y_s^{\pm 1}\chi^V_{(10)}\cdot (t^{11}-35 t^9+217 t^7+21505 t^5+152866 t^3+371316t+ (t\rightarrow t^{-1}))\nn\\
+  &-8\,\chi^V_{(10)}\cdot t^{10}(112 t^{12}-189 t^{10}-104258 t^8+2855160 t^6+46213090 t^4+185620270t^2\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +287407450 +185620270t^{-2}+46213090 t^{-4} + \cdots + 112t^{-12})\nn\\
+  &+13\, y_s^{\pm8}\cdot (8 t^9+229 t^7+2101 t^5+8393 t^3+16401
+  t+ (t\rightarrow t^{-1})) \nn\\
+  &-5824\,y_s^{\pm7}\cdot (t^8+22 t^6+154 t^4+462t^{2}+660+{462}{t^{-2}} + \cdots +
+   t^{-8})\nn\\
+  &+26\,y_s^{\pm6}\cdot (6075 t^7+95425 t^5+483483 t^3+1042937
+  t+ (t\rightarrow t^{-1}))\nn\\
+  &-64\,y_s^{\pm5}\cdot (t^{12}-22 t^{10}+231 t^8+41580 t^6+427575 t^4+1498244
+  t^2+2237312\nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +1498244t^{-2} +427575 t^{-4}+41580 t^{-6}+ \cdots + t^{-12})\nn\\
+  &+91\,y_s^{\pm4}\cdot (11 t^{11}-473 t^9+7623 t^7+312675 t^5+2010490 t^3+4723994
+  t+  (t\rightarrow t^{-1}))\nn\\
+  &+5824\,y_s^{\pm3}\cdot (77 t^8-2046 t^6-32546 t^4-129768t^2-200508-129768t^{-2} + \cdots + 77 t^{-8})\nn\\
+  &+2\,y_s^{\pm2}\cdot (7 t^{15}-154 t^{13}+2475 t^{11}-93720 t^9-257649 t^7 \nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +50128782 t^5+390072133 t^3+972422990t+ (t\rightarrow t^{-1}))\nn\\
+  &-64\,y_s^{\pm1}\cdot (t^{14}-22 t^{12}+231 t^{10}-24927 t^8+317625 t^6+7227990 t^4+31070743t^2+48912688+ \nn\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad +31070743t^{-2}+7227990 t^{-4}+317625 t^{-6}+ \cdots + t^{-14})\nn\\
+  &+154\,(20 t^{11}-1740 t^9-16109 t^7+958563 t^5+8046291 t^3+20489955
+  t+ (t\rightarrow t^{-1}))
+  \end{align}
+  We also confirmed that the 1-instanton partition function $Z_1$ for $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (0,1,2)$ could be identified with the above as follows:
+  \begin{align}
+    {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (0,1,2)}(\vec{a},\e_1,\e_2,m^c,\vec{m}^v)  = {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (1,0,2)}(\vec{a},\e_1,\e_2,m^s,\vec{m}^v) |_{m^s \rightarrow -m^c }.
+  \end{align}
+  
+
 \section{SU(N) theory}
 \label{sec:bound-su}
 We find that 
