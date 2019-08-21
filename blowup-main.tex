@@ -671,37 +671,37 @@ when the gauge group is simple. In the case of 4d, we can also have following ad
 \end{itemize}
 We are able to obtain the partition function for most of the cases in 5d using our formula. But we are not able to apply our formula for some cases including the one with adjoint hypremultiplets since the number of independent blowup equations is smaller than 3. 
 
-% \paragraph{Range of $d$}
-\paragraph{Number of the blowup equations} 
-Prior to solving the equations  for $Z_1$, we recall that the formula \eqref{eq:recursion} is valid only in a certain range of $d$, for which $\langle (\mathcal{O}_{\IP^1})^{d}\rangle = \CZ$. We want to narrow down the validity range of $d$ by doing a simple sanity check on the blowup equation for one-instanton:
+The formula \eqref{eq:recursion} is valid only for a certain range of $d$, for which $\langle (\mathcal{O}_{\IP^1})^{d}\rangle = \CZ$. We want to narrow down the valid range of $d$ by performing a simple sanity check on the blowup equation for the one-instanton partition function:
 \begin{align}
   \label{eq:1inst}
   Z_1 = p_1^{\frac{b}{2}-d}Z^{(N)}_1  + p_2^{\frac{b}{2}-d}  Z^{(S)}_1  + I_1^{(d)} \qquad \text{with an allowed range of $d$} \ .
 \end{align}
-Specifically, we want to examine the expansion of all single terms in  \eqref{eq:1inst} with respect to $\sqrt{p_1p_2} \ll 1$, identifying the leading exponent as follows:{\allowdisplaybreaks
+Specifically, we want to examine the expansion of each term in \eqref{eq:1inst} with in powers of $p_1p_2 \ll 1$. The  leading exponent is identified as follows:{\allowdisplaybreaks
 \begin{align}
+\begin{split}
   I_1^{(d)} &\sim \begin{dcases}
-    g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{2}-d + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
-    g_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{2}-d } + \cdots    &  \text{for }N_\text{sym} = 1
+    g_0(\vec{a},  \vec{m}_{\text{tw}})\cdot  (p_1p_2)^{\frac{b}{2}-d + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
+    g_0(\vec{a},  \vec{m}_{\text{tw}})\cdot (p_1p_2)^{\frac{b}{2}-d } + \cdots    &  \text{for }N_\text{sym} = 1
 \end{dcases}
-  \nn \\
-  Z_1 &\sim   \ \ \, g_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{n}{2}}  + \cdots  \nn \\
-  p_1^{(\frac{b}{2}-d)}Z_1^{(N)}\sim p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1 &\sim  \ \ \,  g_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}   + \cdots   .
+   \\
+  Z_1 &\sim   \ \ \, g_1(\vec{a},  \vec{m}_{\text{tw}})\cdot (p_1p_2)^{\frac{s}{2}}  + \cdots   \\
+  p_1^{\frac{b}{2}-d}Z_1^{(N)}\sim p_2^{\frac{b}{2}-d}  Z^{(S)}_1 &\sim  \ \ \,  g_2(\vec{a},  \vec{m}_{\text{tw}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{s}{4}}   + \cdots   .
   % \nn \\ &\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
+  \end{split}
 \end{align}
-where a numerical value of $n$ will be discussed shortly for a variety of gauge theories (Table~\ref{tbl:list}).
-Notice that for the equation \eqref{eq:1inst} to be true, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Therefore, the condition $d - \frac{b}{2} \geq -\frac{n}{2}$ is  naturally imposed, setting a lower bound on $d$. 
+where $g_{0, 1, 2}(\vec{a}, \vec{m}_{\text{tw}})$ are functions independent of $p_{1, 2}$ and a numerical value of $s$ will be discussed shortly for a variety of gauge theories (Table~\ref{tbl:list}) for the cases when ADHM-like construction is available.
+Notice that for the equation \eqref{eq:1inst} to be true, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Therefore, the condition $d - \frac{b}{2} \geq -\frac{s}{2}$ is naturally imposed, setting a lower bound on $d$. 
 
-Similarly, an upper bound on $d$ can be found from an expansion of \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/\sqrt{p_1p_2} \ll 1$.} 
+Similarly, an upper bound on $d$ can be found from an expansion of \eqref{eq:1inst} with respect to $ 1/p_1p_2 \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/p_1p_2 \ll 1$.} 
 Each single term in \eqref{eq:1inst} can be written as
 \begin{align}
   I_1^{(d)} &\sim \begin{dcases}
-    h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{d-\frac{b}{2} + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
-    h_0(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{d-\frac{b}{2} } + \cdots    &  \text{for }N_\text{sym} = 1
+    h_0(\vec{a},  \vec{m}_{\text{tw}})\cdot  (1/p_1p_2)^{d-\frac{b}{2} + 1} + \cdots   &  \text{for }N_\text{sym} = 0\\
+    h_0(\vec{a},  \vec{m}_{\text{tw}})\cdot (1/p_1p_2)^{d-\frac{b}{2} } + \cdots    &  \text{for }N_\text{sym} = 1
 \end{dcases}
   \nn \\
-  Z_1 &\sim  \ \ \,  h_1(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{n'}{2}}  + \cdots  \nn \\
-  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} \sim  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim \ \ \,  h_2(\vec{a},  \vec{m}_{\text{phy}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}}   + \cdots   
+  Z_1 &\sim  \ \ \,  h_1(\vec{a},  \vec{m}_{\text{tw}})\cdot (1/p_1p_2)^{\frac{n'}{2}}  + \cdots  \nn \\
+  p_1^{(\frac{b}{2}-d)}Z_1^{(N)} \sim  p_2^{(\frac{b}{2}-d)}  Z^{(S)}_1&\sim \ \ \,  h_2(\vec{a},  \vec{m}_{\text{tw}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n'}{4}}   + \cdots   
   % \nn \\&\sim  h_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}  + \cdots   .
 \end{align}
 Again, for \eqref{eq:1inst} to be consistent, the leading exponent of $Z_1$ should be greater than or equal to those of some terms on the right-hand side. Such requirement imposes the upper bound on $d$, namely  $\frac{n'}{2} \geq  d - \frac{b}{2}$.
@@ -722,10 +722,10 @@ Based on the empirical observations, we claim that the 5d recursion formulae \eq
 Another remarkable thing is that a numerical value of  $(n, n')$ exhibits the very simple pattern across a broad range of theories whose gauge group is not $SU(N)_\k$. (See Table~\ref{tbl:list}.)
 \begin{align}
   \label{eq:n-np}
- &n = n' \hspace{1.55cm}=\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  && \text{ for } \quad   G\neq SU(N)_\kappa \text{ nor } Sp(N) \nn\\
- &n = n' - 2\{\tfrac{N_f}{2}\} =\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)
+ n = n' &= h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  && \text{ for } \quad   G\neq SU(N)_\kappa \text{ nor } Sp(N) \nn\\
+ n = n' - 2\left\{\frac{N_f}{2} \right\} &= h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)
  &&   \text{ for }  \quad G = Sp(N)_{\theta=0}\\
- &n = n' + 2\{\tfrac{N_f}{2}\} =\textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 1 &&   \text{ for }  \quad G = Sp(N)_{\theta=\pi}\nn
+ n = n' + 2 \left\{\frac{N_f}{2} \right\} &= h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 1 &&   \text{ for }  \quad G = Sp(N)_{\theta=\pi}\nn
 \end{align}
 As the above numerical pattern \eqref{eq:n-np} emerges for all $G \neq SU(N)_\k$ examples that we studied, we speculate that \eqref{eq:n-np} is generally true, thereby taking the recursion formulae \eqref{eq:recursion} with
 \begin{align}
