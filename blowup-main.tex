@@ -176,7 +176,7 @@ We obtain the partition function for the previously unknown theories: exceptiona
 }
 
 
-\preprint{KIAS-P19047, SNUTP19-???}
+\preprint{KIAS-P19047, SNUTP19-004}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -518,6 +518,7 @@ We recall the known expressions for the classical and 1-loop partition function 
 where $p_1 \equiv e^{-\e_1},\, p_2 \equiv e^{-\e_2},\, y_l \equiv e^{-m_{l}}, q \equiv e^{-m_0}$.\footnote{We assume a particular Weyl chamber in the Coulomb branch, i.e., $ 0< a_i < \e_+ < m$ for all $i\in \{1,\cdots, r\}$.} Also $\Delta$ is the set of all roots and $\mathbf{R}_\ell$ denotes the set of all weight vectors in representation $\mathbf{R}_\ell$. 
 Here, PE represents the Plethystic exponential
 \begin{align}
+  \label{eq:PE}
   \text{PE}\left[f(\vec{a},\e_1,\e_2, m_0 ,\vec{m})\right] \equiv \exp\left(\sum_{n=1}^\infty\frac{1}{n} f(n\vec{a},n\e_1,n\e_2,n m_0,n\vec{m})\right).
 \end{align}
 We also set the radius of ${S}^1$ as $\beta = 1$. Also, the symbols $h_{ij}$ and $d_{ijk}$ are defined as 
@@ -1272,7 +1273,7 @@ We have compared so far the solution $Z_1$ of the recursion formulae \eqref{eq:r
 \begin{table}[h!]
   \centering
   \begin{tabular}{cc|cc}
-    Gauge Group & Hypermultiplets & Equation No. & Attachment \\\hline\hline 
+    Gauge Group & Hypermultiplets & Character Expansion of $Z_1$. & Attachment \\\hline\hline 
     $SO(8)$ & $1\mathbf{S}+1\mathbf{C}+1\mathbf{V}$ & \eqref{eq:SO8-v1s1c1}\\
     $SO(8)$ & $2\mathbf{S}+2\mathbf{C}+2\mathbf{V}$ & \eqref{eq:SO8-v2s2c2}\\
     $SO(9)$ & $2\mathbf{S}+1\mathbf{V}$ & \eqref{eq:SO9-v1s2}\\
@@ -1350,7 +1351,7 @@ The 1-instanton partition function of $E_8$ gauge theory can be written as \cite
 We confirmed that it agrees with our 1-instanton expression \eqref{eq:1inst-formula} up to $t^{520}$ order.
 
 
-\subsection{Theories with a rank-3 antisymmetric hypermultiplet}
+\subsection{SU(6) theory with a rank-3 antisymmetric hypermultiplet}
 \label{subsec:rank3}
 Another non-trivial test of our blow-up recursion formulae \eqref{eq:recursion}  is the partition function for 5d $SU(6)$ theory with an hypermultiplet in the rank-3 antisymmetric representation ({\bf TAS}). This theory allows an intriguing Higgs branch with $SU(3)\times SU(3)$ gauge symmery that can be explicitly checked via the partition function.
 
@@ -1364,12 +1365,12 @@ To have a UV fixed point, 5d $SU(6)$ theories can have up to 2 hypermultiplets i
 \end{figure}
 %----------- </Figure> ---------------%
 
-Our blow-up equation \eqref{eq:cor5d-unity} demands all mass parameters to be generically turned on. In particular, we need a mass parameter for the rank-3 antisymmetric hypermultiplet. As one cannot introduce mass for a half-hypermultiplet, let us consider $SU(6)_3$ theory with one full hypermultiplet in the rank-3 antisymmetric representation ($SU(6)+1{\bf TAS}$). 
-An example for 5-brane web for $SU(6)_3+1{\bf TAS}$ is depicted in Figure~\ref{fig:SU6-monopole}. It is instructive to see if Figure~\ref{fig:SU6-monopole} is consistent with the expected prepotential.  The effective prepotential on the Coulomb branch of a 5d gauge theory with a gauge group $G$ and matter $f$ in a representation $R_f$ is \cite{Intriligator:1997pq}
+Our blow-up equation \eqref{eq:cor5d-unity} demands all mass parameters to be generically turned on. In particular, we need a mass parameter for the rank-3 antisymmetric hypermultiplet. As one cannot introduce mass for a half-hypermultiplet, let us consider the $SU(6)_3$ theory with a full hypermultiplet in the rank-3 antisymmetric representation ($SU(6)_3+1{\bf TAS}$). 
+An example for 5-brane web for $SU(6)_3+1{\bf TAS}$ is depicted in Figure~\ref{fig:SU6-monopole}. It is instructive to see if Figure~\ref{fig:SU6-monopole} is consistent with the expected prepotential.  The effective prepotential on the Coulomb branch of a 5d gauge theory with a gauge group $G$ and matter $f$ in a representation $\mathbf{R}_f$ is \cite{Intriligator:1997pq}
 \begin{align}
-\mathcal{F}(\phi) = \frac{m_0}{2}h_{ij}\phi_i\phi_j + \frac{\kappa}{6}d_{ijk}\phi_i\phi_j\phi_k + \frac{1}{12}\left(\sum_{r\in\text{roots}}\left|r\cdot \phi\right|^3 - \sum_f\sum_{w \in R_f}\left|w\cdot \phi - m_f\right|^3\right). \label{prepotential}
+\mathcal{F}(\phi) = \frac{m_0}{2}h_{ij}\phi_i\phi_j + \frac{\kappa}{6}d_{ijk}\phi_i\phi_j\phi_k + \frac{1}{12}\left(\sum_{\vec{\alpha}\in \D}\Big|\vec{\alpha} \cdot \vec{\phi}\,\Big|^3 - \sum_f\sum_{\vec{\w} \in \mathbf{R}_f}\Big|\vec{\w}\cdot \vec{\phi} + m_f\Big|^3\right). \label{prepotential}
 \end{align}
-Here, $m_0$ is the inverse of the gauge coupling squared, $\kappa$ is the Chern-Simons level and $m_f$ is a mass parameter for the matter $f$. $r$ is a root of the Lie algebra $\mathfrak{g}$ associated to $G$ and $w$ is a weight of the representation $R_f$ of $\mathfrak{g}$. We also defined $h_{ij} = \text{Tr}(T_iT_j), d_{ijk} = \frac{1}{2}\text{Tr}\left(T_i\{T_j, T_k\}\right)$ where $T_i$ are the Cartan generators of the Lie algebra $\mathfrak{g}$. With Coulomb branch moduli assigned in Figure \ref{fig:SU6-monopole} and the identification of Weyl chamber for the Coulomb VEV ($a_1\ge a_2\ge \cdots \ge a_{6}$, $\sum_{i=1}^{6}a_i=0$),
+Here, $m_0$ is the inverse of the gauge coupling squared, $\kappa$ is the Chern-Simons level and $m_f$ is a mass parameter for the matter $f$. $\vec{\alpha}$ is a root of the Lie algebra $\mathfrak{g}$ associated to $G$ and $\vec{\w}$ is a weight of the representation $\mathbf{R}_f$ of $\mathfrak{g}$. We also defined $h_{ij} = \text{Tr}(T_iT_j), d_{ijk} = \frac{1}{2}\text{Tr}\left(T_i\{T_j, T_k\}\right)$ where $T_i$ are the Cartan generators of the Lie algebra $\mathfrak{g}$. With the Coulomb branch moduli assigned in Figure \ref{fig:SU6-monopole} and the identification of Weyl chamber for the Coulomb VEV ($a_1\ge a_2\ge \cdots \ge a_{6}$, $\sum_{i=1}^{6}a_i=0$),
 \begin{align}
 	a_1= \phi_1,&& 
 	a_2=\phi_2-\phi_1,&&
@@ -1378,7 +1379,7 @@ Here, $m_0$ is the inverse of the gauge coupling squared, $\kappa$ is the Chern-
 	a_5=\phi_5-\phi_4,&&
 	a_6=-\phi_5, \label{orth2Dynkin}
 \end{align}
-one finds that the prepotential for $SU(6)_3$ with one massless rank-3 antisymmetry hyper takes the form
+one finds that the prepotential for $SU(6)_3$ with one \emph{massless} rank-3 antisymmetric matter takes the form of
 \begin{align}
 	\mathcal{F}_{SU(6)_3+1{\bf TAS}}=&~m_0 \big( \phi _1^2+\phi _2^2+\phi _3^2+\phi _4^2+\phi _5^2-\phi _1 \phi _2-\phi _2 \phi _3-\phi _3 \phi _4-\phi _4
    \phi _5\big) \cr
@@ -1395,7 +1396,7 @@ one finds that the prepotential for $SU(6)_3$ with one massless rank-3 antisymme
 %   \phi _3^3}{3}+\frac{4 \phi _4^3}{3}+\frac{4 \phi _5^3}{3}-2 \phi _2 \phi _3^2-\phi _3 \phi _4^2+\phi
 %   _2^2 \phi _3-\phi _4^2 \phi _5. \label{eq:prep+SU6-3}
 %\end{align}
-From which, one can easily obtain the monopole string tensions $T_i=\partial{\mathcal{F}}/\partial{\phi_i}$ as the areas of the compact faces of the 5-brane web 
+One can easily see that the monopole string tensions $T_i=\partial{\mathcal{F}}/\partial{\phi_i}$ computed from the above prepotential \eqref{eq:prep+SU6-3} agree with the areas of the compact faces of the 5-brane web, i.e.,
 \begin{align}
 T_1=\textcircled{\scriptsize 1} + 2\times\textcircled{\scriptsize 2},  %\crcr
 && T_2=\textcircled{\scriptsize 3}, %\crcr
@@ -1404,8 +1405,7 @@ T_1=\textcircled{\scriptsize 1} + 2\times\textcircled{\scriptsize 2},  %\crcr
 &&T_5=\textcircled{\scriptsize 6} 
 	+ 2\times\textcircled{\scriptsize 7},
 \end{align}
-where the encircled numbers represent the area of apparent faces in Figure \ref{fig:SU6-monopole}.
-One can then see that the 5-brane web given in Figure \ref{fig:SU6-monopole} is consistent with the prepotential for $SU(6)_3$ with one massless rank-3 antisymmetric hyper.
+where the encircled numbers represent the area of apparent faces in Figure \ref{fig:SU6-monopole}. This shows that Figure~\ref{fig:SU6-monopole} is indeed consistent with the prepotential of $SU(6)_3+1{\bf TAS}$ gauge theory.
 
  %---- <Figure>  ---------------%
 \begin{figure}[t]
@@ -1417,22 +1417,23 @@ One can then see that the 5-brane web given in Figure \ref{fig:SU6-monopole} is 
 \end{figure}
  %---- </Figure>  --------------%
  
-Notice that this 5-brane web for $SU(6)_3+1{\bf TAS}$ suggests an intriguing Higgsing of the theory,  that is the Higgsing of $SU(6)$ theory with one rank-3 antisymmetric hyper into two pure $SU(3)$ theories. It can be achieved by setting the Coulomb branch parameters as
+Notice that this 5-brane web for $SU(6)_3+1{\bf TAS}$ suggests an intriguing Higgsing of the theory, which is the Higgsing of $SU(6)$ theory with one rank-3 antisymmetric hyper into two disjoint $SU(3)$ theories. It can be achieved by setting the Coulomb branch parameters as
  \begin{align}
  	a_5= - a_1-a_6, \qquad {\rm or~equivalently} \qquad \phi_4=\phi_1. \label{eq:HiggisingToSU3}
  \end{align}
- This tuning of the parameters, of course, reduces the dimension of Coulomb brach  by one and also opens up a Higgs branch in such a way that the 5-brane web in Figure \ref{fig:SU6-monopole} becomes 5-brane web in Figure \ref{fig:SU6-Higgsing}(a) where the D5-branes in the upper parts of $\textcircled{\scriptsize 6}$ and $\textcircled{\scriptsize 7}$ are aligned and joint to become a single D5-brane that is paint in red in Figure~\ref{fig:SU6-Higgsing}(a). The resulting configuration is then a 5-brane configuration for two pure $SU(3)_3$ theories that are on top of each other, as shown in Figure~\ref{fig:SU6-Higgsing}(b). This Higgsing procedure is a 5-brane realization of the Higgsing of $SU(6)_3$ theory with a rank-3 antisymmetric hyper into two pure $SU(3)_3$ theories. It follows that 
- under this Higgsing, the prepotential for $SU(6)_3+1{\bf TAS}$ \eqref{eq:prep+SU6-3} becomes a sum of prepotentials for two independent pure $SU(3)_3$ theories (without bi-fundemantals):
-\begin{align}
-\mathcal{F}_{SU(6)_{3}+1{\bf TAS}}{}\Big|_{\phi_4=\phi_1}	&
-\rightarrow \mathcal{F}_{SU(3)_{3}} (m_0, \phi_1, \phi_5-\phi_1,-\phi_5) + \mathcal{F}_{SU(3)_{3}} (m_0, \phi_2-\phi_1, \phi_3-\phi_2,\phi_1-\phi_3),\nonumber
-\end{align}
-or,
+ This tuning of the parameters, of course, reduces dimension of the Coulomb branch by one and also opens up a Higgs branch in such a way that the 5-brane web in Figure \ref{fig:SU6-monopole} becomes 5-brane web in Figure \ref{fig:SU6-Higgsing}(a) where the D5-branes on the upper edges of $\textcircled{\scriptsize 6}$ and $\textcircled{\scriptsize 7}$ are aligned and joint to become a single D5-brane denoted red in Figure~\ref{fig:SU6-Higgsing}(a). The resulting configuration is then a 5-brane configuration for two pure $SU(3)_3$ theories that are on top of each other, as shown in Figure~\ref{fig:SU6-Higgsing}(b). This is a 5-brane realization of Higgsing $SU(6)_3+1{\bf TAS}$ theory into two pure $SU(3)_3$ theories. It follows that 
+ under this Higgsing, the prepotential for $SU(6)_3+1{\bf TAS}$ \eqref{eq:prep+SU6-3} theory reduces to a sum of prepotentials for two disjoint pure $SU(3)_3$ theories:
+% \begin{align}
+% \mathcal{F}_{SU(6)_{3}+1{\bf TAS}}{}\Big|_{\phi_4=\phi_1}	&
+% \rightarrow \mathcal{F}_{SU(3)_{3}} (m_0, \phi_1, \phi_5-\phi_1,-\phi_5) + \mathcal{F}_{SU(3)_{3}} (m_0, \phi_2-\phi_1, \phi_3-\phi_2,\phi_1-\phi_3),\nonumber
+% \end{align}
+% or,
 \begin{align}
 \mathcal{F}_{SU(6)_{3}+1{\bf TAS}}{}\Big|_{a_1+a_5+a_6=0}	%\mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)	
 &\rightarrow \mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4).
 \end{align}
-The Higgsing of the $SU(6)$ theory into two copies of $SU(3)$ theories can be understood as follows. %Under the embedding
+% The Higgsing of the $SU(6)$ theory into two copies of $SU(3)$ theories can be understood as follows. 
+%Under the embedding
 %\begin{align}
 %	SU(6) \supset SU(3) \times SU(3) \times U(1),
 %\end{align}
@@ -1444,9 +1445,10 @@ The Higgsing of the $SU(6)$ theory into two copies of $SU(3)$ theories can be un
 %%	
 %	{\bf 35 }& ={\bf (1,1)}_0 + {\bf (1,8)}_0 + {\bf (8,1)}_0 + {\bf (3,\bar3)}_2 +{\bf (\bar3, 3)}_{-2}.	
 %\end{align}
-This in turn implies that under this Higgsing, the partition function for $SU(6)_{3}+1{\bf TAS}$ should be expressed as a product of the partition functions of two pure $SU(3)_3$ theories  
+This in turn implies that under this Higgsing, the partition function for $SU(6)_{3}+1{\bf TAS}$ should be expressed as a product of the partition functions of two pure $SU(3)_3$ theories:
 \begin{align}
-Z_{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~\rightarrow ~~ Z_{SU(3)_{3}}\!(q,A_1, A_5,A_6)\,Z_{SU(3)_{3}}\!(q,A_2, A_3,A_4)\,Z_{\rm decoupled}(q)\,,	
+\CZ^{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~\rightarrow ~~ \CZ^{SU(3)_{3}}\!(q,A_1, A_5,A_6)\,\CZ^{SU(3)_{3}}\!(q,A_2, A_3,A_4)\,Z_{\rm extra}(q)\,,
+\label{eq:SU6-Higgs-SU3}	
 \end{align}
 %\begin{align}
 %Z_{SU(6)_{3}+1{\bf TAS}}\bigg|_{\rm Higgsing}\qquad \rightarrow\qquad Z^{(1)}_{SU(3)_{3}}Z^{(2)}_{SU(3)_{3}}\,Z^{}_{\rm decoupled}\,,	
@@ -1456,7 +1458,7 @@ Z_{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~\rightarrow ~~ Z_{SU(3)_{3}}\!(q,A_
 %	Z^{(1)}_{SU(3)_{3}} &= Z_{SU(3)_{3}} (\phi_1, \phi_5-\phi_1,-\phi_5),\crcr
 %	Z^{(2)}_{SU(3)_{3}} &= 	Z_{SU(3)_{3}}(\phi_2-\phi_1, \phi_3-\phi_2,\phi_1-\phi_3), 
 %\end{align}
-where the parameters $q$ and $A_i$ are the K\"ahler parameters for instanton and Coulomb branch parameters, and  $Z_{\rm decoupled}(q)$ represents the overall extra terms that do not explicitly depend on the Coulomb branch moduli, which would correspond to a new decoupled mode appearing in Figure \ref{fig:SU6-Higgsing}.  In what follows, we explicitly compute the partition function for $SU(6)_3+1{\bf TAS}$ based on the 5-brane web and compare it with our blowup formula, and also consider this Higgsing as a consistency check.
+where the parameters $q$ and $A_i$ are the K\"ahler parameters for instanton and Coulomb branch parameters, and  $Z_{\rm extra}(q)$ represents the overall extra terms that do not explicitly depend on the Coulomb branch moduli, which would correspond to a new decoupled mode appearing in Figure \ref{fig:SU6-Higgsing}.  In what follows, we explicitly compute the partition function for $SU(6)_3+1{\bf TAS}$ based on the 5-brane web and compare it with our general 1-instanton formula \eqref{eq:1inst-formula}. At two instantons, we will consider this Higgsing as a consistency check of our solution $Z_2$ obtained from the blowup recursion formulae \eqref{eq:recursion}.
 
 %---------  Figure  ---------------%
 \begin{figure}[t]
@@ -1466,20 +1468,20 @@ where the parameters $q$ and $A_i$ are the K\"ahler parameters for instanton and
 \label{fig:SU6young}
 \end{figure}
 %----------------------------------%
-To compute the instanton partition function based on the 5-brane web for $SU(6)+1{\bf TAS}$ given in Figure \ref{fig:SU6-monopole}, we assign the Young diagrams $Y_i$ to each horizontal edge of the web diagram as shown in Figure \ref{fig:SU6young} and use the topological vertex method. For convenience, we restrict to ourselves to the unrefined case where $2\epsilon_+=\epsilon_1+\epsilon_2=0$. (See also a similar calculation done in \cite{Hayashi:2019yxj}.) As the web diagram in Figure \ref{fig:SU6-monopole} is left-right symmetric, it is convenient to split the web diagram as the left and right part and glue to obtain the partition function. With the K\"ahler parameters for Coulomb branch moduli $A_i, (i=1, \cdots, 6)$ subject to $\prod_{i=1}^{6}A_i =1$, the instanton $q$, and the unrefined $\Omega$-deformation parameter $g$, defined by 
+To compute the instanton partition function based on the 5-brane web for $SU(6)_3+1{\bf TAS}$ given in Figure \ref{fig:SU6-monopole}, we assign the Young diagrams $Y_i$ to each horizontal edge of the web diagram as shown in Figure \ref{fig:SU6young} and use the topological vertex method. For convenience, we restrict ourselves to the unrefined case where $2\epsilon_+=\epsilon_1+\epsilon_2=0$. (See also a similar calculation done in \cite{Hayashi:2019yxj}.) As the web diagram in Figure \ref{fig:SU6-monopole} is left-right symmetric, it is convenient to split the web diagram to the left and right parts and glue them later to obtain the full partition function. Let us introduce the following fugacity variables to express the partition function.
 \begin{align}
-A_i = e^{-a_i}
+A_i \equiv e^{-a_i} \ \text{ for } \ i=1, \cdots, 6
 %\quad \Big(\prod_{i=1}^{6}A_i =1\Big)\, 
-, \qquad q = e^{-\frac{8\pi^2}{g_0^2}}% = e^{-4\pi^2m_0}
-, \qquad g=e^{-\epsilon_-},
+% , \qquad q = e^{-\frac{8\pi^2}{g_0^2}}% = e^{-4\pi^2m_0}
+, \qquad g\equiv \sqrt{p_1/p_2} = e^{-\epsilon_-},
 \end{align}
-one finds that 
+in which the $SU(6)$ traceless condition $\prod_{i=1}^{6}A_i =1$ is assumed. Applying the topological vertex formalism \cite{Aganagic:2003db}, we find that 
 \begin{align}
   \label{eq:znek-su6}
-  Z_{\text{Nek}} 
+  \mathcal{Z} 
   =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
   &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}
-  Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y}),
+  Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y})
 %  Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
 \end{align}
 %\begin{align}
@@ -1487,23 +1489,23 @@ one finds that
 %=&\, \sum_{\vec{Y}}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^2A_4^2)^{|Y_3|}(-A_2^2A_3^4)^{|Y_4| + |Y_5|}\nn\\
 %&\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y}), \label{Znek1}
 %\end{align}
-where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$ and the left and right parts,
-$Z_{\text{left}}(\vec{Y})$ and $Z_{\text{right}}(\vec{Y})$, are given by
+where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$. The left/right factor 
+$Z_{\text{left}}(\vec{Y})$/$Z_{\text{right}}(\vec{Y})$ can be written as 
 \begin{align}
-Z_{\text{left}}(\vec{Y})=& \,
-\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
-g^{\frac{||Y_0^t||^2+||Y_0||^2}{2}} \tilde{Z}_{Y_0}^2 f_{Y_0}^2(g)
+Z_{\text{left}}(\vec{Y}) = Z_{\text{left}}(\vec{Y})=& \,
+\sum_{Y'} ( - A_1{}^{-1} A_6{}^{-2})^{|Y'|} 
+g^{\frac{||Y'^t||^2+||Y'||^2}{2}} \tilde{Z}_{Y'}^2 f_{Y'}^2(g)
 \prod_{i=1}^6 g^{\frac{||Y_i||^2}{2}} \tilde{Z}_{Y_i} 
 \cr 
 & 
 \times 
-R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_0^t }^{-1} (A_1^2A_6) \cr 
+R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y' Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y'^t }^{-1} (A_1^2A_6) \cr 
 & 
 \times  
  \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
- \prod_{i=2}^5 R_{Y_0^t Y_i} (A_1 A_i  A_6) ,
+ \prod_{i=2}^5 R_{Y'^t Y_i} (A_1 A_i  A_6) 
 \end{align}
-and $Z_{\text{right}}(\vec{Y})$ is obtained from $Z_{\text{left}}(\vec{Y})$ by replacing $Y_0$ with $Y_7$. % summing over $Y_7$ instead of $Y_0$. %  \big|_{Y_0 \to Y_7}$.
+in which the dummy variable $Y'$ should be interpreted as $Y_0$ for $Z_{\text{left}}(\vec{Y})$ and  $Y_7$ for $Z_{\text{right}}(\vec{Y})$. % summing over $Y_7$ instead of $Y_0$. %  \big|_{Y_0 \to Y_7}$.
 %\begin{align}
 %Z_{\text{right}}(\vec{Y})=&
 %\sum_{Y_7} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_7|} 
@@ -1524,16 +1526,16 @@ and $Z_{\text{right}}(\vec{Y})$ is obtained from $Z_{\text{left}}(\vec{Y})$ by r
 % \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
 % \prod_{i=2}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6) .
 %\end{align}
-Here, for a Young diagram $\lambda = (\lambda_1, \lambda_2, \cdots)$ and its transpose $\lambda^t$,  $|\lambda|=\sum_{i}\lambda_i$ and $||\lambda||^2 =\sum_{i}\lambda_i^2$ and 
+Here, for a Young diagram $\lambda = (\lambda_1, \lambda_2, \cdots)$ and its transpose $\lambda^t$,  
 \begin{align}
-\tilde{Z}_{\lambda} 
+  |\lambda|=\sum_{i}\lambda_i, \qquad ||\lambda||^2 =\sum_{i}\lambda_i^2, \qquad  \tilde{Z}_{\lambda} 
 &= \prod_{(i,j) \in \lambda} \frac{1}{1 - g^{\lambda_i + \lambda^t_j - i - j +1} }. 	
 \end{align}
 The framing factor $f_{\lambda}(g)$ is defined by
 \begin{align}
-f_\lambda(g) = (-1)^{|\lambda|}g^{\frac{1}{2}(g^{||\lambda^t||^2 - ||\lambda||^2})},
+f_\lambda(g) = (-1)^{|\lambda|}g^{\frac{1}{2}(g^{||\lambda^t||^2 - ||\lambda||^2})}.
 \end{align}
-and $R_{\lambda \mu } (Q)=R_{\mu \lambda} (Q)$ is defined by
+And also, $R_{\lambda \mu } (Q)=R_{\mu \lambda} (Q)$ is defined by
 \begin{align}
 %\tilde{Z}_{\lambda} 
 %&= \prod_{(i,j) \in \lambda} \frac{1}{1 - g^{\lambda_i + \lambda^t_j - i - j +1} } , 
@@ -1542,7 +1544,7 @@ R_{\lambda \mu } (Q)%= \prod_{i.j=1}^{\infty} (1 - Q g^{i+j-\lambda_j - \mu_i -1
 =\text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
 \times N_{\lambda^t \mu} (Q)
 \end{align}
-with PE representing the Plethystic exponential
+with PE representing the Plethystic exponential \eqref{eq:PE}
  and 
 \begin{align}
 N_{\lambda \mu} (Q) 
@@ -1559,13 +1561,13 @@ N_{\lambda \mu} (Q)
 %\begin{align}
 %A_i = e^{-a_i}, \qquad q = e^{-m_0}, \qquad g=e^{-\epsilon}.
 %\end{align}
-The Nekrasov partition function is then expressed as a weighted sum of the instanton partition function %of the perturbative partition and the weighted sum of $k$-instanton partition functions $Z_k$
+Recall that the Nekrasov partition function is expressed as the following weighted sum: %of the instanton partition function %of the perturbative partition and the weighted sum of $k$-instanton partition functions $Z_k$
 \begin{align}
-Z_{\text{Nek}} = Z_{\text{pert}}\bigg(1 + \sum_{k=1}^{\infty}q^kZ_k\bigg) ,
+\CZ = Z_{\text{pert}} \cdot \bigg(1 + \sum_{k=1}^{\infty}q^kZ_k\bigg) ,
 \end{align}
 where $Z_{\text{pert}}$ is the perturbative partition function, while $Z_k$ stands for the $k$-instanton partition function. 
 The perturbative part of the partition function $Z_{\text{pert}}$ comes from the summand of \eqref{eq:znek-su6} at empty Young diagrams, i.e., %$(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)$. 
-$(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\o,\o,\o,\o,\o,\o)$
+$(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\o,\o,\o,\o,\o,\o)$.
 It is given by
 \begin{align}
 Z_{\rm pert} 
@@ -1583,12 +1585,12 @@ Z_{\text{right}}(\o,\o,\o,\o,\o,\o)
 \Biggr]
 \cr 
 & 
-\times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
-g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
+\times \bigg(\sum_{Y'} ( - A_1{}^{-1} A_6{}^{-2})^{|Y'|} \ 
+g^{\frac{\Vert Y'^t \Vert ^2+\Vert Y'\Vert ^2}{2}} \tilde{Z}_{Y'}(g)^2 f_{Y'}^2(g)
 \cr 
 & \qquad \qquad
-\textstyle N_{Y_0^t \,\o }^{-1} (A_1{}^{-1} A_6{}^{-2})
- N^{-1}_{Y_0 \,\o } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \,\o } (A_1 A_i  A_6)\bigg)^2 ,\label{eq:zpert-top}
+\textstyle N_{Y'^t \o }^{-1} (A_1{}^{-1} A_6{}^{-2})
+ N^{-1}_{Y' \o } (A_1^2  A_6)\prod_{i=2}^5 N_{Y' \o } (A_1 A_i  A_6)\bigg)^2 ,\label{eq:zpert-top}
 \end{align}
 %\begin{align}
 %  \label{eq:zpert-top}
@@ -1622,10 +1624,11 @@ where the last two lines can be  combined into the following closed-form express
     \Bigr)
     \Biggr].
 \end{align}
-We note here that when performing the Young diagram sum over $Y_0$ in \eqref{eq:zpert-top} to compute the $Z_{\rm pert}$, we expand \eqref{eq:zpert-top} in terms of $A_1$ and, by $\mathcal{O}(A_1^6)$, we mean that the obtained result is valid up to $\mathcal{O}(A_1^6)$. As it is very unlikely that there will be a new term which suddenly appears  in higher orders than 6 in $A_1$, we believe that there are no further terms for $\mathcal{O}(A_1^6)$.  
+We note here that when performing the Young diagram sum over $Y'$ in \eqref{eq:zpert-top} to compute the $Z_{\rm pert}$, we expand \eqref{eq:zpert-top} in terms of $A_1$ and, by $\mathcal{O}(A_1^6)$, we mean that the obtained result is explicitly compared up to $\mathcal{O}(A_1^6)$. As it is very unlikely that there will be a new term which suddenly appears  in higher orders than 6 in $A_1$, we believe that there are no further terms for $\mathcal{O}(A_1^6)$.  
 It is clear then that \eqref{eq:zpert-top} is manifestly consistent with the equivariant index  \cite{Shadchin:2005mx} for 5d $SU(6)$ gauge theory with a hypermultiplet in the rank-3 antisymmetric representation, %$\mathbf{20}$, 
 i.e., 
 \begin{align}
+  \label{eq:SU6pert}
   Z_{\rm pert}  = \text{PE} \Biggl[ 
     \frac{2g}{(1-g)^2} 
     \Bigl(\sum_{1\leq i<j \leq 6}  \frac{A_i}{A_j} 
@@ -1646,26 +1649,18 @@ Summing over all six contributions, one finds
   \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
  \Bigr)^2. 
 \end{align}
-which is in agreement with the blowup partition function (eqn). \textcolor{red}{(overall sign: looking at the GV invariant for single W-boson + single instanton (which should be -2), the topological vertex computation seems to be correct. blowup should have an overall sign issue)}
+which is in agreement with our general 1-instanton formula \eqref{eq:1inst-formula}.
 
-
-
-\pagebreak
-
-We will show the novel results for the $SO(N)$ gauge theories with spinor hypermultiplets in Section~\ref{subsec:spinor}, for the gauge theories with exceptional groups in Section~\ref{subsec:exceptional}, and for the $SU(6)$ gauge theories with rank-3 antisymmetric hypermultiplets in Section~\ref{subsec:rank3}. (See Table~???)
-
-
-
-especially for `exceptional' gauge theories 
-
-
-
-% There are multiple and distinct blow-up equations \eqref{eq:blowup5d} at different values of $d$, ranged over $0 \leq d \leq d_{\rm max}$ where $d_{\rm max} \equiv h^\vee 
-% % -  |\kappa_{\rm eff}| 
-% - \frac{1}{2}\sum_{i} I(\mathbf{R}_i)$. We need at least three distinct equations to solve for the instanton partition function, thus the bootstrap method is applicable only for gauge theories which satisfy $d_{\rm max} \geq 2$. Here we constrain our discussion to the theories having simple gauge groups, which are classified to have a 5d UV fixed point \cite{Jefferson:2017ahm}. 
-
-
-% There are two 
+We checked that upon imposing the Higgsing condition \eqref{eq:SU6-Higgs-SU3}, i.e., $a_1 + a_5 + a_6 = 0$ and $a_2 + a_3 + a_4 = 0$, the 1-loop contribution \eqref{eq:SU6pert} can be factorized into a product of two $SU(3)$ vector multiplet indices \eqref{eq:1-loop-vec}. We also confirmed that the instanton corrections $Z_1$ and $Z_2$ obtained from the blowup recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-range} become
+\begin{align}
+  \begin{split}
+  Z_1^{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~&\rightarrow ~~ Z_1^{SU(3)_{3}}
+  \!(A_1, A_5,A_6)+Z_1^{SU(3)_{3}}\!(A_2, A_3,A_4)\\
+  Z_2^{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~&\rightarrow ~~ Z_2^{SU(3)_{3}}\!(A_1, A_5,A_6)+Z_2^{SU(3)_{3}}\!(A_2, A_3,A_4) \\
+  &\quad+ Z_1^{SU(3)_{3}}\!(A_1, A_5,A_6)\cdot Z_1^{SU(3)_{3}}\!(A_2, A_3,A_4),
+  \end{split}
+\end{align}
+satisfying the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here $Z_k^{SU(3)_{3}}$ is the Young tableaux formula \eqref{eq:SUn-young} which includes the Coulomb VEV independent contribution $Z_{\rm extra}(q)$ in itself.
 
 
 
