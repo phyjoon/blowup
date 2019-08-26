@@ -199,7 +199,7 @@ where the instanton piece is the fugacity sum over all multi-instanton contribut
 Once the Nekrasov partition function is known, one can extract the prepotential via taking $\e_i \to 0$ limit as $\mathcal{F} = \lim_{\epsilon_{i}\rightarrow 0} \epsilon_1 \epsilon_2 \log{\mathcal{Z}}$ \cite{Nekrasov:2002qd,Nekrasov:2003rj,Nakajima:2003pg, Braverman:2004cr}.
 
 The instanton part of the partition function in the $\Omega$-background can be computed once we know appropriate instanton moduli space. For the classical gauge group, the ADHM construction of the moduli space provides a direct way compute the instanton partition function. The ADHM construction can be understood as the quantum mechanics described by the Dp-D(p+4) system. The Higgs branch moduli space of the Dp system gives the desired moduli space. Matter fields can be also introduced by considering the world-volume theory on the D0-branes of the D0-D4-D8 system. 
-By using the localization on the 1d system on the D0-branes or its dimensional reduction \cite{Moore:1997dj, Bruzzo:2002xf}, the partition function has been obtained for variety of cases: classical gauge groups \cite{Nekrasov:2004vw, Marino:2004cn, Fucito:2004gi, Hollands:2010xa, Hollands:2011zc}, exceptional gauge groups \cite{Benvenuti:2010pq, Keller:2011ek, Keller:2012da, Hanany:2012dm}. 
+By using the localization on the 1d system on the D0-branes or its dimensional reduction \cite{Moore:1997dj, Bruzzo:2002xf}, the partition function has been obtained for variety of cases: classical gauge groups \cite{Nekrasov:2004vw, Marino:2004cn, Fucito:2004gi, Hollands:2010xa, Hollands:2011zc}, exceptional gauge groups \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq, Keller:2011ek, Keller:2012da, Hanany:2012dm}. 
 3d N=4 Coulomb branch realization of the instanton moduli space: \cite{Cremonesi:2014xha}
 The precise choice of the Contour of the ADHM integral has been derived in \cite{Hwang:2014uwa, Hori:2014tda, Cordova:2014oxa} following the Jeffrey-Kirwan residue formula in 2d elliptic genus \cite{Benini:2013xpa,Benini:2013nda}. 
 
@@ -846,38 +846,40 @@ We also consider $SU(6)_\kappa  + 1 \mathbf{TAS}$ theory (one rank-3 antisymmetr
 
 
 
-\begin{table}[p]
-  \centering
-  \begin{tabular}{|c|c|c|c|}
-    \hline
-    $G$ & matter & $r_0$ & $d_{\rm max}$\\
-    \hline
-    $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
-    \hline
-    $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
-    \hline
-    $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
-    \hline
-    $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
-    \hline
-    $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
-    \hline
-    $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
-    \hline
-    $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
-    \hline
-    $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
-    \hline
-    $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
-    \hline
-    $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
-    \hline
-    $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
-    \hline
-    \end{tabular}
-    \caption{list of theories}
-    \label{tbl:list}
-\vspace{1cm}
+%\begin{table}[p]
+%  \centering
+%  \begin{tabular}{|c|c|c|c|}
+%    \hline
+%    $G$ & matter & $r_0$ & $d_{\rm max}$\\
+%    \hline
+%    $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0\leq d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
+%    \hline
+%    $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
+%    \hline
+%    $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
+%    \hline
+%    $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
+%    \hline
+%    $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
+%    \hline
+%    $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
+%    \hline
+%    $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
+%    \hline
+%    $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
+%    \hline
+%    $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
+%    \hline
+%    $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
+%    \hline
+%    $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
+%    \hline
+%    \end{tabular}
+%    \caption{list of theories}
+%    \label{tbl:list}
+%\vspace{1cm}
+
+
   % \begin{tabular}{l|l|}
   %   A & $n$ \\
   % $SU(N)_\kappa + N_f \mathbf{F} $ & {$\!\begin{aligned} \begin{dcases}
@@ -890,7 +892,7 @@ We also consider $SU(6)_\kappa  + 1 \mathbf{TAS}$ theory (one rank-3 antisymmetr
   % \end{tabular}
   % \caption{asd}
   % \label{tbl:list-sun}
-\end{table}
+%\end{table}
 
 
 
@@ -1023,9 +1025,13 @@ Even though IR 5d gauge theory sometimes can be obtained using more than one str
 A sensible QFT observable can thus be obtained only through a proper embedding of the gauge theory into string theory. In some occasions, an extra factor dressing the true QFT observable may appear during the above instanton computation, which is sensitive to the choice of a string theory embedding.
 Our blow-up formula \eqref{eq:recursion} does not explicitly specify a particular UV completion nor string theory embedding. However, we observe that the formula does prefer a particular string theory embedding of the gauge theory. For example, for the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets, we always obtain the partition function that is given as that of the ordinary $(p, q)$ 5-brane web. 
 
-There are wide varieties of `exceptional' gauge theories, whose UV completion is found as M-theory wrapped on a singular Calabi-Yau 3-fold \cite{Diaconescu:1998cn, Jefferson:2018irk, Bhardwaj:2018yhy, Apruzzi:2019opn}. Some of these examples do not yet have ADHM quantum mechanics nor the topological vertex formalism to compute the partition function. We will illustrate that bootstrapping the instanton partition function $Z_{\text{inst}}$ based on the recursion formula \eqref{eq:recursion} works well for those `exceptional' theories, providing their BPS spectrum efficiently.
-
-
+There are wide varieties of `exceptional' gauge theories, whose UV completion is found as M-theory wrapped on a singular Calabi-Yau 3-fold \cite{Diaconescu:1998cn, Jefferson:2018irk, Bhardwaj:2018yhy, Apruzzi:2019opn}. Some of these examples do not yet have ADHM quantum mechanics nor the topological vertex formalism to compute the partition function. 
+%There are also `exceptional' gauge theories, that involve exceptional gauge groups or matters that cannot be engineered from the open strings ending on D-branes. Instead, their UV embedding is often geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. 
+Since the exceptional theories lack ADHM description, their instanton partition function $Z_\text{inst}$ has been studied in a case-by-case basis. Once the 5-brane web configuration engineering an exceptional theory is identified, the topological vertex formalism can be applied to compute the relevant partition function $\CZ$ \cite{Hollowood:2003cv, Iqbal:2007ii}. 
+Alternatively, one can first construct the $\IC^2 \times T^2$ partition function for a related 6d gauge theory, based on its modularity and anomaly, then take the circle reduction to obtain the 5d partition function $\CZ$ \cite{DelZotto:2016pvm, DelZotto:2018tcj}. Several interesting exceptional theories have been studied so far, based on the above two approaches.
+Sometimes, there exists auxiliary 4d $\CN=2$ SCFT \cite{Benini:2009gi} that realizes exceptional instanton moduli space as its Higgs branch.\footnote{Also 2d $\CN=(0, 4)$ version \cite{Putrov:2015jpa} for any 4d $\CN=2$ theory can be obtained upon twisted dimensional reduction, which allows us to compute the 6d instanton string partition function.} In this case, computing the superconformal index in the Higgs branch limit provides a way to compute the necessary instanton partition function for the exceptional gauge theory \cite{Gadde:2010te, Gadde:2011uv, Gaiotto:2012uq, Gadde:2015xta, Agarwal:2018ejn}. 
+Likewise, 3d $\CN=4$ theory can realize exceptional instanton moduli space via its Coulomb branch \cite{Intriligator:1996ex}. Computing its Hilbert series (or the Coulomb branch limit of the superconformal index), one can compute the instanton partition function \cite{Cremonesi:2013lqa, Cremonesi:2014xha}. 
+We will illustrate that bootstrapping the instanton partition function $Z_{\text{inst}}$ based on the recursion formula \eqref{eq:recursion} works well for those `exceptional' theories, providing their BPS spectrum efficiently.
 
 
 
@@ -1110,41 +1116,38 @@ The general 1-instanton expression \eqref{eq:1inst-formula} and the recursion fo
 \subsection{Theories with spinor hypermultiplets}
 \label{subsec:spinor}
 
-So far, we have investigated the `standard' gauge theories which have certain D-brane set-ups in IIA/IIB string theory to realize themselves and their non-perturbative solitons. Once there are a sufficient number of the blowup equations, the $n$-instanton partition function $Z_n$ can be obtained as the solution. Solving specifically at 1-instanton level, $Z_1$ is expressed as \eqref{eq:1inst-formula}. All these results were found to be in agreement with the ADHM instanton calculus, sometimes modulo an extra factor $Z_\text{extra}$  sensitive to the string theory embedding of the gauge theory.
+So far, we have investigated the `standard' gauge theories that have certain D-brane set-ups in type IIA/IIB string theory to realize themselves and also their instantons. For the theory with a sufficient number of the blowup equations, the $n$-instanton partition function $Z_n$ can be determined as the solution of the blowup equations. We have found that this formula agrees with the instanton counting result using the ADHM construction, modulo possible extra factor $Z_\text{extra}$ that is sensitive to the string theory embedding of the gauge theory.
 
-There are also `exceptional' gauge theories, which involve exceptional gauge groups or matters that cannot be engineered from perturbative open strings ending on non-perturbative branes. Instead, their UV embedding is geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. Since the exceptional theories lack for the ADHM formalism, their instanton partition function $\CZ$ has been studied on a case-by-case basis; Once the 5-brane web configuration engineering an exceptional theory is identified, the topological vertex formalism can be applied to compute the relevant partition function $\CZ$. Alternatively, one can first construct the $\IC^2 \times T^2$ partition function for a related 6d gauge theory, based on its modularity and anomaly, then take the circle reduction to obtain the 5d partition function $\CZ$. Several interesting exceptional theories have been studied so far, based on the above two approaches.
-
-We can take advantage of the universality of the blowup equation. Recall that the blow-up recursion formula \eqref{eq:recursion} holds for a certain range of $d$, i.e., the set of all integers between $0 \leq d \leq h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l)$, when the gauge group $G$ is neither $ SU(N)_\k$ nor $Sp(N)_\theta$ so that an extra complication due to the Chern-Simons level $\kappa$ or  the theta angle $\theta$ cannot occur. 
-One can solve the recursion formulae for the $k$-instanton correction $Z_k$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We assume that  $Z_k$ solved from the recursion formulae would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested via comparison with \cite{Kim:2018gjo, 
-DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for some exceptional cases. 
+We take advantage of the universality of the blowup equation. Recall that the blow-up recursion formula \eqref{eq:recursion} holds for a certain range of $d$, i.e., the set of all integers between $0 \leq d \leq h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l)$, when the gauge group $G$ is neither $ SU(N)_\k$ nor $Sp(N)_\theta$. In this case, there is no extra complication due to the Chern-Simons level $\kappa$ or the theta angle $\theta$.
+One can solve the recursion formulae for the $n$-instanton correction $Z_n$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We conjecture that $Z_n$ solved from the recursion formula would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested via comparison with \cite{Kim:2018gjo, DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for some exceptional cases. 
 
 
-\begin{table}[t!]
-  \centering
-  \begin{tabular}{@{}cl@{}}
-    \toprule
-    Gauge group  & Hypermultiplets    \\  \midrule
-    $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
-    $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
-    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
-    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(11)$  & $n_{\bf s}= 2$ \\
-    $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(9)$  & $n_{\bf s}  = 3$ \\
-    $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
-    $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
-    $SO(8)$  & $n_{\bf s} + n_{\bf c}+ n_{\bf v} = 4$ \\
-    $SO(7)$  & $n_{\bf s} + n_{\bf v}  =3$\\ \bottomrule
-    \end{tabular}
-    \caption{asd}
-    \label{tbl:spinor}
-\end{table}
+%\begin{table}[t!]
+%  \centering
+%  \begin{tabular}{@{}cl@{}}
+%    \toprule
+%    Gauge group  & Hypermultiplets    \\  \midrule
+%    $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
+%    $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
+%    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
+%    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+%    $SO(11)$  & $n_{\bf s}= 2$ \\
+%    $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
+%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
+%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
+%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
+%    $SO(9)$  & $n_{\bf s}  = 3$ \\
+%    $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
+%    $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
+%    $SO(8)$  & $n_{\bf s} + n_{\bf c}+ n_{\bf v} = 4$ \\
+%    $SO(7)$  & $n_{\bf s} + n_{\bf v}  =3$\\ \bottomrule
+%    \end{tabular}
+%    \caption{asd}
+%    \label{tbl:spinor}
+%\end{table}
 
 In this section, we will focus on the $SO(N)$ gauge theories with spinor hypermultiplets.
-There are a sufficient number of recursion formulae \eqref{eq:recursion} to fix the $k$-instanton partition function $Z_k$ of the $SO(N)$ gauge theory, if and only if  
+We have a sufficient number of recursion formulae \eqref{eq:recursion} to determine the $n$-instanton partition function $Z_n$ of the $SO(N)$ gauge theory, if and only if  
 \begin{align}
   \label{eq:spinor-range}
   \begin{split}
@@ -1152,35 +1155,44 @@ There are a sufficient number of recursion formulae \eqref{eq:recursion} to fix 
   N-4 &\geq N_{\bf v} + 2^{\frac{N-8}{2}}\cdot (N_{\bf s} + N_{\bf c})\qquad\quad \text{for even $N$}
   \end{split}
 \end{align}
-where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$  denote the number of hypermultiplets in the vector, spinor, and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. Let us consider the special cases whose $Z_k$ is already known.
+where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$ denote the number of hypermultiplets in the vector, spinor and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. 
+%Let us consider the special cases whose $Z_n$ is already known.
+We compare our formula against any known results for $SO(N)$ gauge theory with a number of spinor hypermultiplets  \cite{Kim:2018gjo, DelZotto:2018tcj}. We not only find perfect agreements for the case with the known results, but also  obtain partition functions for the previously unknown cases as well. 
 
-\paragraph{SO(7)} The $k$-instanton contribution $Z_k$ of $SO(7) + N_{\bf s}\,\mathbf{S}$ theory can be obtained from the SUSY quantum mechanics proposed in  \cite{Kim:2018gjo}, which can be summarized as the following $SU(4)$ Young tableau expression:
+\paragraph{SO(7)} The $n$-instanton contribution $Z_n$ of $SO(7) + N_{\bf s}\,\mathbf{S}$ theory can be obtained from the SUSY quantum mechanics proposed in \cite{Kim:2018gjo}, which can be summarized as the following $SU(4)$ Young tableau expression:
 \begin{align}
-  Z_k^\text{YD} = \sum_{|\vec{Y}| = k} &\prod_{i=1}^4\prod_{s \in Y_i}\frac{2\sinh{(\phi(s))} \ 2\sinh{(\phi(s)-\e_+)} \ \prod_{l=1}^{N_\textbf{s}}2\sinh(\frac{m_l \pm \phi(s)}{2}) }{\prod_{j=1}^4 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}\,2\sinh{\frac{\e_+ - \phi(s) - a_j}{2}}} \\ \times &\prod_{i \leq j}^4 \prod_{\stackrel{s_{i,j} \in Y_{i,j}}{s_i < s_j}} \frac{2\sinh{\frac{\phi(s_i)+\phi(s_j)}{2}}\, 2\sinh{\frac{\phi(s_i)+\phi(s_j)-2\e_+}{2}}}{ 2\sinh{\frac{\e_1 - \phi(s_i)-\phi(s_j)}{2}} \, 2\sinh{\frac{\e_2 - \phi(s_i)-\phi(s_j)}{2}}}
+\begin{split}
+  Z_n^\text{YD} = \sum_{|\vec{Y}| = n} &\prod_{i=1}^4\prod_{s \in Y_i}\frac{2\sinh{(\phi(s))} \ 2\sinh{(\phi(s)-\e_+)} \ \prod_{l=1}^{N_\textbf{s}}2\sinh(\frac{m_l \pm \phi(s)}{2}) }{\prod_{j=1}^4 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}\,2\sinh{\frac{\e_+ - \phi(s) - a_j}{2}}} \\ \times &\prod_{i \leq j}^4 \prod_{\stackrel{s_{i,j} \in Y_{i,j}}{s_i < s_j}} \frac{2\sinh{\frac{\phi(s_i)+\phi(s_j)}{2}}\, 2\sinh{\frac{\phi(s_i)+\phi(s_j)-2\e_+}{2}}}{ 2\sinh{\frac{\e_1 - \phi(s_i)-\phi(s_j)}{2}} \, 2\sinh{\frac{\e_2 - \phi(s_i)-\phi(s_j)}{2}}}
+\end{split}
 \end{align}
-We checked the agreement between $Z_1^\text{YD}$ and the 1-instanton formula $Z_1$ in \eqref{eq:1inst-formula} for $N_{\bf s} \leq 3$. At two instantons, it was also confirmed for $N_{\bf s} \leq 3$ that $Z_2^\text{YD} = Z_2$, where $Z_2$ is  the solution of the recursion formula \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}. Such explicit comparison implies that the blow-up recursion formula \eqref{eq:recursion} actually works for the $SO(7) + N_{\bf s}\,\mathbf{S}$ theory. 
+We verfied that $Z_1^\text{YD}$ and the 1-instanton formula $Z_1$ in \eqref{eq:1inst-formula} agree for $N_{\bf s} \leq 3$. We further confirmed at two instanton order for $N_{\bf s} \leq 3$ that $Z_2^\text{YD} = Z_2$, where $Z_2$ is  the solution of the recursion formula \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}. Such explicit comparison implies that the blow-up recursion formula \eqref{eq:recursion} indeed works for the $SO(7) + N_{\bf s}\,\mathbf{S}$ theory. 
 
-The 1-instanton partition function of $SO(7) + 4\mathbf{S} + 1\mathbf{V}$  theory is written in (H.15) of \cite{DelZotto:2018tcj}.
-We deduced the 1-instanton correction of $SO(7) + N_{\bf s}\,\mathbf{S} + N_{\bf v}\mathbf{V}$ theory with $( N_{\bf s}, N_{\bf v}) \leq ( 2,1)$  from that,   by taking several flavor chemical potentials to infinity. All of those were confirmed to be in agreement with our general 1-instanton expression \eqref{eq:1inst-formula} up to $(p_1p_2)^{13/2}$.
+The 1-instanton partition function of $SO(7) + 4\mathbf{S} + 1\mathbf{V}$ theory is given in (H.15) of \cite{DelZotto:2018tcj}.
+From this expression, we can obtain the 1-instanton correction of $SO(7) + N_{\bf s}\,\mathbf{S} + N_{\bf v}\mathbf{V}$ theory with $( N_{\bf s}, N_{\bf v}) \leq ( 2,1)$ by integrating out hypermultiplets or equivalently taking some flavor chemical potentials to infinity. We confirmed that the result agrees with our general 1-instanton expression \eqref{eq:1inst-formula} up to order $(p_1p_2)^{13/2}$. Notice that our formula holds for any $N_{\bf v} + N_{\bf s} \le 2$ and can be used to compute arbitrary high orders in instanton number. 
 
 \paragraph{SO(8)}
+Our instanton formula should hold for $N_{\bf v} + N_{\bf s} + N_{\bf c} \le 4$. Let us compare it with known results. 
 
 The 1-instanton result of $SO(8) + 1\mathbf{S} + 1\mathbf{C} + 1\mathbf{V}$ theory is found in (H.28) of \cite{DelZotto:2018tcj}.
-That is expressed in terms of irreducible characters $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ means either the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. Their representation $\mathbf{R}$ is specified by the Dynkin label in the subscript. All irreducible characters for the flavor symmetry are assumed to be written in the orthogonal basis, to be compatible with our convention of mass parameters in \eqref{eq:1-loop-hyp}, \eqref{eq:recursion}, \eqref{eq:1inst-formula}. The mass parameters will be often distinguished by the superscript $S \in \{s,c,v\}$ according to the matter representation. The flavor symmetry is $Sp(N_{\bf v})_v \times Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c$.
+It is expressed in terms of characters of irreducible representations $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ mean either the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. Their representation $\mathbf{R}$ is specified by the Dynkin label in the subscript. All irreducible characters for the flavor symmetry are assumed to be written in the orthogonal basis, to be compatible with our convention of mass parameters in \eqref{eq:1-loop-hyp}, \eqref{eq:recursion}, \eqref{eq:1inst-formula}. The mass parameters will be often distinguished by the superscript $S \in \{s,c,v\}$ according to the matter representation. The flavor symmetry is $Sp(N_{\bf v})_v \times Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c$.
 
-We obtained the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from (H.28) by sending appropriate mass parameters to infinity.
-All of those were consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $t^{20}$ order, where $t \equiv \sqrt{p_1p_2}$. 
-Furthermore, we could determine the unknown part of (H.28) of \cite{DelZotto:2018tcj} as 
+We can obtain the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from (H.28) of \cite{DelZotto:2018tcj} by sending appropriate mass parameters to infinity.
+All the results obtained in this way is consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $t^{20}$ order, where $t \equiv \sqrt{p_1p_2}$. 
+Furthermore, we are able to determine the unknown part of (H.28) of \cite{DelZotto:2018tcj} as 
 \begin{align}
   \label{eq:SO8-v1s1c1}
-  \hat{Z}_1 &=  t^4 + \sum_{n=0}^\infty t^{5+2n}(\chi_{(0n00)}^G \chi^v_{(1)}\chi^s_{(1)}\chi^c_{(1)} + \sum_{n=0}^\infty t^{6+2n}(\chi_{(1n00)}^G \chi^s_{(1)}\chi^c_{(1)}+ \chi_{(0n10)}^G \chi^s_{(1)}\chi^v_{(1)}\\&
-  +\chi_{(0n01)}^G \chi^c_{(1)}\chi^v_{(1)}) + \sum_{n=0}^\infty t^{7+2n} (\chi^G_{(1n10)}\chi^s_{(1)} + \chi^G_{(1n01)}\chi^c_{(1)}+\chi^G_{(0n11)}\chi^v_{(1)})- \sum_{n=0}^\infty t^{8+2n}\chi^G_{(1n11)}\nn,
+  \begin{split}
+ \hat{Z}_1 &=  t^4 + \sum_{n=0}^\infty t^{5+2n} \chi_{(0n00)}^G \chi^v_{(1)}\chi^s_{(1)}\chi^c_{(1)} \\
+ &\quad + \sum_{n=0}^\infty t^{6+2n}\left(\chi_{(1n00)}^G \chi^s_{(1)}\chi^c_{(1)}+ \chi_{(0n10)}^G \chi^s_{(1)}\chi^v_{(1)}
+  +\chi_{(0n01)}^G \chi^c_{(1)}\chi^v_{(1)}\right)\\
+ &\quad  + \sum_{n=0}^\infty t^{7+2n} \left(\chi^G_{(1n10)}\chi^s_{(1)} + \chi^G_{(1n01)}\chi^c_{(1)}+\chi^G_{(0n11)}\chi^v_{(1)}\right)- \sum_{n=0}^\infty t^{8+2n}\chi^G_{(1n11)} \ ,
+ \end{split}
 \end{align}
-where $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1,2}}{2}}) \cdot Z_1$ is the 1-instanton result after removing the center-of-mass factor. 
+where $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1}}{2}})(2\sinh{\frac{\e_{2}}{2}}) \cdot Z_1$ is the 1-instanton partition function with the center-of-mass factor removed. 
 
 
 Now we compare \eqref{eq:1inst-formula} with the 1-instanton partition function of $SO(8) + 2\mathbf{S}
- + 2\mathbf{C} + 2\mathbf{V}$ theory, written in (H.19) of \cite{DelZotto:2018tcj}. Our 1-instanton formula \eqref{eq:1inst-formula} applied to the $SO(8)$ theories having $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,1,1), (1,2,2), (1,1,2),(2,2,0),(2,0,2),(0,2,2)$ was consistent with (H.19) up to $t^{20}$ order, after suitably setting some mass parameters in (H.19) to infinity. By comparison, we could further determine the unknown part of (H.19)  of \cite{DelZotto:2018tcj}  as 
+ + 2\mathbf{C} + 2\mathbf{V}$ theory, written in (H.19) of \cite{DelZotto:2018tcj}. Our 1-instanton formula \eqref{eq:1inst-formula} applied to the $SO(8)$ theories having $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,1,1), (1,2,2), (1,1,2),(2,2,0),(2,0,2),(0,2,2)$ agree with (H.19) up to $t^{20}$ order, after suitably setting some mass parameters in (H.19) to infinity. We could further determine the unknown part of (H.19) of \cite{DelZotto:2018tcj} as 
  \begin{align}
   \label{eq:SO8-v2s2c2}
   \hat{Z}_1 &= t^{-1} - t^3(\chi_{(01)}^v+\chi_{(01)}^s+\chi_{(01)}^c) 
@@ -1207,16 +1219,17 @@ which exchanges the $SO(8)$ irreducible characters as
   \chi_{(n_cn_an_sn_v)} (\vec{a}) &= \chi_{(n_vn_an_cn_s)} (\vec{a}')|_{\vec{a}' \rightarrow \vec{a}}, &
   \chi_{(n_sn_an_vn_c)} (\vec{a}) &= \chi_{(n_vn_an_cn_s)} (\vec{a}'')|_{\vec{a}'' \rightarrow \vec{a}}.
 \end{align}
-Dropping off primes from $Z_1 (\vec{a}', \epsilon_1,\epsilon_2; \vec{m}^s,\vec{m}^c,\vec{m}^v)$ or $Z_1 (\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) $, we confirmed
+Dropping off primes from $Z_1 (\vec{a}', \epsilon_1,\epsilon_2; \vec{m}^s,\vec{m}^c,\vec{m}^v)$ or $Z_1 (\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) $, we indeed find
 \begin{align}
   \begin{split}
   Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) &= Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}', \epsilon_1,\epsilon_2;\vec{m}^v,\vec{m}^s,\vec{m}^c)|_{\vec{a}' \rightarrow \vec{a}}\\
-  Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) &= Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^c,\vec{m}^v,\vec{m}^s)|_{\vec{a}'' \rightarrow \vec{a}}.
+  Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}, \epsilon_1,\epsilon_2;\vec{m}^s,\vec{m}^c,\vec{m}^v) &= Z_1^{N_{\bf s}=N_{\bf c}= N_{\bf v}}\,(\vec{a}'', \epsilon_1,\epsilon_2;\vec{m}^c,\vec{m}^v,\vec{m}^s)|_{\vec{a}'' \rightarrow \vec{a}} , 
   \end{split}
 \end{align}
+which is consistent with the triality. 
 
 Similarly, we also found the 1-instanton formula \eqref{eq:1inst-formula} applied to $SO(8)$ theories with $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (4,0,0)$ or $(0,4,0)$ is compatible with the $SO(8)$ triality.
-Starting with the 1-instanton result $Z_1^\text{ADHM} = Z_1^\text{ADHM} (\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) $ obtained from the relevant ADHM quantum mechanics for $SO(8) +  N_{\bf v}\mathbf{V}$ theory with $ N_{\bf v} \leq 4$, we checked that
+Starting with the 1-instanton result $Z_1^\text{ADHM} = Z_1^\text{ADHM} (\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) $ obtained from the relevant ADHM quantum mechanics for $SO(8) +  N_{\bf v}\mathbf{V}$ theory with $ N_{\bf v} \leq 4$, we find 
 \begin{align}
   \begin{split}
   Z_1^{N_{\bf c}, \, N_{\bf c}= N_{\bf v}= 0}\,(\vec{a}, \epsilon_1,\epsilon_2, \vec{m}) &= Z_1^{\text{ADHM}}(\vec{a}', \epsilon_1,\epsilon_2, \vec{m})|_{\vec{a}' \rightarrow \vec{a}}\\
@@ -1226,18 +1239,21 @@ Starting with the 1-instanton result $Z_1^\text{ADHM} = Z_1^\text{ADHM} (\vec{a}
 
 
 \paragraph{SO(9)}
-
-The 1-instanton formula \eqref{eq:1inst-formula} can be applied to $SO(9) + N_\mathbf{s}\mathbf{S} + N_\mathbf{v}\mathbf{V}$ theory with $(N_\mathbf{s}, N_{\mathbf{v}}) \leq (1,3)$ or $(2,1)$, which has $Sp(N_\mathbf{s})_s \times Sp(N_\mathbf{v})_v$ flavor symmetry. It can be compared with the 1-instanton partition function of $SO(9) + 2\mathbf{S} + 3\mathbf{V}$ theory, which is written in (H.20) of \cite{DelZotto:2018tcj} up to $t^7$ order, after appropriately taking some mass parameters to infinity. We checked all their consistency up to the given order. For example, the character expansion of $\hat{Z}_{1}$ for $SO(9) + 2\mathbf{S} + 1\mathbf{V}$  can be written as  
+For the $SO(9)$ theory with $N_{\bf s}$ spinor and $N_{\bf v}$ vector, our blowup formula is valid for $N_{\bf v} + 2 N_{\bf s} \le 5$. 
+The 1-instanton formula \eqref{eq:1inst-formula} can be applied to $(N_\mathbf{s}, N_{\mathbf{v}}) \leq (1,3)$ or $(2,1)$, which has $Sp(N_\mathbf{s})_s \times Sp(N_\mathbf{v})_v$ flavor symmetry. It can be compared with the 1-instanton partition function of $SO(9) + 2\mathbf{S} + 3\mathbf{V}$ theory, which is written in (H.20) of \cite{DelZotto:2018tcj} up to $t^7$ order, after appropriately taking some mass parameters to infinity. We checked all their consistency up to the given order. For example, the character expansion of $\hat{Z}_{1}$ for $SO(9) + 2\mathbf{S} + 1\mathbf{V}$  can be written as  
 \begin{align}
   \label{eq:SO9-v1s2}
+  \begin{split}
   \hat{Z}_1&=\, t^4\chi^v_{(1)}+t^5\chi^s_{(20)}-t^6\chi_{(0001)}^G\chi^s_{(10)}
-  +\sum_{n=0}^{\infty}\Big(t^{6+2n}\chi^G_{(0n00)}\chi^s_{(02)}\chi^v_{(1)}
-  \nn\\&-t^{7+2n}(\chi^G_{(1n00)}\chi^s_{(02)}+\chi^G_{(0n01)}\chi^s_{(11)}\chi^v_{(1)}) \nn\\&+t^{8+2n}(\chi^G_{(1n01)}\chi^s_{(11)}+\chi^G_{(0n10)}\chi^s_{(20)}\chi^v_{(1)} 
-  +\chi^G_{(0n02)}\chi^s_{(01)}\chi^v_{(1)})
-  \nn\\&-t^{9+2n}(\chi^G_{(1n10)}\chi^s_{(20)}+\chi^G_{(1n02)}\chi^s_{(01)}+\chi^G_{(0n11)}\chi^s_{(10)}\chi^v_{(1)})\\
-  &+t^{10+2n}(\chi^G_{(1n11)}\chi^s_{(10)}+\chi^G_{(0n20)}\chi^v_{(1)})-t^{11+2n}\chi^G_{(1n20)}\Big),\nn
+   \\&\quad +\sum_{n=0}^{\infty}\Bigg(t^{6+2n}\chi^G_{(0n00)}\chi^s_{(02)}\chi^v_{(1)}
+  -t^{7+2n}\left(\chi^G_{(1n00)}\chi^s_{(02)}+\chi^G_{(0n01)}\chi^s_{(11)}\chi^v_{(1)}\right) 
+  \\&\qquad \quad+t^{8+2n}\left(\chi^G_{(1n01)}\chi^s_{(11)}+\chi^G_{(0n10)}\chi^s_{(20)}\chi^v_{(1)} 
+  +\chi^G_{(0n02)}\chi^s_{(01)}\chi^v_{(1)}\right)
+  \\&\qquad \quad-t^{9+2n}\left(\chi^G_{(1n10)}\chi^s_{(20)}+\chi^G_{(1n02)}\chi^s_{(01)}+\chi^G_{(0n11)}\chi^s_{(10)}\chi^v_{(1)}\right)\\
+  &\qquad \quad+t^{10+2n}\left(\chi^G_{(1n11)}\chi^s_{(10)}+\chi^G_{(0n20)}\chi^v_{(1)}\right) -t^{11+2n}\chi^G_{(1n20)} \Bigg),
+  \end{split}
   \end{align}
-which was tested against the general formula \eqref{eq:1inst-formula} up to $t^{20}$ order. It is the same as (H.20) of \cite{DelZotto:2018tcj} after reducing the $Sp(3)_v$ characters
+which is tested against the general formula \eqref{eq:1inst-formula} up to $t^{20}$ order. It is the same as (H.20) of \cite{DelZotto:2018tcj} after reducing the $Sp(3)_v$ characters by 
 \begin{align}
   \chi^{v}_{(001)}\rightarrow \chi^{v}_{(1)},\qquad \chi^{v}_{(010)}\rightarrow 1,\qquad \chi^{v}_{(100)}\rightarrow 0,\qquad\chi^{v}_{(000)}\rightarrow 0.
 \end{align}
@@ -1245,13 +1261,15 @@ which was tested against the general formula \eqref{eq:1inst-formula} up to $t^{
 
 
 \paragraph{SO(10)}
-We apply our 1-instanton expression \eqref{eq:1inst-formula} to $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ theory with $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,0,2),(1,1,2), (0,2,2),(1,0,4),(0,1,4)$. The relevant flavor symmetry is $U(N_\mathbf{s} + N_\mathbf{c}) \times Sp(N_\mathbf{v})$ because  the $SO(10)$ (conjugate) spinor is a complex representation. Since the $SO(10)$ charge conjugation exchanges the spinor and conjugate spinor representations, i.e., $\chi_{(00001)}^G = (\chi_{(00010)}^G)^*$, the instanton partition function for $SO(10) + (N_{\mathbf s}\mp 1)\mathbf{S} + (N_{\mathbf c}\pm 1)\mathbf{C} + N_{\mathbf v}\mathbf{V}$  must be identified with that of $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ simply by flipping the sign of mass parameters for (conjugate) spinor hypermultiplets. 
+We apply our 1-instanton expression \eqref{eq:1inst-formula} to $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ theory with $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,0,2),(1,1,2), (0,2,2),(1,0,4),(0,1,4)$. The relevant flavor symmetry is $U(N_\mathbf{s} + N_\mathbf{c}) \times Sp(N_\mathbf{v})$ because  the $SO(10)$ (conjugate) spinor is a complex representation. Since the $SO(10)$ charge conjugation exchanges the spinor and conjugate spinor representations, 
+\textit{i.e.}, $\chi_{(00001)}^G = (\chi_{(00010)}^G)^*$, the instanton partition function for $SO(10) + (N_{\mathbf s}\mp 1)\mathbf{S} + (N_{\mathbf c}\pm 1)\mathbf{C} + N_{\mathbf v}\mathbf{V}$  must be identified with that of $SO(10) + N_{\mathbf s}\mathbf{S} + N_{\mathbf c}\mathbf{C} + N_{\mathbf v}\mathbf{V}$ simply by flipping the sign of mass parameters for (conjugate) spinor hypermultiplets: 
 \begin{align}
   \hat{Z}_{1}^{N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}}; m^c_{1,\cdots,N_\mathbf{c}}) &= \hat{Z}_{1}^{N_{\mathbf{s}}-1,N_\mathbf{c}+1,N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}-1}; m^c_{1,\cdots,N_\mathbf{c}+1})\big|_{m^c_{N_\mathbf{c}+1} = -m^s_{N_\mathbf{s}}}\nn\\ 
   &= \hat{Z}_{1}^{N_{\mathbf{s}}+1,N_\mathbf{c}-1,N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}+1}; m^c_{1,\cdots,N_\mathbf{c}-1})\big|_{m^s_{N_\mathbf{s}+1} = -m^c_{N_\mathbf{c}}}
 \end{align}
-This relation was explicitly confirmed in all above cases at 1-instanton order. We may want to compare \eqref{eq:1inst-formula} with the known 1-instanton partition function of $SO(10) + 1\mathbf{S} + 1\mathbf{C} + 4\mathbf{V}$ theory, written in (H.21) of \cite{DelZotto:2018tcj}, after  taking relevant mass parameters  to infinity. However, (H.21) specifies $\hat{Z}_1$ only up to $\mathcal{O}(t^5)$, which leaves nothing for comparison once we reduce the mass parameters. Thus the consistency between two expressions could be only weakly tested. For instance, $\hat{Z}_{1}$ obtained  from \eqref{eq:1inst-formula} for $SO(10) + N_\mathbf{s}\mathbf{S}+ N_\mathbf{c}\mathbf{C} + 4\mathbf{V}$ theory with $ N_\mathbf{s} 
-+ N_\mathbf{c} = 2$ is displayed in \eqref{eq:so10-2s2v}, which turns out to be void until $t^4$ order.
+This relation is explicitly confirmed in all above cases at 1-instanton order. 
+We may want to compare \eqref{eq:1inst-formula} with the known 1-instanton partition function of $SO(10) + 1\mathbf{S} + 1\mathbf{C} + 4\mathbf{V}$ theory, written in (H.21) of \cite{DelZotto:2018tcj}, after taking relevant mass parameters  to infinity. However, (H.21) specifies $\hat{Z}_1$ only up to $\mathcal{O}(t^5)$, which leaves nothing for comparison once we reduce the mass parameters. Thus the consistency between two expressions can be only weakly tested. For instance, $\hat{Z}_{1}$ obtained from \eqref{eq:1inst-formula} for $SO(10) + N_\mathbf{s}\mathbf{S}+ N_\mathbf{c}\mathbf{C} + 4\mathbf{V}$ theory with $ N_\mathbf{s} 
++ N_\mathbf{c} = 2$ is displayed in \eqref{eq:so10-2s2v}, which turns out to be trivial upto $t^4$ order.
 
 
 
@@ -1259,14 +1277,19 @@ This relation was explicitly confirmed in all above cases at 1-instanton order. 
 
 The 1-instanton partition function of $SO(12) + 1\mathbf{S} + 6\mathbf{V}$ theory  is written in (H.22) of \cite{DelZotto:2018tcj}, up to $t^8$ order. It can be compared with our 1-instanton formula \eqref{eq:1inst-formula} applied to $SO(12) + N_\mathbf{s}\mathbf{S} + N_\mathbf{c}\mathbf{C} + N_\mathbf{v}\mathbf{V}$ theory with $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}}) \leq (1,0,4)$ or $(0,1,4)$, whose flavor symmetry acting on matter multiplets is $SO(2N_\mathbf{s})_s \times SO(2N_\mathbf{c})_c \times Sp(N_\mathbf{v})_v$. For comparison, we need to appropriately decouple some mass parameters in (H.22) to infinity. It reduces the $Sp(6)_v$ characters in (H.22) to, e.g., the $Sp(4)_v$ irreducible characters as follows:
 \begin{align}
-  \chi^{v}_{(000000)} &\rightarrow 0, & \chi^{v}_{(100000)}&\rightarrow 0,& \chi^{v}_{(010000)}&\rightarrow 1, \\ \chi^{v}_{(001000)}&\rightarrow \chi^{v}_{(1000)}, & \chi^{v}_{(000100)}&\rightarrow \chi^{v}_{(0100)}, & \chi^{v}_{(000001)}&\rightarrow \chi^{v}_{(0001)}\nn
+\begin{split}
+\begin{array}{llllll}
+  \chi^{v}_{(000000)} &\rightarrow 0, & \quad \chi^{v}_{(100000)}&\rightarrow 0,& \quad \chi^{v}_{(010000)}&\rightarrow 1, \\ \chi^{v}_{(001000)}&\rightarrow \chi^{v}_{(1000)}, & \quad  \chi^{v}_{(000100)}&\rightarrow \chi^{v}_{(0100)}, & \quad \chi^{v}_{(000001)}&\rightarrow \chi^{v}_{(0001)}
+\end{array}
+\end{split}
 \end{align}
-The agreement between (H.22) and \eqref{eq:1inst-formula} was explicitly confirmed up to the given order, for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}}) = (1,0,4)$. Moreover, we checked that the 1-instanton results ${Z}_1$ from \eqref{eq:1inst-formula} for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}})= (1,0,N_\mathbf{v})$ and $(0,1,N_\mathbf{v})$ could be interchanged as follows: 
+We explicitly confirmed that (H.22) and \eqref{eq:1inst-formula} agree up to the given order, for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}}) = (1,0,4)$. Moreover, we checked that the 1-instanton results ${Z}_1$ from \eqref{eq:1inst-formula} for $(N_\mathbf{s},N_\mathbf{c}, N_{\mathbf{v}})= (1,0,N_\mathbf{v})$ and $(0,1,N_\mathbf{v})$ could be interchanged as follows: 
 \begin{align}
   \hat{Z}_{1}^{N_{\mathbf{s}}=1,N_\mathbf{c}=0,N_{\mathbf{v}}}(a_1,a_2,a_3,a_4,a_5,a_6) = \hat{Z}_{1}^{N_{\mathbf{s}}=0,N_\mathbf{c}=1,N_{\mathbf{v}}}(a_1,a_2,a_3,a_4,a_5,-a_6).
 \end{align}
 
 
+\paragraph{Summary of new results}
 We have compared so far the solution $Z_1$ of the recursion formulae \eqref{eq:recursion} with the known $1$-instanton partition function   for various $SO(N)$ theories with spinor hypermultiplets. The comparison showed consistency for all the examples whose $Z_1$ had been computed \cite{Kim:2018gjo,DelZotto:2018tcj}. We also collect the character expansion of the 1-instanton partition function \eqref{eq:1inst-formula} in Appendix~\ref{sec:data} for novel $SO(N)$ theories with spinor matters. See Table~\ref{tbl:son-data} for the list of character expansions.
 
 
@@ -1293,7 +1316,7 @@ We have compared so far the solution $Z_1$ of the recursion formulae \eqref{eq:r
 \label{subsec:exceptional}
 
 
-Let us continue to apply the recursion formulae \eqref{eq:recursion} and the general 1-instanton expression \eqref{eq:1inst-formula} to study the instanton partition function of exceptional gauge theories. One can find a sufficient number of recursion formulae \eqref{eq:recursion} to fix the $k$-instanton partition function $Z_k$, if and only if the gauge theory has the following number of fundamental hypermultiplets. Notice that other representations do not appear in the recent classification of 5d SCFTs \cite{Jefferson:2017ahm}.
+Let us continue to apply the recursion formulae \eqref{eq:recursion} and the general 1-instanton expression \eqref{eq:1inst-formula} to study the instanton partition function of exceptional gauge theories. One can find a sufficient number of recursion formulae \eqref{eq:recursion} to fix the $n$-instanton partition function $Z_n$, if and only if the gauge theory has the following number of fundamental hypermultiplets: 
 \begin{align}
   \label{eq:exceptional-range}
   \begin{split}
@@ -1304,47 +1327,54 @@ Let us continue to apply the recursion formulae \eqref{eq:recursion} and the gen
     \varnothing & \qquad\text{ if }\quad G=E_8
   \end{split}
 \end{align}
-
+Notice that other representations do not appear in the recent classification of 4d $\CN=2$ SCFTs \cite{Bhardwaj:2013qia} nor 5d SCFTs \cite{Jefferson:2017ahm}.
 
 \paragraph{$\bf G_2$}
-A supersymmetric quantum mechanical model was proposed in  \cite{Kim:2018gjo}, whose Witten index corresponds to the $k$-instanton partition function of 
+A supersymmetric quantum mechanical model was proposed in  \cite{Kim:2018gjo}, whose Witten index corresponds to the $n$-instanton partition function of 
 $G_2 + N_f \mathbf{F}$ theory with $N_f \leq 3$. Its index can be written as the following sum over $SU(3)$ colored Young diagrams:
 \begin{align}
-  Z_k^\text{YD} = \sum_{|\vec{Y}| = k} &\prod_{i=1}^3\prod_{s \in Y_i}\frac{2\sinh{(\phi(s))} \ 2\sinh{(\e_+-\phi(s))} \ \prod_{l=1}^{N_f}2\sinh(\frac{m_l \pm \phi(s)}{2}) }{2\sinh{\frac{\e_+ - \phi(s)}{2}}\prod_{j=1}^3 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}\,2\sinh{\frac{\e_+ - \phi(s) - a_j}{2}}} \\ \times &\prod_{i \leq j}^3 \prod_{\stackrel{s_{i,j} \in Y_{i,j}}{s_i < s_j}} \frac{2\sinh{\frac{\phi(s_i)+\phi(s_j)}{2}}\, 2\sinh{\frac{\phi(s_i)+\phi(s_j)-2\e_+}{2}}}{ 2\sinh{\frac{\e_1 - \phi(s_i)-\phi(s_j)}{2}} \, 2\sinh{\frac{\e_2 - \phi(s_i)-\phi(s_j)}{2}}}
+\begin{split}
+  Z_n^\text{YD} = \sum_{|\vec{Y}| = n} &\prod_{i=1}^3\prod_{s \in Y_i}\frac{2\sinh{(\phi(s))} \ 2\sinh{(\e_+-\phi(s))} \ \prod_{l=1}^{N_f}2\sinh(\frac{m_l \pm \phi(s)}{2}) }{2\sinh{\frac{\e_+ - \phi(s)}{2}}\prod_{j=1}^3 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}\,2\sinh{\frac{\e_+ - \phi(s) - a_j}{2}}} \\ \times &\prod_{i \leq j}^3 \prod_{\stackrel{s_{i,j} \in Y_{i,j}}{s_i < s_j}} \frac{2\sinh{\frac{\phi(s_i)+\phi(s_j)}{2}}\, 2\sinh{\frac{\phi(s_i)+\phi(s_j)-2\e_+}{2}}}{ 2\sinh{\frac{\e_1 - \phi(s_i)-\phi(s_j)}{2}} \, 2\sinh{\frac{\e_2 - \phi(s_i)-\phi(s_j)}{2}}}
+\end{split}
 \end{align}
-Our 1-instanton formula \eqref{eq:1inst-formula} was confirmed to agree with the above $Z_1^\text{YD}$ for all $N_f \leq 2$. Also at two instantons, we explicitly checked that $Z_2^\text{YD} = Z_2$, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}.
+Our 1-instanton formula \eqref{eq:1inst-formula} agrees with the above expression $Z_1^\text{YD}$ for all $N_f \leq 2$. Also at two instantons, we explicitly checked that $Z_2^\text{YD} = Z_2$, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:d-range-nonsu}.
 
 
 \paragraph{$\bf F_4$}
-The 1-instanton partition function of $F_4 + 2 \mathbf{F}$ gauge theory  was already given in (H.31) of \cite{DelZotto:2018tcj}, which has $Sp(2)_f$ flavor symmetry. In terms of $F_4$ and $Sp(2)_f$ characters, 
+The 1-instanton partition function of $F_4 + 2 \mathbf{F}$ gauge theory is given in (H.31) of \cite{DelZotto:2018tcj}, which has $Sp(2)_f$ flavor symmetry. In terms of $F_4$ and $Sp(2)_f$ characters, 
 \begin{align}
-  \hat{Z}_1=&\,t^6\chi^f_{(01)}+t^7\chi^{f}_{(30)}-t^8(\chi^G_{(0001)}\chi^f_{(20)}+\chi^G_{(1000)})+t^9\chi^G_{(0010)}\chi^f_{(10)}-t^{10}\chi^G_{(0100)}\nn\\
-  &+\sum_{n=0}^{\infty}\Big(t^{8+2n}\chi^G_{(n000)}\chi^f_{(03)}-t^{9+2n}\chi^G_{(n001)}\chi^f_{(12)}+t^{10+2n}(\chi^G_{(n010)}\chi^f_{(21)}+\chi^G_{(n002)}\chi^f_{(02)})\nn\\
-  &\qquad\quad-t^{11+2n}(\chi^G_{(n100)}\chi^f_{(30)}+\chi^G_{(n011)}\chi^f_{(11)}+t^{12+2n}(\chi^G_{(n101)}\chi^f_{(20)}+\chi^G_{(n020)}\chi^f_{(01)})\nn\\
-  &\qquad\quad-t^{13+2n}\chi^G_{(n110)}\chi^f_{(10)}+t^{14+2n}\chi^G_{(n200)}\Big).
+\begin{split}
+  & \hat{Z}_1 =\,t^6\chi^f_{(01)}+t^7\chi^{f}_{(30)}-t^8\left(\chi^G_{(0001)}\chi^f_{(20)}+\chi^G_{(1000)}\right)+t^9\chi^G_{(0010)}\chi^f_{(10)}-t^{10}\chi^G_{(0100)}\\
+  &+\sum_{n=0}^{\infty}\Bigg(t^{8+2n}\chi^G_{(n000)}\chi^f_{(03)}-t^{9+2n}\chi^G_{(n001)}\chi^f_{(12)}+t^{10+2n}\left(\chi^G_{(n010)}\chi^f_{(21)}+\chi^G_{(n002)}\chi^f_{(02)}\right)\\
+  &\qquad\quad-t^{11+2n}\left(\chi^G_{(n100)}\chi^f_{(30)}+\chi^G_{(n011)}\chi^f_{(11)}\right) 
+  +t^{12+2n}\left(\chi^G_{(n101)}\chi^f_{(20)}+\chi^G_{(n020)}\chi^f_{(01)}\right)\\
+  &\qquad\quad-t^{13+2n}\chi^G_{(n110)}\chi^f_{(10)}+t^{14+2n}\chi^G_{(n200)}\Bigg).
+\end{split}
 \end{align}
-We compared it with our 1-instanton formula \eqref{eq:1inst-formula} and found the agreement up to $t^{15}$ order. 
+We confirmed that our 1-instanton formula \eqref{eq:1inst-formula} agrees with the above expression up to $t^{15}$ order. 
 
 
 \paragraph{$\bf E_6$}
 
 Let us apply our general 1-instanton expression \eqref{eq:1inst-formula} to $E_6 + N_f \mathbf{F} + N_{\bar{f}}\overline{\mathbf{F}}$ gauge theory with $(N_f,N_{\bar{f}}) \leq (3,0), (2,1), (1,2),(0,3)$ whose flavor symmetry is $U(N_f 
-+ N_{\bar{f}})$. Since the fundamental and anti-fundamental representations are interchanged by the $E_6$ charge conjugation, their instanton partition functions should be identified by inverting the sign of relevant mass parameters. We explicitly confirmed that \eqref{eq:1inst-formula} satisfies the relations
++ N_{\bar{f}})$. Since the fundamental and anti-fundamental representations are interchanged by the $E_6$ charge conjugation, their instanton partition functions should be identical upon inverting the sign of relevant mass parameters. We explicitly confirmed that \eqref{eq:1inst-formula} satisfies the relations
 \begin{align}
-  Z_{1}^{N_f,N_{\bar{f}}}(m^f_{1, \cdots, N_f}; m^{\bar{f}}_{1,\cdots,N_{\bar{f}}}) &= Z_{1}^{N_f-1,N_{\bar{f}}+1}(m^f_{1, \cdots, N_f-1}; m^{\bar{f}}_{1,\cdots,N_{\bar{f}}+1})\big|_{m^{\bar{f}}_{N_{\bar{f}}+1} = -m^f_{N_f}}\nn\\ 
+\begin{split}
+  Z_{1}^{N_f,N_{\bar{f}}}(m^f_{1, \cdots, N_f}; m^{\bar{f}}_{1,\cdots,N_{\bar{f}}}) &= Z_{1}^{N_f-1,N_{\bar{f}}+1}(m^f_{1, \cdots, N_f-1}; m^{\bar{f}}_{1,\cdots,N_{\bar{f}}+1})\big|_{m^{\bar{f}}_{N_{\bar{f}}+1} = -m^f_{N_f}}\\ 
   &= Z_{1}^{N_f+1,N_{\bar{f}}-1}(m^f_{1, \cdots, N_f+1}; m^{\bar{f}}_{1,\cdots,N_{\bar{f}}-1})\big|_{m^{f}_{N_{f}+1} = -m^{\bar{f}}_{N_{\bar{f}}}}
+\end{split}
 \end{align}
 in all above cases. Furthermore, $Z_1$ at $(N_f, N_{\bar{f}}) = (3,0)$ can be compared with (H.35) of \cite{DelZotto:2018tcj} which displays the character expansion up to $t^{11}$ order. We checked their consistency except a sign mistake in the second term of (H.35). The full character expansion of $Z_1$ at $N_f=3$ and $N_{\bar{f}}=0$ is written in \eqref{eq:E6F3}, after turning off the $E_6$ Coulomb VEV $\vec{a} = 0$ for simplicity.
 
 
 \paragraph{$\bf E_7$}
 
-Our 1-instanton expression \eqref{eq:1inst-formula} is applicable to $E_7 + N_f\mathbf{F}$ gauge theory with $N_f \leq 2$, which has $SO(2N_f)_f$ flavor symmetry. We show the full character expansion of $Z_1$ at $N_f=2$ in \eqref{eq:E7F2} after setting $\vec{a}=0$ to shorten the expression. We also compared our \eqref{eq:1inst-formula} applied to the $N_f = 1$ case with (H.40) of \cite{DelZotto:2018tcj} and found the agreement up to $t^{280}$ order.
+Our 1-instanton expression \eqref{eq:1inst-formula} is applicable to $E_7 + N_f\mathbf{F}$ gauge theory with $N_f \leq 2$, which has $SO(2N_f)_f$ flavor symmetry. We give the full character expansion of $Z_1$ at $N_f=2$ in \eqref{eq:E7F2} after setting $\vec{a}=0$ to shorten the expression. We also compared the result \eqref{eq:1inst-formula} applied to the $N_f = 1$ case with (H.40) of \cite{DelZotto:2018tcj} and found that they agree up to $t^{280}$ order.
 
 
 \paragraph{$\bf E_8$}
 
-The 1-instanton partition function of $E_8$ gauge theory can be written as \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq, Keller:2011ek, Keller:2012da})
+The 1-instanton partition function of $E_8$ gauge theory can be written as \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq, Keller:2011ek}
 \begin{align}
   \hat{Z}_1=\sum_{n=0}^{\infty}t^{29+2n}\chi^G_{(000000n0)}.
 \end{align}
@@ -1353,7 +1383,7 @@ We confirmed that it agrees with our 1-instanton expression \eqref{eq:1inst-form
 
 \subsection{SU(6) theory with a rank-3 antisymmetric hypermultiplet}
 \label{subsec:rank3}
-Another non-trivial test of our blow-up recursion formulae \eqref{eq:recursion}  is the partition function for 5d $SU(6)$ theory with an hypermultiplet in the rank-3 antisymmetric representation ({\bf TAS}). This theory allows an intriguing Higgs branch with $SU(3)\times SU(3)$ gauge symmery that can be explicitly checked via the partition function.
+Another non-trivial test of our blow-up recursion formulae \eqref{eq:recursion}  is the partition function for 5d $SU(6)$ theory with an hypermultiplet in the rank-3 antisymmetric representation ({\bf TAS}). This theory has can be Higgsed to a theory with $SU(3)\times SU(3)$ gauge symmetry that can be explicitly checked at the level of partition function.
 
 To have a UV fixed point, 5d $SU(6)$ theories can have up to 2 hypermultiplets in the rank-3 antisymmetric representation \cite{Jefferson:2017ahm}. Their type IIB 5-brane configurations were constructed in~\cite{Hayashi:2019yxj} with/without O5-planes. In particular, 5-brane web diagrams for $SU(6)+\frac12{\bf TAS}$ and $SU(6)+1{\bf TAS}$ do not contain orientifold planes, so that topological vertex method \cite{Aganagic:2003db, Iqbal:2007ii} can be straightforwardly applied to compute their partition functions. In \cite{Hayashi:2019yxj},  for instance, the partition function of $SU(6)_\frac52 + \frac12{\bf TAS}$ theory was computed up to two instantons using the topological vertex formalism.
 %---------  <Figure>  ---------------%
@@ -1478,11 +1508,13 @@ A_i \equiv e^{-a_i} \ \text{ for } \ i=1, \cdots, 6
 in which the $SU(6)$ traceless condition $\prod_{i=1}^{6}A_i =1$ is assumed. Applying the topological vertex formalism \cite{Aganagic:2003db}, we find that 
 \begin{align}
   \label{eq:znek-su6}
+  \begin{split}
   \mathcal{Z} 
-  =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
+  =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\\
   &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}
   Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y})
 %  Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
+ \end{split}
 \end{align}
 %\begin{align}
 %Z_{\text{Nek}} 
@@ -1492,6 +1524,7 @@ in which the $SU(6)$ traceless condition $\prod_{i=1}^{6}A_i =1$ is assumed. App
 where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$. The left/right factor 
 $Z_{\text{left}}(\vec{Y})$/$Z_{\text{right}}(\vec{Y})$ can be written as 
 \begin{align}
+\begin{split}
 Z_{\text{left}}(\vec{Y}) = Z_{\text{left}}(\vec{Y})=& \,
 \sum_{Y'} ( - A_1{}^{-1} A_6{}^{-2})^{|Y'|} 
 g^{\frac{||Y'^t||^2+||Y'||^2}{2}} \tilde{Z}_{Y'}^2 f_{Y'}^2(g)
@@ -1504,6 +1537,7 @@ R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y' Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,
 \times  
  \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
  \prod_{i=2}^5 R_{Y'^t Y_i} (A_1 A_i  A_6) 
+\end{split}
 \end{align}
 in which the dummy variable $Y'$ should be interpreted as $Y_0$ for $Z_{\text{left}}(\vec{Y})$ and  $Y_7$ for $Z_{\text{right}}(\vec{Y})$. % summing over $Y_7$ instead of $Y_0$. %  \big|_{Y_0 \to Y_7}$.
 %\begin{align}
@@ -1570,6 +1604,7 @@ The perturbative part of the partition function $Z_{\text{pert}}$ comes from the
 $(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\o,\o,\o,\o,\o,\o)$.
 It is given by
 \begin{align}
+\begin{split}
 Z_{\rm pert} 
 =& \,
 Z_{\text{left}}(\o,\o,\o,\o,\o,\o)
@@ -1591,6 +1626,7 @@ g^{\frac{\Vert Y'^t \Vert ^2+\Vert Y'\Vert ^2}{2}} \tilde{Z}_{Y'}(g)^2 f_{Y'}^2(
 & \qquad \qquad
 \textstyle N_{Y'^t \o }^{-1} (A_1{}^{-1} A_6{}^{-2})
  N^{-1}_{Y' \o } (A_1^2  A_6)\prod_{i=2}^5 N_{Y' \o } (A_1 A_i  A_6)\bigg)^2 ,\label{eq:zpert-top}
+\end{split}
 \end{align}
 %\begin{align}
 %  \label{eq:zpert-top}
@@ -1935,9 +1971,10 @@ satisfying the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here $Z_k^{S
 
 
 \acknowledgments
-We thank Babak Haghighat, Saebyeok Jeong and Seok Kim for discussion. 
+We thank Babak Haghighat, Saebyeok Jeong, Hee-Cheol Kim and Seok Kim for discussion. 
 JK and JS thank the hospitality of UESTC where part of this work is done. 
 The work of KL and JS is partly done at the 2019 Pollica summer workshop, which was supported in part by the Simons Foundation (Simons Collaboration on the Non-perturbative Bootstrap) and in part by the INFN. KL and JS are grateful for this support.
+SK and KL also thank APCTP for hosting the Focus program ``Strings, Branes and Gauge Theories 2019," where part of the work is done.
 JK, KL and JS also thank the Simons Center for Geometry and Physics during the Simons Summer Workshop 2019 where part of this work is done. 
 This work is supported in part by the UESTC Research Grant A03017023801317 (SSK), the National Research Foundation of Korea (NRF) Grants 2017R1D1A1B06034369 (KL, JS), and 2018R1A2B6004914 (KHL)
 
@@ -1953,7 +1990,7 @@ This appendix collects the character expansion of the 1-instanton partition func
 \paragraph{SO(8)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ matter multiplets is given by $Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c \times Sp(N_{\bf v})_v$. For $(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)$, the character expansion of the 1-instanton result $\hat{Z}_1$ is 
 \begin{align}
   \label{eq:so8-s3c1}
-\hat{Z}_1=\textstyle\sum_{n=0}^{\infty}&\,\Big(t^{5+2n}\chi^G_{(0n00)}\chi^s_{(001)}\chi^v_{(1)}-t^{6+2n}(\chi^G_{(0n01)}\chi^s_{(010)}\chi^v_{(1)}+\chi^G_{(1n00)}\chi^s_{(001)})\nn\\
+\hat{Z}_1=\sum_{n=0}^{\infty}&\,\Big(t^{5+2n}\chi^G_{(0n00)}\chi^s_{(001)}\chi^v_{(1)}-t^{6+2n}(\chi^G_{(0n01)}\chi^s_{(010)}\chi^v_{(1)}+\chi^G_{(1n00)}\chi^s_{(001)})\nn\\
 &+\,t^{7+2n}(\chi^G_{(1n01)}\chi^s_{(010)}+\chi^G_{(0n02)}\chi^s_{(100)}\chi^v_{(1)})\\
 &-t^{8+2n}(\chi^G_{(1n02)}\chi^s_{(100)}+\chi^G_{(0n03)}\chi^v_{(1)})+t^{9+2n}\chi^G_{(1n03)}\Big)\nn.
 \end{align}
@@ -1982,7 +2019,7 @@ The character expansion for other $SO(8)$ theories with less number of hypermult
   \label{eq:so10-2s2v}
 \hat{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00010)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00001)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
 &+\chi^G_{(10000)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2}))+t^8(\chi^G_{(00100)}\chi^v_{(10)}+\chi^G_{(10010)}\chi^s_{(1)_{-1}}+\chi^G_{(10001)}\chi^s_{(1)_1})-t^9\chi^G_{(10100)}\nn\\
-&\textstyle+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
+&+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
 +\chi^G_{(0n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(01)} +\chi^G_{(1n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(10)})\nn\\
 &\qquad\quad+t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(01)}+\chi^G_{(0n020)}\chi^s_{(0)_{-2}}\chi^v_{(01)}+\chi^G_{(0n002)}\chi^s_{(0)_2}\chi^v_{(01)}\nn\\
 &\qquad\qquad\qquad+\chi^G_{(0n011)}\chi^s_{(2)_0}\chi^v_{(01)}+\chi^G_{(1n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(10)}+\chi^G_{(1n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(10)}\nn\\
@@ -2007,7 +2044,7 @@ Similarly, for $N_{\bf s} + N_{\bf c} = 3$ and $N_{\bf v} = 0$, the character ex
   \label{eq:so10-s3}
 \hat{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(20)_{-2}}+\chi^s_{(02)_2})-t^6
 (\chi^s_{(10)_{-1}}+\chi^s_{(01)_1})+t^7\chi^G_{(00100)}\nn\\
-&+\textstyle\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(04)_{-2}}+\chi^s_{(40)_2}))\nn\\
+&+\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(04)_{-2}}+\chi^s_{(40)_2}))\nn\\
 &\qquad \quad \ -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(01)_{-5}}+\chi^s_{(30)_3}+\chi^s_{(13)_{-1}})+\chi^G_{(0n001)}(\chi^s_{(10)_5}+\chi^s_{(03)_{-3}}+\chi^s_{(31)_1}))\nn\\
 &\qquad \quad \ +t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(02)_{-4}}+\chi^s_{(20)_4}+\chi^s_{(22)_0})+\chi^G_{(0n011)}(\chi^s_{(12)_{-2}}+\chi^s_{(21)_2})\nn\\
 & \qquad \qquad\qquad+\chi^G_{(0n020)}(\chi^s_{(10)_{-4}}+\chi^s_{(03)_0})+\chi^G_{(0n002)}(\chi^s_{(01)_4}+\chi^s_{(30)_0}))\\
@@ -2041,7 +2078,7 @@ Again, \eqref{eq:so10-2s2v} and \eqref{eq:so10-s3} was tested against the closed
 &\,-t^8((y_s+y_s^{_1})\chi^G_{(00001)}\chi^v_{(010)}+(y_s^2+y_s^{-2}+1)\chi^G_{(10000)}\chi^v_{(100)}+\chi^G_{(01000)}\chi^v_{(100)})\nn\\
 &\,+t^9(\chi^G_{(00100)}\chi^v_{(010)}+\chi^G_{(10001)}(y_s+y_s^{-1})\chi^v_{(100)}+\chi^G_{(20000)}(y_s^2+y_s^{-2}+1)+\chi^G_{(11000)})\nn\\
 &\,-t^{10}(\chi^G_{(10100)}\chi^v_{(100)}+\chi^G_{(20001)}(y_s+y_s^{-1}))+t^{11}\chi^G_{(20100)}\\
-&\,+\textstyle\sum_{n=0}^{\infty}\Big(t^{8+2n}(\chi^G_{(0n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(001)})\nn\\
+&\,+\sum_{n=0}^{\infty}\Big(t^{8+2n}(\chi^G_{(0n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(001)})\nn\\
 &\quad\qquad\ -t^{9+2n}(\chi^G_{(0n001)}(y_s^3+y_s^{-3})\chi^v_{(001)}+\chi^G_{(0n001)}(y_s+y_s^{-1})\chi^v_{(001)}+\chi^G_{(1n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(010)})\nn\\
 &\qquad\quad\ +t^{10+2n}(\chi^G_{(0n010)}(y_s^2+y_s^{-2})\chi^v_{(001)}+\chi^G_{(0n100)}(y_s^2+y_s^{-2}+1)\chi^v_{(001)}+\chi^G_{(0n002)}\chi^v_{(001)}\nn\\
 &\qquad\qquad\qquad\ +\chi^G_{(1n001)}(y_s^3+y_s+y_s^{-1}+y_s^{-3})\chi^v_{(010)}+\chi^G_{(2n000)}(y_s^4+y_s^{-4}+1)\chi^v_{(100)})\nn\\
