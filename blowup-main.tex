@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{amsmath, amssymb}
+\usepackage{multirow}
 
 \usepackage{amsfonts,amssymb,epsfig,amsmath,mathtools,tabu}
 \usepackage{verbatim,booktabs}
@@ -1350,6 +1351,7 @@ Our 1-instanton formula \eqref{eq:1inst-formula} agrees with the above expressio
 \paragraph{$\bf F_4$}
 The 1-instanton partition function of $F_4 + 2 \mathbf{F}$ gauge theory is given in (H.31) of \cite{DelZotto:2018tcj}, which has $Sp(2)_f$ flavor symmetry. In terms of $F_4$ and $Sp(2)_f$ characters, 
 \begin{align}
+    \label{eq:F4F2}
 \begin{split}
   & \hat{Z}_1 =\,t^6\chi^f_{(01)}+t^7\chi^{f}_{(30)}-t^8\left(\chi^G_{(0001)}\chi^f_{(20)}+\chi^G_{(1000)}\right)+t^9\chi^G_{(0010)}\chi^f_{(10)}-t^{10}\chi^G_{(0100)}\\
   &+\sum_{n=0}^{\infty}\Bigg(t^{8+2n}\chi^G_{(n000)}\chi^f_{(03)}-t^{9+2n}\chi^G_{(n001)}\chi^f_{(12)}+t^{10+2n}\left(\chi^G_{(n010)}\chi^f_{(21)}+\chi^G_{(n002)}\chi^f_{(02)}\right)\\
@@ -1383,6 +1385,7 @@ Our 1-instanton expression \eqref{eq:1inst-formula} is applicable to $E_7 + N_f\
 
 The 1-instanton partition function of $E_8$ gauge theory can be written as 
 \begin{align}
+    \label{eq:E8}
   \hat{Z}_1=\sum_{n=0}^{\infty}t^{29+2n}\chi^{E_8}_{(000000n0)}.
 \end{align}
 We confirmed that it agrees with our 1-instanton expression \eqref{eq:1inst-formula} up to $t^{520}$ order. 
@@ -2036,19 +2039,19 @@ The character expansion for other $SO(8)$ theories with less number of hypermult
 \paragraph{SO(10)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s} + N_{\bf c})_s \times Sp(N_{\bf v})_v$, reflecting  that the $SO(10)$ (conjugate) spinor representation is complex. For $N_{\bf s} + N_{\bf c} = 2$ and $N_{\bf v} = 2$, the character expansion of $\hat{Z}_1$ is given by 
 \begin{align}
   \label{eq:so10-2s2v}
-\hat{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00010)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00001)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
-&+\chi^G_{(10000)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2}))+t^8(\chi^G_{(00100)}\chi^v_{(10)}+\chi^G_{(10010)}\chi^s_{(1)_{-1}}+\chi^G_{(10001)}\chi^s_{(1)_1})-t^9\chi^G_{(10100)}\nn\\
-&+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
-+\chi^G_{(0n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(01)} +\chi^G_{(1n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(10)})\nn\\
-&\qquad\quad+t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(01)}+\chi^G_{(0n020)}\chi^s_{(0)_{-2}}\chi^v_{(01)}+\chi^G_{(0n002)}\chi^s_{(0)_2}\chi^v_{(01)}\nn\\
-&\qquad\qquad\qquad+\chi^G_{(0n011)}\chi^s_{(2)_0}\chi^v_{(01)}+\chi^G_{(1n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(10)}+\chi^G_{(1n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(10)}\nn\\
+\hat{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00001)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00010)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
+&+\chi^G_{(10000)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2}))+t^8(\chi^G_{(00100)}\chi^v_{(10)}+\chi^G_{(10001)}\chi^s_{(1)_{-1}}+\chi^G_{(10010)}\chi^s_{(1)_1})-t^9\chi^G_{(10100)}\nn\\
+&\textstyle+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n001)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
++\chi^G_{(0n010)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(01)} +\chi^G_{(1n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(10)})\nn\\
+&\qquad\quad+t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(01)}+\chi^G_{(0n002)}\chi^s_{(0)_{-2}}\chi^v_{(01)}+\chi^G_{(0n020)}\chi^s_{(0)_2}\chi^v_{(01)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(0n011)}\chi^s_{(2)_0}\chi^v_{(01)}+\chi^G_{(1n001)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(10)}+\chi^G_{(1n010)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(10)}\nn\\
 &\qquad\qquad\qquad+\chi^G_{(2n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0}))\nn\\
-&\qquad\quad-t^{10+2n}(\chi^G_{(0n110)}\chi^s_{(1)_{-1}}\chi^v_{(01)}+\chi^G_{(0n101)}\chi^s_{(1)_1}\chi^v_{(01)}+\chi^G_{(1n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(10)}\nn\\
-&\qquad\qquad\qquad+\chi^G_{(1n020)}\chi^s_{(0)_{-2}}\chi^v_{(10)}+\chi^G_{(1n002)}\chi^s_{(0)_2}\chi^v_{(10)}+\chi^G_{(1n011)}\chi^s_{(2)_0}\chi^v_{(10)}\nn\\
-&\qquad\qquad\qquad+\chi^G_{(2n010)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})+\chi^G_{(2n001)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\nn\\
-&\qquad\quad+t^{11+2n}(\chi^G_{(1n200)}\chi^v_{(01)}+\chi^G_{(1n110)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(1n101)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(2n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\nn\\
-&\qquad\qquad\qquad+\chi^G_{(2n020)}\chi^s_{(0)_{-2}}+\chi^G_{(2n002)}\chi^s_{(0)_2}+\chi^G_{(2n011)}\chi^s_{(2)_0})\nn\\
-&\qquad\quad-t^{12+2n}(\chi^G_{(1n200)}\chi^v_{(10)}+\chi^G_{(2n110)}\chi^s_{(1)_{-1}}+\chi^G_{(2n101)}\chi^s_{(1)_1})+t^{13+2n}\chi^G_{(2n200)}\Big)
+&\qquad\quad-t^{10+2n}(\chi^G_{(0n101)}\chi^s_{(1)_{-1}}\chi^v_{(01)}+\chi^G_{(0n110)}\chi^s_{(1)_1}\chi^v_{(01)}+\chi^G_{(1n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\chi^v_{(10)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(1n002)}\chi^s_{(0)_{-2}}\chi^v_{(10)}+\chi^G_{(1n020)}\chi^s_{(0)_2}\chi^v_{(10)}+\chi^G_{(1n011)}\chi^s_{(2)_0}\chi^v_{(10)}\nn\\
+&\qquad\qquad\qquad+\chi^G_{(2n001)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})+\chi^G_{(2n010)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\nn\\
+&\qquad\quad+t^{11+2n}(\chi^G_{(1n200)}\chi^v_{(01)}+\chi^G_{(1n101)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(1n110)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(2n100)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})\nn\\
+&\qquad\qquad\qquad+\chi^G_{(2n002)}\chi^s_{(0)_{-2}}+\chi^G_{(2n020)}\chi^s_{(0)_2}+\chi^G_{(2n011)}\chi^s_{(2)_0})\nn\\
+&\qquad\quad-t^{12+2n}(\chi^G_{(1n200)}\chi^v_{(10)}+\chi^G_{(2n101)}\chi^s_{(1)_{-1}}+\chi^G_{(2n110)}\chi^s_{(1)_1})+t^{13+2n}\chi^G_{(2n200)}\Big)
 \end{align}
 where the $U(2)$ character $\chi^s_{(j)_b}$ is defined as (with $y_{s,i} \equiv e^{-m_i^s}$ and $y_{c,i} \equiv e^{-m_i^c}$ understood)
 \begin{align}
@@ -2061,16 +2064,16 @@ where the $U(2)$ character $\chi^s_{(j)_b}$ is defined as (with $y_{s,i} \equiv 
 Similarly, for $N_{\bf s} + N_{\bf c} = 3$ and $N_{\bf v} = 0$, the character expansion of $\hat{Z}_1$ is given by 
 \begin{align}
   \label{eq:so10-s3}
-\hat{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(20)_{-2}}+\chi^s_{(02)_2})-t^6
-(\chi^s_{(10)_{-1}}+\chi^s_{(01)_1})+t^7\chi^G_{(00100)}\nn\\
-&+\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(04)_{-2}}+\chi^s_{(40)_2}))\nn\\
-&\qquad \quad \ -t^{8+2n}(\chi^G_{(0n010)}(\chi^s_{(01)_{-5}}+\chi^s_{(30)_3}+\chi^s_{(13)_{-1}})+\chi^G_{(0n001)}(\chi^s_{(10)_5}+\chi^s_{(03)_{-3}}+\chi^s_{(31)_1}))\nn\\
-&\qquad \quad \ +t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(02)_{-4}}+\chi^s_{(20)_4}+\chi^s_{(22)_0})+\chi^G_{(0n011)}(\chi^s_{(12)_{-2}}+\chi^s_{(21)_2})\nn\\
-& \qquad \qquad\qquad+\chi^G_{(0n020)}(\chi^s_{(10)_{-4}}+\chi^s_{(03)_0})+\chi^G_{(0n002)}(\chi^s_{(01)_4}+\chi^s_{(30)_0}))\\
-&\qquad \quad \ -t^{10+2n}(\chi^G_{(0n110)}(\chi^s_{(11)_{-3}}+\chi^s_{(12)_1})+\chi^G_{(0n101)}(\chi^s_{(11)_3}+\chi^s_{(21)_{-1}})\nn\\
-& \qquad \qquad\qquad+\chi^G_{(0n030)}\chi^s_{(00)_{-3}}+\chi^G_{(0n003)}\chi^s_{(00)_3}+\chi^G_{(0n021)}\chi^s_{(02)_{-1}}+\chi^G_{(0n012)}\chi^s_{(20)_1})\nn\\
-&\qquad \quad \ +t^{11+2n}(\chi^G_{(0n200)}(\chi^s_{(20)_{-2}}+\chi^s_{(02)_2})+\chi^G_{(0n120)}\chi^s_{(01)_{-2}}+\chi^G_{(0n102)}\chi^s_{(10)_2}+\chi^G_{0n111)}\chi^s_{(11)_0})\nn\\
-&\qquad \quad \ -t^{12+2n}(\chi^G_{(0n210)}\chi^s_{(10)_{-1}}+\chi^G_{(0n201)}\chi^s_{(01)_1})+t^{13+2n}\chi_{(0n300)}\Big)\nn
+\hat{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(02)_{-2}}+\chi^s_{(20)_2})-t^6
+(\chi^s_{(01)_{-1}}+\chi^s_{(10)_1})+t^7\chi^G_{(00100)}\nn\\
+&+\textstyle\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(40)_{-2}}+\chi^s_{(04)_2}))\nn\\
+&\qquad \quad \ -t^{8+2n}(\chi^G_{(0n001)}(\chi^s_{(10)_{-5}}+\chi^s_{(03)_3}+\chi^s_{(31)_{-1}})+\chi^G_{(0n010)}(\chi^s_{(01)_5}+\chi^s_{(30)_{-3}}+\chi^s_{(13)_1}))\nn\\
+&\qquad \quad \ +t^{9+2n}(\chi^G_{(0n100)}(\chi^s_{(20)_{-4}}+\chi^s_{(02)_4}+\chi^s_{(22)_0})+\chi^G_{(0n011)}(\chi^s_{(21)_{-2}}+\chi^s_{(12)_2})\nn\\
+& \qquad \qquad\qquad+\chi^G_{(0n002)}(\chi^s_{(01)_{-4}}+\chi^s_{(30)_0})+\chi^G_{(0n020)}(\chi^s_{(10)_4}+\chi^s_{(03)_0}))\\
+&\qquad \quad \ -t^{10+2n}(\chi^G_{(0n101)}(\chi^s_{(11)_{-3}}+\chi^s_{(21)_1})+\chi^G_{(0n110)}(\chi^s_{(11)_3}+\chi^s_{(12)_{-1}})\nn\\
+& \qquad \qquad\qquad+\chi^G_{(0n003)}\chi^s_{(00)_{-3}}+\chi^G_{(0n030)}\chi^s_{(00)_3}+\chi^G_{(0n012)}\chi^s_{(20)_{-1}}+\chi^G_{(0n021)}\chi^s_{(02)_1})\nn\\
+&\qquad \quad \ +t^{11+2n}(\chi^G_{(0n200)}(\chi^s_{(02)_{-2}}+\chi^s_{(20)_2})+\chi^G_{(0n102)}\chi^s_{(10)_{-2}}+\chi^G_{(0n120)}\chi^s_{(01)_2}+\chi^G_{(0n111)}\chi^s_{(11)_0})\nn\\
+&\qquad \quad \ -t^{12+2n}(\chi^G_{(0n201)}\chi^s_{(01)_{-1}}+\chi^G_{(0n210)}\chi^s_{(10)_1})+t^{13+2n}\chi_{(0n300)}\Big)\nn
 \end{align}
 where the $U(3)$ character $\chi^s_{(mn)_c}$ is defined as
 \begin{align}
@@ -2093,6 +2096,7 @@ Again, \eqref{eq:so10-2s2v} and \eqref{eq:so10-s3} was tested against the closed
 
 \paragraph{SO(11)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. For $N_{\bf s}=1$ and  $N_{\bf v} = 3$, the character expansion of  $\hat{Z}_1$ can be written as
 \begin{align}
+  \label{eq:so11-s1v3}
 \hat{Z}_1&=\,t^5+t^6(\chi^v_{(001)}+(y_s^2+y_s^{-2})\chi^v_{(100)})+t^7((y_s^2+y_s^{-2}+1)\chi^v_{(010)}-(y_s^{2}+y_s^{-2})\chi^G_{(10000)})\nn\\
 &\,-t^8((y_s+y_s^{_1})\chi^G_{(00001)}\chi^v_{(010)}+(y_s^2+y_s^{-2}+1)\chi^G_{(10000)}\chi^v_{(100)}+\chi^G_{(01000)}\chi^v_{(100)})\nn\\
 &\,+t^9(\chi^G_{(00100)}\chi^v_{(010)}+\chi^G_{(10001)}(y_s+y_s^{-1})\chi^v_{(100)}+\chi^G_{(20000)}(y_s^2+y_s^{-2}+1)+\chi^G_{(11000)})\nn\\
@@ -2114,6 +2118,7 @@ which was compared with the closed-form expression \eqref{eq:1inst-formula} up t
 \paragraph{SO(12)} 
 The flavor symmetry acting on $N_{\bf s} \mathbf{S} +N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times SO(2N_{\bf c})_c \times  Sp(N_{\bf v})_v$. Here we turn off the Coulomb VEV $\vec{a} = 0$ for simplicity. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (2,0,0)$ can be written as
 \begin{align}
+  \label{eq:so12-s2}
   \hat{Z}_1&= \frac{t^{18}}{(1-t^2)^{18}}\Big(
   -96096\, (\chi^s_{(13)}+\chi^s_{(31)})\cdot {(7t^4+42t^2+72+42t^{-2}+7t^{-4})}\\
   &+10010\,(\chi^s_{(24)}+\chi^s_{(42)})\cdot {(9t^5+88t^3+243t+243t^{-1}+88t^{-3}+9t^{-5})}\nn\\
@@ -2137,6 +2142,7 @@ It was explicitly checked that the 1-instanton partition function $Z_1$ at $(N_{
 \end{align}
 Similarly, the character expansion of $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,1,0)$ can be displayed as follows:
 \begin{align}
+  \label{eq:so12-s1c1}
   \hat{Z}_1&=\frac{t^{18}}{(1-t^2)^{18}}\sum_{\pm}\Big(
   -2462\,(y_s^{\pm1}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm1})\cdot{(2t^6+27t^4+108t^2+168+108t^{-2}+27t^{-4}+2t^{-6})}\nn\\
   &+11\,(y_s^{\pm2}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm2})\cdot{(45t^7+1101t^5+6983t^3+16623t+ (t\rightarrow t^{-1}))}\nn\\
@@ -2158,6 +2164,7 @@ in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\
 
 \paragraph{SO(13)} The flavor symmetry  on $N_{\bf s} \mathbf{S}+ N_{\bf v} \mathbf{V}$ matter multiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s}, N_{\bf v}) = (1,1)$ is written below, after setting the Coulomb VEV $\vec{a} = 0$ to keep the expression concise. 
 \begin{align}
+  \label{eq:so13-s1v1}
   \hat{Z}_1&=\frac{t^{20}}{(1-t^2)^{20}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(1)}\cdot (t^{10}+58 t^8+905 t^6+5580 t^4+15876 t^2+22344++15876 t^{-2} \cdots + t^{-10})\nn\\
   &-64\,y_s^{\pm7}\chi^V_{(1)} \cdot (t^9+45 t^7+540 t^5+2520 t^3+5292 t + (t\rightarrow t^{-1}))\nn\\
   &+26\,y_s^{\pm6}\chi^V_{(1)}\cdot (77 t^8+2541 t^6+22226 t^4+74811 t^2+110770 + 74811 t^{-2} + \cdots + 77 t^{-8})\nn\\
@@ -2191,6 +2198,7 @@ in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\
 
   \paragraph{SO(14)} The classical flavor symmetry  on $N_{\bf s} \mathbf{S}+N_{\bf c} \mathbf{C}+ N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s})_s \times U(N_{\bf c})_c  \times Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,0,2)$ is written below, after turning off the $SO(14)$ Coulomb VEV $\vec{a} = 0$. 
   \begin{align}
+  \label{eq:so14-s1v2}
   \hat{Z}_1&=\frac{t^{22}}{(1-t^2)^{22}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(01)}\cdot (t^{11}+69 t^9+1309 t^7+10065 t^5+36828 t^3+69300
   t+  (t\rightarrow t^{-1}) )\nn\\
   &-64\,y_s^{\pm7}\chi^V_{(01)}\cdot (t^{10}+55 t^8+825 t^6+4950 t^4+13860
@@ -2385,6 +2393,70 @@ where the $U(3)$ character $\chi^f_{(mn)_c}$ is defined as
     &\hspace{2.5cm}+73315010528 t^7+427928422856 t^5+1291626014327 t^3+2206690491962 t+(t\rightarrow t^{-1}))\Big) \nn
 \end{align}
 This was tested against the closed-form expression \eqref{eq:1inst-formula} up to $t^{280}$ order.
+
+\begin{table}[p]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $G$ & Rep's of hypermultiplets & Number of hypermultiplets &   $(s, s')$ & $d$ & Inst. order\\
+    \hline
+    $SU(N)_\kappa$ & $N_f \boldsymbol{F}$ & $N_f+2|\kappa|\leq 2N$ &    \eqref{eq:sun-nf} & \eqref{eq:sun-nf-range} & \multirow{4}{*}{2}\\
+    \cline{1-5}
+    $SU(N)_\kappa$ & $N_f \boldsymbol{F}+1\textbf{AS}$ & $N_f+2|\kappa|\leq N+4$ &    \eqref{eq:sun-nf-na} & \eqref{eq:bound} &\\
+    \cline{1-5}
+    $Sp(N)_{\theta=0}$ & $N_f\boldsymbol{F}+N_a\boldsymbol{A}$ & $N_a(N-1)+\lfloor N_f/2\rfloor\leq N-1$ &   \multirow{7}{*}{\eqref{eq:n-np}}& \multirow{7}{*}{\eqref{eq:d-range-nonsu}} &\\
+    \cline{1-3}
+    $Sp(N)_{\theta=\pi}$ & $N_f\boldsymbol{F}+N_a\boldsymbol{A}$ & $N_a(N-1)+\lceil N_f/2\rceil\leq N$ & & &\\
+    \cline{1-3}\cline{6-6}
+    $SO(2N)$ & $N_v\boldsymbol{V}+N_s\boldsymbol{S}+N_c\boldsymbol{C}$ & $N_v+2^{N-4}(N_s+N_c)\leq 2N-4$ &  & & 2\,($N\leq 4$)\\
+    \cline{1-3}
+    $SO(2N+1)$ & $N_v\boldsymbol{V}+N_s\boldsymbol{S}$ & $N_v+2^{N-3}N_s\leq2 N-3$ & & & 1\,($N\geq 5$)  \\
+    \cline{1-3}\cline{6-6}
+    $E_6$ & $N_f\boldsymbol{F}+N_{\bar{f}}\boldsymbol{\bar{F}}$ & $N_f+N_{\bar{f}}\leq3 $ & & & \multirow{3}{*}{1}  \\
+    \cline{1-3}
+    $E_7$ & $N_f\boldsymbol{F}$ & $N_f\leq2$ & & &   \\
+    \cline{1-3}
+    $E_8$ & $\emptyset$ &  & & &   \\
+    \hline
+    \end{tabular}
+    \caption{List of theories. The number of hypermultiplets are bounded so that there are at least 3 blowup equations except the $SU(N)$ gauge theories. In $SU(N)$ gauge theories, the number of hypermultiplets indicates those allowed in the ADHM QM.}
+    \label{tbl:list}
+\vspace{1cm}
+
+  \begin{tabular}{cc|c}
+    \hline
+    Gauge Group & Hypermultiplets & Equation No.\\
+    \hline\hline
+	$SO(8)$ & $1\boldsymbol{S}+1\boldsymbol{C}+1\boldsymbol{V}$ & \eqref{eq:SO8-v1s1c1}\\
+	$SO(8)$ & $2\boldsymbol{S}+2\boldsymbol{C}+2\boldsymbol{V}$ & \eqref{eq:SO8-v2s2c2}\\
+	$SO(8)$ & $3\boldsymbol{S}+1\boldsymbol{C}$ &  \eqref{eq:so8-s3c1}\\
+	$SO(9)$ & $2\boldsymbol{S}+1\boldsymbol{V}$ & \eqref{eq:SO9-v1s2}\\
+	$SO(10)$ & $2\boldsymbol{S}+2\boldsymbol{V}$ & \eqref{eq:so10-2s2v}\\
+	$SO(10)$ & $3\boldsymbol{S}$ & \eqref{eq:so10-s3}\\
+	$SO(11)$ & $1\boldsymbol{S}+3\boldsymbol{V}$ & \eqref{eq:so11-s1v3}\\
+	$SO(12)$ & $2\boldsymbol{S}$ & \eqref{eq:so12-s2}\\
+	$SO(12)$ & $1\boldsymbol{S}+1\boldsymbol{C}$ & \eqref{eq:so12-s1c1}\\
+	$SO(13)$ & $1\boldsymbol{S}+1\boldsymbol{V}$ & \eqref{eq:so13-s1v1}\\
+	$SO(14)$ & $1\boldsymbol{S}+2\boldsymbol{V}$ & \eqref{eq:so14-s1v2}\\\hline
+    \end{tabular}
+  \caption{Character expansion of $SO(N)$ theory with spinor hypermultiplets}
+  \label{tbl:son-data}
+\vspace{1cm}
+
+  \begin{tabular}{cc|c}
+    \hline
+    Gauge Group & Hypermultiplets & Equation No.\\
+    \hline\hline
+	$F_4$ & $2\boldsymbol{F}$ & \eqref{eq:F4F2}\\
+	$E_6$ & $3\boldsymbol{F}$ & \eqref{eq:E6F3}\\
+	$E_7$ & $2\boldsymbol{F}$ & \eqref{eq:E7F2}\\
+	$E_8$ & $\emptyset$ &  \eqref{eq:E8}\\\hline
+    \end{tabular}
+  \caption{Character expansion of exceptional gauge theory with fundamental hypermultiplets}
+  \label{tbl:exc-data}
+\vspace{1cm}
+
+\end{table}
 
 % \section{SU(N) theory}
 % \label{sec:bound-su}
