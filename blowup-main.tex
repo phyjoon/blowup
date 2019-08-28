@@ -169,9 +169,10 @@
 \emailAdd{jsong@kias.re.kr}
 
 \abstract{
-The Nekrasov partition function for 4d $\CN=2$ or 5d $\CN=1$ gauge theory on the blow up of a point $\hat{\IC}^2$ can be written in terms of the partition function on the flat space $\IC^2$. At the same time, the partition function on the blow up is identical to the partition function on a flat space for sufficiently large class of examples. 
-This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
-We obtain the partition function for the previously unknown theories such as exceptional gauge groups $EFG$ with fundamental and $SO(N)$ theories with spinor hypermultiplets. We also compute the case with $SU(6)$ with rank-3 antisymmetric tensor and compare with the topological vertex computation using the recently found 5-brane web configuration. 
+The Nekrasov partition function for 4d $\CN=2$ (or 5d $\CN=1$) gauge theory on the blow up of a point $\hat{\IC}^2$ (or $\hat{\IC}^2 \times S^1$) can be written in terms of the partition function on the flat space $\IC^2$ (or $\IC^2 \times S^1$). At the same time, the partition function on the blow up is identical to the partition function on a flat space for a sufficiently large class of examples. 
+These give rise to a recursion relation that the partition function has to satisfy.
+This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with a large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
+We obtain the partition function for the previously unknown theories such as exceptional gauge groups $EFG$ with fundamental and $SO(N)$ gauge theories with spinor hypermultiplets. We also compute the partition function for $SU(6)$ gauge theory with a rank-3 antisymmetric hypermultiplet and see the agreement with the topological vertex computation based on recently found 5-brane web configurations.
 }
 
 
@@ -202,25 +203,29 @@ by considering the world-volume theory on the D0-branes of the D0-D4-D8 system.
 By using the localization on the 1d system on the D0-branes or its dimensional reduction \cite{Moore:1997dj, Bruzzo:2002xf}, the contour integral formula of the partition function has been obtained for the case of classical gauge groups with particular choice of matter representations \cite{Nekrasov:2004vw, Marino:2004cn, Fucito:2004gi, Hollands:2010xa, Hollands:2011zc}. 
 The precise choice of the contour of the ADHM integral has been derived in \cite{Hwang:2014uwa, Cordova:2014oxa,Hori:2014tda} following the Jeffrey-Kirwan residue formula in 2d elliptic genus \cite{Benini:2013xpa,Benini:2013nda}. 
 
-But there is no ADHM type construction for the exceptional gauge groups or generic type of matter fields even for the classical group. String-theoretic picture implies that they require strong-coupling dynamics or non-Lagrangian field theories to realize instanton moduli space of exceptional theories as a vacuum moduli space. There has been a few results regarding the exceptional instantons that we review later in beginning of section \ref{sec:example}. 
+However there is no ADHM type construction for the exceptional gauge groups or generic type of matter fields even for the classical group. String-theoretic picture implies that they require strong-coupling dynamics or non-Lagrangian field theories to realize instanton moduli space of exceptional theories as a vacuum moduli space. Even though there has been a few results regarding the exceptional instantons that we review later in beginning of section \ref{sec:example}, complete way for general instanton counting is lacking. 
 
-The approach we take in this paper is to use the blowup formula of Nakajima-Yoshioka (NY) \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig}. In \cite{Keller:2012da}, the NY blow-up formula were used to compute the instanton partition function for exceptional gauge group by extrapolating it to arbitrary gauge group and tested against the superconformal index of 4d SCFT where the Higgs branch is given by the instanton moduli space \cite{Gaiotto:2012uq}. Since Nekrasov partition function computes refined topological string partition function for certain toric Calabi-Yau, a similar blowup formula for topological string theory is expected. Indeed such formulae are studied in \cite{Grassi:2016nnt, Gu:2017ccq, Huang:2017mis, Gu:2018gmy,Gu:2019dan}. Especially in \cite{Gu:2018gmy,Gu:2019dan}, non-perturbative partition functions for 6d SCFTs are obtained using the blowup equation. 
-
-In this paper, we generalize the Nakajima-Yoshioka (NY) blowup equations \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig} to arbitrary gauge group (with a possible 5d Chern-Simons term or discrete theta angle) with hypermultiplets in arbitrary representations. We propose a blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not `too large' as we discuss shortly. This enables us to compute the instanton partition functions for numerous gauge theories that have not been known before, without relying on to the explicit construction of the moduli space. 
+To this end, we generalize the blowup formula of Nakajima-Yoshioka (NY) \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig}. In \cite{Keller:2012da}, the NY blow-up formula were used to compute the instanton partition function for exceptional gauge group without matter by extrapolating the NY blowup equation to arbitrary gauge group. This is tested against the superconformal index of 4d SCFT where the Higgs branch is given by the instanton moduli space \cite{Gaiotto:2012uq}. Since the Nekrasov partition function computes refined topological string partition function for certain toric Calabi-Yau, a similar blowup formula for topological string theory is expected. Indeed such formulae are found and developed in \cite{Grassi:2016nnt, Gu:2017ccq, Huang:2017mis, Gu:2018gmy,Gu:2019dan}. Especially in \cite{Gu:2018gmy,Gu:2019dan}, non-perturbative partition functions for 6d SCFTs are obtained using the blowup equation. 
+We generalize the Nakajima-Yoshioka (NY) blowup equations \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig} to arbitrary gauge group (with a possible 5d Chern-Simons term or discrete theta angle) with hypermultiplets in arbitrary representations. We propose a blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not `too large' as we discuss shortly. This enables us to compute the instanton partition functions for numerous gauge theories that have not been known before, without relying on to the explicit construction of the moduli space. 
 
 The basic idea is as follows: Let us consider a one-point blow up $\hat{\IC^2}$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC^2}$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC^2}$ to $\IC^2$. On $\hat{\IC^2}$, we can insert certain topological operator associated to the 2-cycle that turns out to be trivial via selection rule as long as the matter representation is not `too large'. This provides us functional relations for the partition function, that we call the blowup equations of the form
 \begin{align}
- \langle (\CO_{\IP_1})^d \rangle = \sum_{\vec{k}} \CZ^{(N), d}(\vec{k}) \CZ^{(S), d}(\vec{k}) \qquad \textrm{ for }\quad 0 \le d \le d_{\text{max}} \ , 
+ \langle (\CO_{\IP_1})^d \rangle = \sum_{\vec{k} \in \Delta} \CZ^{(N), d}(\vec{k}) \CZ^{(S), d}(\vec{k}) \qquad \textrm{ for }\quad 0 \le d \le d_{\text{max}} \ , 
 \end{align}
-for some value of $d_\text{max}$ that depends on the gauge group and matter content. Here, $\CZ^{(N/S), d} (\vec{k})$ is written entirely in terms of the flat space partition function $\CZ$. 
-It turns out this equation is sufficient to determine the instanton partition function itself. Remarkably, this relation is completely determined by the perturbative part of the partition function. Therefore we arrive at a surprising conclusion: The \emph{perturbative} physics determine the \emph{non-perturbative} physics! Sometimes in the resurgence analysis, perturbative partition function constrains or even determine the non-perturbative part. This is not necessarily the case, especially for the case of 4d $\CN=2$ and 5d $\CN=1$ theory that we consider \cite{Honda:2016mvg}. In our case, we demand the consistency of the partition function as we change the spacetime smoothly, without assuming any analytic property, which turns out to be sufficient to determine the full partition function from the perturbative part. 
+for some value of $d_\text{max}$ that depends on the gauge group and matter content. Here, $\CZ^{(N/S), d} (\vec{k})$ is written entirely in terms of the flat space partition function $\CZ$ and the sum is over the co-root vectors of the gauge group. 
+It turns out this equation is sufficient to determine the instanton partition function itself as long as $d_\text{max} \ge 2$. Remarkably, this blowup equation is completely determined by the perturbative part of the partition function. Therefore we arrive at a surprising conclusion: 
+\begin{quote}
+\centering
+The \emph{perturbative} physics determines the \emph{non-perturbative} physics! 	
+\end{quote}
+Sometimes in the resurgence analysis, perturbative partition function constrains or even determine the non-perturbative part. This is not necessarily the case, especially for the case of 4d $\CN=2$ and 5d $\CN=1$ theory that we consider \cite{Honda:2016mvg}. In our case, we demand the consistency of the partition function as we change the spacetime smoothly, without assuming any analytic property, which turns out to be sufficient to determine the full partition function from the perturbative part. 
 
 Using the blowup equation we find, we obtain the following universal expression of the 1-instanton partition function for arbitrary gauge group and matter (5d version):
 \begin{align}
 \boxed{
   Z_1=\ \frac{e^{-\frac{b}{2}(\e_1 + \e_2)}\prod_{l}e^{\frac{m^\text{tw}_l I_2(\boldsymbol{R}_l)}{2}}}{(1-e^{-\e_1})(1-e^{-\e_2})} \sum_{\vec{k}\in\Delta_\ell}\frac{e^{\frac{\kappa_{\text{eff}}}{2}(\vec{a}\cdot\vec{k}-d_{ijk}a^ik^jk^k)}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{tw})}{(1-e^{-\e_1-\e_2-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}}
 \end{align} 
-Various symbols in this expression will be explained later in section \ref{sec:blowup}. But we highlight here that this formula depends only on group theoretic data such as the set of long roots $\Delta_\ell$ and weight vectors for representation $\mathbf{R}_l$ for each hypermultiplets labelled by $l$. 
+Various symbols in this expression will be explained later in section \ref{sec:blowup}. But we highlight here that this formula depends only on group-theoretic data such as the set of long roots $\Delta_\ell$ and weight vectors for representation $\mathbf{R}_l$ for each hypermultiplets labelled by $l$. 
 We emphasize that even though this expression looks completely universal, this formula turns out to be valid only if the matter representations satisfy certain constraint. For example, it fails for the matters in the adjoint representation. We find our 1-instanton formula in 5d is valid if 
 \begin{align}
   d_\text{max} = h^\vee -\frac{1}{2}\sum_l I_2(\mathbf{R}_l) \ge 2 \qquad \textrm{for } \quad G \neq SU(N) \textrm{ or } Sp(N) \ ,
@@ -228,7 +233,7 @@ We emphasize that even though this expression looks completely universal, this f
 where $h^\vee$ is the dual Coxeter number of the gauge group and $I_2(\mathbf{R})$ is the quadratic Dynkin index of the representation $\mathbf{R}$ and $l$ runs over all hypermultiplets that are charged under the gauge group $G$. We give analogous expression for $G=SU(N)$ or $Sp(N)$ in section \ref{subsec:numd}. The complication arises because of possible Chern-Simons term and discrete theta angle. One can consider 4d version of the partition function as well. In this case, analogous formula turns out to be valid for any gauge group and matters with $h^\vee - \half \sum_l I_2(\mathbf{R}_l) >1$ since we do not have a Chern-Simons coupling nor discrete theta angle in this case. 
 We compute instanton partition functions for a large number of examples and test against known results, from which we build our confidence for the generalized blowup equation we find. 
 
-The organization of this paper is as follows: In Section \ref{sec:blowup}, we give a physical derivation of the blowup equations. From this, we obtain a recursion formula to compute instanton partition function at any number of instantons. Especially, we derive a concise closed form formula for one instanton partition function that works for a large number of theories. We give a precise condition for our formula to work. In the case of 4d Nekrasov partition function, we are able to derive the bound on the matter representation for which the formula to work. We give an analogous bound for 5d version, based on extrapolating known results. In Section \ref{sec:example}, we test our formula against various known cases. We also compute previously unknown partition functions in the process and some of them in the character expansion form is given in Appendix \ref{sec:data}. 
+The organization of this paper is as follows: In Section \ref{sec:blowup}, we give a physical derivation of the blowup equations. From this, we obtain a recursion formula to compute instanton partition function at any number of instantons. Especially, we derive a concise closed form formula for one instanton partition function that works for a large number of theories. We give a precise condition for our formula to work. In the case of 4d Nekrasov partition function, we are able to derive the bound on the matter representation for which the formula to work. We give an analogous bound for 5d version, based on extrapolating known results. In Section \ref{sec:example}, we test our formula against various known cases. Moreover, we obtain previously unknown partition functions as well. Some of them are expressed as the character expansion, whose form is explicitly given in Appendix \ref{sec:data}. We then conclude with several future directions.
 
 %\paragraph{Notation}
 %The equivariant parameters $\epsilon_{1}, \epsilon_2, \vec{a}$ are associated to the $U(1)^2 \times U(1)^{|G|}$ action on the $k$-instanton moduli space $\mathcal{M}_{k,G}$. Additional parameters $\vec{\mathfrak{m}}$ are introduced if the gauge theory has an extra  flavor symmetry. The instanton fugacity $\mathfrak{q}$ can be written as $\mathfrak{q}\equiv\Lambda^{b_0}$ (4d) or $\mathfrak{q}\equiv \exp(2\pi i \Lambda)$ (5d) where $\Lambda$ denotes the bare coupling of the 4d/5d gauge theory.
@@ -285,7 +290,7 @@ where the flux sum is taken over the co-root lattice $\Lambda$ of the gauge alge
  \CZ^{(S)}(\vec{k}) & \equiv  \CZ (\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q, \vec{m}-\half{\e_2})  \ . 
 \end{split}
 \end{align}
- In addition to the Coulomb branch parameters, the partition function depends on the Omega deformation parameters $\e_1, \e_2$ and also mass parameters $\vec{m}$. The parameter $q$ is the instanton parameter. For a 4d theory, it is given as $q = e^{2\pi i \tau} = \Lambda^{b_0} $ where $\tau$ is the complexified gauge coupling and $\Lambda$ being the dynamical scale of the gauge theory. The exponent $b_0$ is the 1-loop beta function coefficient. For a 5d theory, it is also given by a exponentiated gauge coupling as $q=e^{-\frac{1}{g^2}} \equiv e^{-m_0}$. 
+ In addition to the Coulomb branch parameters, the partition function depends on the Omega deformation parameters $\e_1, \e_2$ and also mass parameters $\vec{m}$. The instanton fugacity $q$ takes the following form: For a 4d theory, it is given as $q = e^{2\pi i \tau} = \Lambda^{b_0} $ where $\tau$ is the complexified gauge coupling and $\Lambda$ being the dynamical scale of the gauge theory. The exponent $b_0$ is the 1-loop beta function coefficient. For a 5d theory, it is also given by a exponentiated gauge coupling as $q=e^{-\frac{1}{g^2}} \equiv e^{-m_0}$. 
 Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$, induced by the non-trivial magnetic flux $\vec{k}$ on the blown-up $\IP^1$, with the proportionality constant $H|_p$. The values of the moment map $H$ for the $U(1)^2$ action $V$,  \textit{i.e.}, $dH = \iota_V \omega$, at the north and south poles are given as
 \begin{align}
   H|_\text{NP} = \epsilon_1 \text{ and } H|_\text{SP} = \epsilon_2.
@@ -310,7 +315,7 @@ The only difference in our case is that we blow-up or down a non-singular point 
 
 \paragraph{Correlation functions in 4d}
 
-In fact, \eqref{eq:blowup-generic} is not enough to fix the partition function completely,  since there are 3 unknown functions and only one relation. It turns out the necessary additional relations can be found from the insertion of non-trivial $\mathcal{Q}$-closed operators \cite{Nakajima:2003pg,Nakajima:2005fg} associated to the two-cycle on the blow-up. 
+The equation \eqref{eq:blowup-generic} itself is not enough to fix the partition function completely, since there are 3 unknown functions and only one relation. It turns out the necessary additional relations can be found from the insertion of non-trivial $\mathcal{Q}$-closed operators \cite{Nakajima:2003pg,Nakajima:2005fg} associated to the two-cycle on the blow-up. 
 %So we consider the correlation functions of that operator $\mathcal{O}_{\IP^1}$ associated to the two-cycle $\IP^1$ of the blow-up $\hat{\mathbb{C}}^2$. 
 
 In the 4d Donaldson-twisted theory, the $\mathcal{Q}$-invariant observable $\CO_2$ associated to a two-cycle can be constructed by applying the topological descent procedure twice to the Casimir invariant $\CO_0 = \text{Tr}(\Phi^2)$ as \cite{Witten:1988ze}
@@ -345,16 +350,16 @@ where
 \end{split}
 \end{align}
 
-Now, as we shrink the two-cycle $\IP^1$ to recover the flat $\IC^2$, the effect of inserting $({\CO}_{\IP^1})^d$ turns out to give a vanishing contribution for small $d$ due to the selection rule. We recall that the instanton breaks the $U(1)_R$ symmetry to the discrete subgroup $\IZ_{2b_0}$ with $b_0 = 2h^\vee - \sum_i I_2(\mathbf{R}_i)$ where the sum is over all hypermultiplets and $h^\vee$ is the dual Coxeter number of the gauge group and $\mathbf{R}_i$ denotes the representation of the $i$-th hypermultiplet and $I_2(\mathbf{R})$ being the quardratic Dynkin index.\footnote{We normalize it so that $I_2(\mathbf{F})= 1$ for the fundamental representation $\mathbf{F}$.} The first term of the operator ${\CO}_{\IP^1}$ (the two-form piece) carries $R$-charge $+2$, which is the familiar non-equivariant version. This discrete $R$-charge is sometimes called as a ghost number. The correlation functions vanish unless the $R$-charges add up to zero, modulo $2b_0 = 4h^\vee - 2\sum_i I_2(\mathbf{R}_i)$. 
+Now, as we shrink the two-cycle $\IP^1$ to recover the flat $\IC^2$, the effect of inserting $({\CO}_{\IP^1})^d$ turns out to give a vanishing contribution for small $d$ due to the selection rule. We recall that the instanton breaks the $U(1)_R$ symmetry to the discrete subgroup $\IZ_{2b_0}$ with $b_0 = 2h^\vee - \sum_l I_2(\mathbf{R}_l)$ where the sum is over all hypermultiplets, and $h^\vee$ is the dual Coxeter number of the gauge group and $\mathbf{R}_l$ denotes the representation of the $l$-th hypermultiplet and $I_2(\mathbf{R})$ being the quardratic Dynkin index.\footnote{We normalize it so that $I_2(\mathbf{F})= 1$ for the fundamental representation $\mathbf{F}$.} The first term of the operator ${\CO}_{\IP^1}$ (the two-form piece) carries $R$-charge $+2$, which is the familiar non-equivariant version. This discrete $R$-charge is sometimes called as a ghost number. The correlation functions vanish unless the $R$-charges add up to zero, modulo $2b_0 = 4h^\vee - 2\sum_l I_2(\mathbf{R}_l)$. 
 Therefore, expanding \eqref{eq:corgen} in powers of $t$, we find
 \begin{align}
   \label{eq:donaldson-4d}
-  \boxed{  \langle e^{t {\CO}_{\IP^1}}\rangle = \CZ + \CO \left(t^{2h^\vee -  \sum_i I_2(\mathbf{R}_i)}\right) } \ . 
+  \boxed{  \langle e^{t {\CO}_{\IP^1}}\rangle = \CZ + \CO \left(t^{2h^\vee -  \sum_l I_2(\mathbf{R}_l)}\right) } \ . 
 \end{align}
 This is our blowup equation. 
-To show this, notice that each term at order $t^m$ carries pieces with $R$-charge between $0$ and $2m$. When $m < b_0$, the only possible non-trivial contribution comes from the $R=0$ piece $ \int H F\wedge F$ at zero instanton sector.  This piece vanishes for zero instanton sector (at north/south poles). For $n$-instanton sector, one should have $R=2b_0 n$, which is the condition to absorb the fermionic zero modes. For $m \ge b_0$, we always have a term that absorbs all the fermionic zero modes (or the term that has $R \equiv 0 \textrm{ mod } 2b_0 n)$ so they do not vanish. 
+To show this, notice that each term at order $t^m$ carries pieces with $R$-charge between $0$ and $2m$. When $m < b_0$, the only possible non-trivial contribution comes from the $R=0$ piece $ \int H F\wedge F$ at zero instanton sector.  This piece vanishes for zero instanton sector (at the north/south poles). For $n$-instanton sector, one should have $R=2b_0 n$, which is the condition to absorb the fermionic zero modes. For $m \ge b_0$, we always have a term that absorbs all the fermionic zero modes (or the term that has $R \equiv 0 \textrm{ mod } 2b_0 n)$ so they do not vanish. 
 
-We see that as long as the hypermultiplet representation is not too large, \emph{i.e.}, when $b_0 = 2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown variables. One can expand $\langle e^{t \, \CO_{\IP_1}}\rangle$ until $\mathcal{O}(t^2)$ order and recursively solve for $\CZ$ at each instanton number. So the instanton part of the partition function will be completely determined from the perturbative partition function. An explicit form of the recursion relation will be studied in Section~\ref{subsec:recursion}.
+We see that as long as the hypermultiplet representation is not too large, \emph{i.e.}, when $b_0 = 2h^\vee - \sum_l I_2(\mathbf{R}_l) > 2$, this allows us to write 3 independent relations for the 3 unknown variables. One can expand $\langle e^{t \, \CO_{\IP_1}}\rangle$ to order $t^2$, $\mathcal{O}(t^2)$ and then recursively solve for $\CZ$ at each instanton number. So the instanton part of the partition function will be completely determined from the perturbative partition function. An explicit form of the recursion relation will be studied in Section~\ref{subsec:recursion}.
 
 \paragraph{Correlation functions in 5d}
 We now turn to 5d $\CN=1$ gauge theory wrapped on $S^1$. The Casimir invariant $\Tr (\Phi^2)$ and its descendants are no longer considered as well-defined observables. Instead, there are two types of $\CQ$-invariant observables \cite{Baulieu:1997nj}. The first type of observables are constructed from the 5d Wilson loop on the $S^1$ by applying the descent procedure. The second type of observables introduce the 3d (K\"ahler) Chern-Simons term, which can be written as \cite{Losev:1995cr,Baulieu:1997nj}
@@ -391,7 +396,7 @@ Here the quantity $b$ is given as
  b \equiv h^\vee - \frac{1}{2} \sum_i I_2(\mathbf{R}_i) - \kappa_{\textrm{eff}} \ , \quad \kappa_{\textrm{eff}} = \kappa - \half \sum_i I_3(\mathbf{R}_i) \ , 
 \end{align}
 where $I_2(\mathbf{R})$ and $I_3(\mathbf{R})$ are quadratic and cubic Casimir invariants respectively. 
-Notice that $d$ has to be an integer to be gauge-invariant. 
+We note that $d$ appearing in the exponential in \eqref{eq:param-np-sp5d} has to be an integer to be gauge-invariant.
 
 The reason that the instanton parameter is further shifted by $\exp(\frac{b}{2} H|_p) $ is because the instanton mass parameter is twisted by $SU(2)_R$ as in the case of the hypermultiplet mass. The $SU(2)_R$ twisted mass of the instanton soliton is given by $m_\text{inst} \equiv m_{0, \textrm{eff}} - \kappa_\text{eff}\,\e_+$. The  effective Chern-Simons coupling $\k_{\textrm{eff}}$ also induces an electric charge to the instanton, contributing to its ground state energy as $E_0 = m_\text{inst} - \vec{a} \cdot \vec{\Pi}$, where $\vec{\Pi}$ is the $U(1)^r \subset G$ electric charge.\footnote{This agrees with the supersymmetric Casimir energy of the ADHM quantum mechanics.} To keep the effective instanton mass $m_\text{inst}$ invariant at a fixed point $p$ of the blow-up $\hat{\IC}^2$, we require the shifted gauge coupling $m_0|_p$  to be 
 \begin{align}
@@ -405,14 +410,14 @@ For the case of 5d pure $\mathcal{N}=1$ SYM, the correlation function turns out 
   \label{eq:cor5d-unity}
 \boxed{  \langle (\mathcal{O}_{\IP^1})^{d}\rangle = \CZ \quad \text{ for }\quad 0\leq d \leq d_\text{max} } \ , 
 \end{align}
-where $d_\text{max} = h^\vee$.\footnote{This was shown in \cite{Nakajima:2005fg} for the case of $G=SU(N)$.} We call \eqref{eq:cor5d-unity} as the blowup equation. The value of $d_{\text{max}}$ depends on the matter content and gauge group. For $d_\text{max} \geq 2$, there are sufficient number of algebraic relations to determine the instanton partition function recursively in increasing order of instantons. This fact was utilized in \cite{Keller:2012da} to compute instanton partition function for the gauge theories with exceptional gauge groups, for which the ADHM construction of instanton moduli space is unknown. 
+where $d_\text{max} = h^\vee$.\footnote{This was shown in \cite{Nakajima:2005fg} for the case of $G=SU(N)$.} We call \eqref{eq:cor5d-unity} as the blowup equation. The value of $d_{\text{max}}$ depends on the matter content and gauge group. For $d_\text{max} \geq 2$, there are a sufficient number of algebraic relations to determine the instanton partition function recursively in increasing order of instantons. This fact was utilized in \cite{Keller:2012da} to compute instanton partition function for the gauge theories with exceptional gauge groups, for which the ADHM construction of instanton moduli space is unknown. 
 
 In this paper, we aim at developing the relation \eqref{eq:cor5d-unity} for various 5d 
-$\mathcal{N}=1$ gauge theories with hypermultiplets in various representations, and compute the instanton partition function. We will identify a certain bound on $d$ in Section~\ref{subsec:numd} as the \emph{necessary} condition for \eqref{eq:cor5d-unity} for a large number of theories. 
+$\mathcal{N}=1$ gauge theories with hypermultiplets in various representations, so as to compute the instanton partition function. We will identify a certain bound on $d$ in Section~\ref{subsec:numd} as the \emph{necessary} condition for \eqref{eq:cor5d-unity} for a large number of theories. 
 %See Table~\ref{tbl:list} for the list of all considered examples. 
 We conjecture that the bound on $d$ we obtain is actually sufficient to obtain the blowup equation \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we compute $n$-instanton partition function $Z_n$, based on the recursion formula that will be derived shortly from \eqref{eq:cor5d-unity}, and confirm the agreement with the known result obtained from an alternative method.
 
-We find a universal expression for the bound on $d$ when the gauge group is not of $SU$ nor $Sp$ type:
+We find a universal expression for the bound on $d$ when the gauge group is neither $SU(N)$ nor $Sp(N)$:
 \begin{align}
   \label{eq:cor5d-dmax}
  d_{\textrm{max}} =  h^\vee -\frac{1}{2}\sum_l I_2(\mathbf{R}_l) \quad \textrm{for } G \neq SU(N) \textrm{ or } Sp(N) 
@@ -515,9 +520,9 @@ Then the blowup equation \eqref{eq:cor5d-unity} can be written as
   &\equiv  \sum_{\vec{k}} f_d(\vec{k}) Z^{(N), d}_{\textrm{inst}}(\vec{k})\, Z^{(S), d}_{\textrm{inst}}(\vec{k}) \ , 
   \end{split}
 \end{align}
-where the superscript $(N/S),d$ implies the appropriate shift of parameters, specified in \eqref{eq:param-np-sp}. The function $f_d(\vec{k})$ is determined only via perturbative part of the partition function. 
+where the superscript $(N/S),d$ denotes the appropriate shift of the parameters, specified in \eqref{eq:param-np-sp}. The function $f_d(\vec{k})$ is determined only via the perturbative part of the partition function. 
 
-We recall the known expressions for the classical and 1-loop partition function (in 5d) \cite{Intriligator:1997pq,Nekrasov:2002qd,Shadchin:2005mx}:\footnote{There exists an ambiguity in writing the perturbative partition function, which depends on a choice of the $\IC^2$ boundary condition at infinity. \eqref{eq:1-loop-vec} and \eqref{eq:1-loop-hyp} should also be associated with a certain specific choice. 
+We recall the known expressions for the classical and 1-loop partition function (in 5d) \cite{Intriligator:1997pq,Nekrasov:2002qd,Shadchin:2005mx}:\footnote{There exists an ambiguity in writing the perturbative partition function, which depends on a choice of the $\IC^2$ boundary condition at infinity. The equations \eqref{eq:1-loop-vec} and \eqref{eq:1-loop-hyp} are fixed upon a specific choice. 
 The `Casimir part' of $Z_{\text{1-loop}}$ is included here to make $f_d(\vec{k})_\text{1-loop}$ and thus the whole blow-up equations respect the charge conjugation, regardless of the ambiguity. We thank Hee-Cheol Kim for the related comment.}
 \begin{align}
    { Z_{\textrm{class}}} &= \exp \Bigg[\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}m_0 \, h_{ij}a_i a_j +\frac{\kappa}{6}d_{ijk} a^{i}a^j a^k\right) \Bigg],\\
@@ -526,7 +531,7 @@ The `Casimir part' of $Z_{\text{1-loop}}$ is included here to make $f_d(\vec{k})
    \end{split} \\
    \begin{split}  \label{eq:1-loop-hyp}
    { Z_{\textrm{1-loop}}^\text{hyp,$l$}} &= \exp \Bigg[-\frac{1}{\epsilon_1\epsilon_2} \sum_{\vec{\omega}\in\boldsymbol{R}_l}\Big(\frac{(\vec{a}\cdot\vec{\omega}+m_l)^3}{12}x-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\omega}+m_l)+1\Big)\Bigg]\\ &
-   ~~\times \text{PE}\ \Bigg[+ \frac{(p_1 p_2)^{\frac{1}{2}} \cdot  y_\ell } {(1-p_1)(1-p_2) }\sum_{\vec{\omega}\in\boldsymbol{R}_\ell}e^{-\vec{a} \cdot \vec{\w}}\Bigg] \qquad \text{ for the $\ell$'th hypermultiplet}
+   ~~\times \text{PE}\ \Bigg[+ \frac{(p_1 p_2)^{\frac{1}{2}} \cdot  y_\ell } {(1-p_1)(1-p_2) }\sum_{\vec{\omega}\in\boldsymbol{R}_l}e^{-\vec{a} \cdot \vec{\w}}\Bigg] \qquad \text{ for the $l$'th hypermultiplet}
    \end{split}
 \end{align}
 where $p_1 \equiv e^{-\e_1},\, p_2 \equiv e^{-\e_2},\, y_l \equiv e^{-m_{l}}, q \equiv e^{-m_0}$.\footnote{We assume a particular Weyl chamber in the Coulomb branch, i.e., $ 0< a_i < \e_+ < m$ for all $i\in \{1,\cdots, r\}$.} Also $\Delta$ is the set of all roots and $\mathbf{R}_\ell$ denotes the set of all weight vectors in representation $\mathbf{R}_\ell$. 
@@ -578,7 +583,7 @@ One can easily check that the expression inside the PE vanishes at $k=0, 1$. Aft
    1 & \text{ for } k=0, 1.
    \end{dcases} . 
 \end{align}
-Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can be written as
+Combining them all together, the recursion formula on the $n$-instanton piece $Z_n$ can be written as
 \begin{align}
   \label{eq:recursion}
   Z_n = &\sum_{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}  
@@ -587,7 +592,7 @@ Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can b
  \times    \frac{\prod_{l} y_{\text{tw}, l}^{-I_2(\boldsymbol{R}_l)(\frac{\vec{k}\cdot\vec{k}}{4})} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{tw},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
  \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
  \end{align}
-where $y_{\text{tw},l} \equiv e^{-m_{\text{tw},l}} = y_l / \sqrt{p_1p_2}$. This is a generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. Here $l$ runs over all hypermultiplets in the theory.  
+where $y_{\text{tw},l} \equiv e^{-m_{\text{tw},l}} = y_l / \sqrt{p_1p_2}$ and $l$ runs over all hypermultiplets in the theory. This is a generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. 
 %This relation is enough to determine $Z_n$ recursively from from $Z_0=1$ as we will see. 
 %The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$ when $\vec{k} \neq 0$. For $\vec{k}=0$, it involves the instanton parts with $\ell + m \le n$, but it never goes beyond $n$. Notice that we have a set of equations labelled by the parameter $d$. Whenever the recursion relation is satisfied for more than 3 values of $d$, we can solve 
 %Therefore one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
@@ -613,7 +618,7 @@ The $n$-instanton partition function $Z_n$ is given as the solution to the three
 \end{align}
 Since $I_n^{(d)}$ only involves low-order instanton corrections, the $n$-instanton partition function $Z_n$ can be constructed from $Z_{m<n}$, allowing us to obtain the full non-perturbative part $Z_\text{inst}$ in a recursive manner starting from $Z_0 = 1$. 
 
-Therefore we arrive at a remarkable conclusion. The non-perturbative partition function $Z_\text{inst}$ is completely fixed by the perturbative partition function! Note that we do not obtain this conclusion by requiring the perturbative series to be well-defined, as is often done in the resurgence analysis. Instead, we demand consistency upon smooth deformation of the spacetime $\IC^2$ or $\IC^2 \times S^1$. Such consistency condition requires non-perturbative parts to exist and even enough to fix the instanton partition function (at least for the large number of examples). 
+Therefore we arrive at a remarkable conclusion. The \emph{non-perturbative} partition function $Z_\text{inst}$ is completely fixed by the \emph{perturbative} partition function! We note that we do not reach this conclusion by requiring the perturbative series to be well-behaved, as is often done in the resurgence analysis. Instead, we demand consistency upon smooth deformation of the spacetime $\IC^2$ or $\IC^2 \times S^1$. Such consistency condition requires non-perturbative parts to exist and even enough to fix the instanton partition function (at least for the large number of examples). 
 
  
 % \paragraph{General 1-instanton partition function} \label{subsec:oneinst}
@@ -674,7 +679,7 @@ In section \ref{subsec:numd}, we study the structure of the blowup equations to 
 
 We are mainly interested in 4d $\CN=2$ and 5d $\mathcal{N}=1$ gauge theories which are UV-complete.  
 UV complete 4d $\CN=2$ gauge theories are classified in \cite{Bhardwaj:2013qia}. 
-In the case of 5d SCFTs that are UV complete as 5d SCFTs, the possible matter representations are restricted to \cite{Jefferson:2017ahm}
+In the case of 5d SCFTs that are UV complete as 5d SCFTs, the possible matter representations are restricted to \cite{Jefferson:2017ahm}: (For simple gauge group,)
 \begin{itemize}
   \item fundamental representation for $SU(N)$, $SO(N)$, $Sp(N)$, $G_2$, $F_4$, $E_6$, $E_7$
   \item antisymmetric representation for $SU(N)$, $Sp(N)$
@@ -683,20 +688,20 @@ In the case of 5d SCFTs that are UV complete as 5d SCFTs, the possible matter re
   \item rank-3 antisymmetric representation for $Sp(3)$, $Sp(4)$, $SU(6)$, $SU(7)$
   \item symmetric representation for $SU(N)$.
 \end{itemize}
-when the gauge group is simple. In the case of 4d, we can also have following additional cases: 
+In the case of 4d, we can also have following additional cases: 
 \begin{itemize}
 	\item adjoint representation for arbitrary group
 	\item rank-3 antisymmetric for $SU(8)$
 	\item \textbf{16} for $Sp(2)$ (half-hypermultiplet)
 \end{itemize}
-We are able to obtain the partition function for a large number of cases in 5d using our formula. But we are not able to apply our formula for some cases including the one with adjoint hypremultiplets since the number of independent blowup equations is smaller than 3. 
+We note that though our blow-up formula is applicable to a large number of 5d theories with various matter representations, we are not able to apply our formula for some cases including the one with adjoint hypermultiplet since the number of independent blowup equations is smaller than 3.
 
 The formula \eqref{eq:recursion} is valid only for a certain range of $d$, for which $\langle (\mathcal{O}_{\IP^1})^{d}\rangle = \CZ$. We want to narrow down the valid range of $d$ by performing a simple sanity check on the blowup equation for the one-instanton partition function:
 \begin{align}
   \label{eq:1inst}
   Z_1 = p_1^{\frac{b}{2}-d}Z^{(N)}_1  + p_2^{\frac{b}{2}-d}  Z^{(S)}_1  + I_1^{(d)} \qquad \text{with an allowed range of $d$} \ .
 \end{align}
-Specifically, we want to examine the expansion of each term in \eqref{eq:1inst} with in powers of $p_1p_2 \ll 1$. The  leading exponent behave as {\allowdisplaybreaks
+Specifically, we want to examine the expansion of each term in \eqref{eq:1inst} with in powers of $p_1p_2 \ll 1$. The  leading exponent of each term behaves as {\allowdisplaybreaks
 \begin{align}
 \begin{split}
   I_1^{(d)} &\sim \begin{dcases}
@@ -709,7 +714,7 @@ Specifically, we want to examine the expansion of each term in \eqref{eq:1inst} 
   % \nn \\ &\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
   \end{split}
 \end{align}
-where $g_{0, 1, 2}(\vec{a}, \vec{m}_{\text{tw}})$ are functions independent of $p_{1, 2}$ and $N_{\text{sym}}$ denotes the number of symmetric representation. Thenumerical value of $s$ will be obtained shortly for a variety of gauge theories for the cases when ADHM-like construction is available.
+where $g_{0, 1, 2}(\vec{a}, \vec{m}_{\text{tw}})$ are functions independent of $p_{1, 2}$ and $N_{\text{sym}}$ denotes the number of symmetric representation. The numerical value of $s$ will be obtained shortly for a variety of gauge theories for the cases when ADHM-like construction is available.
 Notice that for the equation \eqref{eq:1inst} to be true, some terms on the right-hand side should have the leading exponent less than or equal to that of $Z_1$. Therefore, the condition $d - \frac{b}{2} \geq -\frac{s}{2}$ is naturally imposed, setting a lower bound on $d$. 
 
 Similarly, an upper bound on $d$ can be found from an expansion of \eqref{eq:1inst} with respect to $ 1/p_1p_2 \ll 1$.\footnote{This is equivalent to assuming a different parameter regime $ 0 < a_i < -\e_+ < m$ for all $1\leq i \leq r$. In general, an explicit form of the 1-loop partition function \eqref{eq:1-loop-vec}--\eqref{eq:1-loop-hyp} can change depending on a parameter regime, thus affecting \eqref{eq:recursion}. However, all the above expressions remain valid under flipping a sign of $\epsilon_+$, such that we can simply study the expansion of the single terms in \eqref{eq:1inst} with respect to $ 1/p_1p_2 \ll 1$.} 
@@ -803,7 +808,7 @@ For the $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$ theory ($N_f$ fundamentals
   s' &= \min  
   \left(N - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \left(\k_\text{eff}+\sum_{l}I_3(\mathbf{R}_l)+2\right),\right. \\& \left. \qquad \qquad \  N - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\left\{-\frac{\k_\text{eff}}{2}+\frac{1}{2}\sum_{l}I_3(\mathbf{R}_l) \right\}\right)
   \end{split} 
-\end{align} for most cases except
+\end{align} for most cases except for
 \begin{align}
 s=&\,\frac{N}{2}+2 \qquad N\in2\mathbb{Z},\,N_f=0,\,\kappa=\frac{N}{2}+1\nn\\
 s'=&\,\frac{N}{2}+2 \qquad N\in2\mathbb{Z},\,N_f=0,\,\kappa=-\frac{N}{2}-1
@@ -1071,7 +1076,7 @@ The recursion formula \eqref{eq:recursion} for the $n$-instanton partition funct
 Conventionally, the instanton partition function can be computed by employing the ADHM construction of the instanton moduli space \cite{Atiyah:1978ri,Nekrasov:2002qd,Nekrasov:2003rj} or by applying the topological vertex formalism to the 5-brane web \cite{Aganagic:2003db,Iqbal:2007ii}. Both are based on a certain UV realization of 5d $\mathcal{N}=1$ gauge theory via geometric engineering in string theory. 
 Even though IR 5d gauge theory sometimes can be obtained using more than one string theory realizations, the correct UV completion might be only achieved through specific string theory realizations. For instance, the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets with $N_f\geq 5$ must be embedded into D4-D8-O8 brane system to be UV-completed as 5d $E_{N_f+1}$ Minahan-Nemeschansky SCFT \cite{Minahan:1996fg, Minahan:1996cj}. Ordinary $(p,q)$ 5-brane web with colliding branes (without O-planes) indicate UV inconsistency. 
 A sensible QFT observable can thus be obtained only through a proper embedding of the gauge theory into string theory. In some occasions, an extra factor dressing the true QFT observable may appear during the above instanton computation, which is sensitive to the choice of a string theory embedding.
-Our blow-up formula \eqref{eq:recursion} does not explicitly specify a particular UV completion nor string theory embedding. However, we observe that the formula does prefer a particular string theory embedding of the gauge theory. For example, for the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets, we always obtain the partition function that is given as that of the ordinary $(p, q)$ 5-brane web. 
+Our blow-up formula \eqref{eq:recursion} does not explicitly specify a particular UV completion nor string theory embedding. However, we observe that the formula does prefer a particular string theory embedding of the gauge theory. For example, for the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets, we find the partition function obtained from the blow-up formula agrees with the partition function obtained from ordinary $(p,q)$ 5-brane webs without colliding branes.
 
 There are wide varieties of `exceptional' gauge theories, whose UV completion is found as M-theory wrapped on a singular Calabi-Yau 3-fold \cite{Diaconescu:1998cn, Jefferson:2018irk, Bhardwaj:2018yhy, Apruzzi:2019opn}. Some of these examples do not yet have ADHM quantum mechanics nor the topological vertex formalism to compute the partition function. 
 %There are also `exceptional' gauge theories, that involve exceptional gauge groups or matters that cannot be engineered from the open strings ending on D-branes. Instead, their UV embedding is often geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. 
@@ -1091,7 +1096,7 @@ As for the $k$-instanton partition function $Z_k$, the Witten index of the relev
 
 \paragraph{SU(N)}
 
-The ADHM construction for the $n$-instanton partition function, for $SU(N)_\kappa +N_f \mathbf{F}$ ($N_f$ fundamentals) theory with $N_f + 2|\kappa| \leq 2N$ is well-known. Its partition function can be written as a sum over Young tableaux as
+The ADHM construction for the $n$-instanton partition function, for $SU(N)_\kappa +N_f \mathbf{F}$ ($N_f$ fundamentals) theory with $N_f + 2|\kappa| \leq 2N$ is well-known. Its partition function can be written as a sum over Young diagrams as
 \begin{align}
   \label{eq:SUn-young}
   Z_n^\text{ADHM} = \sum_{|\vec{Y}| = n}\prod_{i=1}^N\prod_{\s \in Y_i}\frac{e^{-\kappa \phi(s)} \prod_{l=1}^{N_f} 2\sinh{\frac{\phi(\s)+m_l}{2}}  }{\prod_{j=1}^N 2\sinh{\frac{E_{ij}}{2}}\,2\sinh{\frac{E_{ij}-2\e_+}{2}}} \ , 
@@ -1127,7 +1132,7 @@ For the $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{AS}$ theory ($N_f$ fundamental 
 Note that $Z_n^\text{ADHM}$ contains an extra factor $Z_\text{extra} \neq 1$ if $N_f + 2|\k| = N+4$, coming from the spectrum of D1-branes escaping from the D5-branes on which the gauge theory is supported. 
 The appearance of $Z_\text{extra}\neq 1$ is an artifact of the string theory embedding, spurious from the 5d QFT perspective.
 We checked that $Z_1^\text{ADHM}$ and the 1-instanton formula \eqref{eq:1inst-formula} agree for the $SU(3)$, $SU(4)$, $SU(5)$ theories whose $(n,n')$ satisfies $\frac{n+n'}{2} \geq 2$. 
-We confirmed $Z_2 = Z_2^\text{ADHM}$ as well, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-na}. The same spurious factor $Z_\text{extra}$ arises from the recursion formula, implying that our blowup equations are implicitly based on the D5-NS5-D7-O7${}^{-}$ brane realization of the gauge theory.\footnote{An exceptional case is the $SU(2)$ gauge theory, in which the antisymmetric hypermultiplet decouples and never affects the recursion formula. The corresponding $Z_n$ is the same as the Young tableau formula \eqref{eq:SUn-young}.}
+We confirmed $Z_2 = Z_2^\text{ADHM}$ as well, where $Z_2$ is the solution of the recursion formulae \eqref{eq:recursion} with \eqref{eq:sun-nf-na}. The same spurious factor $Z_\text{extra}$ arises from the recursion formula, implying that our blowup equations are implicitly based on the D5-NS5-D7-O7${}^{-}$ brane realization of the gauge theory.\footnote{An exceptional case is the $SU(2)$ gauge theory, in which the antisymmetric hypermultiplet decouples and never affects the recursion formula. The corresponding $Z_n$ is the same as the Young diagram formula \eqref{eq:SUn-young}.}
 
 \paragraph{Sp(N)}
 The $n$-instanton partition function for $Sp(N)_\theta + N_f \mathbf{F}$ theory ($\theta$ being the discrete theta-angle for $Sp$ and $N_f$ fundamental hypermultiplets) with $N_f \leq 2N+4$ can be computed from the ADHM quantum mechanics of D1-D5-NS5-O5 branes, which engineers the gauge theory and its instantons. The Witten index for the D1-brane theory is written as
@@ -1147,7 +1152,7 @@ For the $Sp(N)_\theta + N_f \mathbf{F} + 1\mathbf{AS}$ theory ($N_f$ fundamental
 \end{split}
 \end{align}
 We find that $Z_1^{\text{ADHM}}$ itself is \emph{not} the same as the 1-instanton expression from the blowup \eqref{eq:1inst-formula} for the $Sp(2)_\theta$, $Sp(3)_\theta$ theories with $N_f \leq 1$ (at $\theta=0$) and $N_f \leq 2$ (at $\theta=\pi$). Instead, the difference between $Z_1$ and $Z_1^{\text{ADHM}}$ can be identified as the BPS index of D0-branes moving away from the D4-D8-O8 brane system \cite{Kim:2012gu,Hwang:2014uwa}. 
-Similarly, we confirmed that the 2-instanton correction $Z_2$ captures the same 5d QFT spectrum as in $Z_2^\text{ADHM}$, upon substracting the spurious contribution of escaping D0-branes. It is interesting that our blow-up formulae does \emph{not} contain a spurious factor $Z_\text{extra}$.
+Similarly, we confirmed that the 2-instanton correction $Z_2$ captures the same 5d QFT spectrum as in $Z_2^\text{ADHM}$, upon subtracting the spurious contribution of escaping D0-branes. It is interesting that our blow-up formulae does \emph{not} contain a spurious factor $Z_\text{extra}$.
 
 
 \paragraph{SO(N)} One can compute the instanton partition function of $SO(N) + N_v \mathbf{V}$ theory ($N_v$ hypermultiplets in the vector representation) with $N_v \leq N-4$ using the ADHM quantum mechanics of the D1-D5-NS5-O5 brane system. At even $N$, the Witten index for a single D1-brane can be written as
@@ -1222,7 +1227,7 @@ From this expression, we can obtain the 1-instanton correction of $SO(7) + N_{\b
 Our instanton formula should hold for $N_{\bf v} + N_{\bf s} + N_{\bf c} \le 4$. Let us compare it with known results. 
 
 The 1-instanton result of $SO(8) + 1\mathbf{S} + 1\mathbf{C} + 1\mathbf{V}$ theory is found in (H.28) of \cite{DelZotto:2018tcj}.
-It is expressed in terms of characters of irreducible representations $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ mean either the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. Their representation $\mathbf{R}$ is specified by the Dynkin label in the subscript. All irreducible characters for the flavor symmetry are assumed to be written in the orthogonal basis, to be compatible with our convention of mass parameters in \eqref{eq:1-loop-hyp}, \eqref{eq:recursion}, \eqref{eq:1inst-formula}. The mass parameters will be often distinguished by the superscript $S \in \{s,c,v\}$ according to the matter representation. The flavor symmetry is $Sp(N_{\bf v})_v \times Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c$.
+It is expressed in terms of characters of irreducible representations $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c\}$ means either the gauge symmetry ($G$) or the flavor symmetry acting on the vector ($v$), spinor ($s$), or conjugate spinor ($c$) hypermultiplets. Their representation $\mathbf{R}$ is specified by the Dynkin label in the subscript. All irreducible characters for the flavor symmetry are assumed to be written in the orthogonal basis, to be compatible with our convention of mass parameters in \eqref{eq:1-loop-hyp}, \eqref{eq:recursion}, \eqref{eq:1inst-formula}. The mass parameters will be often distinguished by the superscript $S \in \{s,c,v\}$ according to the matter representation. The flavor symmetry is $Sp(N_{\bf v})_v \times Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c$.
 
 We can obtain the 1-instanton partition function of $SO(8) + N_{\bf s}\mathbf{S} + N_{\bf c}\mathbf{C} + N_{\bf v}\mathbf{V}$ theory with  $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq ( 1,1,1)$ from (H.28) of \cite{DelZotto:2018tcj} by sending appropriate mass parameters to infinity.
 All the results obtained in this way is consistent with our general 1-instanton expression \eqref{eq:1inst-formula} up to $t^{20}$ order, where $t \equiv \sqrt{p_1p_2}$. 
@@ -1775,9 +1780,8 @@ We checked that upon imposing the Higgsing condition \eqref{eq:SU6-Higgs-SU3}, i
   &\quad+ Z_1^{SU(3)_{3}}\!(A_1, A_5,A_6)\cdot Z_1^{SU(3)_{3}}\!(A_2, A_3,A_4),
   \end{split}
 \end{align}
-satisfying the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here $Z_k^{SU(3)_{3}}$ is the Young tableaux formula \eqref{eq:SUn-young} which includes the Coulomb VEV independent contribution $Z_{\rm extra}(q)$ in itself.
-
-
+which satisfy the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here, $Z_n^{SU(3)_3}$ is the Young
+diagram formula \eqref{eq:SUn-young} which includes the Coulomb VEV independent contribution $Z_{\rm extra}(q)$.
 
 
 % We will 
@@ -2045,13 +2049,15 @@ satisfying the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here $Z_k^{S
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion} \label{sec:conclusion}
 
-In this paper, we have found blowup equations for the Nekrasov partition function that hold for a large set of gauge theories. Especially, we are able to compute instanton partition functions for various exceptional theories that does not have ADHM description using the blowup formula. One of the remarkable aspect of the blowup formulae is that it is completely determined via perturbative part of the partition function. We would like to make a couple of comments on future directions. 
+In this paper, we have found the blowup equations for the Nekrasov partition function that hold for a large set of 4d and 5d gauge theories. 
+We listed the theories that are determined via the blowup equations in Table \ref{tbl:list}, and tested against various examples in Section \ref{sec:example}. In particular, the blowup formula enable us to compute instanton partition functions for exceptional theories whose ADHM description is not known. 
+One of the remarkable aspect of the blowup formulae is that the instanton part of the partition function is completely determined via the perturbative part of the partition function. We would like to make a couple of comments on future directions. 
 
 First, we have not given a fully general condition for the blowup formula to hold in the case of 5d $SU(N)$ gauge theory. For the case of 4d $\CN=2$ theory, the selection rule obtained via unbroken subgroup of $U(1)_R$ symmetry is enough to show the general conditions for arbitrary gauge theory. It would be desirable to find an explanation or pattern for the $d_{\text{max}}$ in $SU(N)$ theory. 
 
 Secondly, there must be a broader set of blow-up relations for the 5d Nekrasov partition function $\CZ$, similar to those recently found for topological string partition functions and 6d SCFTs \cite{Grassi:2016nnt, Gu:2017ccq, Huang:2017mis, Gu:2018gmy,Gu:2019dan}. We expect that some recursion formulae, derived from the generalized blow-up equations, may realize a different string theory embedding of the gauge theory. It would be very interesting if one can reveal the connection between the choice of UV embedding and the blow-up equations. In this way, it may be possible to determine the partition function even for the theories that we are not able to fix in the current paper. 
 
-We would also like to point out that our blowup formula turns out to be not enough to determine the instanton partition function with half-hypermultiplets. There exists many interesting gauge theories with half-hypermultiplets, such as trifundamentals in generalized $SU(2)$ quiver gauge theories \cite{Gaiotto:2009we} appear in AGT correspondence \cite{Alday:2009aq} or bifundamentals in $SO-Sp$ quiver theories. To our best knowledge, instanton counting with half-hypermultiplet has not been studied except for \cite{Hollands:2010xa, Hollands:2011zc} some time ago, and there is a recent progress in \cite{Coman:2019eex}. Our blowup formula is naturally written in terms of the representation of a full hypermultiplet, therefore it is not obvious how to incorporate half-hypermultiplet. It would be interesting to develop a way to do instanton counting for the half-hypermultiplets as well. 
+Finally, we remark that though our blow-up formula is applicable to fairly large set of theories that contain hypermultiplets of various representations, it is not clear how to implement our blow-up formula to theories with half-hypermultiplets.  There exists many interesting gauge theories with half-hypermultiplets, such as trifundamentals in generalized $SU(2)$ quiver gauge theories \cite{Gaiotto:2009we} that appear in AGT correspondence \cite{Alday:2009aq} or bifundamentals in $SO-Sp$ quiver theories. To our best knowledge, instanton counting with half-hypermultiplet has not been studied except for \cite{Hollands:2010xa, Hollands:2011zc} some time ago, and there is a recent progress in \cite{Coman:2019eex}. Our blowup formula is naturally written in terms of the representation of a full hypermultiplet, therefore it is not obvious how to incorporate half-hypermultiplet. It would be interesting to develop a way to do instanton counting for the half-hypermultiplets as well. 
 
 
 \acknowledgments
