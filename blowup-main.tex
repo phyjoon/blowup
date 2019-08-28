@@ -1,5 +1,3 @@
-
-
 \documentclass[letterpaper, 11pt]{article}
 
 \usepackage{jheppub}
@@ -197,17 +195,13 @@ where the instanton piece is the fugacity sum over all multi-instanton contribut
 \begin{align}
   {Z}_{\textrm{inst}}(\vec{a}, \vec{{m}}, \e_1, \e_2, {q}) = 1 + \sum_{n=1}^\infty {q}^n {Z}_n(\vec{a}, \vec{{m}}, \e_1, \e_2).
 \end{align}
-Once the Nekrasov partition function is known, one can extract the Seiberg-Witten prepotential via taking the $\e_i \to 0$ limit as $\mathcal{F} = \lim_{\epsilon_{1, 2}\rightarrow 0} \epsilon_1 \epsilon_2 \log{\CZ}$ \cite{Nekrasov:2002qd,Nekrasov:2003rj,Nakajima:2003pg, Braverman:2004cr}.
 
-The instanton part of the partition function in the $\Omega$-background can be computed once we know appropriate instanton moduli space. For the classical gauge groups, the ADHM construction of the moduli space \cite{Atiyah:1978ri} provides a direct way compute the instanton partition function. The ADHM construction can be understood as the quantum mechanics described by the Dp-D(p+4) system. The Higgs branch moduli space of the Dp system gives the desired moduli space. Matter fields can be also introduced by considering the world-volume theory on the D0-branes of the D0-D4-D8 system. 
 By using the localization on the 1d system on the D0-branes or its dimensional reduction \cite{Moore:1997dj, Bruzzo:2002xf}, the contour integral formula of the partition function has been obtained for the case of classical gauge groups with particular choice of matter representations \cite{Nekrasov:2004vw, Marino:2004cn, Fucito:2004gi, Hollands:2010xa, Hollands:2011zc}. 
-The precise choice of the contour of the ADHM integral has been derived in \cite{Hwang:2014uwa, Hori:2014tda, Cordova:2014oxa} following the Jeffrey-Kirwan residue formula in 2d elliptic genus \cite{Benini:2013xpa,Benini:2013nda}. 
 
 But there is no ADHM type construction for the exceptional gauge groups or generic type of matter fields even for the classical group. String-theoretic picture implies that they require strong-coupling dynamics or non-Lagrangian field theories to realize instanton moduli space of exceptional theories as a vacuum moduli space. There has been a few results regarding the exceptional instantons that we review later in beginning of section \ref{sec:example}. 
 
 The approach we take in this paper is to use the blowup formula of Nakajima-Yoshioka (NY) \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig}. In \cite{Keller:2012da}, the NY blow-up formula were used to compute the instanton partition function for exceptional gauge group by extrapolating it to arbitrary gauge group and tested against the superconformal index of 4d SCFT where the Higgs branch is given by the instanton moduli space \cite{Gaiotto:2012uq}. Since Nekrasov partition function computes refined topological string partition function for certain toric Calabi-Yau, a similar blowup formula for topological string theory is expected. Indeed such formulae are studied in \cite{Grassi:2016nnt, Gu:2017ccq, Huang:2017mis, Gu:2018gmy,Gu:2019dan}. Especially in \cite{Gu:2018gmy,Gu:2019dan}, non-perturbative partition functions for 6d SCFTs are obtained using the blowup equation. 
 
-In this paper, we generalize the Nakajima-Yoshioka (NY) blowup equations \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig} to arbitrary gauge group (with a possible Chern-Simons term or discrete theta angle) with hypermultiplets in arbitrary representations. We propose a blow-up formula for general gauge theory with arbitrary representations, under the condition that the matter representation is not `too large' as we discuss shortly. This enables us to compute the instanton partition functions for numerous gauge theories that have not been known before, without relying on to the explicit construction of the moduli space. 
 
 The basic idea is as follows: Let us consider a one-point blow up $\hat{\IC^2}$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC^2}$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC^2}$ to $\IC^2$. On $\hat{\IC^2}$, we can insert certain topological operator associated to the 2-cycle that turns out to be trivial via selection rule as long as the matter representation is not `too large'. This provides us functional relations for the partition function, that we call the blowup equations of the form
 \begin{align}
@@ -215,6 +209,7 @@ The basic idea is as follows: Let us consider a one-point blow up $\hat{\IC^2}$ 
 \end{align}
 for some value of $d_\text{max}$ that depends on the gauge group and matter content. Here, $\CZ^{(N/S), d} (\vec{k})$ is written entirely in terms of the flat space partition function $\CZ$. 
 It turns out this equation is sufficient to determine the instanton partition function itself. Remarkably, this relation is completely determined by the perturbative part of the partition function. Therefore we arrive at a surprising conclusion: The \emph{perturbative} physics determine the \emph{non-perturbative} physics! Sometimes in the resurgence analysis, perturbative partition function constrains or even determine the non-perturbative part. This is not necessarily the case, especially for the case of 4d $\CN=2$ and 5d $\CN=1$ theory that we consider \cite{Honda:2016mvg}. In our case, we demand the consistency of the partition function as we change the spacetime smoothly, without assuming any analytic property, which turns out to be sufficient to determine the full partition function from the perturbative part. 
+
 
 Using the blowup equation we find, we obtain the following universal expression of the 1-instanton partition function for arbitrary gauge group and matter (5d version):
 \begin{align}
@@ -226,7 +221,6 @@ We emphasize that even though this expression looks completely universal, this f
 \begin{align}
   d_\text{max} = h^\vee -\frac{1}{2}\sum_l I_2(\mathbf{R}_l) \ge 2 \qquad \textrm{for } \quad G \neq SU(N) \textrm{ or } Sp(N) \ ,
 \end{align}
-where $h^\vee$ is the dual Coxeter number of the gauge group and $I_2(\mathbf{R})$ is the quadratic Dynkin index of the representation $\mathbf{R}$ and $l$ runs over all hypermultiplets that are charged under the gauge group $G$. We give analogous expression for $G=SU(N)$ or $Sp(N)$ in section \ref{subsec:numd}. The complication arises because of possible Chern-Simons term and discrete theta angle. One can obtain 4d version of the partition function as well. In this case, analogous formula turns out to be valid for any gauge group and matters with $h^\vee - \half \sum_l I_2(\mathbf{R}_l) >1$ since we do not have a Chern-Simons coupling nor discrete theta angle in this case. 
 We compute instanton partition functions for a large number of examples and test against known results, from which we build our confidence for the generalized blowup equation we find. 
 
 The organization of this paper is as follows: In Section \ref{sec:blowup}, we give a physical derivation of the blowup equations. From this, we obtain a recursion formula to compute instanton partition function at any number of instantons. Especially, we derive a concise closed form formula for one instanton partition function that works for a large number of theories. We give a precise condition for our formula to work. In the case of 4d Nekrasov partition function, we are able to derive the bound on the matter representation for which the formula to work. We give an analogous bound for 5d version, based on extrapolating known results. In Section \ref{sec:example}, we test our formula against various known cases. We also compute previously unknown partition functions in the process and some of them in the character expansion form is given in Appendix \ref{sec:data}. 
@@ -279,14 +273,10 @@ Summing up, $\hat{\mathcal Z}$ can be expressed in terms of the partition functi
 \begin{align} \label{eq:blowup}
   \hat{\mathcal Z}(\vec{a}, \e_1, \e_2, q, \vec{m}) = \sum_{\vec{k} \in \Lambda} \CZ^{(N)}(\vec{k}) \CZ^{(S)}(\vec{k}) \ , 
 \end{align}
-where the flux sum is taken over the co-root lattice $\Lambda$ of the gauge algebra. Each factor represents the partition function localized at the $U(1)^2$ fixed points (north/south-poles of the $\IP^1 \subset \hat{\IC}^2$ given as 
 \begin{align}
 \begin{split}
- \CZ^{(N)}(\vec{k}) &\equiv \CZ (\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1, q, \vec{m}+\half{\e_1}) \ , \\
- \CZ^{(S)}(\vec{k}) & \equiv  \CZ (\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q, \vec{m}+\half{\e_2})  \ . 
 \end{split}
 \end{align}
- In addition to the Coulomb branch parametres, the partition function depends on the Omega deformation parameters $\e_1, \e_2$ and also mass parameters $\vec{m}$. The parameter $q$ is the instanton parameter. For a 4d theory, it is given as $q = e^{2\pi i \tau} = \Lambda^{b_0} $ where $\tau$ is the complexified gauge coupling and $\Lambda$ being the dynamical scale of the gauge theory. The exponent $b_0$ is the 1-loop beta function coefficient. For a 5d theory, it is also given by a exponentiated gauge coupling as $q=e^{-\frac{1}{g^2}} \equiv e^{-m_0}$. 
 Notice that the Coulomb parameter $\vec{a}$ gets an appropriate shift at each fixed point $p$, induced by the non-trivial magnetic flux $\vec{k}$ on the blown-up $\IP^1$, with the proportionality constant $H|_p$. The values of the moment map $H$ for the $U(1)^2$ action $V$,  \textit{i.e.}, $dH = \iota_V \omega$, at the north and south poles are given as
 \begin{align}
   H|_\text{NP} = \epsilon_1 \text{ and } H|_\text{SP} = \epsilon_2.
@@ -304,7 +294,6 @@ Since the Nekrasov partition function gets contributions only from the small ins
   %(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1, q, \vec{m}) \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q, \vec{m}) \ , 
 \end{align}
 
-This blow-up identity can be thought of as a special case of more generalized to orbifold partition functions \cite{Sasaki:2006vq,Bonelli:2012ny,Ito:2013kpa}. %For example, if we consider the total space of the bundle $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ with singularity at the origin. 
 %There are certain states originated from wrapped D-branes on the $\IP^1$ which become massless by shrinking the $\IP^1$. They constitute to the required twisted sector of the orbifold partition function. 
 For example, the Nekrasov partition function on the orbifold $\IC^2/\IZ_2$ can be computed in two different ways, one is via formula analogous to \eqref{eq:blowup} by combining the contributions from two fixed points of the blown-up geometry $\CO(-2) \to \IP^1$. The other way is to compute the partition function at the orbifold point using the ADHM construction for the orbifolds. The Nekrasov partition function still remains the same as we blow up or down the singular point.\footnote{This simple picture does not necessarily hold when there are too many hypermultiplets, due to some subtle scheme dependence related to the wall-crossing \cite{Ito:2013kpa}.} 
 The only difference in our case is that we blow-up or down a non-singular point instead of a singular point. 
@@ -331,7 +320,6 @@ In our case, we consider a $U(1)^2$-equivariant version of the topological desce
 \end{align} 
 Here $\omega$ and $H$ are the K\"ahler two-form on the $\IP^1$ and the moment map $\iota_V \omega = dH$, respectively. $M_4$ denotes the spacetime. The first part of \eqref{eq:muC} without $H$ is the non-equivariant version of the topological operator associated to two-cycle. 
 It is convenient to study the generating function $\langle e^{t \, {\CO}_{\IP^1}}\rangle $ of the correlators $\langle {\CO}_{\IP^1} \ldots {\CO}_{\IP^1} \rangle$. 
-This cause a shift of instanton parameter by $q \to q \exp(t H)$ at the fixed points of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}.  
 The expectation value of the generating function can be written as
 \begin{align} \label{eq:corgen}
   \hat{\CZ}^{t} \equiv \langle e^{t  {\CO}_{\IP^1}}\rangle = \sum_{\vec{k} \in \Lambda}  \CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})\ ,  
@@ -340,8 +328,6 @@ where
 \begin{align}
   \label{eq:param-np-sp}
 \begin{split}
-  \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q \exp(t \e_1), \vec{m} +\tfrac{1}{2}\e_1) \ , \\
-  \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q \exp(t \e_2), \vec{m} +\tfrac{1}{2}\e_2)\ . \\
 % \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, q, \vec{m}).
 \end{split}
 \end{align}
@@ -353,7 +339,6 @@ Therefore, expanding \eqref{eq:corgen} in powers of $t$, we find
   \boxed{  \langle e^{t {\CO}_{\IP^1}}\rangle = \CZ + \CO \left(t^{2h^\vee -  \sum_i I_2(\mathbf{R}_i)}\right) } \ . 
 \end{align}
 This is our blowup equation. 
-To show this, notice that each term at order $t^n$ carries pieces with $R$-charge between $0$ and $2n$. When $n < 2b_0$, the only possible non-trivial contribution comes from the $R=0$ piece $ \int H F\wedge F$ at zero instanton sector. For $n$-instanton sector, one should have $R=2b_0 n$, which is the condition to absorb the fermionic zero modes. This piece vanishes for zero instanton sector (at north/south poles). For $n \ge 2b_0$, we always have a term that abosorb all the fermionic zero modes (or the term that has $R \equiv 0 \textrm{ mod } 2b_0 n)$ so they do not vanish. 
 
 We see that as long as the hypermultiplet representation is not too large, \emph{i.e.}, when $b_0 = 2h^\vee - \sum_i I_2(\mathbf{R}_i) > 2$, this allows us to write 3 independent relations for the 3 unknown variables. One can expand $\langle e^{t \, \CO_{\IP_1}}\rangle$ until $\mathcal{O}(t^2)$ order and recursively solve for $\CZ$ at each instanton number. So the instanton part of the partition function will be completely determined from the perturbative partition function. An explicit form of the recursion relation will be studied in Section~\ref{subsec:recursion}.
 
@@ -383,8 +368,6 @@ where
 \begin{align}
   \label{eq:param-np-sp5d}
 \begin{split}
-  \CZ^{(N),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q \exp \left((d - \tfrac{b}{2})\e_1 \right), \vec{m} +\tfrac{1}{2}\e_1) \ , \\
-  \CZ^{(S),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q \exp \left( (d - \tfrac{b}{2})\e_2\right), \vec{m} +\tfrac{1}{2}\e_2)\ . 
 \end{split}
 \end{align}
 Here the quantity $b$ is given as 
@@ -394,9 +377,6 @@ Here the quantity $b$ is given as
 where $I_2(\mathbf{R})$ and $I_3(\mathbf{R})$ are quadratic and cubic Casimir invariants respectively. 
 Notice that $d$ has to be an integer to be gauge-invariant. 
 
-The reason that the instanton parameter is further shifted by $\exp(\frac{b}{2} H|_p) $ is because the instanton mass parameter is twisted by $SU(2)_R$ as in the case of the hypermultiplet mass. 
-Moreover, the instanton soliton carries the $SU(2)_R$ twisted effective mass, given by $m_\text{inst} \equiv m_{0, \textrm{eff}} - \kappa_\text{eff}\,\e_+$.
-In addition, the  effective Chern-Simons coupling $\k_{\textrm{eff}}$ induces an electric charge to the instanton, contributing to its ground state energy as $E_0 = m_\text{inst} - \vec{a} \cdot \vec{\Pi}$, where $\vec{\Pi}$ is the $U(1)^r \subset G$ electric charge.\footnote{This agrees with the supersymmetric Casimir energy of the ADHM quantum mechanics.} To keep the effective instanton mass $m_\text{inst}$ invariant at a fixed point $p$ of the blow-up $\hat{\IC}^2$, we require the shifted gauge coupling $m_0|_p$  to be 
 \begin{align}
   \label{eq:coupling-shift}
   m_0|_p = m_0 + \frac{b}{2}H|_p \quad \text{ with }\quad
@@ -520,7 +500,6 @@ Then the blowup equation \eqref{eq:cor5d-unity} can be written as
 \end{align}
 where the superscript $(N/S),d$ implies the appropriate shift of parameters, specified in \eqref{eq:param-np-sp}. The function $f_d(\vec{k})$ is determined only via perturbative part of the partition function. 
 
-We recall the known expressions for the classical and 1-loop partition function (in 5d) \cite{Intriligator:1997pq,Nekrasov:2002qd,Shadchin:2005mx}:\footnote{The `Casimir part' of the 1-loop free energy (the ones inside the exp) depends on the choice of ...}
 \begin{align}
    { Z_{\textrm{class}}} &= \exp \Bigg[\frac{1}{\epsilon_1\epsilon_2}\left(\frac{1}{2}m_0 \, h_{ij}a_i a_j +\frac{\kappa}{6}d_{ijk} a^{i}a^j a^k\right) \Bigg],\\
    \begin{split}  \label{eq:1-loop-vec}
@@ -567,7 +546,6 @@ Substituting them to \eqref{eq:recur-inst}, we obtain the ratio of three differe
 where we split the $f_d(\vec{k})$ into classical and 1-loop pieces for vector and hypermultiplet. 
 % with $\vec{v}_1\cdot\vec{v}_2 \equiv h_{ij} v_1^i v_2^j$. 
 Here we used $I_2(\textbf{adj}) = 2h^\vee$, $I_3(\textbf{adj})=0$, and also 
-the fact $h_{ij}$ and $d_{ijk}$ are totally symmetric. We also define $m_{\text{tw}} \equiv m + \e_+$. The function $\CL_k (x,\e_1,\e_2)$ is introduced to denote concisely the combination of the PE parts:
 \begin{align}
   \CL_k (x,\e_1,\e_2) \equiv \text{PE}\left[ e^{-x} \left(\frac{p_1^k \, p_2}{(1-p_1)(1-\frac{p_2}{p_1})}+\frac{p_1\, p_2^k}{(1-\frac{p_1}{p_2})(1-p_2)}-\frac{p_1p_2}{(1-p_1)(1-p_2)}\right) \right]
 \end{align}
@@ -584,7 +562,6 @@ Combining them all, the resursion formula on the $n$-instanton piece $Z_n$ can b
 \begin{align}
   \label{eq:recursion}
   Z_n = &\sum_{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}  
-  \Bigg( (p_1p_2)^{(\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
  e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k} \\& 
  \times    \frac{\prod_{l} y_{\text{tw}, l}^{-I_2(\boldsymbol{R}_l)(\frac{\vec{k}\cdot\vec{k}}{4})} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{tw},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
  \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
@@ -603,7 +580,6 @@ The recursion relation \eqref{eq:recursion} can be rewritten as
 where $I_{n}^{(d)}$ is defined as
 \begin{align} \label{eq:Ind}
   I_{n}^{(d)} = &\sum_{\stackrel{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}{\ell, m \neq n}}  
-  \Bigg( (p_1p_2)^{(\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
  e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k}  \\& 
  \times    \frac{\prod_{l} y_{\text{tw}, l}^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{tw},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
  \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m} Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) . \nn
@@ -1606,7 +1582,6 @@ where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$. The left/right factor
 $Z_{\text{left}}(\vec{Y})$/$Z_{\text{right}}(\vec{Y})$ can be written as 
 \begin{align}
 \begin{split}
-Z_{\text{left}}(\vec{Y}) = Z_{\text{left}}(\vec{Y})=& \,
 \sum_{Y'} ( - A_1{}^{-1} A_6{}^{-2})^{|Y'|} 
 g^{\frac{||Y'^t||^2+||Y'||^2}{2}} \tilde{Z}_{Y'}^2 f_{Y'}^2(g)
 \prod_{i=1}^6 g^{\frac{||Y_i||^2}{2}} \tilde{Z}_{Y_i} 
