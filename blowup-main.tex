@@ -1155,11 +1155,11 @@ We find that $Z_1^{\text{ADHM}}$ itself is \emph{not} the same as the 1-instanto
 Similarly, we confirmed that the 2-instanton correction $Z_2$ captures the same 5d QFT spectrum as in $Z_2^\text{ADHM}$, upon subtracting the spurious contribution of escaping D0-branes. It is interesting that our blow-up formulae does \emph{not} contain a spurious factor $Z_\text{extra}$.
 
 
-\paragraph{SO(N)} One can compute the instanton partition function of $SO(N) + N_v \mathbf{V}$ theory ($N_v$ hypermultiplets in the vector representation) with $N_v \leq N-4$ using the ADHM quantum mechanics of the D1-D5-NS5-O5 brane system. At even $N$, the Witten index for a single D1-brane can be written as
+\paragraph{SO(N)} One can compute the instanton partition function of $SO(N) + N_v \mathbf{V}$ theory ($N_v$ hypermultiplets in the vector representation) with $N_v \leq N-4$ using the ADHM quantum mechanics of the D1-D5-NS5-O5 brane system. For even $N$, the Witten index for a single D1-brane can be written as
 \begin{align}
 Z_1^\text{ADHM} = \sum_{i=1}^{N/2}\bigg(\frac{2\sinh(2\e_+-a_i)\,2\sinh(a_i-\e_+)\prod_{l=1}^{N_v}2\sinh\frac{m_l\pm(a_i-\e_+)}{2}}{2 \cdot 2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}\prod_{j\neq i}2\sinh\frac{a_i\pm a_j}{2}\,2\sinh\frac{2\e_+-a_i\pm a_j}{2}}+(a_i\rightarrow -a_i)\bigg).
 \end{align}
-At odd $N$,
+For odd $N$,
 \begin{align}
   Z_1^\text{ADHM} =\sum_{i=1}^{\lfloor N/2\rfloor}\bigg(\frac{2\cosh\frac{2\e_+-a_i}{2}\,2\sinh(a_i-\e_+)\,\prod_{l=1}^{N_f}2\sinh\frac{m_l\pm(a_i-\e_+)}{2}}{2 \cdot 2\sinh\frac{\e_1}{2}\,2\sinh\frac{\e_2}{2}\, 2\sinh\frac{a_i}{2}\prod_{j\neq i}2\sinh\frac{a_i\pm a_j}{2}\,2\sinh\frac{2\e_+-a_i\pm a_j}{2}}+(a_i\rightarrow -a_i)\bigg).
 \end{align}
@@ -1235,20 +1235,20 @@ Furthermore, we are able to determine the unknown part of (H.28) of \cite{DelZot
 \begin{align}
   \label{eq:SO8-v1s1c1}
   \begin{split}
- \hat{Z}_1 &=  t^4 + \sum_{n=0}^\infty t^{5+2n} \chi_{(0n00)}^G \chi^v_{(1)}\chi^s_{(1)}\chi^c_{(1)} \\
+ \tilde{Z}_1 &=  t^4 + \sum_{n=0}^\infty t^{5+2n} \chi_{(0n00)}^G \chi^v_{(1)}\chi^s_{(1)}\chi^c_{(1)} \\
  &\quad + \sum_{n=0}^\infty t^{6+2n}\left(\chi_{(1n00)}^G \chi^s_{(1)}\chi^c_{(1)}+ \chi_{(0n10)}^G \chi^s_{(1)}\chi^v_{(1)}
   +\chi_{(0n01)}^G \chi^c_{(1)}\chi^v_{(1)}\right)\\
  &\quad  + \sum_{n=0}^\infty t^{7+2n} \left(\chi^G_{(1n10)}\chi^s_{(1)} + \chi^G_{(1n01)}\chi^c_{(1)}+\chi^G_{(0n11)}\chi^v_{(1)}\right)- \sum_{n=0}^\infty t^{8+2n}\chi^G_{(1n11)} \ ,
  \end{split}
 \end{align}
-where $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1}}{2}})(2\sinh{\frac{\e_{2}}{2}}) \cdot Z_1$ is the 1-instanton partition function with the center-of-mass factor removed. 
+where $\tilde{Z}_1 \equiv (2\sinh{\frac{\e_{1}}{2}})(2\sinh{\frac{\e_{2}}{2}})  Z_1$ is the 1-instanton partition function with the center-of-mass factor removed. 
 
 
 Now we compare \eqref{eq:1inst-formula} with the 1-instanton partition function of $SO(8) + 2\mathbf{S}
  + 2\mathbf{C} + 2\mathbf{V}$ theory, written in (H.19) of \cite{DelZotto:2018tcj}. Our 1-instanton formula \eqref{eq:1inst-formula} applied to the $SO(8)$ theories having $( N_{\bf s},  N_{\bf c}, N_{\bf v}) \leq (2,1,1), (1,2,2), (1,1,2),(2,2,0),(2,0,2),(0,2,2)$ agree with (H.19) up to $t^{20}$ order, after suitably setting some mass parameters in (H.19) to infinity. We could further determine the unknown part of (H.19) of \cite{DelZotto:2018tcj} as 
  \begin{align}
   \label{eq:SO8-v2s2c2}
-  \hat{Z}_1 &= t^{-1} - t^3(\chi_{(01)}^v+\chi_{(01)}^s+\chi_{(01)}^c) 
+  \tilde{Z}_1 &= t^{-1} - t^3(\chi_{(01)}^v+\chi_{(01)}^s+\chi_{(01)}^c) 
   +t^5(\chi^G_{(1000)}\chi^s_{(10)}\chi^c_{(10)}+\chi^G_{(0010)}\chi^s_{(10)}\chi^v_{(10)}+\chi^G_{(0001)}\chi^c_{(10)}\chi^v_{(10)}) \nn \\&
   -t^6(\chi^G_{(1010)}\chi_{(10)}^s+\chi^G_{(1001)}\chi_{(10)}^c+\chi^G_{(0011)}\chi_{(10)}^v) + t^7 \chi_{(1011)}^G - \sum_{n=0}^\infty \Big(t^{5+2n}\chi_{(0n00)}^G \chi^s_{(10)}\chi^c_{(10)} \chi^v_{(10)}  \nn \\&
   + t^{6+2n}(\chi^G_{(1n00)}\chi^s_{(01)}\chi^c_{(01)}\chi^v_{(10)}+\chi^G_{(0n10)}\chi^s_{(01)}\chi^c_{(10)}\chi^v_{(01)}+\chi^G_{(0n01)}\chi^s_{(10)}\chi^c_{(01)}\chi^v_{(01)}) \nn \\&- t^{7+2n} 
@@ -1297,7 +1297,7 @@ The 1-instanton formula \eqref{eq:1inst-formula} can be applied to $(N_\mathbf{s
 \begin{align}
   \label{eq:SO9-v1s2}
   \begin{split}
-  \hat{Z}_1&=\, t^4\chi^v_{(1)}+t^5\chi^s_{(20)}-t^6\chi_{(0001)}^G\chi^s_{(10)}
+  \tilde{Z}_1&=\, t^4\chi^v_{(1)}+t^5\chi^s_{(20)}-t^6\chi_{(0001)}^G\chi^s_{(10)}
    \\&\quad +\sum_{n=0}^{\infty}\Bigg(t^{6+2n}\chi^G_{(0n00)}\chi^s_{(02)}\chi^v_{(1)}
   -t^{7+2n}\left(\chi^G_{(1n00)}\chi^s_{(02)}+\chi^G_{(0n01)}\chi^s_{(11)}\chi^v_{(1)}\right) 
   \\&\qquad \quad+t^{8+2n}\left(\chi^G_{(1n01)}\chi^s_{(11)}+\chi^G_{(0n10)}\chi^s_{(20)}\chi^v_{(1)} 
@@ -1321,7 +1321,7 @@ We apply our 1-instanton expression \eqref{eq:1inst-formula} to $SO(10) + N_{\ma
   &= \hat{Z}_{1}^{N_{\mathbf{s}}+1,N_\mathbf{c}-1,N_{\mathbf{v}}}(m^s_{1, \cdots, N_\mathbf{s}+1}; m^c_{1,\cdots,N_\mathbf{c}-1})\big|_{m^s_{N_\mathbf{s}+1} = -m^c_{N_\mathbf{c}}}
 \end{align}
 This relation is explicitly confirmed in all above cases at 1-instanton order. 
-We may want to compare \eqref{eq:1inst-formula} with the known 1-instanton partition function of $SO(10) + 1\mathbf{S} + 1\mathbf{C} + 4\mathbf{V}$ theory, written in (H.21) of \cite{DelZotto:2018tcj}, after taking relevant mass parameters  to infinity. However, (H.21) specifies $\hat{Z}_1$ only up to $\mathcal{O}(t^5)$, which leaves nothing for comparison once we reduce the mass parameters. Thus the consistency between two expressions can be only weakly tested. For instance, $\hat{Z}_{1}$ obtained from \eqref{eq:1inst-formula} for $SO(10) + N_\mathbf{s}\mathbf{S}+ N_\mathbf{c}\mathbf{C} + 4\mathbf{V}$ theory with $ N_\mathbf{s} 
+We may want to compare \eqref{eq:1inst-formula} with the known 1-instanton partition function of $SO(10) + 1\mathbf{S} + 1\mathbf{C} + 4\mathbf{V}$ theory, written in (H.21) of \cite{DelZotto:2018tcj}, after taking relevant mass parameters  to infinity. However, (H.21) specifies $\tilde{Z}_1$ only up to $\mathcal{O}(t^5)$, which leaves nothing for comparison once we reduce the mass parameters. Thus the consistency between two expressions can be only weakly tested. For instance, $\hat{Z}_{1}$ obtained from \eqref{eq:1inst-formula} for $SO(10) + N_\mathbf{s}\mathbf{S}+ N_\mathbf{c}\mathbf{C} + 4\mathbf{V}$ theory with $ N_\mathbf{s} 
 + N_\mathbf{c} = 2$ is displayed in \eqref{eq:so10-2s2v}, which turns out to be trivial upto $t^4$ order.
 
 
@@ -1419,7 +1419,7 @@ The 1-instanton partition function of $F_4 + 2 \mathbf{F}$ gauge theory is given
 \begin{align}
     \label{eq:F4F2}
 \begin{split}
-  & \hat{Z}_1 =\,t^6\chi^f_{(01)}+t^7\chi^{f}_{(30)}-t^8\left(\chi^G_{(0001)}\chi^f_{(20)}+\chi^G_{(1000)}\right)+t^9\chi^G_{(0010)}\chi^f_{(10)}-t^{10}\chi^G_{(0100)}\\
+  & \tilde{Z}_1 =\,t^6\chi^f_{(01)}+t^7\chi^{f}_{(30)}-t^8\left(\chi^G_{(0001)}\chi^f_{(20)}+\chi^G_{(1000)}\right)+t^9\chi^G_{(0010)}\chi^f_{(10)}-t^{10}\chi^G_{(0100)}\\
   &+\sum_{n=0}^{\infty}\Bigg(t^{8+2n}\chi^G_{(n000)}\chi^f_{(03)}-t^{9+2n}\chi^G_{(n001)}\chi^f_{(12)}+t^{10+2n}\left(\chi^G_{(n010)}\chi^f_{(21)}+\chi^G_{(n002)}\chi^f_{(02)}\right)\\
   &\qquad\quad-t^{11+2n}\left(\chi^G_{(n100)}\chi^f_{(30)}+\chi^G_{(n011)}\chi^f_{(11)}\right) 
   +t^{12+2n}\left(\chi^G_{(n101)}\chi^f_{(20)}+\chi^G_{(n020)}\chi^f_{(01)}\right)\\
@@ -1452,7 +1452,7 @@ Our 1-instanton expression \eqref{eq:1inst-formula} is applicable to $E_7 + N_f\
 The 1-instanton partition function of $E_8$ gauge theory can be written as 
 \begin{align}
     \label{eq:E8}
-  \hat{Z}_1=\sum_{n=0}^{\infty}t^{29+2n}\chi^{E_8}_{(000000n0)}.
+  \tilde{Z}_1=\sum_{n=0}^{\infty}t^{29+2n}\chi^{E_8}_{(000000n0)}.
 \end{align}
 We confirmed that it agrees with our 1-instanton expression \eqref{eq:1inst-formula} up to $t^{520}$ order. 
 It is actually proven in \cite{Keller:2011ek, Keller:2012da} that the one-instanton formula \eqref{eq:1inst-formula} for any gauge group without matter can be written in terms of the character expression \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq}
@@ -2075,12 +2075,12 @@ This work is supported in part by the UESTC Research Grant A03017023801317 (SSK)
 \section{One-instanton partition functions}
 \label{sec:data}
 
-This appendix collects the character expansion of the 1-instanton partition function $Z_1$ for a variety of 5d $\mathcal{N}=1$ gauge theories. For simplicity, we display the $\hat{Z}_1 \equiv (2\sinh{\frac{\e_{1,2}}{2}}) \cdot Z_1$ which takes off the center-of-mass factor. They are written in terms of irreducible characters $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c,f,\bar{f}\}$ indicates the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), conjugate spinor ($c$), fundamental ($f$), or anti-fundamental ($\bar{f}$) hypermultiplets. The representation $\mathbf{R}$ of an irreducible character $\chi_{\mathbf{R}}^S$ is specified by its Dynkin label.\footnote{In this paper, we follow the convention of  LieART \cite{Feger:2012bs} to denote the Dynkin label of a representation $\mathbf{R}$.} An irreducible character for the flavor symmetry is assumed to be in the orthogonal basis, such that it can be consistent with the mass parameters $m_\ell$ introduced in Section~\ref{sec:blowup}. We will often distinguish the mass parameters by the superscript $S \in \{s,c,v,f,\bar{f}\}$ according to the matter representation. 
+This appendix collects the character expansion of the 1-instanton partition function $Z_1$ for a variety of 5d $\mathcal{N}=1$ gauge theories. For simplicity, we display the $\tilde{Z}_1 \equiv (2\sinh{\frac{\e_{1,2}}{2}}) \cdot Z_1$ which takes off the center-of-mass factor. They are written in terms of irreducible characters $\chi_{\mathbf{R}}^S$, whose superscript $S \in \{G,v,s,c,f,\bar{f}\}$ indicates the gauge symmetry ($G$) or the flavor symmery acting on the vector ($v$), spinor ($s$), conjugate spinor ($c$), fundamental ($f$), or anti-fundamental ($\bar{f}$) hypermultiplets. The representation $\mathbf{R}$ of an irreducible character $\chi_{\mathbf{R}}^S$ is specified by its Dynkin label.\footnote{In this paper, we follow the convention of  LieART \cite{Feger:2012bs} to denote the Dynkin label of a representation $\mathbf{R}$.} An irreducible character for the flavor symmetry is assumed to be in the orthogonal basis, such that it can be consistent with the mass parameters $m_\ell$ introduced in Section~\ref{sec:blowup}. We will often distinguish the mass parameters by the superscript $S \in \{s,c,v,f,\bar{f}\}$ according to the matter representation. 
 
-\paragraph{SO(8)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ matter multiplets is given by $Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c \times Sp(N_{\bf v})_v$. For $(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)$, the character expansion of the 1-instanton result $\hat{Z}_1$ is 
+\paragraph{SO(8)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ matter multiplets is given by $Sp(N_{\bf s})_s \times Sp(N_{\bf c})_c \times Sp(N_{\bf v})_v$. For $(N_{\bf s}, N_{\bf c}, N_{\bf v}) = (3,1,0)$, the character expansion of the 1-instanton result $\tilde{Z}_1$ is 
 \begin{align}
   \label{eq:so8-s3c1}
-\hat{Z}_1=\sum_{n=0}^{\infty}&\,\Big(t^{5+2n}\chi^G_{(0n00)}\chi^s_{(001)}\chi^v_{(1)}-t^{6+2n}(\chi^G_{(0n01)}\chi^s_{(010)}\chi^v_{(1)}+\chi^G_{(1n00)}\chi^s_{(001)})\nn\\
+\tilde{Z}_1=\sum_{n=0}^{\infty}&\,\Big(t^{5+2n}\chi^G_{(0n00)}\chi^s_{(001)}\chi^v_{(1)}-t^{6+2n}(\chi^G_{(0n01)}\chi^s_{(010)}\chi^v_{(1)}+\chi^G_{(1n00)}\chi^s_{(001)})\nn\\
 &+\,t^{7+2n}(\chi^G_{(1n01)}\chi^s_{(010)}+\chi^G_{(0n02)}\chi^s_{(100)}\chi^v_{(1)})\\
 &-t^{8+2n}(\chi^G_{(1n02)}\chi^s_{(100)}+\chi^G_{(0n03)}\chi^v_{(1)})+t^{9+2n}\chi^G_{(1n03)}\Big)\nn.
 \end{align}
@@ -2104,10 +2104,10 @@ The character expansion for other $SO(8)$ theories with less number of hypermult
 
 
 
-\paragraph{SO(10)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s} + N_{\bf c})_s \times Sp(N_{\bf v})_v$, reflecting  that the $SO(10)$ (conjugate) spinor representation is complex. For $N_{\bf s} + N_{\bf c} = 2$ and $N_{\bf v} = 2$, the character expansion of $\hat{Z}_1$ is given by 
+\paragraph{SO(10)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s} + N_{\bf c})_s \times Sp(N_{\bf v})_v$, reflecting  that the $SO(10)$ (conjugate) spinor representation is complex. For $N_{\bf s} + N_{\bf c} = 2$ and $N_{\bf v} = 2$, the character expansion of $\tilde{Z}_1$ is given by 
 \begin{align}
   \label{eq:so10-2s2v}
-\hat{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00001)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00010)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
+\tilde{Z}_1&=\,t^5(\chi^s_{(2)_0}+\chi^v_{(01)})+t^6(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2})-t^7(\chi^G_{(00001)}\chi^s_{(1)_{-1}}\chi^v_{(10)}+\chi^G_{(00010)}\chi^s_{(1)_1}\chi^v_{(10)}+\chi^G_{(01000)}\nn\\
 &+\chi^G_{(10000)}(\chi^s_{(2)_{-2}}+\chi^s_{(2)_2}))+t^8(\chi^G_{(00100)}\chi^v_{(10)}+\chi^G_{(10001)}\chi^s_{(1)_{-1}}+\chi^G_{(10010)}\chi^s_{(1)_1})-t^9\chi^G_{(10100)}\nn\\
 &\textstyle+\sum_{n=0}^{\infty}\Big(t^{7+2n}\chi^G_{(0n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(01)} -t^{8+2n}(\chi^G_{(0n001)}(\chi^s_{(1)_{-3}}+\chi^s_{(3)_1})\chi^v_{(01)} \nn\\&\qquad\quad\qquad\quad
 +\chi^G_{(0n010)}(\chi^s_{(1)_3}+\chi^s_{(3)_{-1}})\chi^v_{(01)} +\chi^G_{(1n000)}(\chi^s_{(0)_{-4}}+\chi^s_{(0)_4}+\chi^s_{(4)_0})\chi^v_{(10)})\nn\\
@@ -2129,10 +2129,10 @@ where the $U(2)$ character $\chi^s_{(j)_b}$ is defined as (with $y_{s,i} \equiv 
     (y_{c,1}\,y_{c,2})^{-b/2} \cdot \textstyle\sum_{a=0}^{j} \big(y_{c,1}/y_{c,2}\big)^{-j/2+a}& \text{ for } \quad (N_\mathbf{s}, N_\mathbf{c})=(0,2).
   \end{dcases}
 \end{align}
-Similarly, for $N_{\bf s} + N_{\bf c} = 3$ and $N_{\bf v} = 0$, the character expansion of $\hat{Z}_1$ is given by 
+Similarly, for $N_{\bf s} + N_{\bf c} = 3$ and $N_{\bf v} = 0$, the character expansion of $\tilde{Z}_1$ is given by 
 \begin{align}
   \label{eq:so10-s3}
-\hat{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(02)_{-2}}+\chi^s_{(20)_2})-t^6
+\tilde{Z}_1&=\,t^5(\chi^G_{(10000)}+\chi^s_{(02)_{-2}}+\chi^s_{(20)_2})-t^6
 (\chi^s_{(01)_{-1}}+\chi^s_{(10)_1})+t^7\chi^G_{(00100)}\nn\\
 &+\textstyle\sum_{n=0}^{\infty}\Big(t^{7+2n}(\chi^G_{(0n000)}(\chi^s_{(00)_{-6}}+\chi^s_{(00)_6}+\chi^s_{(40)_{-2}}+\chi^s_{(04)_2}))\nn\\
 &\qquad \quad \ -t^{8+2n}(\chi^G_{(0n001)}(\chi^s_{(10)_{-5}}+\chi^s_{(03)_3}+\chi^s_{(31)_{-1}})+\chi^G_{(0n010)}(\chi^s_{(01)_5}+\chi^s_{(30)_{-3}}+\chi^s_{(13)_1}))\nn\\
@@ -2162,10 +2162,10 @@ with
 Again, \eqref{eq:so10-2s2v} and \eqref{eq:so10-s3} was tested against the closed-form expression \eqref{eq:1inst-formula} up to $t^{20}$ order.
 
 
-\paragraph{SO(11)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. For $N_{\bf s}=1$ and  $N_{\bf v} = 3$, the character expansion of  $\hat{Z}_1$ can be written as
+\paragraph{SO(11)} The flavor symmetry acting on $N_{\bf s} \mathbf{S} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. For $N_{\bf s}=1$ and  $N_{\bf v} = 3$, the character expansion of  $\tilde{Z}_1$ can be written as
 \begin{align}
   \label{eq:so11-s1v3}
-\hat{Z}_1&=\,t^5+t^6(\chi^v_{(001)}+(y_s^2+y_s^{-2})\chi^v_{(100)})+t^7((y_s^2+y_s^{-2}+1)\chi^v_{(010)}-(y_s^{2}+y_s^{-2})\chi^G_{(10000)})\nn\\
+\tilde{Z}_1&=\,t^5+t^6(\chi^v_{(001)}+(y_s^2+y_s^{-2})\chi^v_{(100)})+t^7((y_s^2+y_s^{-2}+1)\chi^v_{(010)}-(y_s^{2}+y_s^{-2})\chi^G_{(10000)})\nn\\
 &\,-t^8((y_s+y_s^{_1})\chi^G_{(00001)}\chi^v_{(010)}+(y_s^2+y_s^{-2}+1)\chi^G_{(10000)}\chi^v_{(100)}+\chi^G_{(01000)}\chi^v_{(100)})\nn\\
 &\,+t^9(\chi^G_{(00100)}\chi^v_{(010)}+\chi^G_{(10001)}(y_s+y_s^{-1})\chi^v_{(100)}+\chi^G_{(20000)}(y_s^2+y_s^{-2}+1)+\chi^G_{(11000)})\nn\\
 &\,-t^{10}(\chi^G_{(10100)}\chi^v_{(100)}+\chi^G_{(20001)}(y_s+y_s^{-1}))+t^{11}\chi^G_{(20100)}\\
@@ -2184,10 +2184,10 @@ Again, \eqref{eq:so10-2s2v} and \eqref{eq:so10-s3} was tested against the closed
 which was compared with the closed-form expression \eqref{eq:1inst-formula} up to $t^{20}$ order.
 
 \paragraph{SO(12)} 
-The flavor symmetry acting on $N_{\bf s} \mathbf{S} +N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times SO(2N_{\bf c})_c \times  Sp(N_{\bf v})_v$. Here we turn off the Coulomb VEV $\vec{a} = 0$ for simplicity. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (2,0,0)$ can be written as
+The flavor symmetry acting on $N_{\bf s} \mathbf{S} +N_{\bf c} \mathbf{C} + N_{\bf v} \mathbf{V}$ hypermultiplets is $SO(2N_{\bf s})_s \times SO(2N_{\bf c})_c \times  Sp(N_{\bf v})_v$. Here we turn off the Coulomb VEV $\vec{a} = 0$ for simplicity. The character expansion of  $\tilde{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (2,0,0)$ can be written as
 \begin{align}
   \label{eq:so12-s2}
-  \hat{Z}_1&= \frac{t^{18}}{(1-t^2)^{18}}\Big(
+  \tilde{Z}_1&= \frac{t^{18}}{(1-t^2)^{18}}\Big(
   -96096\, (\chi^s_{(13)}+\chi^s_{(31)})\cdot {(7t^4+42t^2+72+42t^{-2}+7t^{-4})}\\
   &+10010\,(\chi^s_{(24)}+\chi^s_{(42)})\cdot {(9t^5+88t^3+243t+243t^{-1}+88t^{-3}+9t^{-5})}\nn\\
   &-352\,(\chi^s_{(15)}+\chi^s_{(51)})\cdot {(25t^6+474t^4+2169t^2+3504+2169t^{-2}+474t^{-4}+25t^{-6})}\nn\\
@@ -2208,10 +2208,10 @@ It was explicitly checked that the 1-instanton partition function $Z_1$ at $(N_{
 \begin{align}
   {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (0,2,0)}(a_1,a_2,a_3,a_4,a_5,a_6) = {Z}_{1}^{(N_{\mathbf{s}},N_\mathbf{c},N_{\mathbf{v}}) = (2,0,0)}(a_1,a_2,a_3,a_4,a_5,-a_6).
 \end{align}
-Similarly, the character expansion of $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,1,0)$ can be displayed as follows:
+Similarly, the character expansion of $\tilde{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,1,0)$ can be displayed as follows:
 \begin{align}
   \label{eq:so12-s1c1}
-  \hat{Z}_1&=\frac{t^{18}}{(1-t^2)^{18}}\sum_{\pm}\Big(
+  \tilde{Z}_1&=\frac{t^{18}}{(1-t^2)^{18}}\sum_{\pm}\Big(
   -2462\,(y_s^{\pm1}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm1})\cdot{(2t^6+27t^4+108t^2+168+108t^{-2}+27t^{-4}+2t^{-6})}\nn\\
   &+11\,(y_s^{\pm2}y_c^{\pm4}+y_s^{\pm4}y_c^{\pm2})\cdot{(45t^7+1101t^5+6983t^3+16623t+ (t\rightarrow t^{-1}))}\nn\\
   &+44\,(y_s^{\pm3}y_c^{\pm3})\cdot{(23t^7+587t^5+3925t^3+9609t+ (t\rightarrow t^{-1}))}\\
@@ -2230,10 +2230,10 @@ Similarly, the character expansion of $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\
 \end{align}
 in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\pm1} = xy+xy^{-1}+x^{-1}y+x^{-1}y^{-1}$, $\sum_{\pm}x^{\pm1} = x+x^{-1}$, and $\sum_{\pm} 1 = 1$.
 
-\paragraph{SO(13)} The flavor symmetry  on $N_{\bf s} \mathbf{S}+ N_{\bf v} \mathbf{V}$ matter multiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s}, N_{\bf v}) = (1,1)$ is written below, after setting the Coulomb VEV $\vec{a} = 0$ to keep the expression concise. 
+\paragraph{SO(13)} The flavor symmetry  on $N_{\bf s} \mathbf{S}+ N_{\bf v} \mathbf{V}$ matter multiplets is $SO(2N_{\bf s})_s \times  Sp(N_{\bf v})_v$. The character expansion of  $\tilde{Z}_1$ at $(N_{\bf s}, N_{\bf v}) = (1,1)$ is written below, after setting the Coulomb VEV $\vec{a} = 0$ to keep the expression concise. 
 \begin{align}
   \label{eq:so13-s1v1}
-  \hat{Z}_1&=\frac{t^{20}}{(1-t^2)^{20}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(1)}\cdot (t^{10}+58 t^8+905 t^6+5580 t^4+15876 t^2+22344++15876 t^{-2} \cdots + t^{-10})\nn\\
+  \tilde{Z}_1&=\frac{t^{20}}{(1-t^2)^{20}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(1)}\cdot (t^{10}+58 t^8+905 t^6+5580 t^4+15876 t^2+22344++15876 t^{-2} \cdots + t^{-10})\nn\\
   &-64\,y_s^{\pm7}\chi^V_{(1)} \cdot (t^9+45 t^7+540 t^5+2520 t^3+5292 t + (t\rightarrow t^{-1}))\nn\\
   &+26\,y_s^{\pm6}\chi^V_{(1)}\cdot (77 t^8+2541 t^6+22226 t^4+74811 t^2+110770 + 74811 t^{-2} + \cdots + 77 t^{-8})\nn\\
   &-5824\,y_s^{\pm5}\chi^V_{(1)} \cdot (7 t^7+154 t^5+924 t^3+2145 t + (t\rightarrow t^{-1}) )\nn\\
@@ -2264,10 +2264,10 @@ in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\
   &+(t^{15}-20 t^{13}-602 t^{11}+5691 t^9+495005 t^7-22183672 t^5-225823570 t^3-617150913t+  (t\rightarrow t^{-1}) )\Big)
   \end{align}
 
-  \paragraph{SO(14)} The classical flavor symmetry  on $N_{\bf s} \mathbf{S}+N_{\bf c} \mathbf{C}+ N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s})_s \times U(N_{\bf c})_c  \times Sp(N_{\bf v})_v$. The character expansion of  $\hat{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,0,2)$ is written below, after turning off the $SO(14)$ Coulomb VEV $\vec{a} = 0$. 
+  \paragraph{SO(14)} The classical flavor symmetry  on $N_{\bf s} \mathbf{S}+N_{\bf c} \mathbf{C}+ N_{\bf v} \mathbf{V}$ hypermultiplets is $U(N_{\bf s})_s \times U(N_{\bf c})_c  \times Sp(N_{\bf v})_v$. The character expansion of  $\tilde{Z}_1$ at $(N_{\bf s},N_{\bf c}, N_{\bf v}) = (1,0,2)$ is written below, after turning off the $SO(14)$ Coulomb VEV $\vec{a} = 0$. 
   \begin{align}
   \label{eq:so14-s1v2}
-  \hat{Z}_1&=\frac{t^{22}}{(1-t^2)^{22}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(01)}\cdot (t^{11}+69 t^9+1309 t^7+10065 t^5+36828 t^3+69300
+  \tilde{Z}_1&=\frac{t^{22}}{(1-t^2)^{22}}\sum_{\pm}\Big(y_s^{\pm8}\chi^V_{(01)}\cdot (t^{11}+69 t^9+1309 t^7+10065 t^5+36828 t^3+69300
   t+  (t\rightarrow t^{-1}) )\nn\\
   &-64\,y_s^{\pm7}\chi^V_{(01)}\cdot (t^{10}+55 t^8+825 t^6+4950 t^4+13860
   t^2+19404+13860t^{-2} + \cdots + t^{-10})\nn\\
@@ -2325,10 +2325,10 @@ in which $\sum_{\pm}$ notation is understood as follows: $\sum_{\pm}x^{\pm1}y^{\
   
 
 \paragraph{$\bf E_6$}
-The flavor symmetry on $N_f\mathbf{F} + N_{\bar{f}}\bar{\mathbf{F}}$ hypermultiplets is $U(N_f + N_{\bar{f}})$. The character expansion of $\hat{Z}_1$ at $N_f+ N_{\bar{f}} = 3$ is written as follows:
+The flavor symmetry on $N_f\mathbf{F} + N_{\bar{f}}\bar{\mathbf{F}}$ hypermultiplets is $U(N_f + N_{\bar{f}})$. The character expansion of $\tilde{Z}_1$ at $N_f+ N_{\bar{f}} = 3$ is written as follows:
   \begin{align}
     \label{eq:E6F3}
-    \hat{Z}_1&=\,\frac{t^{22}}{(1-t^2)^{22}}\Big((\chi^f_{(00)_{-9}}+\chi^f_{(00)_9})(t^{11}+56 t^9+945 t^7+6776 t^5+23815 t^3+43989 t+(t\rightarrow t^{-1}))\nn\\
+    \tilde{Z}_1&=\,\frac{t^{22}}{(1-t^2)^{22}}\Big((\chi^f_{(00)_{-9}}+\chi^f_{(00)_9})(t^{11}+56 t^9+945 t^7+6776 t^5+23815 t^3+43989 t+(t\rightarrow t^{-1}))\nn\\
 &-27(\chi^f_{(10)_{-8}}+\chi^f_{(01)_8})(t^{10}+42 t^8+539 t^6+2948 t^4+7854 t^2+10824+7854t^{-2}+\cdots+t^{-10})\nn\\
 &+351(\chi^f_{(20)_{-7}}+\chi^f_{(02)_7}) (t^9+28 t^7+253 t^5+1001 t^3+1947t+(t\rightarrow t^{-1}))\nn\\
 &+351(\chi^f_{(01)_{-7}}+\chi^f_{(10)_7}) (t^9+33 t^7+330 t^5+1386 t^3+2772t+(t\rightarrow t^{-1}))\\
@@ -2400,10 +2400,10 @@ where the $U(3)$ character $\chi^f_{(mn)_c}$ is defined as
 
   
 
-\paragraph{$\bf E_7$} The flavor symmetry acting on $N_f$ hypermultiplets is $SO(2N_f)_f$. The character expansion of $\hat{Z}_1$ at $N_f=2$ is given as follows:
+\paragraph{$\bf E_7$} The flavor symmetry acting on $N_f$ hypermultiplets is $SO(2N_f)_f$. The character expansion of $\tilde{Z}_1$ at $N_f=2$ is given as follows:
   \begin{align}
     \label{eq:E7F2}
-    \hat{Z}_1&=\frac{t^{34}}{(1-t^2)^{34}}\Big((\chi^f_{(0,12)}+\chi^f_{(12,0)})(t^{17}+99 t^{15}+3410 t^{13}+56617 t^{11}+521917 t^9\\
+    \tilde{Z}_1&=\frac{t^{34}}{(1-t^2)^{34}}\Big((\chi^f_{(0,12)}+\chi^f_{(12,0)})(t^{17}+99 t^{15}+3410 t^{13}+56617 t^{11}+521917 t^9\\
     &\hspace{2.5cm}+2889898 t^7+10086066 t^5+22867856t^3+34289476t+(t\rightarrow t^{-1})\nn\\
     &-8(\chi^f_{(1,11)}+\chi^f_{(11,1)})(7 t^{16}+572 t^{14}+16401 t^{12}+227766 t^{10}+1759296 t^8\nn\\
     &\hspace{2.5cm}+8155308 t^6+23747878 t^4+44652608t^2+55026348+44652608t^{-2}+\cdots+7t^{-16})\nn\\
