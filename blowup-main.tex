@@ -169,10 +169,13 @@
 \emailAdd{jsong@kias.re.kr}
 
 \abstract{
-The Nekrasov partition function for 4d $\CN=2$ (or 5d $\CN=1$) gauge theory on the blow up of a point $\hat{\IC}^2$ (or $\hat{\IC}^2 \times S^1$) can be written in terms of the partition function on the flat space $\IC^2$ (or $\IC^2 \times S^1$). At the same time, the partition function on the blow up is identical to the partition function on a flat space for a sufficiently large class of examples. 
-These give rise to a recursion relation that the partition function has to satisfy.
-This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with a large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
-We obtain the partition function for the previously unknown theories such as exceptional gauge groups $EFG$ with fundamental and $SO(N)$ gauge theories with spinor hypermultiplets. We also compute the partition function for $SU(6)$ gauge theory with a rank-3 antisymmetric hypermultiplet and see the agreement with the topological vertex computation based on recently found 5-brane web configurations.
+%The Nekrasov partition function for 4d $\CN=2$ (or 5d $\CN=1$) gauge theory on the blow up of a point $\hat{\IC}^2$ (or $\hat{\IC}^2 \times S^1$) can be written in terms of the partition function on the flat space $\IC^2$ (or $\IC^2 \times S^1$). At the same time, the partition function on the blow up is identical to the partition function on a flat space for a sufficiently large class of examples. 
+%These give rise to a recursion relation that the partition function has to satisfy.
+%This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with a large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
+%We obtain the partition function for the previously unknown theories such as exceptional gauge groups $EFG$ with fundamental and $SO(N)$ gauge theories with spinor hypermultiplets. We also compute the partition function for $SU(6)$ gauge theory with a rank-3 antisymmetric hypermultiplet and see the agreement with the topological vertex computation based on recently found 5-brane web configurations.
+%
+We generalize Nakajima-Yoshioka blowup equations to arbitrary gauge group with hypermultiplets in arbitrary representations. Using our blowup equations, we compute the instanton partition functions for 4d $\CN = 2$ and 5d $\CN = 1$ gauge theories for arbitrary gauge theory with a large class of matter representations, without knowing explicit construction of the instanton moduli space. Our examples include exceptional gauge theories with fundamentals, $SO(N)$ gauge theories with spinors, and $SU(6)$ gauge theories with rank-3 antisymmetric hypers.  Remarkably, the instanton partition function is completely determined by the perturbative part.
+
 }
 
 
@@ -210,9 +213,9 @@ We generalize the Nakajima-Yoshioka (NY) blowup equations \cite{Nakajima:2003pg,
 
 The basic idea is as follows: Let us consider a one-point blow up $\hat{\IC^2}$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC^2}$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC^2}$ to $\IC^2$. On $\hat{\IC^2}$, we can insert certain topological operator associated to the 2-cycle that turns out to be trivial via selection rule as long as the matter representation is not `too large'. This provides us functional relations for the partition function, that we call the blowup equations of the form
 \begin{align}
- \langle (\CO_{\IP_1})^d \rangle = \sum_{\vec{k} \in \Delta} \CZ^{(N), d}(\vec{k}) \CZ^{(S), d}(\vec{k}) \qquad \textrm{ for }\quad 0 \le d \le d_{\text{max}} \ , 
+ \CZ = \sum_{\vec{k} \in \Delta} \CZ^{(N), d}(\vec{k}) \CZ^{(S), d}(\vec{k}) \qquad \textrm{ for }\quad 0 \le d \le d_{\text{max}} \ , 
 \end{align}
-for some value of $d_\text{max}$ that depends on the gauge group and matter content. Here, $\CZ^{(N/S), d} (\vec{k})$ is written entirely in terms of the flat space partition function $\CZ$ and the sum is over the co-root vectors of the gauge group. 
+for some value of $d_\text{max}$ that depends on the gauge group and matter content. Here, $\CZ^{(N/S), d} (\vec{k})$ is given entirely in terms of the flat space partition function $\CZ$ and the sum is over the co-root vectors of the gauge group. 
 It turns out that this equation is sufficient to determine the instanton partition function itself as long as $d_\text{max} \ge 2$. Remarkably, this blowup equation leads to a set of recursion relations which can completely determine the instanton contribution from the perturbative part of the partition function. Therefore we arrive at a surprising conclusion: 
 \begin{quote}
 \centering
@@ -1449,13 +1452,13 @@ Our 1-instanton expression \eqref{eq:1inst-formula} is applicable to $E_7 + N_f\
 
 \paragraph{$\bf E_8$}
 
-The 1-instanton partition function of $E_8$ gauge theory can be written as 
+The (centered) 1-instanton partition function of $E_8$ gauge theory can be written as 
 \begin{align}
     \label{eq:E8}
   \tilde{Z}_1=\sum_{n=0}^{\infty}t^{29+2n}\chi^{E_8}_{(000000n0)}.
 \end{align}
 We confirmed that it agrees with our 1-instanton expression \eqref{eq:1inst-formula} up to $t^{520}$ order. 
-It is actually proven in \cite{Keller:2011ek, Keller:2012da} that the one-instanton formula \eqref{eq:1inst-formula} for any gauge group without matter can be written in terms of the character expression \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq}
+It is actually proven in \cite{Keller:2011ek, Keller:2012da} that the (centered) 1-instanton formula \eqref{eq:1inst-formula} for any gauge group without matter can be written in terms of the character expression \cite{VinbergPopov, Garfinkle, Benvenuti:2010pq}
 \begin{align}
  \tilde{Z}_1 = t^{h^\vee - 1} \sum_{n=0}^\infty t^{2n} \chi^G_{n \cdot \textbf{adj}} \ . 
 \end{align}
