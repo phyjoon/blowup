@@ -169,11 +169,6 @@
 \emailAdd{jsong@kias.re.kr}
 
 \abstract{
-%The Nekrasov partition function for 4d $\CN=2$ (or 5d $\CN=1$) gauge theory on the blow-up of a point $\hat{\IC}^2$ (or $\hat{\IC}^2 \times S^1$) can be written in terms of the partition function on the flat space $\IC^2$ (or $\IC^2 \times S^1$). At the same time, the partition function on the blow-up is identical to the partition function on a flat space for a sufficiently large class of examples. 
-%These give rise to a recursion relation that the partition function has to satisfy.
-%This relation enables us to compute the instanton partition functions for 4d $\CN=2$ and 5d $\CN=1$ gauge theories for arbitrary gauge theory with a large class of matter representations without knowing explicit construction of the instanton moduli space. Remarkably, the instanton partition function is completely determined by the perturbative part. 
-%We obtain the partition function for the previously unknown theories such as exceptional gauge groups $EFG$ with fundamental and $SO(N)$ gauge theories with spinor hypermultiplets. We also compute the partition function for $SU(6)$ gauge theory with a rank-3 antisymmetric hypermultiplet and see the agreement with the topological vertex computation based on recently found 5-brane web configurations.
-%
 We generalize Nakajima-Yoshioka blowup equations to arbitrary gauge group with hypermultiplets in arbitrary representations. Using our blowup equations, we compute the instanton partition functions for 4d $\CN = 2$ and 5d $\CN = 1$ gauge theories for arbitrary gauge theory with a large class of matter representations, without knowing explicit construction of the instanton moduli space. Our examples include exceptional gauge theories with fundamentals, $SO(N)$ gauge theories with spinors, and $SU(6)$ gauge theories with rank-3 antisymmetric hypers.  Remarkably, the instanton partition function is completely determined by the perturbative part.
 
 }
@@ -211,7 +206,7 @@ However, there is no ADHM type construction for the exceptional gauge groups or 
 To this end, we generalize the blowup formula of Nakajima-Yoshioka (NY) \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig}. In \cite{Keller:2012da}, the blow-up formula was used to compute the instanton partition function for exceptional gauge group without matter by extrapolating the NY blowup equation to arbitrary gauge group. This is tested against the superconformal index of 4d SCFT where the Higgs branch is given by the instanton moduli space \cite{Gaiotto:2012uq}. Since the Nekrasov partition function computes the topological string partition function for certain toric Calabi-Yau spaces, a similar blowup formula for topological string theory is expected. Indeed such formulae are found and developed in \cite{Grassi:2016nnt, Gu:2017ccq, Huang:2017mis, Gu:2018gmy,Gu:2019dan}. Especially in \cite{Gu:2018gmy,Gu:2019dan}, non-perturbative partition functions for 6d SCFTs are obtained using the blowup equation. 
 We generalize the Nakajima-Yoshioka (NY) blowup equations \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig} to arbitrary gauge group (with a possible 5d Chern-Simons term or discrete theta angle) with hypermultiplets in arbitrary representations. We propose a blow-up formula for a general gauge theory with arbitrary matter representations, under the condition that the matter representation is not `too large' as we discuss shortly. This enables us to compute the instanton partition functions for numerous gauge theories that have not been known before, without relying on the explicit construction of the moduli space. 
 
-The basic idea is as follows: Let us consider a one-point blow-up $\hat{\IC^2}$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC^2}$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC^2}$ to $\IC^2$. On $\hat{\IC^2}$, we can insert certain topological operator associated with the 2-cycle that turns out to be trivial via selection rule as long as the matter representation is not `too large'. This provides us functional relations for the partition function, that we call the blowup equations of the form
+The basic idea is as follows: Let us consider a one-point blow-up $\hat{\IC}^2$ of the flat space $\IC^2$. The \emph{full} partition function on $\hat{\IC}^2$ can be written in terms of the products of the \emph{full} partition function of $\IC^2$. But at the same time, the partition function on the blowup is identical to that of the flat space since we can smoothly blow-down $\hat{\IC}^2$ to $\IC^2$. On $\hat{\IC}^2$, we can insert certain topological operator associated with the 2-cycle that turns out to be trivial via selection rule as long as the matter representation is not `too large'. This provides us functional relations for the partition function, that we call the blowup equations of the form
 \begin{align}
  \CZ = \sum_{\vec{k} \in \Delta} \CZ^{(N), d}(\vec{k}) \CZ^{(S), d}(\vec{k}) \qquad \textrm{ for }\quad 0 \le d \le d_{\text{max}} \ , 
 \end{align}
@@ -238,11 +233,6 @@ We compute instanton partition functions for a large number of examples and test
 
 The organization of this paper is as follows: In Section \ref{sec:blowup}, we give a physical derivation of the blowup equations. From this, we obtain a recursion formula to compute instanton partition function at any number of instantons. Especially, we derive a concise closed-form formula for one instanton partition function that works for a large number of theories. We give a precise condition for our formula to work. In the case of 4d Nekrasov partition function, we are able to derive the bound on the matter representation for which the formula to work. We suggest an analogous bound for 5d version, by extrapolating known results. In Section \ref{sec:example}, we test our formula against various known cases. Moreover, we also obtain many previously unknown partition functions. Some of them are expressed as the character expansion, whose form is explicitly given in Appendix \ref{sec:data}. We then conclude with several future directions.
 
-%\paragraph{Notation}
-%The equivariant parameters $\epsilon_{1}, \epsilon_2, \vec{a}$ are associated to the $U(1)^2 \times U(1)^{|G|}$ action on the $k$-instanton moduli space $\mathcal{M}_{k,G}$. Additional parameters $\vec{\mathfrak{m}}$ are introduced if the gauge theory has an extra  flavor symmetry. The instanton fugacity $\mathfrak{q}$ can be written as $\mathfrak{q}\equiv\Lambda^{b_0}$ (4d) or $\mathfrak{q}\equiv \exp(2\pi i \Lambda)$ (5d) where $\Lambda$ denotes the bare coupling of the 4d/5d gauge theory.
-%
-%Throughout Section~\ref{sec:blowup}, we will characterize the partition function in terms of $m_i \equiv \mathfrak{m}_i + \epsilon_+$ (where $\epsilon_+ \equiv \frac{\epsilon_1 + \epsilon_2}{2}$) as a reflection of the Donaldson-Witten twist by $SU(2)_R$ symmetry. Here $m_i$ corresponds to the `physical' mass parameter of a matter hypermultiplet. We will also stick to the `effective' instanton fugacity $q \equiv \mathfrak{q} e^{{b_0}\epsilon_+}$, which absorbs the $SU(2)_R$ generated mass of fermionic instanton zero modes, in describing the 5d Nekrasov partition function.
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Instanton Counting from Blow-up} \label{sec:blowup}
@@ -261,18 +251,11 @@ The essential idea of using the blow-up of ${\IC}^2$ for instanton counting is t
 One of the expressions for the partition function $\hat{\mathcal{Z}}$ on the blow-up $\hat{\IC}^2$ comes from the Coulomb branch localization, which results that $\hat{\mathcal{Z}}$ can be obtained by patching together the flat-space partition function $\mathcal Z$ \cite{Nekrasov:2003vi}.
 
 The blow-up $\hat{\IC}^2$ of the complex plane is constructed from $\IC^2$ by replacing the origin with a compact 2-cycle $\IP^1$. In particular, the geometry is identical to the total space of the line bundle of degree $(-1)$ over $\IP^1$. One can parametrize $\mathcal{O}(-1)\rightarrow \IP^1$ using the homogeneous coordinates $(z_0, z_1, z_2)$, satisfying the projective condition $(z_0, z_1, z_2) \sim (\lambda^{-1}z_0, \lambda^1 z_1, \lambda^1 z_2)$ for any $\lambda \in \IC^*$, where the two-cycle  $\IP^1 \subset \hat{\IC}^2$ corresponds to the locus $z_0 = 0$. 
-%  can be described as a subspace of $\IC^2 \times \IP^1$, defined as
-% \begin{align}
-%  \left\{ \big((x, y), [z: w]\big) \in \IC^2 \times \IP^1 \,\big|\, xw = yz \,\right\} \ , 
-% \end{align}
-% where $[z:w]$ represents the homogeneous coordinates on $\IP^1$. Notice that this space 
 We are interested in the $U(1)^2$ equivariant partition function, with the $U(1)^2$ action $V$ rotating the complex coordinates $(z_0, z_1, z_2)$ as follows:
 \begin{align}
   (z_0, z_1, z_2) \mapsto (z_0, e^{\e_1}z_1, e^{\e_2}z_2).
-%  \big((x, y), [z: w]\big) \mapsto \big((e^{ \e_1} x, e^{ \e_2} y), [e^{ \e_1} z: e^{ \e_2} w]\big) \ . 
 \end{align}
 Instantons are located at two fixed points of the $U(1)^2$ action, \textit{i.e.}, the north/south poles of the $\mathbb{P}^1$, whose coordinates are 
-% $((x, y), [z: w]) = ((0, 0), [1, 0])$ and $((0, 0), [0, 1])$ 
 $(z_0, z_1, z_2)  = (0,1,0)$ and $(0,0,1)$. Around these fixed points, ($\IC^*$-invariant) local coordinates are given by $(z_0 z_1, z_2/z_1)$ and $(z_0 z_2, z_1/z_2)$ respectively. The local weights under the $U(1)^2$ action $V$ near the fixed points are:
 \begin{align}
 \begin{split}
@@ -302,24 +285,20 @@ The mass parameters also get shifted since the hypermultiplet mass is twisted by
 
 \paragraph{Partition function on $\hat{\IC}^2$ vs $\IC^2$}
 Another important fact for the partition function $\hat{\CZ}$ on the blow-up $\hat{\IC}^2$ is that $\hat{\CZ}$ is actually identical to the flat-space partition function $\CZ$  \cite{Nakajima:2003pg,Nakajima:2003uh,Nakajima:2005fg, Gottsche:2006bm, Nakajima:2009qjc, Gottsche:2010ig}.
- % This can be understood as follows: 
 The blow-up $\hat{\IC}^2$ is identical to $\IC^2$ except for the origin, which is replaced by the blown-up sphere $\IP^1$. 
 Since the Nekrasov partition function gets contributions only from the small instantons localized at the fixed points of the $U(1)^2$ equivariant action $V$, the size of the divisor should not affect the partition function as we smoothly shrink it. So we expect that $\hat{\CZ} = \CZ$. This implies the following relation: 
 \begin{align} 
   \label{eq:blowup-generic}
   \CZ = \hat{\CZ} = \sum_{\vec{k} \in \Lambda} \CZ^{(N)}(\vec{k}) \CZ^{(S)}(\vec{k})
-  %(\vec{a}+ \vec{k} \e_1, \e_1, \e_2 - \e_1, q, \vec{m}) \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q, \vec{m}) \ , 
 \end{align}
 
-This blow-up identity can be thought of as a special case of more generalized  orbifold partition functions \cite{Sasaki:2006vq,Bonelli:2012ny,Ito:2013kpa}. %For example, if we consider the total space of the bundle $\CO(-2) \to \IP^1$ and shrink the base, we land on the orbifold $\IC^2/\IZ_2$ with singularity at the origin. 
-%There are certain states originated from wrapped D-branes on the $\IP^1$ which become massless by shrinking the $\IP^1$. They constitute to the required twisted sector of the orbifold partition function. 
+This blow-up identity can be thought of as a special case of more generalized  orbifold partition functions \cite{Sasaki:2006vq,Bonelli:2012ny,Ito:2013kpa}. 
 For example, the Nekrasov partition function on the orbifold $\IC^2/\IZ_2$ can be computed in two different ways, one is via formula analogous to \eqref{eq:blowup} by combining the contributions from two fixed points of the blown-up geometry $\CO(-2) \to \IP^1$. The other way is to compute the partition function at the orbifold point using the ADHM construction for the orbifolds. The Nekrasov partition function still remains the same as we blow up or down the singular point.\footnote{This simple picture does not necessarily hold when there are too many hypermultiplets, due to some subtle scheme dependence related to the wall-crossing \cite{Ito:2013kpa}.} 
 The only difference in our case is that we blow-up or down a non-singular point instead of a singular point. 
 
 \paragraph{Correlation functions in 4d}
 
 The equation \eqref{eq:blowup-generic} itself is not enough to fix the partition function completely, since there are 3 unknown functions and only one relation. It turns out the necessary additional relations can be found from the insertion of non-trivial $\mathcal{Q}$-closed operators \cite{Nakajima:2003pg,Nakajima:2005fg} associated to the two-cycle on the blow-up. 
-%So we consider the correlation functions of that operator $\mathcal{O}_{\IP^1}$ associated to the two-cycle $\IP^1$ of the blow-up $\hat{\mathbb{C}}^2$. 
 
 In the 4d Donaldson-twisted theory, the $\mathcal{Q}$-invariant observable $\CO_2$ associated to a two-cycle can be constructed by applying the topological descent procedure twice to the Casimir invariant $\CO_0 = \text{Tr}(\Phi^2)$ as \cite{Witten:1988ze}
 \begin{align}
@@ -349,7 +328,6 @@ where
 \begin{split}
   \CZ^{(N),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q \exp(t \e_1), \vec{m} -\tfrac{1}{2}\e_1) \ , \\
   \CZ^{(S),t}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q \exp(t \e_2), \vec{m} -\tfrac{1}{2}\e_2)\ . \\
-% \CZ^{(0)} &\equiv \CZ(\vec{a}, \e_1, \e_2, q, \vec{m}).
 \end{split}
 \end{align}
 
@@ -377,15 +355,6 @@ It can be viewed as the natural $S^1$ uplift of \eqref{eq:muC} via exponentiatio
   \label{eq:cor5d}
   \hat{\CZ}^{d} \equiv \langle (\mathcal{O}_{\IP^1})^{d}\rangle = \sum_{\vec{k} \in \Lambda}  \CZ^{(N),d}(\vec{k}) \cdot \CZ^{(S),d}(\vec{k}) \ , 
 \end{align} 
-%
-%In particular, the insertion of $\exp{(t  {\CO}_{\IP^1})}$ causes an extra shift of the instanton mass by $2tH|_p$ at a fixed point $p$ of the blow-up $\hat{\IC}^2$ \cite{Nakajima:2003pg,Nakajima:2003uh, Nakajima:2005fg}. This modifies \eqref{eq:coupling-shift} to 
-%%$\Lambda|_p = \Lambda + (\frac{b}{2}-t)H|_p$
-%$q|_p = q \exp\left((t - \frac{b}{2})H|_p\right)$. 
-%Therefore the expectation value of the generating function is given by
-%\begin{align}
-%  \label{eq:corgen}
-%  \langle e^{t  {\CO}_{\IP^1}}\rangle =\frac{1}{\CZ^{(0)}} \sum_{\vec{k} \in \Lambda}  \CZ^{(N),t}(\vec{k}) \cdot \CZ^{(S),t}(\vec{k})\ , 
-%\end{align} 
 where
 \begin{align}
   \label{eq:param-np-sp5d}
@@ -417,7 +386,6 @@ where $d_\text{max} = h^\vee$.\footnote{This was shown in \cite{Nakajima:2005fg}
 
 In this paper, we aim at developing the relation \eqref{eq:cor5d-unity} for various 5d 
 $\mathcal{N}=1$ gauge theories with hypermultiplets in various representations, so as to compute the instanton partition function. We will identify a certain bound on $d$ in Section~\ref{subsec:numd} as the \emph{necessary} condition for \eqref{eq:cor5d-unity} for a large number of theories. 
-%See Table~\ref{tbl:list} for the list of all considered examples. 
 We conjecture that the bound on $d$ we obtain is actually sufficient to obtain the blowup equation \eqref{eq:cor5d-unity}. While we do not attempt to prove this sufficiency, we compute $n$-instanton partition function $Z_n$, based on the recursion formula that will be derived shortly from \eqref{eq:cor5d-unity}, and confirm the agreement with the known result obtained from an alternative method.
 
 We find a universal expression for the bound on $d$ when the gauge group is neither $SU(N)$ nor $Sp(N)$:
@@ -469,8 +437,6 @@ Here $I_2(\mathbf{R})$ and $I_3(\mathbf{R})$ are the quadratic and cubic Dynkin 
 Speaking explicitly, the rational part of the one-loop free energy  \eqref{eq:free-energy} can be written as 
 \begin{align}
   \log{\CZ_{\textrm{pert}}}=\frac{1}{\e_1\e_2}\Bigg[&\,\frac{1}{2}m_{0, \text{eff}}\,h_{ij}\,a^ia^j+\frac{\k_\text{eff}}{6}d_{ijk}\,a^ia^ja^k+ \text{(independent of $\vec{a}$)}\Bigg],
-  %  + \sum_{n=1}^\infty\frac{ f(n\vec{a},n\epsilon_{1,2},nm_i)}{n}
-  % + \text{(exponential part)}
   \end{align}
 where the one-loop corrected parameters are 
 \begin{align}
@@ -486,13 +452,11 @@ In addition, the  effective Chern-Simons coupling $\k_{\textrm{eff}}$ induces an
 \end{align}
 For example, the $\IC^2 \times S^1$ partition function of $\mathcal{N}=1$ free Maxwell theory, given as a product between the perturbative index of a free vector multiplet,
 \begin{align}
-  % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
     \exp\left[+\frac{1}{\e_1 \e_2} \left(\frac{\epsilon _1
   \epsilon _2 (\epsilon _1+\epsilon _2)}{48} -\frac{\epsilon _1+\epsilon _2}{4} +1 \right)  \right] \cdot  \text{PE}\left[-\frac{e^{-\e_1-\e_2}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
 \end{align}
 and the non-perturbative correction from $U(1)$ multi-instantons,
 \begin{align}
-  % \CZ_\text{U(1)}^{\rm pert}(\epsilon_1, \epsilon_2) &= 
   \text{PE}\left[\frac{e^{-m_0} \cdot e^{-\e_+}}{(1-e^{-\e_1})(1-e^{-\e_2})}\right],
 \end{align}
 will comply with the relation \eqref{eq:blowup-generic} by shifting the gauge coupling as $m_0 \rightarrow m_0|_p = m_0 + \frac{H}{2}|_p$. 
@@ -571,7 +535,6 @@ Substituting them to \eqref{eq:recur-inst}, we obtain the ratio of three differe
 \end{split}
 \end{align}
 where we split the $f_d(\vec{k})$ into classical and 1-loop pieces for vector and hypermultiplet. 
-% with $\vec{v}_1\cdot\vec{v}_2 \equiv h_{ij} v_1^i v_2^j$. 
 Here we used $I_2(\textbf{adj}) = 2h^\vee$, $I_3(\textbf{adj})=0$, and also 
 the fact $h_{ij}$ and $d_{ijk}$ are totally symmetric. We also define $m_{\text{tw}} \equiv m - \e_+$. The function $\CL_k (x,\e_1,\e_2)$ is introduced to denote concisely the combination of the PE parts:
 \begin{align}
@@ -596,9 +559,6 @@ Combining them all together, the recursion formula on the $n$-instanton piece $Z
  \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn,
  \end{align}
 where $y_{\text{tw},l} \equiv e^{-m_{\text{tw},l}} = y_l / \sqrt{p_1p_2}$ and $l$ runs over all hypermultiplets in the theory. This is a generalization of the recursion formula found for the pure SYM case \cite{Nakajima:2005fg,Gottsche:2006bm}. 
-%This relation is enough to determine $Z_n$ recursively from from $Z_0=1$ as we will see. 
-%The right-hand side of the recursion relation \eqref{eq:recursion} only involves the instanton parts with $\ell , m < n$ when $\vec{k} \neq 0$. For $\vec{k}=0$, it involves the instanton parts with $\ell + m \le n$, but it never goes beyond $n$. Notice that we have a set of equations labeled by the parameter $d$. Whenever the recursion relation is satisfied for more than 3 values of $d$, we can solve 
-%Therefore one can determine the $n$-instanton correction $Z_n$ recursively from $Z_0 = 1$. 
 
 \paragraph{Solving the recursion formulae}
 The recursion relation \eqref{eq:recursion} can be rewritten as 
@@ -623,8 +583,7 @@ Since $I_n^{(d)}$ only involves low-order instanton corrections, the $n$-instant
 
 Therefore we arrive at a remarkable conclusion. The \emph{non-perturbative} partition function $Z_\text{inst}$ is completely fixed by the \emph{perturbative} partition function! We note that we do not reach this conclusion by requiring the perturbative series to be well-behaved, as is often done in the resurgence analysis. Instead, we demand consistency upon smooth deformation of the spacetime $\IC^2$ or $\IC^2 \times S^1$. Such consistency condition requires non-perturbative parts to exist and even enough to fix the instanton partition function (at least for a large number of examples). 
 
- 
-% \paragraph{General 1-instanton partition function} \label{subsec:oneinst}
+
 Now, let us write the solution for 1-instanton explicitly. At one instanton level, the formula \eqref{eq:Ind} can be written as
  \begin{align}
   \begin{split}   \label{eq:1inst-i}
@@ -651,7 +610,6 @@ Using the property $i_{1}^{(d_0+\aleph)}(\vec{k}) /i_{1}^{(d_0)}(\vec{k})=(p_1p_
   \cdot i_1^{(d_0)}(\vec{k}) 
    \\=&\ \frac{(p_1p_2)^{(\frac{b}{2}-d_0)}\prod_{l}(y_{l}^{\text{tw}})^{-{\frac{I_2(\boldsymbol{R}_l)}{2}}}}{(1-p_1)(1-p_2)} \sum_{\vec{k}\in\Delta_l}\frac{e^{(d_0+\frac{\kappa_{\text{eff}}}{2})(\vec{a}\cdot\vec{k})-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{tw})}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})} . \nn
 \end{align}
-%where the factor $\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1}, \e_{2})$ in \eqref{eq:1inst-i-flux} is explicitly written in \eqref{eq:weight-expansion-sym}~and~\eqref{eq:weight-expansion-non-sym}. 
 Notice that there are multiple options for choosing $d_0$. However, we find that \eqref{eq:1inst-formula} is independent of a specific choice of $d_0$. Once we choose $d_0 = 0$, for instance, which works in most cases,\footnote{A numerical value of $d_0$ should be a half-integer for theories with $G = Sp(N)_{\theta=\pi}$.} \eqref{eq:1inst-formula} becomes
 \begin{align}
 \boxed{
@@ -667,15 +625,6 @@ The formula \eqref{eq:1inst-formula} indeed reduces to the pure YM partition fun
 We claim that \eqref{eq:1inst-formula} is the closed-form expression for the one-instanton partition function, which holds \emph{universally for any gauge theory} with $d_{\text{max}}>2$.  
 In section \ref{subsec:numd}, we study the structure of the blowup equations to bound the number of possible independent equations.  
 
-
-%Let us explicitly write the expression $\prod_{\w \in \mathbf{R}} \CL$ in the numerator of \eqref{eq:1inst-formula}.  
-%For the $SU(N)$ symmetric representation, the inner product $ \vec{k}\cdot \vec{\w}$ can be either $0$, $\pm 1$, or $\pm 2$.
-%\begin{align}
-%  \label{eq:weight-expansion-sym}
-%  \begin{split}
-%  \prod_{\w \in \boldsymbol{\textbf{sym}}} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy}}, \e_1,\e_2)  &= \prod_{\vec{k}\cdot \vec{\w} = 2} (1-y_\text{phy}\,  p_1p_2 e^{-\vec{a}\cdot \vec{\w}}) \times \prod_{\vec{k}\cdot \vec{\w} = -1}(1-y_\text{phy} e^{-\vec{a}\cdot \vec{\w}}) \\&~~~\times \prod_{\vec{k}\cdot \vec{\w} = -2} (1-y_\text{phy}\,  p_1^{-1} e^{-\vec{a}\cdot \vec{\w}})(1-y_\text{phy}\,  p_2^{-1} e^{-\vec{a}\cdot \vec{\w}}).
-%\end{split}
-% \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Number of independent blowup equations} \label{subsec:numd}
@@ -712,7 +661,6 @@ Specifically, we want to examine the expansion of each term in \eqref{eq:1inst} 
    \\
   Z_1 &\sim   \ \ \, g_1(\vec{a},  \vec{m}_{\text{tw}})\cdot (p_1p_2)^{\frac{s}{2}}  + \cdots   \\
   p_1^{\frac{b}{2}-d}Z_1^{(N)}\sim p_2^{\frac{b}{2}-d}  Z^{(S)}_1 &\sim  \ \ \,  g_2(\vec{a},  \vec{m}_{\text{tw}})\cdot  (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{s}{4}}   + \cdots   .
-  % \nn \\ &\sim  g_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (p_1p_2)^{\frac{b}{4}-\frac{d}{2}+\frac{n}{4}}  + \cdots   
   \end{split}
 \end{align}
 where $g_{0, 1, 2}(\vec{a}, \vec{m}_{\text{tw}})$ are functions independent of $p_{1, 2}$ and $N_{\text{sym}}$ denotes the number of symmetric representation. The numerical value of $s$ will be obtained shortly for a variety of gauge theories for which ADHM-like construction is available.
@@ -729,14 +677,9 @@ Each term in \eqref{eq:1inst} can be written as
    \\
   Z_1 &\sim  \ \ \,  h_1(\vec{a},  \vec{m}_{\text{tw}})\cdot (1/p_1p_2)^{\frac{s'}{2}}  + \cdots   \\
   p_1^{\frac{b}{2}-d}Z_1^{(N)} \sim  p_2^{\frac{b}{2}-d}  Z^{(S)}_1&\sim \ \ \,  h_2(\vec{a},  \vec{m}_{\text{tw}})\cdot  (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{s'}{4}}   + \cdots   
-  % \nn \\&\sim  h_3(\vec{a},  \vec{m}_{\text{phy}})\cdot (1/p_1p_2)^{\frac{d}{2}-\frac{b}{4}+\frac{n}{4}}  + \cdots   .
 \end{split}
 \end{align}
 Again, for \eqref{eq:1inst} to be consistent, the leading exponent of $Z_1$ should be greater than or equal to those of the terms on the right-hand side. Such a requirement imposes an upper bound on $d$, namely  $\frac{s'}{2} \geq  d - \frac{b}{2}$.
-% \begin{align}
-%   \label{eq:lowerbound}
-%       \frac{n'}{2} \geq  d - \frac{b}{2}.
-% \end{align}
 Combining the two inequalities, one can identify the following range
 \begin{align}
   \label{eq:bound}
@@ -745,10 +688,7 @@ Combining the two inequalities, one can identify the following range
 as a necessary condition for \eqref{eq:1inst}. 
 We explicitly checked that the $n$-instanton partition function $Z_n$ actually satisfies all the $(\frac{s+s'}{2})$ recursion relations up to a certain value of $n > 1$ for numerous examples whose $Z_n$ is already known from alternative methods. 
 This is true even though the bound \eqref{eq:bound} itself is merely a \emph{necessary} condition found from one-instanton analysis. 
-%Recall that the simple selection rule, governed by $\IZ_{4h^\vee - 2\sum_i I_2(\mathbf{R}_i)} \subset U(1)_R$, supports the validity of \eqref{eq:donaldson-4d} at all instanton orders in 4d $\CN=2$ theories. 
 Based on this empirical observation, we claim that the 5d recursion formulae \eqref{eq:recursion} within the above range of $d$ is true at all instanton orders.
-
-% that the QFT has to be well-defined regardless of its spacetime. 
 
 
 Another remarkable thing is that a numerical value of  $(s, s')$ exhibits the very simple pattern across a broad range of theories whose gauge group is not $SU(N)_\k$. %(See Table~\ref{tbl:list}.)
@@ -768,7 +708,6 @@ As the above numerical pattern \eqref{eq:n-np} emerges for all $G \neq SU(N)_\k$
   -\frac{1}{2} &\leq  d \leq h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \frac{1}{2} - \left\{\frac{N_f}{2} \right\} & \qquad \text{ for }\quad G =Sp(N)_{\theta=\pi} \nn
 \end{alignat}
 as a basic assumption to obtain the partition function $\mathcal{Z}$ for any $G \neq SU(N)_\k$ gauge theory. 
-%We will derive the general expression for the 1-instanton partition function $Z_1$, which applies for all $G \neq SU(N)_\k$ gauge theories having $h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) \geq 2$.
 It would be desirable to understand from the first principle the range  \eqref{eq:d-range-nonsu} of $d$ for which \eqref{eq:recursion} holds true.
 
 It turns out to be more difficult to characterize a general pattern behind $(s, s')$ for $SU(N)_\kappa$ gauge theories, due to extra complication caused by the 5d Chern-Simons level $\kappa$. Here we consider two particular classes of $SU(N)_\kappa$ gauge theories for illustration.  For $SU(N)_\kappa + N_f\mathbf{F}$ gauge theory ($N_f$ fundamental hypermultiplets) with $N_f + 2|\kappa| \leq 2N$, we find that 
@@ -851,222 +790,6 @@ We also consider $SU(6)_\kappa  + 1 \mathbf{TAS}$ theory (one rank-3 antisymmetr
 \end{table}
 We give the list of theories we consider in the current paper in Table \ref{tbl:list}. 
 
-%
-%\paragraph{Solving the recursion formulae}
-%
-%We now turn to solve the recursion formulae \eqref{eq:recursion} for the one-instanton partition function $Z_1$. As long as there are at least 3 consecutive integers $\{d_0, d_0+1, d_0+2\}$ for $d$, the solution $Z_1$ to the three linear equations \eqref{eq:recursion} is given by
-%\begin{align}
-%  \label{eq:1inst-sol}
-%  Z_1(\vec{a},\e_1,\e_2, \vec{m})=\frac{p_1p_2\,I_{1}^{(d_0+2)}-(p_1+p_2)\,I_{1}^{(d_0+1)}+I_{1}^{(d_0)}}{(1-p_1)(1-p_2)}
-%\end{align}
-%with $I_1^{(d)}$ defined in \eqref{eq:1inst-i}. It turns out to be more convenient to express \eqref{eq:1inst-sol} by decomposing $I_1^{(d)}$ into the flux sum, i.e., $I_1^{(d)} \equiv \sum_{\vec{k}\in\Delta_{l}} i_1^{(d)}(\vec{k})$, where
-%\begin{align}
-%  \label{eq:1inst-i-flux}
-%  i_{1}^{(d)}(\vec{k})\equiv &\ (p_1p_2)^{(\frac{b}{2}-d)}\,e^{(d+\frac{\kappa_{\text{eff}}}{2})(\vec{a}\cdot\vec{k})}e^{-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\\
-%  &\,\times\frac{\prod_{l}(y_{l}^{\text{phy}})^{-{I_2(\boldsymbol{R}_l)}/{2}}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})(1-p_1^{-1}e^{\vec{a}\cdot\vec{k}})(1-p_2^{-1}e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}.\nn
-%\end{align}
-%Using the property $i_{1}^{(d_0+\aleph)}(\vec{k}) /i_{1}^{(d_0)}(\vec{k})=(p_1p_2)^{-\aleph}\,e^{\aleph(\vec{a}\cdot\vec{k})}$, the above $Z_1$ can be written as
-%\begin{align}
-%  \label{eq:1inst-formula}
-%  Z_1=&\ \sum_{\vec{k}\in\Delta_l}\frac{(1-p_1^{-1}e^{\vec{a}\cdot\vec{k}})(1-p_2^{-1}e^{\vec{a}\cdot\vec{k}})}{(1-p_1)(1-p_2)}
-%  \cdot i_1^{(d_0)}(\vec{k}) 
-%  % \\=&\ \frac{(p_1p_2)^{(\frac{b}{2}-d_0)}\prod_{l}(y_{l}^{\text{phy}})^{-{I_2(\boldsymbol{R}_l)}/{2}}}{(1-p_1)(1-p_2)} \sum_{\vec{k}\in\Delta_l}\frac{e^{(d_0+\frac{\kappa_{\text{eff}}}{2})(\vec{a}\cdot\vec{k})-\frac{\kappa_{\text{eff}}}{2}d_{ijk}a^ik^jk^k}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1,2})}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}\nn
-%\end{align}
-%where the factor $\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy}, \e_{1}, \e_{2})$ in \eqref{eq:1inst-i-flux} is explicitly written in \eqref{eq:weight-expansion-sym}~and~\eqref{eq:weight-expansion-non-sym}. Notice that there are multiple options for choosing $d_0$ in case of $\frac{n+n'}{2} > 2$. However, it was observed that \eqref{eq:1inst-formula} is independent of a specific choice of $d_0$. Once we choose $d_0 = 0$, for instance, which works in most cases,\footnote{A numerical value of $d_0$ should be a half-integer for theories with $G = Sp(N)_{\theta=\pi}$.} \eqref{eq:1inst-formula} becomes
-%\begin{align}
-%\boxed{
-%  Z_1=\ \frac{(p_1p_2)^{\frac{b}{2}}\prod_{l}(y_{l}^{\text{phy}})^{-\frac{I_2(\boldsymbol{R}_l)}{2}}}{(1-p_1)(1-p_2)} \sum_{\vec{k}\in\Delta_l}\frac{e^{\frac{\kappa_{\text{eff}}}{2}(\vec{a}\cdot\vec{k}-d_{ijk}a^ik^jk^k)}\prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{l}^\text{phy})}{(1-p_1p_2e^{-\vec{a}\cdot\vec{k}})(1-e^{\vec{a}\cdot\vec{k}})\prod_{\vec{\alpha}\cdot \vec{k}=-1}(1-e^{-\vec{a}\cdot\vec{\alpha}})}}\ .
-%\end{align} 
-%We claim that \eqref{eq:1inst-formula} is the closed-form expression for the one-instanton partition function, which \emph{universally} holds for any gauge theory having $\frac{n+n'}{2} \geq 2$.
-
-%More generally, the $n$-instanton correction $Z_n$ can be determied by solving the following set of equations:
-%\begin{align}
-%  \label{eq:kinst}
-%  Z_n = p_1^{n(\frac{b}{2}-d)}Z^{(N)}_{n}  + p_2^{n(\frac{b}{2}-d)}  Z^{(S)}_n  + I_n^{(d)} \qquad \text{with an allowed range of $d$},
-%\end{align}
-%where $I_{n}^{(d)}$ is defined as
-%\begin{align}
-%  I_{n}^{(d)} = &\sum_{\stackrel{\frac{1}{2}\vec{k}\cdot\vec{k} + \ell + m = n}{\ell, m \neq n}}  
-%  \Bigg( (p_1p_2)^{(\frac{h^\vee}{2} - \frac{\kappa_\text{eff}}{2}-d) (\frac{\vec{k}\cdot\vec{k}}{2}) +\frac{\k_\text{eff}}{6}d_{ijk}\,k^ik^jk^k} e^{(d+\frac{\k_\text{eff}}{2})(\vec{a}\cdot\vec{k})}\,
-% e^{-\frac{\k_\text{eff}}{2}d_{ijk}\,a^ik^jk^k} \\& 
-% \times    \frac{\prod_{l} y_l^{-I_2(\boldsymbol{R}_l)(\vec{k}\cdot\vec{k}/4)} \prod_{\w \in \boldsymbol{R}_l} \CL_{\vec{k}\cdot\vec{\w}}(\vec{a}\cdot \vec{\w} + m_{\text{phy},l}, \e_1,\e_2)}{ \prod_{\a \in \D} \CL_{\vec{k} \cdot \vec{\a}} (\vec{a}\cdot\vec{\alpha}, \epsilon_1, \epsilon_2)}
-% \cdot p_1^{(\frac{b}{2}-d)\ell}p_2^{(\frac{b}{2}-d)m}Z^{(N)}_{\ell}(\vec{k})  Z^{(S)}_m (\vec{k}) \Bigg) \nn.
-%\end{align}
-%The $n$-instanton partition function $Z_n$ is given as the solution to the three linear equations \eqref{eq:kinst} with consecutive integers $\{d_0, d_0+1, d_0+2\}$.
-%\begin{align}
-%  Z_n(\vec{a},\e_1,\e_2, \vec{m})=\frac{p_1^n p_2^n \,I_{n}^{(d_0+2)}-(p_1^n+p_2^n)\,I_{n}^{(d_0+1)}+I_{n}^{(d_0)}}{(1-p_1^n)(1-p_2^n)}
-%\end{align}
-%Since $I_n^{(d)}$ only involves low-order instanton corrections, the $n$-instanton partition function $Z_n$ can be constructed from $Z_{m<n}$, allowing us to obtain the full non-perturbative part $Z_\text{inst}$ in a recursive manner. Again, this approach is applicable for any gauge theory having $\frac{n+n'}{2} \geq 2$.
-
-% We will not attempt to write down the closed-form expression for $Z_{k>1}$.
-
-
-
-%\begin{table}[p]
-%  \centering
-%  \begin{tabular}{|c|c|c|c|}
-%    \hline
-%    $G$ & matter & $r_0$ & $d_{\rm max}$\\
-%    \hline
-%    $SU(N)_\kappa$ & $N_f\times\boldsymbol{N}$ & $d-N/2-\kappa/2$ & $0 \le  d \leq N-|\kappa|-2N_f-1$\textcolor{red}{(?)}\\
-%    \hline
-%    $SU(6)_{3}$ & $1\times\boldsymbol{20}$ & $d-6/2-3/2+3/2$ & $1\leq d\leq 6$\\
-%    \hline
-%    $SO(7)$ & pure & $d-5/2$ & $0\leq d \leq 5$\\
-%    \hline
-%    $SO(7)$ & $1\times\textbf{8}$ & $d-5/2+1/2$ & $0\leq d\leq 4$\\
-%    \hline
-%    $SO(7)$ & $1\times\textbf{7}$ & $d-5/2+1\times1/2$ & $0\leq d\leq 4$\\
-%    \hline
-%    $SO(7)$ & $2\times\textbf{7}$ & $d-5/2+2\times1/2$ & $0\leq d\leq 3$\\
-%    \hline
-%    $G_2$ & pure & $d-4/2$ & $0\leq d \leq 4$\\
-%    \hline
-%    $G_2$ & $1\times\textbf{7}$ & $d-4/2+1/2$ & $0\leq d\leq 3$\\
-%    \hline
-%    $F_4$ & pure & $d-9/2$ & $0\leq d \leq 9$\\
-%    \hline
-%    $F_4$ & $1\times\textbf{26}$ & $d-9/2+1\times 3/2$ & $0\leq d\leq 6$\\
-%    \hline
-%    $F_4$ & $2\times\textbf{26}$ & $d-9/2+2\times 3/2$ & $0\leq d\leq 3$\\
-%    \hline
-%    \end{tabular}
-%    \caption{list of theories}
-%    \label{tbl:list}
-%\vspace{1cm}
-
-
-  % \begin{tabular}{l|l|}
-  %   A & $n$ \\
-  % $SU(N)_\kappa + N_f \mathbf{F} $ & {$\!\begin{aligned} \begin{dcases}
-  %   \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \k_\text{eff}
-  %    & \text{ for } \k_\text{eff}  > 0\\
-  %    \textstyle h^\vee  - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) -  \k_\text{eff}
-  %    & \text{ for } \k_\text{eff} < 0
-  % \end{dcases} \end{aligned}$}
-  % except for the special case of $SU(N)_{\kappa}$ gauge theory with $\kappa =  h^\vee - \frac{1}{2}\sum_{l} I_2(\mathbf{R}_l)> 0$, 
-  % \end{tabular}
-  % \caption{asd}
-  % \label{tbl:list-sun}
-%\end{table}
-
-
-
-
-%
-% \subsection{Instanton partition function for 4d gauge theory}
-% Let us discuss the case for the 4d $\CN=2$ theory. In principle, one can simply take the 4d limit of the 5d partition function by shrinking $\beta \to 0$. Instead, let us write down the recursion formula directly to deduce the partition function. 
-% The perturbative partition functions for the vector and hypermultiplet are
-% \begin{align}
-%  Z_{\textrm{vec}}^{\textrm{pert}}(\vec{a}, q) &= \exp \left( - \sum_{\vec \a \in \Delta} \gamma_{\e_1, \e_2}  (\vec{a} \cdot {\vec{\a}}; q )\right) \ , \\
-%  Z_{\textrm{hyp}}^{\textrm{pert}} (\vec{a}, m, q)&= \exp \left( \sum_{\vec{w} \in R} \gamma_{\e_1, \e_2} ( \vec{a} \cdot {\vec{w}} - m; q)\right) \ . 
-% \end{align}
-% Here the gamma function is defined as
-% \begin{align}
-%  \gamma_{\e_1, \e_2} (x; \Lambda) = \left. \frac{d}{ds} \right|_{s=0} \frac{\Lambda^s}{\Gamma(s)} \int_0^{\infty} \frac{dt}{t} t^s \frac{e^{-ts}}{(e^{\e_1 t} - 1)(e^{\e_2 t} - 1)} \ , 
-% \end{align}
-% which is formally equivalent to 
-% \begin{align}
-%  \textrm{log} \left[\prod_{n, m\ge 0} \left( \frac{x - m\e_1 - n \e_2}{\Lambda} \right) \right] \ . 
-% \end{align}
-% If we write the equation \eqref{eq:blowup} in terms of $Z = Z^{\textrm{pert}} Z^{\textrm{inst}}$, we get
-% \begin{align}
-%  Z^{\textrm{inst}}(\vec{a}, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} \frac{Z^{(N), \textrm{pert}}(\vec{k}) Z^{(S), \textrm{pert}}(\vec{k})}{Z^{\textrm{pert}}(\vec{a}, \e_1, \e_2)} Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k})
-% \end{align}
-% and here we omit the dependence on the Coulomb vev and the Omega deformation parameters. 
-% Now the factor in the middle can be explicitly worked out. Let us denote the ratio of the perturbative factor as $f(\vec{k}) \equiv Z^{(N), \textrm{pert}} Z^{(S), \textrm{pert}}/Z^{\textrm{pert}}$. 
-% Then the ratio of the perturbative factor for the vector multiplet is given as
-% \begin{align} \label{eq:1loopvec4d}
-% \begin{split}
-% f(\vec{k})_{\textrm{vec}} &= \prod_{\vec{\a} \in \Delta} \exp \left( \g_{\e_1, \e_2} (\vec{a}\cdot \vec{\a}) - \g_{\e_1, \e_2 - \e_1}(\vec{a}\cdot \vec{\a} + \vec{k}\cdot\vec{\a} \e_1) -  \g_{\e_1 - \e_2, \e_2 }(\vec{a}\cdot \vec{\a} +  \vec{k}\cdot\vec{\a} \e_2)   \right) \\
-%  &= \prod_{\vec{\a} \in \Delta}  \frac{\Lambda^{(\vec{k} \cdot \vec{\a})^2 /2} }{s(-\vec{k}\cdot \vec{\a}, \vec{\a}\cdot \vec{a}, \e_1, \e_2) }
-%  = \frac{(\Lambda^{2 h^\vee})^{\vec{k} \cdot \vec{k}/2} }{\prod_{\vec{\a} \in \Delta} \ell^{\vec{k}}_{\vec{\a}} (\vec{a}, \e_1, \e_2) } \ , 
-% \end{split}
-% \end{align}
-% where $h^\vee$ refers to the dual Coxeter number of the gauge group. Notice that the beta function coefficient for the pure YM theory is given by $b_0 = 2h^\vee$ and the instanton parameter is given by $q \equiv \Lambda^{2 h^\vee}$. The other symbols are given as 
-% \begin{align}
-% \ell^{\vec{k}}_{\vec{\alpha}} (\vec{a}, \e_1, \e_2) &= s(-\vec{k}\cdot\vec{\a}, \vec{a}\cdot\vec{\a}, \e_1, \e_2) \\
-% s(k, x, \e_1, \e_2) &= 
-% \begin{cases}
-%  {\displaystyle \prod_{i, j \ge 0, i+j \le k-1} (x - i \e_1 - j e_2) } & (k > 0) \\
-%  {\displaystyle \prod_{i, j \ge 0, i+j \le -k-2} (x + (i+1)\e_1 + (j+1)\e_2)} & (k < -1)  \\
-%  1 & (k=0, -1)
-% \end{cases}
-% \end{align}
-% The final identity of \eqref{eq:1loopvec4d} involves a bit of work. This follows from the identity (\cite{Nakajima:2003uh}, App. E.)
-% \begin{align}
-% \begin{split}
-%  \g_{\e_1, \e_2-\e_1}(x+\e_1 k; \Lambda) &+ \g_{\e_1 - \e_2, \e_2}(x+\e_2k; \Lambda) \\
-%   & \qquad = \g_{\e_1, \e_2}(x; \Lambda) + \log s(-k, x, \e_1, \e_2) - \frac{k(k-1)}{2} \log \Lambda \ . 
-% \end{split}
-% \end{align}
-% For the hypermultiplets we get, 
-% \begin{align}
-% f(\vec{k})_{\textrm{hyp}} &=  \prod_{\vec{w} \in R} \exp \Big( -\g_{\e_1, \e_2} (a_{w, m}) + \g_{\e_1, \e_2 - \e_1}(a_{w, m} + k_w \e_1) +  \g_{\e_1 - \e_2, \e_2 }(a_{w, m} + k_w \e_2)   \Big) \nn \\
-% &= \prod_{\vec{w} \in R} \Lambda^{-\half k_w^2} s(-{k}_w, a_{w, m}, \e_1, \e_2) 
-% = (\Lambda^{- 2 I(R)})^{\half \vec{k} \cdot \vec{k} }\prod_{\vec{w} \in R}  s(-{k}_w, a_{w, m}, \e_1, \e_2) 
-% \ , 
-% \end{align}
-% where we introduced the short-hand notation $k_w = \vec{k}\cdot\vec{w}$, $a_{w, m} = \vec{a} \cdot \vec{w} - m$ and $I(R)$ corresponds to the Dynkin index for the representation $R$. The Dynkin index appears in the beta function coefficients as $b_0 = 2h^\vee - I(R)$ for the hypermultiplets in the representation $R$.  This gives the instanton parameter to be $q \equiv \Lambda^{b_0} = \Lambda^{2h^\vee - I(R)}$. 
-%
-% Now, for the SQCD, we obtain the following equation:
-% \begin{align}
-%   Z^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2) = \sum_{\vec{k} \in \Lambda} f(\vec{k}) Z^{(N), \textrm{inst}}(\vec{k} ) Z^{(S), \textrm{inst}}(\vec{k}) \ , 
-% \end{align}
-% with
-% \begin{align}
-%  f(\vec{k}) =  \frac{\displaystyle q^{\half \vec{k} \cdot \vec{k}} \prod_{i} \prod_{\vec{w} \in R_i}  s(-k_w, a_w - m_i, \e_1, \e_2)}{\displaystyle \prod_{\vec{\a} \in \Lambda} s(-k_\a, a_\a, \e_1, \e_2)} \ , 
-% \end{align} 
-% where $i$ runs over the charged hypermultiplets. Here $q = \Lambda^{2N_c - N_f}$ for the $SU(N_c)$ SQCD with $N_f$ fundamental hypermultiplets. 
-% We have checked this expression explicitly for the $SU(2)$ gauge theory with $N_f=0, 1$ hypermultiplets up to the first few order in instanton numbers. 
-%
-% Notice that in the Gottsche-Nakajima-Yoshioka \cite{Nakajima:2009qjc, Gottsche:2010ig}, the mass parameters and the instanton parameters (for the 5d) are also shifted when the contribution from North and South poles are computed. This is simply a reflection of the fact that they twist the instanton bundles by the half-Canonical bundle of the $\IC^2$, which shift the mass parameters by $m \to m - \frac{\e_1 + \e_2}{2}$. If we do not twist by this amount, we get a cleaner expression as above. 
-%
-%\paragraph{Correlation functions}
-%On the blow-up, we have a non-trivial 2-cycle. This allows us to insert the equivariant version of the Donaldson operator, which can be written in terms of the twisted fields as
-%\begin{align} \label{eq:muC}
-% \left\langle \exp \left[ t \int d^4 x \left( \omega \wedge \left(\phi F + \half \psi \wedge \psi \right) + H F \wedge F \right) \right] \right\rangle \ . 
-%\end{align}
-%Here $H$ is the moment map for the $U(1)^2_{\e_1, \e_2}$ action so that $dH = \i_{V} \omega$. Upon localization, it is easy to see that it can be written as
-%\begin{align}
-% \hat{Z}^{\textrm{inst}}(\vec{a}, m, \e_1, \e_2, t) = \sum_{\vec{k} \in \Lambda} e^{ t \left( \vec{k} \cdot \vec{a} + \half \vec{k}\cdot \vec{k} (\e_1 + \e_2) \right) } f(\vec{k}) Z^{(N), \textrm{inst}}(\vec{k}; q e^{t \e_1} ) Z^{(S), \textrm{inst}}(\vec{k} ; q e^{t \e_2}) \ . 
-%\end{align} 
-%Notice that we shift the instanton parameter by equivariant parameters. This is due to the term $H F\wedge F$ in \eqref{eq:muC} which shifts the instanton parameter by $e^{t(\e_1+\e_2)}$. We need to compensate this part by shifting $q$. 
-%The insertion \eqref{eq:muC} inside the exponent has the conserved charge $U=+2$, and the instanton generates $4h^\vee$ which means it counts the number of fermion zero modes. Therefore, when expanding in powers of $t$, 
-%\begin{align}
-%\hat{Z} = Z + \CO(t^{2h^\vee - 2\sum_R C_2(R)})  \ . 
-%\end{align}
-%Therefore, when $N_f < 2N_c - 2$ for the $SU(N_c)$ SQCD, we have enough number of relations to fix the instanton partition function. 
-%
-
-% \subsection{Blowup Equation for 5d gauge theory} 
-
-% We consider a 5d $\mathcal{N}=1$ gauge theory with a gauge group $G$. It has the Coulomb branch moduli space, parametrized by the vacuum expectation value $\alpha_i\equiv \langle\Phi_{ii}\rangle $ of the vector multiplet scalar $\Phi$. The gauge symmetry $G$ is spontaeously broken to its Abelian subgroup $U(1)^{|G|}$ on the Coulomb branch. The low energy Abelian theory is described by the effective prepotential, which can be written as \cite{Intriligator:1997pq}
-% \begin{align}
-% 	\mathcal{F}_\text{classical} = \frac{1}{2g^2}h_{ij}\alpha_i \alpha_j + \frac{\kappa}{6}d_{ijk}\alpha_i\alpha_j\alpha_k 
-% \end{align}
-% at the classical level. It was found in \cite{Nekrasov:2002qd,Nekrasov:2003rj} that the fully quantum corrected prepotential can be obtained from the BPS instanton partition function $\mathcal{Z}$ on $\Omega$-deformed $\mathbf{R}^4 \times S^1$, i.e.,
-% \begin{align}
-% 	\mathcal{F} = \lim_{\epsilon_{1,2}\rightarrow 0} \epsilon_1 \epsilon_2 \log{\mathcal{Z}} = \mathcal{F}_\text{classical} + \mathcal{F}_\text{quantum}.
-% \end{align}
-
-% The BPS partition function $\mathcal{Z}$ is defined with equivariant parameters $\epsilon_{1}, \epsilon_2$, $\alpha_1, \cdots, \alpha_{|G|}$ associated to the $U(1)^2 \times U(1)^{|G|}$ action on the $k$-instanton moduli space $\mathcal{M}_{k,G}$  \cite{Nekrasov:2002qd,Nekrasov:2003rj}. Additional equivariant parameters $m_1, \cdots, m_{|F|}$ can be introduced if a given theory has the flavor symmetry $F$. It takes the form of 
-% \begin{align}
-%     \mathcal{Z} = \exp{(F_0)} \cdot \mathcal{I}
-% \end{align}
-% where $\mathcal{I}$ is the Witten index counting the BPS bound states of fundamental particles and/or non-perturbative instanton solitons. More precisely, 
-% \begin{align}
-% 	\mathcal{I} \equiv \text{Tr}_{\mathcal{H}} \bigg[(-1)^F e^{-\frac{8\pi^2}{g^2} k} e^{-\epsilon_1 (J_1+\frac{R}{2})} e^{-\epsilon_2 (J_2+\frac{R}{2})} \prod_{i=1}^{|G|} e^{-\alpha_i Q_i} \prod_{l=1}^{|F|} e^{-m_l F_l}\bigg]
-% \end{align}
-% where $(J_1, J_2)$ are the angular momenta associated to the two $\mathbf{R}^2$ planes, $R$ is the Cartan generator of $SU(2)_R$ symmetry, $(Q_1, \cdots, Q_{|G|})$ are the electric charges of $U(1)^{|G|} \subset G$, and $(F_1, \cdots, F_{|F|})$ are the Cartan generators of the flavor symmetry group $F$. 
-% We also frequently use the notation $\epsilon_+ \equiv \frac{\epsilon_1 + \epsilon_2}{2}$, $\epsilon_- \equiv \frac{\epsilon_1 - \epsilon_2}{2}$ and $J_l = \frac{J_1 - J_2}{2}$, $J_r = \frac{J_1 + J_2}{2}$, generating self-dual and anti-self-dual rotation inside the $\mathbf{R}^4$.
-% The fugacity variables used throughout this paper are 
-% \begin{align}
-%     p_1 = e^{-\epsilon_1},\ p_2 = e^{-\epsilon_2},\ \omega_i = e^{-\alpha_i},\ y_l = e^{-m_l},\ Q = e^{-8\pi^2  /g^2},\ t = \sqrt{p_1p_2},\  u = \sqrt{p_1/p_2}.
-% \end{align}
-
-% Each multiplet
-
 
 
 
@@ -1080,11 +803,8 @@ Conventionally, the instanton partition function can be computed by employing th
 Even though IR 5d gauge theory sometimes can be obtained using more than one string theory realizations, the correct UV completion might be only achieved through specific string theory realizations. For instance, the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets with $N_f\geq 5$ must be embedded into D4-D8-O8 brane system to be UV-completed as 5d $E_{N_f+1}$ Minahan-Nemeschansky SCFT \cite{Seiberg:1996bd, Minahan:1996fg, Minahan:1996cj}. Ordinary $(p,q)$ 5-brane web with colliding branes (without O-planes) indicate UV inconsistency \cite{Aharony:1997ju}. 
 A sensible QFT observable can thus be obtained only through a proper embedding of the gauge theory into string theory. In some occasions, an extra factor dressing the true QFT observable may appear during the above instanton computation, which is sensitive to the choice of a string theory embedding.
 Our blow-up formula \eqref{eq:recursion} does not explicitly specify a particular UV completion nor string theory embedding. However, we observe that the formula does prefer a particular string theory embedding of the gauge theory. For example, for the $SU(2)$ gauge theory with $N_f$ fundamental hypermultiplets, we find the partition function obtained from the blow-up formula agrees with the partition function obtained from the ordinary $(p,q)$ 5-brane webs. 
-%without colliding branes.
 
 There are wide varieties of `exceptional' gauge theories (having exceptional gauge groups or exotic matter representations) whose UV completion is found as M-theory wrapped on a singular Calabi-Yau 3-fold \cite{Diaconescu:1998cn, Jefferson:2018irk, Bhardwaj:2018yhy, Apruzzi:2019opn}. 
-%Many of these examples do not have the known ADHM construction nor 5-brane web realization that can be used to compute the relevant partition function. 
-%There are also `exceptional' gauge theories, that involve exceptional gauge groups or matters that cannot be engineered from the open strings ending on D-branes. Instead, their UV embedding is often geometrically realized as M-theory wrapped on local Calabi-Yau threefolds. 
 As most exceptional theories lack the ADHM description \cite{Kim:2018gjo}, their instanton partition function $Z_\text{inst}$ has been studied in a case-by-case basis. Once the 5-brane web configuration engineering an exceptional theory is identified \cite{Zafrir:2015ftn, Hayashi:2018bkd, Hayashi:2019yxj}, the topological vertex formalism can be applied to compute the relevant partition function $\CZ$ \cite{Hollowood:2003cv, Iqbal:2007ii}. 
 Alternatively, one can first construct the $\IC^2 \times T^2$ partition function for a related 6d gauge theory, based on its modularity and anomaly, then take the circle reduction to obtain the 5d partition function $\CZ$ \cite{DelZotto:2016pvm, DelZotto:2018tcj}. Several interesting exceptional theories have been studied so far, based on the above two approaches.
 Sometimes, there exists auxiliary 4d $\CN=2$ SCFT \cite{Benini:2009gi} that realizes exceptional instanton moduli space as its Higgs branch.\footnote{Also 2d $\CN=(0, 4)$ version \cite{Putrov:2015jpa} for any 4d $\CN=2$ theory can be obtained upon twisted dimensional reduction, which allows us to compute the 6d instanton string partition function.} In this case, computing the superconformal index in the Higgs branch limit provides a way to compute the necessary instanton partition function for the exceptional gauge theory \cite{Gadde:2010te, Gadde:2011uv, Gaiotto:2012uq, Gadde:2015xta, Agarwal:2018ejn}. 
@@ -1180,30 +900,6 @@ We take advantage of the universality of the blowup equation. Recall that the bl
 One can solve the recursion formulae for the $n$-instanton correction $Z_n$ to the partition function, as long as $h^\vee - \frac{1}{2}\sum_l I(\mathbf{R}_l) \geq 2$, even for the exceptional gauge theories. We conjecture that $Z_n$ solved from the recursion formula would be the correct BPS data for UV-consistent 5d SCFTs, modulo an extra factor $Z_\text{extra}$ independent of the Coulomb VEV $\vec{a}$. This conjecture will be tested via comparison with \cite{Kim:2018gjo, DelZotto:2018tcj,Hayashi:2019yxj} which compute $\CZ$ for some exceptional cases. 
 
 
-%\begin{table}[t!]
-%  \centering
-%  \begin{tabular}{@{}cl@{}}
-%    \toprule
-%    Gauge group  & Hypermultiplets    \\  \midrule
-%    $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
-%    $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
-%    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
-%    $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-%    $SO(11)$  & $n_{\bf s}= 2$ \\
-%    $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
-%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
-%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-%    $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-%    $SO(9)$  & $n_{\bf s}  = 3$ \\
-%    $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
-%    $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
-%    $SO(8)$  & $n_{\bf s} + n_{\bf c}+ n_{\bf v} = 4$ \\
-%    $SO(7)$  & $n_{\bf s} + n_{\bf v}  =3$\\ \bottomrule
-%    \end{tabular}
-%    \caption{asd}
-%    \label{tbl:spinor}
-%\end{table}
-
 In this section, we will focus on the $SO(N)$ gauge theories with spinor hypermultiplets.
 We have a sufficient number of recursion formulae \eqref{eq:recursion} to determine the $n$-instanton partition function $Z_n$ of the $SO(N)$ gauge theory, if and only if  
 \begin{align}
@@ -1214,7 +910,6 @@ We have a sufficient number of recursion formulae \eqref{eq:recursion} to determ
   \end{split}
 \end{align}
 where $N_{\bf v}$, $N_{\bf s}$, and $N_{\bf c}$ denote the number of hypermultiplets in the vector, spinor and conjugate spinor representations, respectively. Our 1-instanton expression \eqref{eq:1inst-formula} is also applicable to the cases satisfying \eqref{eq:spinor-range}. 
-%Let us consider the special cases whose $Z_n$ is already known.
 We compare our formula against any known results for $SO(N)$ gauge theory with a number of spinor hypermultiplets  \cite{Kim:2018gjo, DelZotto:2018tcj}. We not only find perfect agreements for the case with the known results, but also  obtain partition functions for the previously unknown cases as well. 
 
 \paragraph{SO(7)} The $n$-instanton contribution $Z_n$ of $SO(7) + N_{\bf s}\,\mathbf{S}$ theory can be obtained from the SUSY quantum mechanics proposed in \cite{Kim:2018gjo}, which can be summarized as the following $SU(4)$ Young diagram expression:
@@ -1506,15 +1201,6 @@ one finds that the prepotential for $SU(6)_3$ with one \emph{massless} rank-3 an
    & \quad +2 \phi _1\phi _2 \phi _3 +2\phi_1\phi_3\phi_4+2\phi_1\phi_4\phi_5. \label{eq:prep+SU6-3}
 \end{split}
 \end{align}
-%\begin{align}
-%	\mathcal{F}_{SU(6)_3+1{\bf TAS}}=&\,m_0 \big( \phi _1^2+\phi _2^2+\phi _3^2+\phi _4^2+\phi _5^2-\phi _1 \phi _2-\phi _2 \phi _3-\phi _3 \phi _4-\phi _4
-%   \phi _5\big) \cr
-%   &+ \frac{\phi _1^3}{3}+4 \phi _2 \phi _1^2-5 \phi _2^2 \phi _1+2 \phi _2 \phi _3 \phi _1-2 \left(\phi
-%   _3^2-\phi _4 \phi _3+\phi _4^2+\phi _5^2-\phi _4 \phi _5\right) \phi _1\cr
-%  & +\frac{4 \phi _2^3}{3}+\frac{4
-%   \phi _3^3}{3}+\frac{4 \phi _4^3}{3}+\frac{4 \phi _5^3}{3}-2 \phi _2 \phi _3^2-\phi _3 \phi _4^2+\phi
-%   _2^2 \phi _3-\phi _4^2 \phi _5. \label{eq:prep+SU6-3}
-%\end{align}
 One can easily see that the monopole string tensions $T_i=\partial{\mathcal{F}}/\partial{\phi_i}$ computed from the above prepotential \eqref{eq:prep+SU6-3} agree with the areas of the compact faces of the 5-brane web, i.e.,
 \begin{align}
 T_1=\textcircled{\scriptsize 1} + 2\times\textcircled{\scriptsize 2},  %\crcr
@@ -1542,41 +1228,15 @@ Notice that this 5-brane web for $SU(6)_3+1{\bf TAS}$ suggests an intriguing Hig
  \end{align}
  This tuning of the parameters, of course, reduces dimension of the Coulomb branch by one and also opens up a Higgs branch in such a way that the 5-brane web in Figure \ref{fig:SU6-monopole} becomes 5-brane web in Figure \ref{fig:SU6-Higgsing}(a) where the D5-branes on the upper edges of $\textcircled{\scriptsize 6}$ and $\textcircled{\scriptsize 7}$ are aligned and joint to become a single D5-brane denoted red in Figure~\ref{fig:SU6-Higgsing}(a). The resulting configuration is then a 5-brane configuration for two pure $SU(3)_3$ theories that are on top of each other, as shown in Figure~\ref{fig:SU6-Higgsing}(b). This is a 5-brane realization of Higgsing $SU(6)_3+1{\bf TAS}$ theory into two pure $SU(3)_3$ theories. It follows that 
  under this Higgsing, the prepotential for $SU(6)_3+1{\bf TAS}$ \eqref{eq:prep+SU6-3} theory reduces to a sum of prepotentials for two disjoint pure $SU(3)_3$ theories:
-% \begin{align}
-% \mathcal{F}_{SU(6)_{3}+1{\bf TAS}}{}\Big|_{\phi_4=\phi_1}	&
-% \rightarrow \mathcal{F}_{SU(3)_{3}} (m_0, \phi_1, \phi_5-\phi_1,-\phi_5) + \mathcal{F}_{SU(3)_{3}} (m_0, \phi_2-\phi_1, \phi_3-\phi_2,\phi_1-\phi_3),\nonumber
-% \end{align}
-% or,
 \begin{align}
 \mathcal{F}_{SU(6)_{3}+1{\bf TAS}}{}\Big|_{a_1+a_5+a_6=0}	%\mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)	
 &\rightarrow \mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4).
 \end{align}
-% The Higgsing of the $SU(6)$ theory into two copies of $SU(3)$ theories can be understood as follows. 
-%Under the embedding
-%\begin{align}
-%	SU(6) \supset SU(3) \times SU(3) \times U(1),
-%\end{align}
-%Under this Higgsing, the hypermultiplet in the rank-3 antisymmetric representation and the gauge bosons transforming the adjoint of $SU(6)$ are decomposed as
-%\begin{align}
-%	SU(6) &\supset SU(3) \times  SU(3) \times U(1),\crcr
-%%	
-%	{\bf 20}&={\bf (1,1)}_3 + {\bf (1,1)}_{-3}+ {\bf (3,\bar3)}_{-1}+{\bf (\bar3, 3)}_{1}\crcr
-%%	
-%	{\bf 35 }& ={\bf (1,1)}_0 + {\bf (1,8)}_0 + {\bf (8,1)}_0 + {\bf (3,\bar3)}_2 +{\bf (\bar3, 3)}_{-2}.	
-%\end{align}
 This in turn implies that under this Higgsing, the partition function for $SU(6)_{3}+1{\bf TAS}$ should be expressed as a product of the partition functions of two pure $SU(3)_3$ theories:
 \begin{align}
 \CZ^{SU(6)_{3}+1{\bf TAS}}\big|_{\rm Higgsing}~\rightarrow ~~ \CZ^{SU(3)_{3}}\!(q,A_1, A_5,A_6)\,\CZ^{SU(3)_{3}}\!(q,A_2, A_3,A_4)\,Z_{\rm extra}(q)\,,
 \label{eq:SU6-Higgs-SU3}	
 \end{align}
-%\begin{align}
-%Z_{SU(6)_{3}+1{\bf TAS}}\bigg|_{\rm Higgsing}\qquad \rightarrow\qquad Z^{(1)}_{SU(3)_{3}}Z^{(2)}_{SU(3)_{3}}\,Z^{}_{\rm decoupled}\,,	
-%\end{align}
-%where 
-%\begin{align}
-%	Z^{(1)}_{SU(3)_{3}} &= Z_{SU(3)_{3}} (\phi_1, \phi_5-\phi_1,-\phi_5),\crcr
-%	Z^{(2)}_{SU(3)_{3}} &= 	Z_{SU(3)_{3}}(\phi_2-\phi_1, \phi_3-\phi_2,\phi_1-\phi_3), 
-%\end{align}
 where the parameters $q$ and $A_i$ are the K\"ahler parameters for instanton and Coulomb branch parameters, and  $Z_{\rm extra}(q)$ represents the overall extra terms that do not explicitly depend on the Coulomb branch moduli, which would correspond to a new decoupled mode appearing in Figure \ref{fig:SU6-Higgsing}.  In what follows, we explicitly compute the partition function for $SU(6)_3+1{\bf TAS}$ based on the 5-brane web and compare it with our general 1-instanton formula \eqref{eq:1inst-formula}. At two instantons, we will consider this Higgsing as a consistency check of our solution $Z_2$ obtained from the blowup recursion formulae \eqref{eq:recursion}.
 
 %---------  Figure  ---------------%
@@ -1605,11 +1265,6 @@ in which the $SU(6)$ traceless condition $\prod_{i=1}^{6}A_i =1$ is assumed. App
 %  Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
  \end{split}
 \end{align}
-%\begin{align}
-%Z_{\text{Nek}} 
-%=&\, \sum_{\vec{Y}}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^2A_4^2)^{|Y_3|}(-A_2^2A_3^4)^{|Y_4| + |Y_5|}\nn\\
-%&\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{left}}(\vec{Y})Z_{\text{right}}(\vec{Y}), \label{Znek1}
-%\end{align}
 where $\vec{Y}=(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$. The left/right factor 
 $Z_{\text{left}}(\vec{Y})$/$Z_{\text{right}}(\vec{Y})$ can be written as 
 \begin{align}
@@ -1629,26 +1284,6 @@ R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y' Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,
 \end{split}
 \end{align}
 in which the dummy variable $Y'$ should be interpreted as $Y_0$ for $Z_{\text{left}}(\vec{Y})$ and  $Y_7$ for $Z_{\text{right}}(\vec{Y})$. % summing over $Y_7$ instead of $Y_0$. %  \big|_{Y_0 \to Y_7}$.
-%\begin{align}
-%Z_{\text{right}}(\vec{Y})=&
-%\sum_{Y_7} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_7|} 
-%g^{\frac{||Y_7^t||^2+||Y_7||^2}{2}} \tilde{Z}_{Y_7}^2 f_{Y_7}^2(g)
-%\prod_{i=1}^6 g^{\frac{||Y_i||^2}{2}} \tilde{Z}_{Y_i} 
-%\cr 
-%& 
-%%\times 
-%%R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1}) \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
-%%\cr 
-%%& 
-%%\times  
-%%R_{Y_7 Y_6^t} (A_1{}^{-1} A_6{}^{-2})\prod_{i=1}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6).
-%\times 
-%R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_7 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_7^t }^{-1} (A_1^2A_6) \cr 
-%& 
-%\times  
-% \prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})
-% \prod_{i=2}^5 R_{Y_7^t Y_i} (A_1 A_i  A_6) .
-%\end{align}
 Here, for a Young diagram $\lambda = (\lambda_1, \lambda_2, \cdots)$ and its transpose $\lambda^t$,  
 \begin{align}
   |\lambda|=\sum_{i}\lambda_i, \qquad ||\lambda||^2 =\sum_{i}\lambda_i^2, \qquad  \tilde{Z}_{\lambda} 
@@ -1660,9 +1295,6 @@ f_\lambda(g) = (-1)^{|\lambda|}g^{\frac{1}{2}(g^{||\lambda^t||^2 - ||\lambda||^2
 \end{align}
 And also, $R_{\lambda \mu } (Q)=R_{\mu \lambda} (Q)$ is defined by
 \begin{align}
-%\tilde{Z}_{\lambda} 
-%&= \prod_{(i,j) \in \lambda} \frac{1}{1 - g^{\lambda_i + \lambda^t_j - i - j +1} } , 
-%\cr
 R_{\lambda \mu } (Q)%= \prod_{i.j=1}^{\infty} (1 - Q g^{i+j-\lambda_j - \mu_i -1}),\cr
 =\text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
 \times N_{\lambda^t \mu} (Q)
@@ -1674,17 +1306,7 @@ N_{\lambda \mu} (Q)
 = \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
 \prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right). 
 \end{align}
-%and $f_{\lambda}(g)$ is the framing factor defined by
-%\begin{align}
-%f_\lambda(g) = (-1)^{|\lambda|}g^{\frac{1}{2}(g^{||\lambda^t||^2 - ||\lambda||^2})},
-%\end{align}
-%with $|\lambda|=\sum_{i}\lambda_i$ and $||\lambda||^2 =\sum_{i}\lambda_i^2$ for a Young diagram $\lambda = (\lambda_1, \lambda_2, \cdots)$ and its transpose $\lambda^t$. %=(\lambda^t_1, \lambda^t_2, \cdots)$ .
-%Moreover, $A_i, (i=1, \cdots, 6)$, $q$ and $g$ are defined by 
-%and the Coulomb branch parameters $A_i, (i=1, \cdots, 6)$, the instanton fugacity $q$ and the unrefined $\Omega$-deformation parameter $g$ are defined by 
-%\begin{align}
-%A_i = e^{-a_i}, \qquad q = e^{-m_0}, \qquad g=e^{-\epsilon}.
-%\end{align}
-Recall that the Nekrasov partition function is expressed as the following weighted sum: %of the instanton partition function %of the perturbative partition and the weighted sum of $k$-instanton partition functions $Z_k$
+Recall that the Nekrasov partition function is expressed as the following weighted sum: 
 \begin{align}
 \CZ = Z_{\text{pert}} \cdot \bigg(1 + \sum_{k=1}^{\infty}q^kZ_k\bigg) ,
 \end{align}
@@ -1717,29 +1339,6 @@ g^{\frac{\Vert Y'^t \Vert ^2+\Vert Y'\Vert ^2}{2}} \tilde{Z}_{Y'}(g)^2 f_{Y'}^2(
  N^{-1}_{Y' \o } (A_1^2  A_6)\prod_{i=2}^5 N_{Y' \o } (A_1 A_i  A_6)\bigg)^2 ,\label{eq:zpert-top}
 \end{split}
 \end{align}
-%\begin{align}
-%  \label{eq:zpert-top}
-%Z_{\rm pert} 
-%=& \,
-%Z_{\text{half}}(\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)^2
-%\cr
-%=&\, 
-%\text{PE} \Biggl[ 
-%\frac{2g}{(1-g)^2} 
-%\Bigl( \frac{A_1}{A_6} + \frac{1}{A_1A_6^2} + A_1^2  A_6 
-%+ \sum_{2 \le i <  j \le 5} \frac{A_i}{A_j}
-%- \sum_{i=2}^5 A_1 A_i  A_6
-%\Bigr)
-%\Biggr]
-%\cr 
-%& 
-%\times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
-%g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
-%\cr 
-%& \qquad \qquad
-%\textstyle N_{Y_0^t \varnothing }^{-1} (A_1{}^{-1} A_6{}^{-2})
-% N^{-1}_{Y_0 \varnothing } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \varnothing } (A_1 A_i  A_6)\bigg)^2 ,
-%\end{align}
 where the last two lines can be  combined into the following closed-form expression:
 \begin{align}
   \text{PE} \Biggl[ 
@@ -1788,267 +1387,6 @@ We checked that upon imposing the Higgsing condition \eqref{eq:SU6-Higgs-SU3}, i
 which satisfy the expected Higgsing relation \eqref{eq:SU6-Higgs-SU3}. Here, $Z_n^{SU(3)_3}$ is the Young
 diagram formula \eqref{eq:SUn-young} which includes the Coulomb VEV independent contribution $Z_{\rm extra}(q)$.
 
-
-% We will 
-
-
-
-% The complete list of $\mathcal{N}=1$ gauge theories, satisfying $d_{\rm max} \geq 2$, is displayed in Table~\ref{tbl:infinite-theory}~and~\ref{tbl:exceptional-theory}.
-% All infinite families of theories, whose rank of the gauge group can be arbitrarily large, are summarized in Table~\ref{tbl:infinite-theory}. There are also finite families of theories, summarized in Table~\ref{tbl:exceptional-theory}, which involve an exceptional gauge group or a spinor hypermultiplet. 
-
-% \textcolor{red}{(comparison with IMS bound, etc) (SCFT bound)} 
-% Some theories in Table~\ref{tbl:exceptional-theory} do not belong to the 
-
-% \begin{table}[tbp]
-%   \centering
-%   \begin{tabular}{@{}cl@{}}
-%     \toprule
-%     Gauge group  & Hypermultiplets    \\ \midrule
-%     $SU(N)_\kappa$ &x                               \\
-%     $SO(2N+1)$ & $n_{\mathbf{v}} \leq 2(N-1)$ \\
-%     $SO(2N)$   & $n_{\mathbf{v}} \leq 2(N-2)$ \\
-%     $USp(2N)$  & $n_{\bf f} \leq 2N$ \\
-%     $USp(2N)$  & $n_{\Lambda^2} = 1$ and $n_{\bf f} \leq 2$ \\ \bottomrule
-%     \end{tabular}
-%     \caption{asd}
-%     \label{tbl:infinite-theory}
-% \end{table}
-% \begin{table}[tbp]
-%   \centering
-%   \begin{tabular}{@{}cl@{}}
-%     \toprule
-%     Gauge group  & Hypermultiplets    \\  \midrule
-%     $SO(14)$  & $n_{\bf s} + n_{\bf c} = 1$ and $n_{\bf v}  \leq 2$ \\
-%     $SO(13)$  & $n_{\bf s} = 1$ and $n_{\bf v}  \leq 2$ \\
-%     $SO(12)$  & $n_{\bf s} + n_{\bf c} = 2$ \\
-%     $SO(12)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-%     $SO(11)$  & $n_{\bf s}= 2$ \\
-%     $SO(11)$  & $n_{\bf s}= 1$ and  $n_{\bf v}  \leq 4$\\
-%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 3$ \\
-%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-%     $SO(10)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 4$\\
-%     $SO(9)$  & $n_{\bf s}  = 3$ \\
-%     $SO(9)$  & $n_{\bf s}  = 2$ and  $n_{\bf v}  \leq 2$\\
-%     $SO(9)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 4$\\
-%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 4$ \\
-%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 3$ and  $n_{\bf v}  =1$\\
-%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 2$ and  $n_{\bf v}  \leq 2$\\
-%     $SO(8)$  & $n_{\bf s} + n_{\bf c} = 1$ and  $n_{\bf v}  \leq 3$\\
-%     $SO(7)$  & $n_{\bf s} = 4$ \\
-%     $SO(7)$  & $n_{\bf s} = 3$ and  $n_{\bf v}  =1$\\
-%     $SO(7)$  & $n_{\bf s} = 2$ and  $n_{\bf v}  \leq 2$\\
-%     $SO(7)$  & $n_{\bf s} = 1$ and  $n_{\bf v}  \leq 3$\\
-%     $G_2$  & $n_{\bf 7}\leq 2$ \\
-%     $F_4$  & $n_{\bf 26}\leq 2$ \\
-%     $E_6$  & $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$\\
-%     $E_7$  & $n_{\bf 56} \leq 2$ \\ 
-%     $E_8$  & $\varnothing$ \\ \bottomrule
-%     \end{tabular}
-%     \caption{asd}
-%     \label{tbl:exceptional-theory}
-% \end{table}
-
-
-
-% % \begin{itemize}
-%   % \item $G=E_8$: pure YM
-%   % \item $G=E_7$: $I_{\bf 56} = 12$. $n_{\bf 56} \leq 2$. 
-%   % \item $G=E_6$: $I_{\bf 27} = I_{\bf \overline{27}} = 6$. $n_{\bf 27}+ n_{\bf \overline{27}} \leq 3$. 
-%   % \item $G=F_4$: $I_{\bf 26} = 6$. $n_{\bf 26}\leq 2$. 
-%   % \item $G=G_2$: $I_{\bf 7} = 2$. $n_{\bf 7}\leq 2$. 
-%   % \item $G=D_N$: $I(spinor) = 2^{N-3}$. $I(vector) = 2$.\\
-%   %  $G= D_7$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
-%   %  $G=D_6$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
-%   %  $G=D_5$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
-%   %  $G=D_4$: $n_{\bf s}  + n_{\bf v} \leq 4$
-%   %  \item $G=B_N$: $I(spinor) = 2^{N-2}$. $I(vector) = 2$.\\
-%   %  $G= B_6$: $n_{\bf s} = 1$, $n_{\bf v}  \leq 2$  and $n_{\bf s} = 0$, $n_{\bf v}  \leq 10$. \\
-%   %  $G=B_5$: $n_{\bf s} = 2$, $n_{\bf v}  = 0$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 8$.\\
-%   %  $G=B_4$: $n_{\bf s} = 3$, $n_{\bf v}  = 0$ and $n_{\bf s} = 2$, $n_{\bf v}  \leq 2$ and $n_{\bf s} = 1$, $n_{\bf v}  \leq 4$ and $n_{\bf s} = 0$, $n_{\bf v}  \leq 6$\\
-%   %  $G=B_3$: $n_{\bf s}  + n_{\bf v} \leq 4$
-%   %  \item $G=C_N$:  $I(vector) = 1$. $I(anti) = 2N-2$. $I(\text{rank-3 anti}) = (N-2)(2N -1)$.\\
-%   %  $G= C_{N}$:  $n_{\bf v} + (2N-2) n_{\Lambda^2} \leq 2N$ . \\
-%   %  $G= C_3$: $n_{ \Lambda^3} = 1$, $n_{ \Lambda^2} = 0$, $n_{\bf v}  \leq 1$ in addition to the above.\\
-%   %  ------------------------------------------------------
-% %    \item $G=A_N$:  $I(fnd) = 1$. $I(anti) = N-2$. $I(sym) = N+2$. $I(\text{rank-3 anti}) = (N - 3) (N - 2)/2$. $I(\text{rank-4 anti}) = (N-4)(N - 3) (N - 2)/3!$. 
-% %    \begin{align}
-% %     \kappa_{\rm eff} = \kappa_\text{cl} -\text{sgn}(m) \frac{\mathcal{A}_\mathbf{R_i} }{2}\cdot n_\mathbf{R_i}
-% %    \end{align}
-% % \end{itemize}
-
-% % \pagebreak
-
-
-
-
-
-
-% \paragraph{$SU(6)_3+1\times\boldsymbol{20}$}
-
-% As a non-trivial test, we consider the instanton partition function of the $SU(6)_3+\boldsymbol{20}$ whose 5-brane realization was found recently \cite{Hayashi:2019yxj}. Its web-diagram is given as \textcolor{red}{figure}.
-
-% \textcolor{red}{(Written before computing the $SU(6)_3+20$ instanton partition function.)}\\
-% Rather than comparing instanton partition functions directly, we consider an interesting Higgsing procedure. We consider the $SU(3)\times SU(3)\times U(1)\subset SU(6)$ where the $SU(6)$ multiplets are decomposed by
-% \begin{align}
-% A_{i\bar{j}}:\,\boldsymbol{35}\longrightarrow&\,(\boldsymbol{8},1)_0\oplus (1,\boldsymbol{8})_0\oplus (\boldsymbol{3},\bar{\boldsymbol{3}})_2\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_{-2}\oplus(1,1)_0,\nonumber\\
-% \Phi_{ijk}:\,\boldsymbol{20}\longrightarrow&\,(\boldsymbol{3},\bar{\boldsymbol{3}})_{-1}\oplus(\bar{\boldsymbol{3}},\boldsymbol{3})_1\oplus(1,1)_3\oplus(1,1)_{-3}.
-% \end{align} 
-% Here to fit with the web-diagram, we set $\Phi_{156}$ and $\Phi_{234}$ are $(1,1)_3$ and $(1,1)_{-3}$. Once $\Phi_{156}$ and $\Phi_{234}$ get non-zero VEVs, 
-
-%  When $a_5=-a_1-a_6$, the web-diagram factorizes to two $SU(3)_3$ whose Coulomb VEVs are $(a_1, a_5, a_6)$ and $(a_2, a_3, a_4)$. In the gauge theory, it can be seen partly from prepotential. The prepotential of $S(6)_3+1\times\boldsymbol{20}$ is
-% \begin{align}
-% \mathcal{F}=\frac{1}{2}m_0\sum_{i=1}^{6}a_i^2+\frac{1}{2}\sum_{i=1}^{6}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3-\frac{1}{6}\sum_{1<i<j}(a_1+a_j+a_k)^3
-% \end{align}
-% at the Weyl chamber $a_1>\cdots>a_6$. As one sets the Coulomb VEV $a_6=-a_1-a_5$ and $a_4=-a_2-a_3$, one can check
-% \begin{align}
-% \mathcal{F}(m_0,a_1,a_2,a_3,a_4,a_5,a_6)=\mathcal{F}_{SU(3)_3}(m_0,a_1,a_5,a_6)+\mathcal{F}_{SU(3)_3}(m_0,a_2,a_3,a_4)
-% \end{align}
-% where
-% \begin{align}
-% \mathcal{F}_{SU(3)_3}(m_0,a_1,a_2,a_3)=\frac{1}{2}m_0\sum_{i=1}^{3}a_i^2+\frac{1}{2}\sum_{i=1}^{3}a_i^3+\frac{1}{6}\sum_{i<j}(a_i-a_j)^3.
-% \end{align}
-% It is Higgsed by 
-
-
-
-
-
-% It was recently found in \cite{Hayashi:2019yxj} that the 5d $SU(6)_3$ gauge theory with a rank-3 antisymmetric hypermultiplet can be engineered from the 5-brane web configuration, depicted in Figure~\ref{fig:SU6-monopole}. Given a web diagram, we utilize  the topological vertex method \cite{Aganagic:2003db,Iqbal:2007ii} to compute all genus topological string amplitudes, which is the logarithm of the 5d Nekrasov partition function on $\Omega$-deformed $\mathbf{R}^4\times S^1$ \cite{Gopakumar:1998jq}. We will check its agreement with the blowup partition function (eqn), providing a supporting evidence to the suggested blow-up equation (eqn).
-% % We use the notation of \cite{Bao:2013pwa} for the following topological vertex computation. 
-
-% By applying the topological vertex method to Figure~\ref{fig:SU6-monopole}, we find that the instanton partition function can be  written as the following sum over all possible 6 Young diagrams:
-% \begin{align}
-%   \label{eq:znek-su6}
-%   Z_{\text{Nek}} 
-%   =&\, \sum_{(Y_1, \cdots, Y_6)}q^{\sum_{i=1}^6|Y_i|} (-A_1^6)^{|Y_1|}(-A_2^6)^{|Y_2|}(-A_2^2A_3^4)^{|Y_3|}(-A_2^2A_3^2A_4^2)^{|Y_4| + |Y_5|}\nn\\
-%   &\times f_{Y_1}(g)^5f_{Y_2}(g)^5f_{Y_3}(g)^3f_{Y_4}(g)f_{Y_5}(g)^{-1}f_{Y_6}(g)^{2}Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)^2. 
-%   \end{align}
-%   where the K\"ahler parameters can be identified as 
-% \begin{align}
-% A_i = e^{-a_i}, \qquad q = e^{-\frac{8\pi^2}{g^2}}, \qquad g=e^{-\epsilon_-}.
-% \end{align}
-% We briefly explain our notation: For a given Young diagram $\mu$, $|\mu|$ denotes the total number of boxes. $\mu_i$ is the number of boxes in the $i$-th row of $\mu$. $\mu^t$ is the transpose of $\mu$. We also use
-% \begin{align}
-% f_\mu(g) = (-1)^{|\mu|}g^{\frac{1}{2}({\Vert \mu^t\Vert ^2 - \Vert \mu\Vert ^2})}, \qquad \tilde{Z}_{\lambda}(g) 
-% = \prod_{(i,j) \in \lambda} {(1 - g^{\lambda_i + \lambda^t_j - i - j +1} )^{-1}}
-% \end{align}
-% with $\Vert \mu \Vert^2   = \sum_{i} \mu_i^2$. The factor $Z_{\text{half}}\,(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6)$ involves a single summation over all possible Young diagrams, i.e.,
-% \begin{align}
-% Z_{\text{left}}(\vec{Y})= \,
-% \sum_{Y_0} &( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} 
-% g^{\frac{\Vert Y_0^t\Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}(g)^2
-% \ \textstyle\prod_{i=1}^6 g^{\frac{\Vert Y_i\Vert ^2}{2}} \tilde{Z}_{Y_i} (g)
-% \cr 
-% & 
-% \times 
-% R_{Y_1 Y_6^t}^{-1} (A_1 A_6{}^{-1})\,R_{Y_0 Y_6^t}^{-1} (A_1{}^{-1} A_6{}^{-2})\,R_{Y_1Y_0^t }^{-1} (A_1^2A_6) \cr 
-% & 
-% \times  
-%  \textstyle\prod_{2 \le i <  j \le 5} R_{Y_i Y_j^t}^{-1} (A_i A_j{}^{-1})\ 
-%  \prod_{i=2}^5 R_{Y_0^t Y_i} (A_1 A_i  A_6) ,
-% \end{align}
-% in which we introduce
-% \begin{align}
-% R_{\lambda \mu} (Q)=R_{ \mu\lambda} (Q)
-% &= \text{PE} \left[ - \frac{g}{(1-g)^2} Q \right]
-% \times N_{\lambda^t \mu} (Q)
-% \end{align}
-% with PE representing the Plethystic exponential
-%  and 
-% \begin{align}
-% N_{\lambda \mu} (Q) 
-% = \prod_{(i,j) \in \lambda} \left( 1 - Q g^{\lambda_i + \mu_j^t -i-j+1} \right)
-% \prod_{(i,j) \in \mu} \left( 1 - Q g^{-\lambda^t_j - \mu_i + i + j - 1} \right).
-% \end{align}
-% We also recall that the Nekrasov partition function is divided into the perturbative partition function $Z_{\text{pert}}$ and the weighted sum of $k$-instanton partition function $Z_k$.
-% \begin{align}
-% Z_{\text{Nek}} = Z_{\text{pert}}\Big(1 + \sum_{k=1}^{\infty}q^kZ_k\Big).
-% \end{align}
-
-% The perturbative part of the partition function $Z_{\text{pert}}$ comes from the summand of \eqref{eq:znek-su6} at empty Young diagrams, i.e., $(Y_1, Y_2, Y_3, Y_4, Y_5, Y_6) = (\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)$. It is given by
-% \begin{align}
-%   \label{eq:zpert-top}
-% Z_{\rm pert} 
-% =& \,
-% Z_{\text{half}}(\varnothing,\varnothing,\varnothing,\varnothing,\varnothing,\varnothing)^2
-% \cr
-% =&\, 
-% \text{PE} \Biggl[ 
-% \frac{2g}{(1-g)^2} 
-% \Bigl( \frac{A_1}{A_6} + \frac{1}{A_1A_6^2} + A_1^2  A_6 
-% + \sum_{2 \le i <  j \le 5} \frac{A_i}{A_j}
-% - \sum_{i=2}^5 A_1 A_i  A_6
-% \Bigr)
-% \Biggr]
-% \cr 
-% & 
-% \times \bigg(\sum_{Y_0} ( - A_1{}^{-1} A_6{}^{-2})^{|Y_0|} \ 
-% g^{\frac{\Vert Y_0^t \Vert ^2+\Vert Y_0\Vert ^2}{2}} \tilde{Z}_{Y_0}(g)^2 f_{Y_0}^2(g)
-% \cr 
-% & \qquad \qquad
-% \textstyle N_{Y_0^t \varnothing }^{-1} (A_1{}^{-1} A_6{}^{-2})
-%  N^{-1}_{Y_0 \varnothing } (A_1^2  A_6)\prod_{i=2}^5 N_{Y_0 \varnothing } (A_1 A_i  A_6)\bigg)^2 ,
-% \end{align}
-% where the last two lines can be  combined into the following closed-form expression:
-% \begin{align}
-%   \text{PE} \Biggl[ 
-%     \frac{2g}{(1-g)^2} 
-%     \Bigl(\sum_{i=2}^5  \frac{A_1}{A_i} +\sum_{i=2}^5  \frac{A_i}{A_6} - \frac{1}{A_1A_6^2} - A_1^2  A_6 
-%     - \sum_{2\leq i<j \leq 5} A_1 A_i  A_j + \mathcal{O}(A_1^6)
-%     \Bigr)
-%     \Biggr].
-% \end{align}
-% So \eqref{eq:zpert-top} is manifestly consistent with the equivariant index  \cite{Shadchin:2005mx} for 5d $SU(6)$ gauge theory with a hypermultiplet in the rank-3 antisymmetric representation $\mathbf{20}$, i.e., 
-% \begin{align}
-%   Z_{\rm pert}  = \text{PE} \Biggl[ 
-%     \frac{2g}{(1-g)^2} 
-%     \Bigl(\sum_{1\leq i<j \leq 6}  \frac{A_i}{A_j} 
-%     - \sum_{2\leq i<j \leq 6} A_1 A_i  A_j + \mathcal{O}(A_1^6)
-%     \Bigr)
-%     \Biggr].
-% \end{align}
-
-% The 1-instanton partition function $Z_1$ can be obtained from the summands of \eqref{eq:znek-su6} at Young diagrams satisfying $\sum_{i=1}^6 |Y_i|=1$. There are 6 different profiles of Young diagrams. The configuration $|Y_i| = 1$ and $Y_{j\neq i} = \varnothing$ contributes to $Z_{1}$ by
-% \begin{align}
-%   + \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
-%   \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
-%  \Bigr)^2. 
-% \end{align}
-% Summing over all six contributions, we find
-% \begin{align}
-%   Z_1 = \sum_{i=1}^6 \frac{g}{(1-g)^2} \frac{A_i^6}{\prod_{j \neq i} (A_i - A_j)^2} 
-%   \Bigl(-A_i \sum_{j\neq i} A_j +  \sum_{j\neq i}\frac{1}{A_j}  - \frac{1}{A_i} + A_i^2
-%  \Bigr)^2. 
-% \end{align}
-% which is in agreement with the blowup partition function (eqn). \textcolor{red}{(overall sign: looking at the GV invariant for single W-boson + single instanton (which should be -2), the topological vertex computation seems to be correct. blowup should have an overall sign issue)}
-% \pagebreak
-
-% %---------  Figure  ---------------%
-% \begin{figure}[t]
-% \centering
-% \includegraphics[width=10cm]{SU6-monopole.pdf}
-% \caption{A 5-brane web for $SU(6)_3+1{\bf TAS}$ with massless ${\bf TAS}$.}
-% \label{fig:SU6-monopole}
-% \end{figure}
-% %----------------------------------%
-
-%   %---------  Figure  ---------------%
-% \begin{figure}[t]
-% \centering
-% \includegraphics[width=12cm]{SU6-Higgsing.pdf}
-% \caption{(a) A Higgsing from from $SU(6)_3+1{\bf TAS}$ to two $SU(3)_3$ theories. (a) Two $SU(3)_3$ theories are painted in blue and in pink respectively. A new decoupled mode emerges.}
-% \label{fig:SU6-Higgsing}
-% \end{figure}
-% %----------------------------------%
-
-% %---------  Figure  ---------------%
-% \begin{figure}[t]
-% \centering
-% \includegraphics[width=10cm]{SU6young.pdf}
-% \caption{A labeling of Young diagrams assigned to the horizontal lines in Figure \ref{fig:SU6-monopole}.}
-% \label{fig:SU6young}
-% \end{figure}
-% %----------------------------------%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2467,160 +1805,6 @@ where the $U(3)$ character $\chi^f_{(mn)_c}$ is defined as
 \end{align}
 This was tested against the closed-form expression \eqref{eq:1inst-formula} up to $t^{280}$ order.
 
-% \section{SU(N) theory}
-% \label{sec:bound-su}
-% We find that 
-% \begin{align}
-%   \hspace{-2.2cm}
-%   \begin{dcases}
-%   n = \textstyle \frac{N_f}{2}
-%   & \hspace{0.8cm} \textstyle\text{ if }  \kappa_\text{eff} = N - N_f, \\
-%   n = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + |\k_\text{eff}| 
-%   & \hspace{0.8cm}\textstyle\text{ otherwise}.
-%   \end{dcases}
-% \end{align}
-% for $SU(N)_\kappa + N_f\mathbf{F}$ theory  with $N_f + 2|\kappa| \leq 2N$, 
-% \begin{align}
-%   \begin{dcases}
-%     % n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if }  \kappa_\text{eff} > 3 - \frac{N_f}{2} - (\frac{N}{2}-\lfloor\frac{N}{2}\rfloor),\\
-%     n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if $N$: odd and }  \kappa_\text{eff} \geq 3 - \frac{N_f}{2},\\
-%     n  = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  - (\k_\text{eff}-2) & \textstyle\text{ if $N$: even and }  \kappa_\text{eff} > 3 - \frac{N_f}{2}  ,\\
-%     n  \geq 
-%      \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{\frac{\k_\text{eff}}{2}\}
-%      &\textstyle\text{ otherwise}.
-%   \end{dcases}
-% \end{align}
-% for $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory with $N_f + 2|\kappa| \leq N+4$. 
-
-% \begin{align}
-%   \begin{dcases}
-%   n' = \textstyle \frac{N_f}{2}
-%   & \hspace{0.8cm} \textstyle\text{ if }  \kappa_\text{eff} = -N, \\
-%   n' = \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + \left|\k + \frac{1}{2}\sum_{l}I_2(\mathbf{R}_l)\right| 
-%   & \hspace{0.8cm} \textstyle\text{ otherwise} \nn.
-%   \end{dcases}
-% \end{align}
-% for $SU(N)_\kappa + N_f\mathbf{F}$ theory  with $N_f + 2|\kappa| \leq 2N$, 
-% \begin{align}
-%   \begin{dcases}
-%     n'  = \textstyle h^\vee + \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  + \k_\text{eff} &  
-%      \textstyle\text{ if $N$: odd and }   \kappa_\text{eff} \leq 1-N - \frac{N_f}{2} ,\\
-%      n'  = \textstyle h^\vee + \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)  + \k_\text{eff} &  
-%      \textstyle\text{ if $N$: even and }   \kappa_\text{eff} < 1-N - \frac{N_f}{2},\\
-%      n'  \geq 
-%      \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l) + 2\{-\frac{\k_\text{eff}+N+N_f}{2}\}
-%      &  \textstyle\text{ otherwise}.
-%   \end{dcases}
-% \end{align} 
-% for $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory with $N_f + 2|\kappa| \leq N+4$. 
-
-
-
-
-
-
-
-
-
-% \pagebreak
-
-% i.e.,   and 
-
-% In other words, This suggests that, as long as $\frac{b+b'}{2} > 2$, we can solve for the instanton partition function $Z_n$ 
-
-% In summary, there are $(b+b')/2$ blowup equations 
-
-
-
-% we have found   $n=n'=b = h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l)$. Thus the range of $d$ is constrained to
-% \begin{align}
-%   \label{eq:bound-1}
-%   0  \leq d  \leq h^\vee  - \frac{1}{2}  \sum_{l}I_2(\mathbf{R}_l)  \quad \text{ for the theories with }  G\neq SU(N).
-% \end{align}
-
-
-
-
-
-%   See Appendix~\ref{sec:bound-su} for the pattern on $n$ in  two classes of 
-
-
-
-% Especially when $\k_\text{eff} = 0$, the value of $n$ is same as the above. 
-
-
-
-
-
-
-
-% where we observe that 
-% \begin{align}
-%   n' &= \textstyle h^\vee - \frac{1}{2} \sum_{l}I_2(\mathbf{R}_l)
-% \end{align}
-% for the theories with $G\neq SU(N)$,
-
-
-% We need to be a bit careful when dealing with $SU(N)_\k$ theories. For $SU(N)_\kappa + N_f\mathbf{F}$ theory, the validity range of $d$ becomes
-% \begin{align}
-%   \begin{dcases}
-%     d \in [0 , N] &\quad\text{ for }\quad \k = -N +\tfrac{N_f}{2} \\
-%     d \in [0, N-\tfrac{N_f}{2}-\kappa] &\quad\text{ for } \quad \k \in (-N +\tfrac{N_f}{2}, -\tfrac{N_f}{2}]\\
-%     d \in [0, N] &\quad\text{ for } \quad \k \in [-\tfrac{N_f}{2}, +\tfrac{N_f}{2}] \\
-%     d \in [\tfrac{N_f}{2}-\kappa, N] &\quad\text{ for } \quad\k \in [+\tfrac{N_f}{2}, N-\tfrac{N_f}{2}) \\
-%     d \in [0, N] &\quad\text{ for }\quad  \k = +N -\tfrac{N_f}{2} 
-%   \end{dcases}
-% \end{align}
-% which always includes $0 \leq d \leq N$. For $SU(N)_\kappa + N_f\mathbf{F} + 1\mathbf{A}$ theory, 
-
-
-% Substituting $(n, n')$ to \eqref{eq:bound},  $d$ takes a value in the following range:
-% \begin{align}
-%   \begin{dcases}
-%     d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N] &\quad\text{ for }\quad \k \in [-2-\tfrac{N}{2}+\tfrac{N_f}{2}, 1-N-\tfrac{N_f}{2}] \\
-%     d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in (1-N-\tfrac{N_f}{2}, 3-\tfrac{N_f}{2})\\
-%     d \in [-1, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in [3-\tfrac{N_f}{2}, +\tfrac{N_f}{2}, 2+\tfrac{N}{2}-\tfrac{N_f}{2}]
-%   \end{dcases}
-% \end{align}
-% with odd $N$, and 
-% \begin{align}
-%   \begin{dcases}
-%     d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N] &\quad\text{ for }\quad \k \in [-2-\tfrac{N}{2}+\tfrac{N_f}{2}, 1-N-\tfrac{N_f}{2}] \\
-%     d \in [-1 - \tfrac{a}{4} - \{\tfrac{a}{4}\}, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in (1-N-\tfrac{N_f}{2}, 3-\tfrac{N_f}{2})\\
-%     d \in [-1, N-\tfrac{b}{2}-\{-\tfrac{b}{2}\}] &\quad\text{ for } \quad \k \in [3-\tfrac{N_f}{2}, +\tfrac{N_f}{2}, 2+\tfrac{N}{2}-\tfrac{N_f}{2}]
-%   \end{dcases}
-% \end{align}
-% with even $N$, where $a$ and $b$ are defined by $a=2 \k-N-N_f$ and $b = 2\k+N+N_f$. Although these patterns look 
- 
-
-%  \begin{align}
-%   -\frac{\k_\text{eff}}{2} - \{\frac{\k_\text{eff}}{2}\} \leq d \leq N \quad \text{ for } -N \leq \k_\text{eff}\leq 1-N-\frac{N_f}{2  }
-%  \end{align}
-% \begin{align}
-%  -\frac{\k_\text{eff}}{2}-\{\frac{\k_\text{eff}}{2}\} \leq d \leq N+1 -\frac{\k_\text{eff}+N+N_f}{2} + \{-\frac{\k_\text{eff}+N+N_f}{2}\}
-% \end{align}
-% \begin{align}
-%   -1 \leq d \leq N+1 -\frac{\k_\text{eff}+N+N_f}{2} + \{-\frac{\k_\text{eff}+N+N_f}{2}\}
-%  \end{align}
-% %\begin{figure}[t]
-% %  \centering
-% %  \includegraphics[scale=0.8]{/Users/jkim/Documents/GitHub/blowup/SUF.pdf}
-% %  \caption{asd}
-% %  \label{fig:SUN-Nf}
-% %%   \begin{dcases}
-% %%   0  \leq d  \leq N  & \text{ if }  \k = \pm (N- \tfrac{N_f}{2})\\
-% %%   \tfrac{N_f}{2}- \k  \leq d  \leq N  & \text{ if }  +\tfrac{N_f}{2} \leq \kappa \\
-% %%   0  \leq d  \leq N  & \text{ if } -\tfrac{N_f}{2} < \k < \tfrac{N_f}{2} \\
-% %%   0  \leq d  \leq N - N_f - \k_\text{eff}  & \text{ if }  \k_\text{eff} <-N_f 
-% %% \end{dcases}
-% %\end{figure}
-
-% % which gives \eqref{eq:cor5d-dmax}. 
-% For $SU(N)_{|\kappa|<N}$ SYM without a hypermultiplet, $n = h^\vee + |\k|$ so that \cite{Gottsche:2006bm}
-% \begin{align}
-%   \label{eq:bound-2}
-%   \textstyle -\frac{\k + |\k|}{2}  \leq d  \leq h^\vee + \frac{|\k|-\k}{2}.
-% \end{align}
 \bibliographystyle{JHEP}
 \bibliography{ref}
 
