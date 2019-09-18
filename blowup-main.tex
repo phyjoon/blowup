@@ -359,8 +359,8 @@ where
 \begin{align}
   \label{eq:param-np-sp5d}
 \begin{split}
-  \CZ^{(N),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q \exp \left((-d + \tfrac{b}{2})\e_1 \right), \vec{m} -\tfrac{1}{2}\e_1) \ , \\
-  \CZ^{(S),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q \exp \left( (-d + \tfrac{b}{2})\e_2\right), \vec{m} -\tfrac{1}{2}\e_2)\ . 
+  \CZ^{(N),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_1, \e_1, \e_2-\e_1, q \exp \left((d - \tfrac{b}{2})\e_1 \right), \vec{m} -\tfrac{1}{2}\e_1) \ , \\
+  \CZ^{(S),d}(\vec{k}) &\equiv \CZ(\vec{a}+\vec{k} \e_2, \e_1 - \e_2, \e_2, q \exp \left( (d - \tfrac{b}{2})\e_2\right), \vec{m} -\tfrac{1}{2}\e_2)\ . 
 \end{split}
 \end{align}
 Here the quantity $b$ is given as 
@@ -497,7 +497,7 @@ The `Casimir part' of $Z_{\text{1-loop}}$ is included here to make $f_d(\vec{k})
    { Z_{\textrm{1-loop}}^\text{vec}} &= \exp \Bigg[\frac{1}{\epsilon_1\epsilon_2} \,  \sum_{\vec{\alpha}\in\Delta}\Big(\frac{(\vec{a}\cdot\vec{\alpha}+\e_+)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\alpha}+\e_+)+1\Big)\Bigg]\\ & ~~\times \text{PE}\ \Bigg[- \frac{p_1 p_2}{(1-p_1)(1-p_2) }\sum_{\vec{\a} \in \D} e^{- \vec{a} \cdot \vec{\a}}  \Bigg]  \qquad \text{ for the vector multiplet}
    \end{split} \\
    \begin{split}  \label{eq:1-loop-hyp}
-   { Z_{\textrm{1-loop}}^\text{hyp,$l$}} &= \exp \Bigg[-\frac{1}{\epsilon_1\epsilon_2} \sum_{\vec{\omega}\in\mathbf{R}_l}\Big(\frac{(\vec{a}\cdot\vec{\omega}+m_l)^3}{12}x-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\omega}+m_l)+1\Big)\Bigg]\\ &
+   { Z_{\textrm{1-loop}}^\text{hyp,$l$}} &= \exp \Bigg[-\frac{1}{\epsilon_1\epsilon_2} \sum_{\vec{\omega}\in\mathbf{R}_l}\Big(\frac{(\vec{a}\cdot\vec{\omega}+m_l)^3}{12}-\frac{\e_1^2+\e_2^2+24}{48}\,(\vec{a}\cdot\vec{\omega}+m_l)+1\Big)\Bigg]\\ &
    ~~\times \text{PE}\ \Bigg[+ \frac{(p_1 p_2)^{\frac{1}{2}} \cdot  y_\ell } {(1-p_1)(1-p_2) }\sum_{\vec{\omega}\in\mathbf{R}_l}e^{-\vec{a} \cdot \vec{\w}}\Bigg] \qquad \text{ for the $l$'th hypermultiplet}
    \end{split}
 \end{align}
